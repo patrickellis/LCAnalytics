@@ -35,6 +35,7 @@ class Stats extends Component {
         };
         this.computeStats = this.computeStats.bind(this);
         this.updateProgress = this.updateProgress.bind(this);
+        this.setSlugAndDatesData = this.setSlugAndDatesData.bind(this);
     }
 
     componentDidMount(){     
@@ -46,6 +47,16 @@ class Stats extends Component {
             this.setState({
                 solvedOverTimeData : solvedOverTime,                
             })
+    }
+    setSlugAndDatesData(slugdata,datesdata,solvedOverTime){
+        console.log("setting slug and dates");
+        console.log(slugdata, " ### ", datesdata);
+        this.setState({
+            slugData : slugdata,
+            dateDict: datesdata,
+            solvedOverTimeData : solvedOverTime,
+            overTimeDataComputed : true
+        })
     }
     computeStats(){
         console.log("Computing stats #####")
@@ -68,17 +79,8 @@ class Stats extends Component {
         let radarData = idsToRadar(this.state.data,ProblemIdToCategories,Categories);
         console.log(radarData);
         console.log(commonIDS)
-        let dates = fetchDatesFromIds('PatrickEllis','LeetCode',commonIDS);
-        setTimeout(function(){
-            dates['slugData'].sort(function(a,b){
-                if(a['daysAgo'] < b['daysAgo']) return -1;
-                if(a['daysAgo'] > b['daysAgo']) return 1;
-                return 0;
-            })
-            this.setState({
-                slugData : dates['slugData']
-            })            
-        }.bind(this),200)
+        let dates = fetchDatesFromIds('PatrickEllis','LeetCode',commonIDS,this.setSlugAndDatesData,numProblems,solvedCounter);
+        {/*
         setTimeout(function(){ 
             console.log("this is a weekly call from computestats func")
             let solvedOverTime = weeklyProgressFromDates(dates['oldest_commits'],4,numProblems,solvedCounter); 
@@ -86,11 +88,10 @@ class Stats extends Component {
                 solvedOverTimeData : solvedOverTime,
                 overTimeDataComputed : true
             })
-        }.bind(this), 1000);
+        }.bind(this), 1000);*/}
         
         this.setState({
-            radarData : radarData,
-            dateDict : dates,
+            radarData : radarData,            
             commonIDS : commonIDS,
             numCompleted : solvedCounter,
             companyProblemDict : cpd,
@@ -125,6 +126,7 @@ class Stats extends Component {
                 
                 <div class='m-12f3mir'>
                     <CompanyDashboard 
+                        name = {this.props.name}
                         radarData={this.state.radarData}
                         easy={this.state.difficultyBreakdown['Easy']}
                         medium={this.state.difficultyBreakdown['Medium']}

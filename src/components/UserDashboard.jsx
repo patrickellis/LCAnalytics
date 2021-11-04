@@ -1,5 +1,4 @@
 import {React,Component} from 'react';
-import CompanyData from '../data/companies/6mo/json/linkedin';
 import CompanyTable from './CompanyTable';
 import {fetchGithubRepo} from '../scripts/github'
 import Stats from './StatsSection';
@@ -63,7 +62,7 @@ class UserDashboard extends Component {
                                                 <td></td>
                                                 <td> {idx++} </td>
                                                 <td> {item.title}</td>
-                                                <td> <span class="m-14c7t56 esfbxh91" style={{color: 'rgb(133, 208, 255)'}}>{item.daysAgo} days ago</span></td>
+                                                <td> <span class="m-14c7t56 esfbxh91" style={{color: '#0773f6'}}>{item.daysAgo} days ago</span></td>
                                                 <td></td>
                                             </tr>
                                             )
@@ -89,7 +88,7 @@ class UserDashboard extends Component {
                             
                             <div class="upperightcontent">   
                                 <div class="solvedContent">                                                         
-                                     <p class="solvedtext" style={{color:'#FFF'}}>Currently solved {this.props.numCompleted} out of {this.props.numProblems}</p>
+                                     <p class="solvedtext" style={{color:'rgb(49, 41, 85)'}}>Currently solved {this.props.numCompleted} out of {this.props.numProblems}</p>
                                 </div>
                                 <ActiveShapePieChart data={this.props.chartDataCompleted}/>   
                                         

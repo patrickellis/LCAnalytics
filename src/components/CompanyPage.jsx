@@ -1,5 +1,4 @@
 import {React,Component} from 'react';
-import CompanyData from '../data/companies/6mo/json/linkedin';
 import CompanyTable from './CompanyTable';
 import CompanyNav from './CompanyNav';
 import {fetchGithubRepo} from '../scripts/github'
@@ -12,7 +11,7 @@ class CompanyPage extends Component {
         super(props);
         this.state = {
             isLoaded : false,
-            data: CompanyData,
+            data: this.props.data,
             userData: [],
             displayQuestions : true,
         };
@@ -36,6 +35,7 @@ class CompanyPage extends Component {
         })
     }
     async componentDidMount(){        
+        console.log("mounting");
         const userData = await fetchGithubRepo('patrickellis','LeetCode','main',this.setUserData);
         //await new Promise(r => setTimeout(r, 500));
         
@@ -43,11 +43,11 @@ class CompanyPage extends Component {
     render(){
         return(
             <>                                    
-            {this.state.isLoaded &&
-                <>
+            {this.state.isLoaded &&                
+                <>                
                 <StatsHeader/>
                 <div class="m-ht4nkg">
-                    <Stats userData={this.state.userData} data={this.state.data} isLoaded={this.state.isLoaded}/>
+                    <Stats name={this.props.name} userData={this.state.userData} data={this.state.data} isLoaded={this.state.isLoaded}/>
                     <div class="separator"></div>
                     <CompanyNav toggleDisplay={this.toggleDisplay}/>
                     {this.state.displayQuestions && 

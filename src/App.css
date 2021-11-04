@@ -92,7 +92,7 @@ body,html{
   width:100%;
 }
 text{
-  fill: white;
+  fill: rgb(49, 41, 85);
 }
 tspan{
   font-size:12px;
@@ -102,7 +102,16 @@ tspan{
   left:60px;
 }
 
+.dashTable th{
+  background:#565895;
+}
 /* UserDashboard */
+.dashTable thead tr{
+  background:white;   
+}
+.dashTable tbody tr{
+  background:white;
+}
 .upperleft{
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
@@ -192,9 +201,10 @@ tspan{
   --ads-top-offset: calc(var(--app-overall-header-height) + 1.2rem);
   box-sizing: border-box;
   outline: none!important;
-  border-right: 1px solid rgba(255, 255, 255, 0.05);
-  flex: 1 1 300px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(187, 187, 187, 0.548);
+  border-right: 1px solid rgba(187, 187, 187, 0.548);
+  flex: 1 1 300px;  
+  
 }
 .uppersection{
   line-height: 1.15;
@@ -382,17 +392,13 @@ tspan{
   display: flex;
   flex-direction: column;
   border-radius: 0.6rem;
-  box-shadow: rgba(21, 11, 37, 0.5) 0px 2px 10px 0px;
-  background-color: var(--widget-main);
-  border: 1px solid var(--deep-purple);
+  background-color: white;  
   
   width: 100%;
   min-width: 0px;
   position: relative;
 }
-.upperight{
 
-}
 .upperightcontent{
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
@@ -680,7 +686,7 @@ tspan{
   -webkit-box-align: center;
   align-items: center;
   padding: 0.6rem 1.2rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(187, 187, 187, 0.548);
   color: var(--white);
   min-height: 3.4rem;
 }
@@ -774,7 +780,7 @@ tspan{
   line-height: 20px;
   letter-spacing: 0.25px;
   text-transform: uppercase;
-  color: var(--white);
+  color: #18bd9b;
   box-sizing: border-box;
   outline: none!important;
   display: flex;
@@ -886,7 +892,7 @@ tspan{
   font-size: 10px;
   line-height: 20px;
   letter-spacing: 0.25px;
-  color: rgb(204, 173, 112);
+  color: #18bd9b;
   display: flex;
   -webkit-box-align: center;
   align-items: center;
@@ -992,7 +998,7 @@ tspan{
   -webkit-box-align: center;
   align-items: center;
   padding: 0.6rem 1.2rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(187, 187, 187, 0.548);
   color: var(--white);
   min-height: 3.4rem;
 }
@@ -1086,7 +1092,7 @@ tspan{
   line-height: 20px;
   letter-spacing: 0.25px;
   text-transform: uppercase;
-  color: var(--white);
+  color: #382f66;  
   box-sizing: border-box;
   outline: none!important;
   display: flex;
@@ -1598,12 +1604,12 @@ tbody {
   position: relative;
   cursor: pointer;
   background: var(--tired-licorice);
-  box-shadow: rgb(21 11 37 / 25%) 0px 2px 10px;
+
   font-weight: 500;
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 0.25px;
-  color: rgb(179, 180, 208);
+  color:#1d1546
 }
 .m-14j0amg:hover {
   background: rgb(21 11 37);
@@ -1809,6 +1815,9 @@ svg:not(:root) {
   background:white;
   box-shadow:rgb(21 11 37 / 25%) 0px 3px 5px;
 }
+.dashTable tr:hover{
+  background:#f5d075;
+}
 .mainTable tr:hover{
   background: white !important;  
 }
@@ -1856,7 +1865,7 @@ svg:not(:root) {
 }
 .recharts-surface tspan{
   font-size:9px;
-  fill:rgb(201, 201, 201) !important;
+  fill:rgba(179, 179, 179, 0.966) !important;
 }
 .customized-tooltip-content{
   color:white;
@@ -1902,8 +1911,8 @@ svg:not(:root) {
   border-radius: 6px;
   border-color: rgb(126, 207, 191);
   border-width: 1px;
-  background-color: var(--marine);
-  color: var(--regular);
+  background-color:#565895;
+  color: white;
   text-transform: inherit;
 }
 .selectContainer{
@@ -1947,6 +1956,32 @@ nav ul li:before {
 .unselected:hover {
   cursor:pointer;
   color: #555;
+}
+
+
+.drop{
+  position:absolute;
+  overflow:hidden;
+  width:126px;
+}
+thead, th{
+  overflow:visible !important;
+}
+.mainTable th{
+  overflow:visible !important;
+}
+.drop li{
+  list-style-type: none;
+  padding:5px 0px;
+  background:white;
+  border:1px solid rgb(201, 201, 201);
+  width:126px;
+}
+.drop li{
+  position:relative;
+  text-transform: capitalize;
+  z-index:99;
+  right:16px;
 }
 
 

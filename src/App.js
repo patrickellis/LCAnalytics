@@ -12,8 +12,18 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state = {
-
+      data : [],
+      name : "",
+      readyToCall : false
     }
+    this.updateData = this.updateData.bind(this);
+  }
+  updateData(data,name){
+    this.setState({
+      data : data,
+      name : name,
+      readyToCall : true
+    })
   }
   render(){
     return (
@@ -22,13 +32,13 @@ class App extends Component {
           <Router>
             <Switch>
               <Route exact path="/">
-                <CompanyPage/>
+                <CompanyPage />
               </Route> 
               <Route path="/companies">
-                <CompanyListPage/>
+                <CompanyListPage updateData={this.updateData}/>
               </Route>
-              <Route path="/company">
-                <CompanyPage/>
+              <Route path="/company">                
+                <CompanyPage name={this.state.name} data={this.state.data}/>
               </Route>                    
           </Switch> 
           </Router>           

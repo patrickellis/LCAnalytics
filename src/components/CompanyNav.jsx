@@ -1,5 +1,5 @@
 import {React,Component} from 'react';
-import CompanyData from '../data/companies/6mo/json/linkedin';
+
 import CompanyTable from './CompanyTable';
 import {fetchGithubRepo} from '../scripts/github'
 import Stats from './StatsSection';

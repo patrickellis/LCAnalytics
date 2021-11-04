@@ -4,9 +4,7 @@ import Table from 'react-bootstrap/Table'
 import {fetchGithubRepo,getURLfromId} from '../scripts/github'
 import {userHasSolvedProblem} from '../scripts/util'
 import getJSON from '../scripts/JSONloader'
-import CompanyData from '../data/companies/6mo/json/linkedin';
 
-console.log(CompanyData);
 
 class CompanyTable extends Component {
     constructor(props){

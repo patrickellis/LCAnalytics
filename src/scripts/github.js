@@ -21,7 +21,7 @@ export const fetchGithubRepo = (username,repo_name,branch_name,setUserData) => {
     var url = 'https://api.github.com/repos/'+username+'/'+repo_name+'/git/trees/'+branch_name+'?recursive=0' 
     axios.get(url,{
         'headers' : {
-            'Authorization' : 'token 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'
+            'Authorization' : 'token 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'
         }
     })
             .then(res => {
@@ -56,19 +56,38 @@ function convert_ids_to_slugs(ids){
     }
     return ids;
 }
-
-export const fetchDatesFromIds = (username,repo_name,ids) => {
+function setInfo(oldest_commits,newest_commits,flag,slugData,numProblems,solvedCounter,setData){
+    let commit_data = {
+        'oldest_commits' : oldest_commits,
+        'newest_commits' : newest_commits,
+        'flag' : flag,
+        'slugData' : slugData
+    }
+    commit_data['slugData'].sort(function(a,b){
+        if(a['daysAgo'] < b['daysAgo']) return -1;
+        if(a['daysAgo'] > b['daysAgo']) return 1;
+        return 0;
+    });
+    let solvedOverTime = weeklyProgressFromDates(oldest_commits,4,numProblems,solvedCounter);
+    setData(slugData.slice(0,10),commit_data,solvedOverTime);
+    return commit_data;
+}
+export const fetchDatesFromIds = (username,repo_name,ids,setData,numProblems,solvedCounter) => {
     var id_slugs = convert_ids_to_slugs(ids)
     var oldest_commits = []
     var newest_commits = []
     console.log("slugs: " ,ids)
     var slugData = []
     var flag = false;
+    let commit_data = {};
+    if(ids.length == 0){        
+        return setInfo(oldest_commits,newest_commits,flag,slugData,numProblems,solvedCounter,setData);
+    }
     for(let i = 0; i < ids.length; ++i){
         var url = 'https://api.github.com/repos/'+username+'/'+repo_name+'/commits?path='+ids[i];
         axios.get(url,{
             'headers' : {
-                'Authorization' : 'token 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'
+                'Authorization' : 'token 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'
             }
             })
                 .then(res => {
@@ -87,19 +106,13 @@ export const fetchDatesFromIds = (username,repo_name,ids) => {
                     obj['date'] = new Date(newest_commit);
                     obj['daysAgo'] = datediff(new Date(newest_commit),new Date(Date.now()),);
                     slugData.push(obj);
-                    //console.log('solved ', counter/num_problems*100, '% of all problems')
-                })
-    }
-    var commit_data = {
-        'oldest_commits' : oldest_commits,
-        'newest_commits' : newest_commits,
-        'flag' : flag,
-        'slugData' : slugData
-    }
-    
-    
-    console.log(commit_data);
-    console.log(slugData);
+                    if(i==ids.length-1){
+                        let solvedOverTime = weeklyProgressFromDates(oldest_commits,4,numProblems,solvedCounter);
+                        //function setInfo(oldest_commits,newest_commits,flag,slugData,numProblems,solvedCounter,setData){
+                        setInfo(oldest_commits,newest_commits,flag,slugData,numProblems,solvedCounter,setData);                        
+                    }
+                })                  
+    }    
     return commit_data
 }
 function datediff(first, second) {

@@ -19,7 +19,9 @@ export const idsToRadar = (data, idToCategories, category_list) => {
     for(let i = 0; i < data.length; ++i){
         var id = data[i]['#'];
         //console.log("Id: ", id)
+        if(!id in idToCategories) continue;
         var cats = idToCategories[id];
+        if(!cats) continue;
         //console.log(cats);
         for(let j = 0; j < cats.length; ++j){
             counts[cat_name_to_idx[cats[j]]]+=1;

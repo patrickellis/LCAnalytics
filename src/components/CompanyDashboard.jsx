@@ -1,5 +1,4 @@
 import {React,Component} from 'react';
-import CompanyData from '../data/companies/6mo/json/linkedin';
 import CompanyTable from './CompanyTable';
 import {fetchGithubRepo} from '../scripts/github'
 import Stats from './StatsSection';
@@ -30,14 +29,14 @@ class CompanyDashboard extends Component {
                                     <span>
                                         <div class="m-1kvt2p1" role="img">
                                             <span>
-                                                <img src="//logo.clearbit.com/linkedin.com" alt="sizzvpaul" loading="lazy" class="m-0"/>
+                                                <img src={"//logo.clearbit.com/"+this.props.name+".com"} alt="sizzvpaul" loading="lazy" class="m-0"/>
                                             </span>
                                         </div>
                                     </span>
                                 </div>
                             </div>
                             <div class="m-h0893i">
-                                <h1 class="m-lu2isw">LinkedIn</h1>                                
+                                <h1 class="m-lu2isw">{this.props.name}</h1>                                
                             </div>
                         </div>
                         <div class="problemDistribution">

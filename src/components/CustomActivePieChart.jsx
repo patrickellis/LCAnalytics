@@ -33,7 +33,7 @@ const renderActiveShape = (props) => {
 
   return (
     <g>
-      <text x={cx} y={cy} dy={8} textAnchor="middle" fill={'#FFF'}>
+      <text x={cx} y={cy} dy={8} textAnchor="middle" fill={'#000'}>
         {payload.name}
       </text>
       {/* inner rings selected */}
@@ -75,7 +75,7 @@ const renderActiveShape = (props) => {
         y={ey}
         dy={18}
         textAnchor={textAnchor}
-        fill="#FFF"
+        fill="#ffc306"
       >
         {`${(percent * 100).toFixed(2)}%`}
       </text>
