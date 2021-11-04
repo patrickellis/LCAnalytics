@@ -1,0 +1,41 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,3,Longest Substring Without Repeating Characters,32.4%,Medium,1.69916
+1,5,Longest Palindromic Substring,31.4%,Medium,1.35445
+2,17,Letter Combinations of a Phone Number,51.9%,Medium,10.207
+3,20,Valid Parentheses,40.5%,Easy,2.39392
+4,23,Merge k Sorted Lists,45.0%,Hard,10.4397
+5,25,Reverse Nodes in k-Group,48.7%,Hard,6.09665
+6,39,Combination Sum,62.5%,Medium,6.73195
+7,40,Combination Sum II,51.5%,Medium,5.67758
+8,46,Permutations,69.9%,Medium,5.77172
+9,49,Group Anagrams,62.3%,Medium,9.41761
+10,50,"Pow(x, n)",31.6%,Medium,2.74446
+11,53,Maximum Subarray,48.9%,Easy,5.23962
+12,56,Merge Intervals,43.2%,Medium,9.45737
+13,68,Text Justification,32.9%,Hard,9.87515
+14,84,Largest Rectangle in Histogram,39.0%,Hard,15.5833
+15,103,Binary Tree Zigzag Level Order Traversal,52.1%,Medium,16.7559
+16,138,Copy List with Random Pointer,44.5%,Medium,19.3258
+17,146,LRU Cache,38.3%,Medium,24.9101
+18,198,House Robber,45.0%,Medium,1.92967
+19,200,Number of Islands,52.0%,Medium,1.75747
+20,206,Reverse Linked List,68.3%,Easy,1.22501
+21,213,House Robber II,38.8%,Medium,3.87271
+22,221,Maximal Square,41.3%,Medium,30.9659
+23,224,Basic Calculator,39.5%,Hard,25.7477
+24,253,Meeting Rooms II,48.4%,Medium,16.0443
+25,268,Missing Number,57.6%,Easy,3.0126
+26,269,Alien Dictionary,34.3%,Hard,9.33985
+27,279,Perfect Squares,51.1%,Medium,2.42359
+28,295,Find Median from Data Stream,49.5%,Hard,6.26101
+29,380,Insert Delete GetRandom O(1),50.7%,Medium,2.38381
+30,399,Evaluate Division,55.9%,Medium,31.2805
+31,557,Reverse Words in a String III,75.5%,Easy,3.36168
+32,655,Print Binary Tree,57.9%,Medium,74.2087
+33,695,Max Area of Island,68.0%,Medium,3.96372
+34,729,My Calendar I,54.7%,Medium,100
+35,953,Verifying an Alien Dictionary,52.2%,Easy,6.27573
+36,509,Fibonacci Number,67.8%,Easy,1.95161
+37,977,Squares of a Sorted Array,71.5%,Easy,3.41194
+38,1381,Design a Stack With Increment Operation,77.1%,Medium,36.8962
+39,1854,Maximum Population Year,57.9%,Easy,48.4174

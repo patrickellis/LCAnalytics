@@ -1,0 +1,15 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,2,Add Two Numbers,37.2%,Medium,2.15494
+1,3,Longest Substring Without Repeating Characters,32.4%,Medium,6.13848
+2,5,Longest Palindromic Substring,31.4%,Medium,2.7539
+3,45,Jump Game II,35.1%,Medium,6.21647
+4,54,Spiral Matrix,39.3%,Medium,8.171
+5,69,Sqrt(x),36.0%,Easy,6.1764
+6,70,Climbing Stairs,50.0%,Easy,1.73285
+7,77,Combinations,61.1%,Medium,11.3429
+8,84,Largest Rectangle in Histogram,39.0%,Hard,14.1327
+9,221,Maximal Square,41.3%,Medium,59.5154
+10,235,Lowest Common Ancestor of a Binary Search Tree,54.9%,Easy,8.65736
+11,355,Design Twitter,33.4%,Medium,100
+12,617,Merge Two Binary Trees,76.9%,Easy,19.0308
+13,739,Daily Temperatures,66.1%,Medium,15.5294

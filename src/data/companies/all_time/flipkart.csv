@@ -1,0 +1,51 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,4,Median of Two Sorted Arrays,32.9%,Hard,2.57771
+1,11,Container With Most Water,53.2%,Medium,6.42628
+2,15,3Sum,29.8%,Medium,0.492736
+3,20,Valid Parentheses,40.5%,Easy,1.75302
+4,31,Next Permutation,34.7%,Medium,3.33488
+5,34,Find First and Last Position of Element in Sorted Array,38.9%,Medium,2.52886
+6,42,Trapping Rain Water,54.2%,Hard,25.9409
+7,45,Jump Game II,35.1%,Medium,10.0233
+8,54,Spiral Matrix,39.3%,Medium,1.219
+9,74,Search a 2D Matrix,40.7%,Medium,0.846932
+10,76,Minimum Window Substring,37.9%,Hard,7.02641
+11,84,Largest Rectangle in Histogram,39.0%,Hard,5.78171
+12,103,Binary Tree Zigzag Level Order Traversal,52.1%,Medium,1.27717
+13,120,Triangle,48.7%,Medium,0.885261
+14,124,Binary Tree Maximum Path Sum,36.8%,Hard,1.00662
+15,134,Gas Station,43.2%,Medium,19.5589
+16,135,Candy,36.0%,Hard,40.6261
+17,169,Majority Element,61.4%,Easy,4.56009
+18,198,House Robber,45.0%,Medium,2.33126
+19,236,Lowest Common Ancestor of a Binary Tree,52.7%,Medium,2.23598
+20,241,Different Ways to Add Parentheses,59.7%,Medium,11.1918
+21,269,Alien Dictionary,34.3%,Hard,11.0177
+22,295,Find Median from Data Stream,49.5%,Hard,7.45836
+23,337,House Robber III,52.4%,Medium,3.60451
+24,355,Design Twitter,33.4%,Medium,25.9026
+25,452,Minimum Number of Arrows to Burst Balloons,50.7%,Medium,13.1468
+26,460,LFU Cache,38.3%,Hard,2.7957
+27,480,Sliding Window Median,40.2%,Hard,16.994
+28,581,Shortest Unsorted Continuous Subarray,33.6%,Medium,2.51623
+29,675,Cut Off Trees for Golf Event,35.4%,Hard,45.2396
+30,752,Open the Lock,55.0%,Medium,7.51012
+31,431,Encode N-ary Tree to Binary Tree,75.7%,Hard,33.5949
+32,871,Minimum Number of Refueling Stops,35.2%,Hard,100
+33,967,Numbers With Same Consecutive Differences,46.4%,Medium,0
+34,968,Binary Tree Cameras,41.2%,Hard,13.4255
+35,973,K Closest Points to Origin,65.7%,Medium,1.05762
+36,977,Squares of a Sorted Array,71.5%,Easy,0.818537
+37,982,Triples with Bitwise AND Equal To Zero,57.3%,Hard,0
+38,994,Rotting Oranges,51.1%,Medium,1.09863
+39,1000,Minimum Cost to Merge Stones,41.6%,Hard,12.4472
+40,1011,Capacity To Ship Packages Within D Days,61.7%,Medium,75.8884
+41,1219,Path with Maximum Gold,66.0%,Medium,27.6974
+42,1326,Minimum Number of Taps to Open to Water a Garden,48.0%,Hard,19.3418
+43,1423,Maximum Points You Can Obtain from Cards,49.4%,Medium,16.903
+44,1519,Number of Nodes in the Sub-Tree With the Same Label,38.6%,Medium,23.8312
+45,1574,Shortest Subarray to be Removed to Make Array Sorted,34.7%,Medium,14.6697
+46,1700,Number of Students Unable to Eat Lunch,67.6%,Easy,69.3513
+47,1760,Minimum Limit of Balls in a Bag,55.3%,Medium,0
+48,1912,Design Movie Rental System,42.5%,Hard,0
+49,2019,The Score of Students Solving Math Expression,31.5%,Hard,0

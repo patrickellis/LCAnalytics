@@ -1,0 +1,19 @@
+,#,Title,Acceptance,Difficulty,FrequencyFrequency of problems that appear in real interviews,Frequency
+0,8,String to Integer (atoi),16.1%,Medium,,13.2041
+1,23,Merge k Sorted Lists,45.0%,Hard,,5.10322
+2,42,Trapping Rain Water,54.2%,Hard,,10.095
+3,56,Merge Intervals,43.2%,Medium,,6.65224
+4,63,Unique Paths II,36.6%,Medium,,48.8623
+5,127,Word Ladder,33.7%,Hard,,66.1697
+6,128,Longest Consecutive Sequence,48.0%,Medium,,19.6224
+7,138,Copy List with Random Pointer,44.5%,Medium,,83.4771
+8,139,Word Break,43.3%,Medium,,30.2105
+9,198,House Robber,45.0%,Medium,,15.0073
+10,199,Binary Tree Right Side View,58.2%,Medium,,6.5031
+11,200,Number of Islands,52.0%,Medium,,13.6709
+12,213,House Robber II,38.8%,Medium,,7.54774
+13,253,Meeting Rooms II,48.4%,Medium,,7.85661
+14,297,Serialize and Deserialize Binary Tree,52.1%,Hard,,42.3135
+15,329,Longest Increasing Path in a Matrix,48.3%,Hard,,36.7131
+16,332,Reconstruct Itinerary,39.4%,Hard,,18.3815
+17,1387,Sort Integers by The Power Value,70.3%,Medium,,100

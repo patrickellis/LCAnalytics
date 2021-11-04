@@ -1,0 +1,20 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,1,Two Sum,47.8%,Easy,5.44094
+1,5,Longest Palindromic Substring,31.4%,Medium,13.65
+2,9,Palindrome Number,51.6%,Easy,4.09015
+3,18,4Sum,36.7%,Medium,10.0509
+4,20,Valid Parentheses,40.5%,Easy,1.72163
+5,38,Count and Say,47.6%,Medium,11.7031
+6,53,Maximum Subarray,48.9%,Easy,1.35828
+7,135,Candy,36.0%,Hard,34.2341
+8,146,LRU Cache,38.3%,Medium,10.1499
+9,177,Nth Highest Salary,35.1%,Medium,36.7343
+10,209,Minimum Size Subarray Sum,41.6%,Medium,8.89111
+11,239,Sliding Window Maximum,45.7%,Hard,6.42883
+12,283,Move Zeroes,59.6%,Easy,2.47127
+13,410,Split Array Largest Sum,48.6%,Hard,19.8682
+14,421,Maximum XOR of Two Numbers in an Array,55.0%,Medium,76.6803
+15,424,Longest Repeating Character Replacement,49.8%,Medium,15.2499
+16,509,Fibonacci Number,67.8%,Easy,7.09428
+17,1175,Prime Arrangements,52.1%,Easy,100
+18,1353,Maximum Number of Events That Can Be Attended,32.1%,Medium,60.054

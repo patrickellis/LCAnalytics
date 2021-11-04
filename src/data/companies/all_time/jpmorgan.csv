@@ -1,0 +1,40 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,1,Two Sum,47.8%,Easy,1.89337
+1,17,Letter Combinations of a Phone Number,51.9%,Medium,3.43678
+2,20,Valid Parentheses,40.5%,Easy,58.5911
+3,31,Next Permutation,34.7%,Medium,4.26501
+4,37,Sudoku Solver,51.5%,Hard,3.83165
+5,41,First Missing Positive,35.2%,Hard,0.345453
+6,49,Group Anagrams,62.3%,Medium,0.312212
+7,53,Maximum Subarray,48.9%,Easy,2.69228
+8,56,Merge Intervals,43.2%,Medium,51.8538
+9,91,Decode Ways,28.9%,Medium,100
+10,121,Best Time to Buy and Sell Stock,52.9%,Easy,9.62398
+11,141,Linked List Cycle,44.3%,Easy,0.376752
+12,146,LRU Cache,38.3%,Medium,2.25296
+13,173,Binary Search Tree Iterator,63.3%,Medium,0.84069
+14,174,Dungeon Game,35.6%,Hard,2.47602
+15,202,Happy Number,52.2%,Easy,87.529
+16,215,Kth Largest Element in an Array,61.4%,Medium,0.17814
+17,242,Valid Anagram,60.2%,Easy,0.643578
+18,276,Paint Fence,41.0%,Medium,2.76311
+19,283,Move Zeroes,59.6%,Easy,0.0506589
+20,399,Evaluate Division,55.9%,Medium,0.464228
+21,423,Reconstruct Original Digits from English,51.5%,Medium,83.1436
+22,453,Minimum Moves to Equal Array Elements,52.7%,Medium,4.64885
+23,480,Sliding Window Median,40.2%,Hard,4.17028
+24,560,Subarray Sum Equals K,43.7%,Medium,0.181082
+25,572,Subtree of Another Tree,44.9%,Easy,0.18514
+26,696,Count Binary Substrings,62.9%,Easy,68.8397
+27,742,Closest Leaf in a Binary Tree,44.8%,Medium,8.33063
+28,509,Fibonacci Number,67.8%,Easy,41.3608
+29,980,Unique Paths III,77.6%,Hard,1.11298
+30,1091,Shortest Path in Binary Matrix,41.3%,Medium,0.681464
+31,1328,Break a Palindrome,52.2%,Medium,12.8949
+32,1247,Minimum Swaps to Make Strings Equal,63.6%,Medium,0
+33,1290,Convert Binary Number in a Linked List to Integer,81.8%,Easy,27.3379
+34,1418,Display Table of Food Orders in a Restaurant,71.3%,Medium,0
+35,1609,Even Odd Tree,52.6%,Medium,13.0339
+36,1625,Lexicographically Smallest String After Applying Operations,66.1%,Medium,0
+37,1812,Determine Color of a Chessboard Square,77.4%,Easy,0
+38,1843,Suspicious Bank Accounts,49.9%,Medium,0

@@ -1,0 +1,18 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,20,Valid Parentheses,40.5%,Easy,2.30035
+1,31,Next Permutation,34.7%,Medium,3.82372
+2,49,Group Anagrams,62.3%,Medium,0.818297
+3,146,LRU Cache,38.3%,Medium,0.968033
+4,236,Lowest Common Ancestor of a Binary Tree,52.7%,Medium,0.923032
+5,359,Logger Rate Limiter,74.0%,Easy,19.9269
+6,362,Design Hit Counter,66.5%,Medium,7.94439
+7,526,Beautiful Arrangement,63.4%,Medium,6.39018
+8,829,Consecutive Numbers Sum,40.2%,Hard,9.22456
+9,860,Lemonade Change,52.2%,Easy,32.6385
+10,981,Time Based Key-Value Store,53.4%,Medium,3.46773
+11,1071,Greatest Common Divisor of Strings,51.8%,Easy,25.3338
+12,1220,Count Vowels Permutation,56.5%,Hard,35.7706
+13,1235,Maximum Profit in Job Scheduling,50.2%,Hard,3.84557
+14,1297,Maximum Number of Occurrences of a Substring,52.2%,Medium,57.4915
+15,1366,Rank Teams by Votes,58.2%,Medium,100
+16,1817,Finding the Users Active Minutes,79.7%,Medium,78.2791

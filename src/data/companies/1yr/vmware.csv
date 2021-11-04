@@ -1,0 +1,81 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,1,Two Sum,47.8%,Easy,0.81081
+1,2,Add Two Numbers,37.2%,Medium,1.29138
+2,3,Longest Substring Without Repeating Characters,32.4%,Medium,3.67485
+3,4,Median of Two Sorted Arrays,32.9%,Hard,1.15687
+4,8,String to Integer (atoi),16.1%,Medium,3.67088
+5,15,3Sum,29.8%,Medium,4.43814
+6,20,Valid Parentheses,40.5%,Easy,0.576807
+7,21,Merge Two Sorted Lists,58.3%,Easy,3.76566
+8,23,Merge k Sorted Lists,45.0%,Hard,3.18786
+9,33,Search in Rotated Sorted Array,37.0%,Medium,2.04542
+10,35,Search Insert Position,42.5%,Easy,1.44189
+11,38,Count and Say,47.6%,Medium,3.92096
+12,41,First Missing Positive,35.2%,Hard,2.51539
+13,42,Trapping Rain Water,54.2%,Hard,4.98102
+14,49,Group Anagrams,62.3%,Medium,25.431
+15,53,Maximum Subarray,48.9%,Easy,0.45507
+16,54,Spiral Matrix,39.3%,Medium,4.8891
+17,56,Merge Intervals,43.2%,Medium,16.4584
+18,62,Unique Paths,58.1%,Medium,1.61681
+19,71,Simplify Path,36.4%,Medium,3.58378
+20,73,Set Matrix Zeroes,46.7%,Medium,2.24175
+21,76,Minimum Window Substring,37.9%,Hard,2.34678
+22,79,Word Search,38.9%,Medium,0.890399
+23,98,Validate Binary Search Tree,29.7%,Medium,6.13738
+24,103,Binary Tree Zigzag Level Order Traversal,52.1%,Medium,5.12243
+25,121,Best Time to Buy and Sell Stock,52.9%,Easy,6.33717
+26,127,Word Ladder,33.7%,Hard,6.68255
+27,138,Copy List with Random Pointer,44.5%,Medium,10.4713
+28,146,LRU Cache,38.3%,Medium,52.3866
+29,155,Min Stack,48.8%,Easy,3.59033
+30,179,Largest Number,32.0%,Medium,7.00191
+31,200,Number of Islands,52.0%,Medium,5.92883
+32,204,Count Primes,32.8%,Medium,4.00414
+33,206,Reverse Linked List,68.3%,Easy,0.663749
+34,210,Course Schedule II,44.9%,Medium,4.7297
+35,226,Invert Binary Tree,69.8%,Easy,1.6803
+36,232,Implement Queue using Stacks,55.3%,Easy,12.2218
+37,238,Product of Array Except Self,62.7%,Medium,1.20437
+38,253,Meeting Rooms II,48.4%,Medium,4.90424
+39,255,Verify Preorder Sequence in Binary Search Tree,47.1%,Medium,100
+40,278,First Bad Version,39.9%,Easy,0.760492
+41,279,Perfect Squares,51.1%,Medium,1.31318
+42,283,Move Zeroes,59.6%,Easy,1.86144
+43,295,Find Median from Data Stream,49.5%,Hard,7.60822
+44,297,Serialize and Deserialize Binary Tree,52.1%,Hard,2.96088
+45,300,Longest Increasing Subsequence,47.3%,Medium,3.73213
+46,328,Odd Even Linked List,58.3%,Medium,3.93458
+47,332,Reconstruct Itinerary,39.4%,Hard,5.11026
+48,347,Top K Frequent Elements,63.7%,Medium,9.97402
+49,349,Intersection of Two Arrays,67.4%,Easy,2.85571
+50,355,Design Twitter,33.4%,Medium,27.5669
+51,370,Range Addition,66.5%,Medium,12.0647
+52,387,First Unique Character in a String,55.6%,Easy,1.37414
+53,421,Maximum XOR of Two Numbers in an Array,55.0%,Medium,25.6906
+54,443,String Compression,46.2%,Medium,5.30705
+55,460,LFU Cache,38.3%,Hard,24.9628
+56,545,Boundary of Binary Tree,41.9%,Medium,16.623
+57,564,Find the Closest Palindrome,20.9%,Hard,73.5582
+58,621,Task Scheduler,53.7%,Medium,5.95906
+59,696,Count Binary Substrings,62.9%,Easy,5.21148
+60,426,Convert Binary Search Tree to Sorted Doubly Linked List,63.3%,Medium,3.96996
+61,706,Design HashMap,63.8%,Easy,4.11159
+62,811,Subdomain Visit Count,73.1%,Medium,8.81762
+63,856,Score of Parentheses,65.5%,Medium,17.6003
+64,863,All Nodes Distance K in Binary Tree,59.8%,Medium,16.2573
+65,977,Squares of a Sorted Array,71.5%,Easy,3.28295
+66,994,Rotting Oranges,51.1%,Medium,1.10438
+67,1010,Pairs of Songs With Total Durations Divisible by 60,51.9%,Medium,28.7064
+68,1136,Parallel Courses,60.2%,Medium,20.2874
+69,1167,Minimum Cost to Connect Sticks,65.9%,Medium,10.3076
+70,1046,Last Stone Weight,62.7%,Easy,23.4447
+71,1071,Greatest Common Divisor of Strings,51.8%,Easy,17.9027
+72,1228,Missing Number In Arithmetic Progression,51.2%,Easy,87.6978
+73,1116,Print Zero Even Odd,58.5%,Medium,49.7319
+74,1143,Longest Common Subsequence,58.8%,Medium,2.49173
+75,1328,Break a Palindrome,52.2%,Medium,59.4185
+76,1192,Critical Connections in a Network,51.9%,Hard,12.6568
+77,1347,Minimum Number of Steps to Make Two Strings Anagram,75.4%,Medium,12.4929
+78,1642,Furthest Building You Can Reach,43.8%,Medium,35.8863
+79,1669,Merge In Between Linked Lists,74.9%,Medium,45.555

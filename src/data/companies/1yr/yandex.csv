@@ -1,0 +1,48 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,1,Two Sum,47.8%,Easy,0.0446075
+1,2,Add Two Numbers,37.2%,Medium,0.0561512
+2,3,Longest Substring Without Repeating Characters,32.4%,Medium,0.488585
+3,21,Merge Two Sorted Lists,58.3%,Easy,0.059056
+4,22,Generate Parentheses,68.3%,Medium,0.145935
+5,23,Merge k Sorted Lists,45.0%,Hard,0.862113
+6,26,Remove Duplicates from Sorted Array,47.7%,Easy,0.0683828
+7,42,Trapping Rain Water,54.2%,Hard,1.09065
+8,49,Group Anagrams,62.3%,Medium,1.97274
+9,56,Merge Intervals,43.2%,Medium,0.978379
+10,71,Simplify Path,36.4%,Medium,0.350421
+11,88,Merge Sorted Array,42.2%,Easy,0.182161
+12,98,Validate Binary Search Tree,29.7%,Medium,0.216692
+13,101,Symmetric Tree,50.2%,Easy,1.52056
+14,124,Binary Tree Maximum Path Sum,36.8%,Hard,0.175754
+15,125,Valid Palindrome,39.9%,Easy,5.87857
+16,150,Evaluate Reverse Polish Notation,40.7%,Medium,0.494345
+17,159,Longest Substring with At Most Two Distinct Characters,51.7%,Medium,1.0792
+18,161,One Edit Distance,33.6%,Medium,2.79714
+19,167,Two Sum II - Input Array Is Sorted,57.3%,Easy,0.096333
+20,200,Number of Islands,52.0%,Medium,2.28786
+21,206,Reverse Linked List,68.3%,Easy,0.790517
+22,228,Summary Ranges,44.1%,Easy,13.1664
+23,253,Meeting Rooms II,48.4%,Medium,1.89684
+24,268,Missing Number,57.6%,Easy,0.159607
+25,281,Zigzag Iterator,60.5%,Medium,12.6918
+26,283,Move Zeroes,59.6%,Easy,0.98471
+27,341,Flatten Nested List Iterator,57.5%,Medium,0.796648
+28,350,Intersection of Two Arrays II,53.8%,Easy,0.549189
+29,356,Line Reflection,33.9%,Medium,100
+30,362,Design Hit Counter,66.5%,Medium,10.1774
+31,380,Insert Delete GetRandom O(1),50.7%,Medium,0.503681
+32,387,First Unique Character in a String,55.6%,Easy,0.134363
+33,415,Add Strings,50.8%,Easy,0.240951
+34,438,Find All Anagrams in a String,46.5%,Medium,0.68399
+35,443,String Compression,46.2%,Medium,18.907
+36,487,Max Consecutive Ones II,48.2%,Medium,1.3933
+37,523,Continuous Subarray Sum,26.1%,Medium,0.36337
+38,560,Subarray Sum Equals K,43.7%,Medium,3.78474
+39,567,Permutation in String,44.4%,Medium,5.26726
+40,771,Jewels and Stones,87.4%,Easy,0.48595
+41,849,Maximize Distance to Closest Person,44.9%,Medium,31.718
+42,470,Implement Rand10() Using Rand7(),46.4%,Medium,2.97932
+43,977,Squares of a Sorted Array,71.5%,Easy,0.500862
+44,986,Interval List Intersections,69.7%,Medium,1.51268
+45,1493,Longest Subarray of 1's After Deleting One Element,59.8%,Medium,65.859
+46,1650,Lowest Common Ancestor of a Binary Tree III,77.4%,Medium,0.430941

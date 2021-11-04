@@ -1,0 +1,15 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,1,Two Sum,47.8%,Easy,0.189297
+1,49,Group Anagrams,62.3%,Medium,0.53089
+2,121,Best Time to Buy and Sell Stock,52.9%,Easy,0.215618
+3,127,Word Ladder,33.7%,Hard,1.23589
+4,150,Evaluate Reverse Polish Notation,40.7%,Medium,4.69737
+5,230,Kth Smallest Element in a BST,65.1%,Medium,1.02425
+6,239,Sliding Window Maximum,45.7%,Hard,13.9566
+7,259,3Sum Smaller,49.9%,Medium,75.6152
+8,297,Serialize and Deserialize Binary Tree,52.1%,Hard,1.22859
+9,343,Integer Break,52.6%,Medium,7.13798
+10,370,Range Addition,66.5%,Medium,100
+11,518,Coin Change 2,55.1%,Medium,1.92826
+12,829,Consecutive Numbers Sum,40.2%,Hard,5.98466
+13,1010,Pairs of Songs With Total Durations Divisible by 60,51.9%,Medium,44.7859

@@ -1,0 +1,21 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,1,Two Sum,47.8%,Easy,0.121931
+1,2,Add Two Numbers,37.2%,Medium,0.345273
+2,16,3Sum Closest,46.9%,Medium,13.5472
+3,25,Reverse Nodes in k-Group,48.7%,Hard,30.6287
+4,68,Text Justification,32.9%,Hard,3.21705
+5,101,Symmetric Tree,50.2%,Easy,6.89099
+6,146,LRU Cache,38.3%,Medium,2.04458
+7,155,Min Stack,48.8%,Easy,10.8079
+8,204,Count Primes,32.8%,Medium,66.9797
+9,234,Palindrome Linked List,44.6%,Easy,4.10906
+10,268,Missing Number,57.6%,Easy,11.8561
+11,283,Move Zeroes,59.6%,Easy,1.98744
+12,322,Coin Change,39.0%,Medium,0.804838
+13,347,Top K Frequent Elements,63.7%,Medium,15.1722
+14,445,Add Two Numbers II,57.7%,Medium,33.9593
+15,482,License Key Formatting,43.1%,Easy,31.0789
+16,723,Candy Crush,74.1%,Medium,33.2617
+17,905,Sort Array By Parity,74.9%,Easy,17.7507
+18,1099,Two Sum Less Than K,60.5%,Easy,21.4909
+19,1878,Get Biggest Three Rhombus Sums in a Grid,44.1%,Medium,100

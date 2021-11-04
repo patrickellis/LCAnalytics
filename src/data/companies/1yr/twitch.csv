@@ -1,0 +1,11 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,20,Valid Parentheses,40.5%,Easy,3.09891
+1,32,Longest Valid Parentheses,30.7%,Hard,8.36411
+2,65,Valid Number,17.3%,Hard,63.3944
+3,146,LRU Cache,38.3%,Medium,8.12436
+4,212,Word Search II,38.4%,Hard,3.64295
+5,419,Battleships in a Board,72.5%,Medium,100
+6,460,LFU Cache,38.3%,Hard,26.7888
+7,695,Max Area of Island,68.0%,Medium,5.13101
+8,841,Keys and Rooms,67.7%,Medium,18.1374
+9,1197,Minimum Knight Moves,39.1%,Medium,24.5097

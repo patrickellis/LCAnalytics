@@ -1,0 +1,19 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,42,Trapping Rain Water,54.2%,Hard,0.384266
+1,76,Minimum Window Substring,37.9%,Hard,8.67137
+2,91,Decode Ways,28.9%,Medium,13.607
+3,126,Word Ladder II,25.8%,Hard,6.37034
+4,127,Word Ladder,33.7%,Hard,8.10124
+5,143,Reorder List,44.0%,Medium,1.15054
+6,157,Read N Characters Given Read4,39.4%,Easy,3.5941
+7,158,Read N Characters Given read4 II - Call Multiple Times,39.6%,Hard,100
+8,200,Number of Islands,52.0%,Medium,0.658665
+9,210,Course Schedule II,44.9%,Medium,1.45533
+10,238,Product of Array Except Self,62.7%,Medium,5.84864
+11,304,Range Sum Query 2D - Immutable,45.4%,Medium,17.6865
+12,365,Water and Jug Problem,33.0%,Medium,21.9064
+13,642,Design Search Autocomplete System,47.6%,Hard,42.1405
+14,716,Max Stack,44.2%,Easy,71.0702
+15,735,Asteroid Collision,44.1%,Medium,5.16352
+16,981,Time Based Key-Value Store,53.4%,Medium,6.59157
+17,1326,Minimum Number of Taps to Open to Water a Garden,48.0%,Hard,4.01548

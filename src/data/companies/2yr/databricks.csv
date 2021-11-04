@@ -1,0 +1,24 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,10,Regular Expression Matching,28.0%,Hard,0.44651
+1,17,Letter Combinations of a Phone Number,51.9%,Medium,0.440882
+2,23,Merge k Sorted Lists,45.0%,Hard,8.12004
+3,41,First Missing Positive,35.2%,Hard,8.50764
+4,42,Trapping Rain Water,54.2%,Hard,2.78669
+5,48,Rotate Image,64.0%,Medium,0.218463
+6,68,Text Justification,32.9%,Hard,8.86925
+7,91,Decode Ways,28.9%,Medium,0.319095
+8,239,Sliding Window Maximum,45.7%,Hard,4.75805
+9,314,Binary Tree Vertical Order Traversal,49.1%,Medium,17.176
+10,362,Design Hit Counter,66.5%,Medium,3.90743
+11,380,Insert Delete GetRandom O(1),50.7%,Medium,6.35953
+12,722,Remove Comments,37.0%,Medium,95.7115
+13,742,Closest Leaf in a Binary Tree,44.8%,Medium,56.4438
+14,426,Convert Binary Search Tree to Sorted Doubly Linked List,63.3%,Medium,1.2588
+15,945,Minimum Increment to Make Array Unique,48.0%,Medium,13.5708
+16,987,Vertical Order Traversal of a Binary Tree,39.8%,Hard,2.80806
+17,1146,Snapshot Array,37.1%,Medium,1.19167
+18,1329,Sort the Matrix Diagonally,81.5%,Medium,5.23851
+19,1206,Design Skiplist,59.9%,Hard,15.7171
+20,1235,Maximum Profit in Job Scheduling,50.2%,Hard,7.38626
+21,1242,Web Crawler Multithreaded,48.1%,Medium,100
+22,1861,Rotating the Box,63.5%,Medium,2.36356

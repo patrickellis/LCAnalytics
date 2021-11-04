@@ -1,0 +1,63 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,1,Two Sum,47.8%,Easy,0.666361
+1,3,Longest Substring Without Repeating Characters,32.4%,Medium,0.0375654
+2,20,Valid Parentheses,40.5%,Easy,4.14256
+3,21,Merge Two Sorted Lists,58.3%,Easy,0.124637
+4,33,Search in Rotated Sorted Array,37.0%,Medium,2.47561
+5,36,Valid Sudoku,53.4%,Medium,0.163374
+6,38,Count and Say,47.6%,Medium,0.359827
+7,42,Trapping Rain Water,54.2%,Hard,0.457108
+8,49,Group Anagrams,62.3%,Medium,0.730084
+9,53,Maximum Subarray,48.9%,Easy,0.0939231
+10,54,Spiral Matrix,39.3%,Medium,0.795328
+11,56,Merge Intervals,43.2%,Medium,0.0754902
+12,63,Unique Paths II,36.6%,Medium,0.314104
+13,70,Climbing Stairs,50.0%,Easy,1.26882
+14,73,Set Matrix Zeroes,46.7%,Medium,0.205726
+15,75,Sort Colors,52.8%,Medium,0.0697294
+16,79,Word Search,38.9%,Medium,0.0817121
+17,98,Validate Binary Search Tree,29.7%,Medium,0.090474
+18,114,Flatten Binary Tree to Linked List,55.7%,Medium,0.29423
+19,121,Best Time to Buy and Sell Stock,52.9%,Easy,2.29304
+20,122,Best Time to Buy and Sell Stock II,60.4%,Medium,0.510974
+21,127,Word Ladder,33.7%,Hard,1.08592
+22,143,Reorder List,44.0%,Medium,0.343142
+23,146,LRU Cache,38.3%,Medium,0.312071
+24,151,Reverse Words in a String,26.8%,Medium,0.0924475
+25,198,House Robber,45.0%,Medium,0.85806
+26,200,Number of Islands,52.0%,Medium,2.58854
+27,206,Reverse Linked List,68.3%,Easy,0.0609124
+28,215,Kth Largest Element in an Array,61.4%,Medium,0.118898
+29,216,Combination Sum III,62.6%,Medium,0.83143
+30,238,Product of Array Except Self,62.7%,Medium,0.110525
+31,239,Sliding Window Maximum,45.7%,Hard,0.197662
+32,253,Meeting Rooms II,48.4%,Medium,0.450063
+33,295,Find Median from Data Stream,49.5%,Hard,0.311322
+34,332,Reconstruct Itinerary,39.4%,Hard,2.87243
+35,416,Partition Equal Subset Sum,45.7%,Medium,0.347634
+36,423,Reconstruct Original Digits from English,51.5%,Medium,1.46383
+37,438,Find All Anagrams in a String,46.5%,Medium,0.286164
+38,443,String Compression,46.2%,Medium,7.3528
+39,532,K-diff Pairs in an Array,36.9%,Medium,1.99582
+40,647,Palindromic Substrings,63.7%,Medium,1.45338
+41,692,Top K Frequent Words,53.9%,Medium,0.453832
+42,694,Number of Distinct Islands,59.0%,Medium,1.42373
+43,695,Max Area of Island,68.0%,Medium,0.197091
+44,697,Degree of an Array,55.2%,Easy,3.80602
+45,724,Find Pivot Index,49.2%,Easy,4.7452
+46,739,Daily Temperatures,66.1%,Medium,0.851134
+47,426,Convert Binary Search Tree to Sorted Doubly Linked List,63.3%,Medium,0.364324
+48,787,Cheapest Flights Within K Stops,36.8%,Medium,2.62323
+49,706,Design HashMap,63.8%,Easy,0.377321
+50,528,Random Pick with Weight,45.6%,Medium,1.43678
+51,973,K Closest Points to Origin,65.7%,Medium,0.173325
+52,974,Subarray Sums Divisible by K,52.4%,Medium,2.37376
+53,1008,Construct Binary Search Tree from Preorder Traversal,79.8%,Medium,0.338339
+54,1041,Robot Bounded In Circle,54.5%,Medium,0.421947
+55,1197,Minimum Knight Moves,39.1%,Medium,74.5399
+56,1507,Reformat Date,60.9%,Easy,100
+57,1283,Find the Smallest Divisor Given a Threshold,52.0%,Medium,7.0593
+58,1465,Maximum Area of a Piece of Cake After Horizontal and Vertical Cuts,36.9%,Medium,65.2115
+59,1492,The kth Factor of n,62.4%,Medium,50.6392
+60,1481,Least Number of Unique Integers after K Removals,58.6%,Medium,13.8537
+61,1487,Making File Names Unique,33.4%,Medium,25.1791

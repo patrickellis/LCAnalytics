@@ -1,0 +1,35 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,17,Letter Combinations of a Phone Number,51.9%,Medium,0.191447
+1,56,Merge Intervals,43.2%,Medium,0.453309
+2,57,Insert Interval,36.6%,Medium,0.458395
+3,78,Subsets,68.4%,Medium,0.24682
+4,79,Word Search,38.9%,Medium,1.10009
+5,133,Clone Graph,43.4%,Medium,0.31001
+6,208,Implement Trie (Prefix Tree),55.8%,Medium,2.85597
+7,211,Design Add and Search Words Data Structure,42.5%,Medium,0.694993
+8,212,Word Search II,38.4%,Hard,0.210466
+9,221,Maximal Square,41.3%,Medium,5.12923
+10,239,Sliding Window Maximum,45.7%,Hard,0.297295
+11,256,Paint House,56.7%,Medium,3.27665
+12,295,Find Median from Data Stream,49.5%,Hard,0.468246
+13,300,Longest Increasing Subsequence,47.3%,Medium,0.229314
+14,341,Flatten Nested List Iterator,57.5%,Medium,6.80819
+15,358,Rearrange String k Distance Apart,36.3%,Hard,9.06355
+16,380,Insert Delete GetRandom O(1),50.7%,Medium,2.15993
+17,453,Minimum Moves to Equal Array Elements,52.7%,Medium,48.3706
+18,532,K-diff Pairs in an Array,36.9%,Medium,5.26917
+19,547,Number of Provinces,62.2%,Medium,0.691917
+20,635,Design Log Storage System,61.4%,Medium,56.7478
+21,642,Design Search Autocomplete System,47.6%,Hard,2.30769
+22,724,Find Pivot Index,49.2%,Easy,0.604336
+23,921,Minimum Add to Make Parentheses Valid,76.9%,Medium,1.09064
+24,1200,Minimum Absolute Difference,67.6%,Easy,2.31811
+25,1248,Count Number of Nice Subarrays,57.5%,Medium,6.39223
+26,1326,Minimum Number of Taps to Open to Water a Garden,48.0%,Hard,10.7075
+27,1347,Minimum Number of Steps to Make Two Strings Anagram,75.4%,Medium,1.72436
+28,1348,Tweet Counts Per Frequency,41.6%,Medium,100
+29,1353,Maximum Number of Events That Can Be Attended,32.1%,Medium,1.24489
+30,1475,Final Prices With a Special Discount in a Shop,75.0%,Easy,2.20304
+31,1492,The kth Factor of n,62.4%,Medium,7.93944
+32,1751,Maximum Number of Events That Can Be Attended II,53.1%,Hard,7.63768
+33,1817,Finding the Users Active Minutes,79.7%,Medium,62.3369

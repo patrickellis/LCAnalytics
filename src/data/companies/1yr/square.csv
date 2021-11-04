@@ -1,0 +1,19 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,1,Two Sum,47.8%,Easy,0.486208
+1,17,Letter Combinations of a Phone Number,51.9%,Medium,1.47824
+2,43,Multiply Strings,36.2%,Medium,7.36126
+3,68,Text Justification,32.9%,Hard,5.70255
+4,72,Edit Distance,49.2%,Hard,24.8878
+5,200,Number of Islands,52.0%,Medium,1.01487
+6,273,Integer to English Words,29.0%,Hard,26.6506
+7,282,Expression Add Operators,38.7%,Hard,11.4808
+8,289,Game of Life,61.2%,Medium,34.5451
+9,353,Design Snake Game,37.3%,Medium,47.7983
+10,359,Logger Rate Limiter,74.0%,Easy,5.42082
+11,388,Longest Absolute File Path,44.7%,Medium,16.4559
+12,415,Add Strings,50.8%,Easy,5.89524
+13,529,Minesweeper,63.4%,Medium,15.9822
+14,642,Design Search Autocomplete System,47.6%,Hard,17.8186
+15,815,Bus Routes,44.6%,Hard,100
+16,1366,Rank Teams by Votes,58.2%,Medium,73.8992
+17,1861,Rotating the Box,63.5%,Medium,39.4422

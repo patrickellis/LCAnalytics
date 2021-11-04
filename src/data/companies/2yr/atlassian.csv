@@ -1,0 +1,49 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,3,Longest Substring Without Repeating Characters,32.4%,Medium,0.0779206
+1,17,Letter Combinations of a Phone Number,51.9%,Medium,5.23992
+2,20,Valid Parentheses,40.5%,Easy,2.7162
+3,22,Generate Parentheses,68.3%,Medium,0.638319
+4,23,Merge k Sorted Lists,45.0%,Hard,0.270068
+5,31,Next Permutation,34.7%,Medium,4.49082
+6,46,Permutations,69.9%,Medium,0.26493
+7,49,Group Anagrams,62.3%,Medium,0.243549
+8,78,Subsets,68.4%,Medium,0.340393
+9,98,Validate Binary Search Tree,29.7%,Medium,2.9691
+10,102,Binary Tree Level Order Traversal,59.2%,Medium,0.2232
+11,121,Best Time to Buy and Sell Stock,52.9%,Easy,0.22245
+12,122,Best Time to Buy and Sell Stock II,60.4%,Medium,0.265825
+13,123,Best Time to Buy and Sell Stock III,42.2%,Hard,0.347187
+14,146,LRU Cache,38.3%,Medium,0.288115
+15,150,Evaluate Reverse Polish Notation,40.7%,Medium,2.15495
+16,153,Find Minimum in Rotated Sorted Array,47.4%,Medium,0.274797
+17,169,Majority Element,61.4%,Easy,0.287897
+18,173,Binary Search Tree Iterator,63.3%,Medium,0.659069
+19,236,Lowest Common Ancestor of a Binary Tree,52.7%,Medium,1.7071
+20,284,Peeking Iterator,52.4%,Medium,3.87995
+21,300,Longest Increasing Subsequence,47.3%,Medium,4.96566
+22,359,Logger Rate Limiter,74.0%,Easy,18.2682
+23,362,Design Hit Counter,66.5%,Medium,33.2946
+24,366,Find Leaves of Binary Tree,75.0%,Medium,7.15539
+25,513,Find Bottom Left Tree Value,64.1%,Medium,2.62208
+26,526,Beautiful Arrangement,63.4%,Medium,1.9019
+27,540,Single Element in a Sorted Array,58.1%,Medium,1.38189
+28,547,Number of Provinces,62.2%,Medium,0.954233
+29,647,Palindromic Substrings,63.7%,Medium,0.760574
+30,692,Top K Frequent Words,53.9%,Medium,0.941369
+31,695,Max Area of Island,68.0%,Medium,0.40882
+32,706,Design HashMap,63.8%,Easy,3.10144
+33,829,Consecutive Numbers Sum,40.2%,Hard,2.7455
+34,841,Keys and Rooms,67.7%,Medium,1.44513
+35,860,Lemonade Change,52.2%,Easy,68.2065
+36,872,Leaf-Similar Trees,64.7%,Easy,2.37467
+37,911,Online Election,51.7%,Medium,11.3021
+38,934,Shortest Bridge,51.7%,Medium,5.35909
+39,981,Time Based Key-Value Store,53.4%,Medium,12.087
+40,1071,Greatest Common Divisor of Strings,51.8%,Easy,36.4129
+41,1220,Count Vowels Permutation,56.5%,Hard,10.6464
+42,1223,Dice Roll Simulation,47.5%,Hard,17.866
+43,1235,Maximum Profit in Job Scheduling,50.2%,Hard,2.56054
+44,1297,Maximum Number of Occurrences of a Substring,52.2%,Medium,17.1112
+45,1326,Minimum Number of Taps to Open to Water a Garden,48.0%,Hard,9.65111
+46,1366,Rank Teams by Votes,58.2%,Medium,100
+47,1817,Finding the Users Active Minutes,79.7%,Medium,23.2981

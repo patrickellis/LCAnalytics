@@ -1,0 +1,74 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,1,Two Sum,47.8%,Easy,0.0567395
+1,3,Longest Substring Without Repeating Characters,32.4%,Medium,0.257586
+2,5,Longest Palindromic Substring,31.4%,Medium,0.461664
+3,15,3Sum,29.8%,Medium,0.311225
+4,20,Valid Parentheses,40.5%,Easy,0.644671
+5,39,Combination Sum,62.5%,Medium,0.454277
+6,41,First Missing Positive,35.2%,Hard,0.703768
+7,49,Group Anagrams,62.3%,Medium,1.42767
+8,50,"Pow(x, n)",31.6%,Medium,0.416049
+9,56,Merge Intervals,43.2%,Medium,25.9299
+10,62,Unique Paths,58.1%,Medium,1.01623
+11,99,Recover Binary Search Tree,44.8%,Medium,1.71432
+12,103,Binary Tree Zigzag Level Order Traversal,52.1%,Medium,0.63836
+13,121,Best Time to Buy and Sell Stock,52.9%,Easy,0.145387
+14,126,Word Ladder II,25.8%,Hard,2.59716
+15,127,Word Ladder,33.7%,Hard,1.86967
+16,128,Longest Consecutive Sequence,48.0%,Medium,0.679933
+17,133,Clone Graph,43.4%,Medium,2.50069
+18,134,Gas Station,43.2%,Medium,1.45199
+19,138,Copy List with Random Pointer,44.5%,Medium,0.736858
+20,139,Word Break,43.3%,Medium,1.50741
+21,141,Linked List Cycle,44.3%,Easy,0.276745
+22,146,LRU Cache,38.3%,Medium,10.3022
+23,151,Reverse Words in a String,26.8%,Medium,0.63355
+24,165,Compare Version Numbers,31.9%,Medium,11.8828
+25,225,Implement Stack using Queues,50.4%,Easy,1.80788
+26,236,Lowest Common Ancestor of a Binary Tree,52.7%,Medium,0.907261
+27,239,Sliding Window Maximum,45.7%,Hard,0.602623
+28,243,Shortest Word Distance,63.4%,Easy,2.56788
+29,253,Meeting Rooms II,48.4%,Medium,0.611113
+30,295,Find Median from Data Stream,49.5%,Hard,3.76726
+31,314,Binary Tree Vertical Order Traversal,49.1%,Medium,2.75676
+32,341,Flatten Nested List Iterator,57.5%,Medium,8.95177
+33,347,Top K Frequent Elements,63.7%,Medium,0.449375
+34,403,Frog Jump,42.4%,Hard,4.52664
+35,410,Split Array Largest Sum,48.6%,Hard,4.16394
+36,441,Arranging Coins,43.3%,Easy,6.51516
+37,451,Sort Characters By Frequency,66.8%,Medium,0.344352
+38,459,Repeated Substring Pattern,43.4%,Easy,6.25181
+39,460,LFU Cache,38.3%,Hard,12.2371
+40,488,Zuma Game,37.6%,Hard,100
+41,496,Next Greater Element I,68.6%,Easy,0.338907
+42,556,Next Greater Element III,33.4%,Medium,3.22893
+43,582,Kill Process,65.2%,Medium,7.52172
+44,588,Design In-Memory File System,47.4%,Hard,11.4063
+45,621,Task Scheduler,53.7%,Medium,3.73009
+46,628,Maximum Product of Three Numbers,46.7%,Easy,2.07034
+47,636,Exclusive Time of Functions,57.9%,Medium,3.84197
+48,647,Palindromic Substrings,63.7%,Medium,2.50568
+49,678,Valid Parenthesis String,32.4%,Medium,25.855
+50,692,Top K Frequent Words,53.9%,Medium,3.09851
+51,696,Count Binary Substrings,62.9%,Easy,5.76364
+52,698,Partition to K Equal Sum Subsets,45.8%,Medium,1.92691
+53,733,Flood Fill,56.9%,Easy,0.66046
+54,739,Daily Temperatures,66.1%,Medium,1.15785
+55,780,Reaching Points,30.8%,Hard,10.0682
+56,706,Design HashMap,63.8%,Easy,1.15036
+57,829,Consecutive Numbers Sum,40.2%,Hard,4.03533
+58,895,Maximum Frequency Stack,64.2%,Hard,4.6928
+59,1010,Pairs of Songs With Total Durations Divisible by 60,51.9%,Medium,2.04134
+60,1197,Minimum Knight Moves,39.1%,Medium,2.87029
+61,1110,Delete Nodes And Return Forest,68.8%,Medium,1.68967
+62,1200,Minimum Absolute Difference,67.6%,Easy,4.69885
+63,1283,Find the Smallest Divisor Given a Threshold,52.0%,Medium,21.5221
+64,1326,Minimum Number of Taps to Open to Water a Garden,48.0%,Hard,3.65118
+65,1353,Maximum Number of Events That Can Be Attended,32.1%,Medium,2.52342
+66,1413,Minimum Value to Get Positive Step by Step Sum,65.8%,Easy,8.07165
+67,1419,Minimum Number of Frogs Croaking,49.3%,Medium,11.2671
+68,1443,Minimum Time to Collect All Apples in a Tree,55.3%,Medium,11.1294
+69,1465,Maximum Area of a Piece of Cake After Horizontal and Vertical Cuts,36.9%,Medium,4.39558
+70,1539,Kth Missing Positive Number,54.9%,Easy,1.87053
+71,1641,Count Sorted Vowel Strings,74.9%,Medium,4.31234
+72,1718,Construct the Lexicographically Largest Valid Sequence,50.2%,Medium,62.965

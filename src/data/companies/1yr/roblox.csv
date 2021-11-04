@@ -1,0 +1,20 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,13,Roman to Integer,57.7%,Easy,0.29718
+1,36,Valid Sudoku,53.4%,Medium,0.58652
+2,99,Recover Binary Search Tree,44.8%,Medium,2.01869
+3,162,Find Peak Element,45.0%,Medium,11.1332
+4,210,Course Schedule II,44.9%,Medium,2.76243
+5,224,Basic Calculator,39.5%,Hard,54.8199
+6,227,Basic Calculator II,40.0%,Medium,8.48165
+7,256,Paint House,56.7%,Medium,61.8504
+8,363,Max Sum of Rectangle No Larger Than K,40.1%,Hard,34.0645
+9,770,Basic Calculator IV,55.3%,Hard,100
+10,811,Subdomain Visit Count,73.1%,Medium,11.3914
+11,528,Random Pick with Weight,45.6%,Medium,2.91667
+12,881,Boats to Save People,49.6%,Medium,49.6652
+13,1289,Minimum Falling Path Sum II,62.5%,Hard,14.2364
+14,1209,Remove All Adjacent Duplicates in String II,56.2%,Medium,8.04346
+15,1465,Maximum Area of a Piece of Cake After Horizontal and Vertical Cuts,36.9%,Medium,11.4752
+16,1472,Design Browser History,73.7%,Medium,80.1719
+17,1481,Least Number of Unique Integers after K Removals,58.6%,Medium,3.4701
+18,1710,Maximum Units on a Truck,72.1%,Easy,8.89721

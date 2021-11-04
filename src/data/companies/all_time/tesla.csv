@@ -1,0 +1,37 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,2,Add Two Numbers,37.2%,Medium,0.0623296
+1,3,Longest Substring Without Repeating Characters,32.4%,Medium,0.17755
+2,5,Longest Palindromic Substring,31.4%,Medium,0.179096
+3,15,3Sum,29.8%,Medium,0.120735
+4,17,Letter Combinations of a Phone Number,51.9%,Medium,2.37107
+5,20,Valid Parentheses,40.5%,Easy,1.25708
+6,23,Merge k Sorted Lists,45.0%,Hard,0.956973
+7,37,Sudoku Solver,51.5%,Hard,0.580037
+8,38,Count and Say,47.6%,Medium,0.425575
+9,41,First Missing Positive,35.2%,Hard,4.24655
+10,42,Trapping Rain Water,54.2%,Hard,0.135546
+11,49,Group Anagrams,62.3%,Medium,0.312071
+12,53,Maximum Subarray,48.9%,Easy,0.197364
+13,54,Spiral Matrix,39.3%,Medium,0.940651
+14,62,Unique Paths,58.1%,Medium,0.175486
+15,64,Minimum Path Sum,58.1%,Medium,5.71768
+16,141,Linked List Cycle,44.3%,Easy,0.428461
+17,146,LRU Cache,38.3%,Medium,9.81233
+18,179,Largest Number,32.0%,Medium,1.6986
+19,200,Number of Islands,52.0%,Medium,3.06152
+20,214,Shortest Palindrome,31.3%,Hard,2.13059
+21,273,Integer to English Words,29.0%,Hard,0.688363
+22,283,Move Zeroes,59.6%,Easy,0.358779
+23,543,Diameter of Binary Tree,52.3%,Easy,0.872748
+24,560,Subarray Sum Equals K,43.7%,Medium,0.321228
+25,572,Subtree of Another Tree,44.9%,Easy,0.736824
+26,588,Design In-Memory File System,47.4%,Hard,4.42491
+27,767,Reorganize String,51.2%,Medium,2.74776
+28,976,Largest Perimeter Triangle,59.8%,Easy,2.91193
+29,1189,Maximum Number of Balloons,62.5%,Easy,100
+30,1239,Maximum Length of a Concatenated String with Unique Characters,50.6%,Medium,77.1247
+31,1304,Find N Unique Integers Sum up to Zero,76.6%,Easy,19.3732
+32,1578,Minimum Deletion Cost to Avoid Repeating Letters,61.3%,Medium,48.2489
+33,1647,Minimum Deletions to Make Character Frequencies Unique,55.9%,Medium,1.97129
+34,1729,Find Followers Count,71.0%,Easy,0
+35,1758,Minimum Changes To Make Alternating Binary String,58.8%,Easy,16.2023

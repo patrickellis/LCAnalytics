@@ -1,0 +1,25 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,10,Regular Expression Matching,28.0%,Hard,0.220869
+1,17,Letter Combinations of a Phone Number,51.9%,Medium,0.603234
+2,23,Merge k Sorted Lists,45.0%,Hard,6.66794
+3,41,First Missing Positive,35.2%,Hard,37.031
+4,42,Trapping Rain Water,54.2%,Hard,5.91817
+5,48,Rotate Image,64.0%,Medium,0.430727
+6,68,Text Justification,32.9%,Hard,4.38724
+7,91,Decode Ways,28.9%,Medium,17.2099
+8,239,Sliding Window Maximum,45.7%,Hard,7.78687
+9,314,Binary Tree Vertical Order Traversal,49.1%,Medium,19.9361
+10,362,Design Hit Counter,66.5%,Medium,3.38145
+11,380,Insert Delete GetRandom O(1),50.7%,Medium,16.8278
+12,722,Remove Comments,37.0%,Medium,65.0901
+13,742,Closest Leaf in a Binary Tree,44.8%,Medium,100
+14,426,Convert Binary Search Tree to Sorted Doubly Linked List,63.3%,Medium,1.10116
+15,945,Minimum Increment to Make Array Unique,48.0%,Medium,6.71288
+16,981,Time Based Key-Value Store,53.4%,Medium,0.849242
+17,987,Vertical Order Traversal of a Binary Tree,39.8%,Hard,2.15214
+18,1146,Snapshot Array,37.1%,Medium,0.589468
+19,1329,Sort the Matrix Diagonally,81.5%,Medium,9.58318
+20,1206,Design Skiplist,59.9%,Hard,7.77459
+21,1235,Maximum Profit in Job Scheduling,50.2%,Hard,3.65367
+22,1242,Web Crawler Multithreaded,48.1%,Medium,71.9409
+23,1861,Rotating the Box,63.5%,Medium,2.58963

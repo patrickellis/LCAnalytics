@@ -1,38 +1,2000 @@
 .App {
   text-align: center;
+  background:#6b6889;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body,html{
+  background:#6b6889;  
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  font-family: 'Roboto',sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-size: 8px;
+  --nav-main-bg-color: #140e30;
+  --nav-hover-bg-color: #271c37;
+  --nav-border-color: #251e47;
+  --purple: #aaabca;
+  --dark-purple: #6b6889;
+  --deep-purple: #382f66;
+  --blue: #38c6f4;
+  --bluey-grey: #8890b5;
+  --white: #ffffff;
+  --success: #00b972;
+  --greeny: #4cb748;
+  --greeny-blue: #3cbdc2;
+  --gold: #bd9e59;
+  --dark-gold: #bd9e59;
+  --tier-platinum: #2a947b;
+  --strong-cyan: #18bd9b;
+  --tier-gold: #f9b439;
+  --pink: #c848c3;
+  --darkish-pink: #e54787;
+  --red: #ff2576;
+  --twilight: #565697;
+  --dark-blue-grey: #1a133d;
+  --pumpkin-orange: #fc7c00;
+  --lavender-grey: #b3b4d0;
+  --yellow: #ffc306;
+  --light-yellow: #f5d075;
+  --dark-violet: #252146;
+  --grayly-blue: #565895;
+  --marine: #211d41;
+  --haiti: #161236;
+  --martinique: #2e2a4f;
+  --kinky-shark: #392b68;
+  --satiric-shark: #312955;
+  --arid-shark: #3b2d6a;
+  --tired-licorice: #2c274f;
+  --restrictive-jet: #1d1546;
+  --actual-jet: #151136;
+  --sober-earth: #bd9e59;
+  --chosen: #ad4cce;
+  --twitch: #6441a5;
+  --twitter: #1da1f2;
+  --youtube: #b14235;
+  --reddit: #ff5700;
+  --facebook: #0773f6;
+  --black-russian: #11172c;
+  --black: #000;
+  --metrics-good: #1dc49b;
+  --metrics-bad: #e54787;
+  --metrics-average: #ffffff;
+  --background-main: #151136;
+  --background-modal-default: #25204a;
+  --widget-main: #2c274f;
+  --widget-secondary: #252046;
+  --widget-borders: #382f66;
+  --borders: #382f66;
+  --labels: #6b6889;
+  --regular: #b3b4d0;
+  --warning: #ffb257;
+  --primary: #f2bf43;
+  --match-draw: #8890b5;
+  --match-loss: #e54787;
+  --match-win: #18bd9b;
+  --plus: #fc7c00;
+  --desktop-window-bar-height: 0px;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background: #1b123d;
+  box-sizing: border-box;
+  outline: none!important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.frequency-bar{  
+  height:5px;
+  background-color: orange;
+}
+.pieChartContainer{
+  height:300px;
+  width:100%;
+}
+text{
+  fill: white;
+}
+tspan{
+  font-size:12px;
+}
+.selectContainer{
+  position:relative;
+  left:60px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* UserDashboard */
+.upperleft{
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  font-family: 'Roboto',sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-size: 10px;
+  --nav-main-bg-color: #140e30;
+  --nav-hover-bg-color: #271c37;
+  --nav-border-color: #251e47;
+  --purple: #aaabca;
+  --dark-purple: #6b6889;
+  --deep-purple: #382f66;
+  --blue: #38c6f4;
+  --bluey-grey: #8890b5;
+  --white: #ffffff;
+  --success: #00b972;
+  --greeny: #4cb748;
+  --greeny-blue: #3cbdc2;
+  --gold: #bd9e59;
+  --dark-gold: #bd9e59;
+  --tier-platinum: #2a947b;
+  --strong-cyan: #18bd9b;
+  --tier-gold: #f9b439;
+  --pink: #c848c3;
+  --darkish-pink: #e54787;
+  --red: #ff2576;
+  --twilight: #565697;
+  --dark-blue-grey: #1a133d;
+  --pumpkin-orange: #fc7c00;
+  --lavender-grey: #b3b4d0;
+  --yellow: #ffc306;
+  --light-yellow: #f5d075;
+  --dark-violet: #252146;
+  --grayly-blue: #565895;
+  --marine: #211d41;
+  --haiti: #161236;
+  --martinique: #2e2a4f;
+  --kinky-shark: #392b68;
+  --satiric-shark: #312955;
+  --arid-shark: #3b2d6a;
+  --tired-licorice: #2c274f;
+  --restrictive-jet: #1d1546;
+  --actual-jet: #151136;
+  --sober-earth: #bd9e59;
+  --chosen: #ad4cce;
+  --twitch: #6441a5;
+  --twitter: #1da1f2;
+  --youtube: #b14235;
+  --reddit: #ff5700;
+  --facebook: #0773f6;
+  --black-russian: #11172c;
+  --black: #000;
+  --metrics-good: #1dc49b;
+  --metrics-bad: #e54787;
+  --metrics-average: #ffffff;
+  --background-main: #151136;
+  --background-modal-default: #25204a;
+  --widget-main: #2c274f;
+  --widget-secondary: #252046;
+  --widget-borders: #382f66;
+  --borders: #382f66;
+  --labels: #6b6889;
+  --regular: #b3b4d0;
+  --warning: #ffb257;
+  --primary: #f2bf43;
+  --match-draw: #8890b5;
+  --match-loss: #e54787;
+  --match-win: #18bd9b;
+  --plus: #fc7c00;
+  --desktop-window-bar-height: 0px;
+  --app-expanded-sidebar-width: 200px;
+  --app-collapsed-sidebar-width: 64px;
+  --app-sidebar-item-height: 52px;
+  --app-content-min-width: calc(100% - var(--content-left));
+  --app-top-banner-height: 4.8rem;
+  --app-top-bar-height: 52px;
+  --app-to-top-bar-height: calc(var(--desktop-window-bar-height) + var(--app-top-banner-height));
+  --app-content-min-height: calc(100vh - var(--app-overall-header-height));
+  --app-lol-lc-status-bar-height: 0rem;
+  --app-overall-header-height: calc( var(--desktop-window-bar-height) + var(--app-top-banner-height) + var(--app-top-bar-height) + var(--app-lol-lc-status-bar-height) );
+  --content-left: var(--app-expanded-sidebar-width);
+  --sidebar-width: var(--app-expanded-sidebar-width);
+  --expanded-elements-display: flex;
+  --collased-logo-display: none;
+  --expanded-logo-display: flex;
+  --collapse-expand-icon-rotate: -180deg;
+  --ads-top-offset: calc(var(--app-overall-header-height) + 1.2rem);
+  box-sizing: border-box;
+  outline: none!important;
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  flex: 1 1 300px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+.uppersection{
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  font-family: 'Roboto',sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-size: 10px;
+  --nav-main-bg-color: #140e30;
+  --nav-hover-bg-color: #271c37;
+  --nav-border-color: #251e47;
+  --purple: #aaabca;
+  --dark-purple: #6b6889;
+  --deep-purple: #382f66;
+  --blue: #38c6f4;
+  --bluey-grey: #8890b5;
+  --white: #ffffff;
+  --success: #00b972;
+  --greeny: #4cb748;
+  --greeny-blue: #3cbdc2;
+  --gold: #bd9e59;
+  --dark-gold: #bd9e59;
+  --tier-platinum: #2a947b;
+  --strong-cyan: #18bd9b;
+  --tier-gold: #f9b439;
+  --pink: #c848c3;
+  --darkish-pink: #e54787;
+  --red: #ff2576;
+  --twilight: #565697;
+  --dark-blue-grey: #1a133d;
+  --pumpkin-orange: #fc7c00;
+  --lavender-grey: #b3b4d0;
+  --yellow: #ffc306;
+  --light-yellow: #f5d075;
+  --dark-violet: #252146;
+  --grayly-blue: #565895;
+  --marine: #211d41;
+  --haiti: #161236;
+  --martinique: #2e2a4f;
+  --kinky-shark: #392b68;
+  --satiric-shark: #312955;
+  --arid-shark: #3b2d6a;
+  --tired-licorice: #2c274f;
+  --restrictive-jet: #1d1546;
+  --actual-jet: #151136;
+  --sober-earth: #bd9e59;
+  --chosen: #ad4cce;
+  --twitch: #6441a5;
+  --twitter: #1da1f2;
+  --youtube: #b14235;
+  --reddit: #ff5700;
+  --facebook: #0773f6;
+  --black-russian: #11172c;
+  --black: #000;
+  --metrics-good: #1dc49b;
+  --metrics-bad: #e54787;
+  --metrics-average: #ffffff;
+  --background-main: #151136;
+  --background-modal-default: #25204a;
+  --widget-main: #2c274f;
+  --widget-secondary: #252046;
+  --widget-borders: #382f66;
+  --borders: #382f66;
+  --labels: #6b6889;
+  --regular: #b3b4d0;
+  --warning: #ffb257;
+  --primary: #f2bf43;
+  --match-draw: #8890b5;
+  --match-loss: #e54787;
+  --match-win: #18bd9b;
+  --plus: #fc7c00;
+  --desktop-window-bar-height: 0px;
+  --app-expanded-sidebar-width: 200px;
+  --app-collapsed-sidebar-width: 64px;
+  --app-sidebar-item-height: 52px;
+  --app-content-min-width: calc(100% - var(--content-left));
+  --app-top-banner-height: 4.8rem;
+  --app-top-bar-height: 52px;
+  --app-to-top-bar-height: calc(var(--desktop-window-bar-height) + var(--app-top-banner-height));
+  --app-content-min-height: calc(100vh - var(--app-overall-header-height));
+  --app-lol-lc-status-bar-height: 0rem;
+  --app-overall-header-height: calc( var(--desktop-window-bar-height) + var(--app-top-banner-height) + var(--app-top-bar-height) + var(--app-lol-lc-status-bar-height) );
+  --content-left: var(--app-expanded-sidebar-width);
+  --sidebar-width: var(--app-expanded-sidebar-width);
+  --expanded-elements-display: flex;
+  --collased-logo-display: none;
+  --expanded-logo-display: flex;
+  --collapse-expand-icon-rotate: -180deg;
+  --ads-top-offset: calc(var(--app-overall-header-height) + 1.2rem);
+  box-sizing: border-box;
+  outline: none!important;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.userdash{
+  width:100% !important;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  font-family: 'Roboto',sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-size: 10px;
+  --nav-main-bg-color: #140e30;
+  --nav-hover-bg-color: #271c37;
+  --nav-border-color: #251e47;
+  --purple: #aaabca;
+  --dark-purple: #6b6889;
+  --deep-purple: #382f66;
+  --blue: #38c6f4;
+  --bluey-grey: #8890b5;
+  --white: #ffffff;
+  --success: #00b972;
+  --greeny: #4cb748;
+  --greeny-blue: #3cbdc2;
+  --gold: #bd9e59;
+  --dark-gold: #bd9e59;
+  --tier-platinum: #2a947b;
+  --strong-cyan: #18bd9b;
+  --tier-gold: #f9b439;
+  --pink: #c848c3;
+  --darkish-pink: #e54787;
+  --red: #ff2576;
+  --twilight: #565697;
+  --dark-blue-grey: #1a133d;
+  --pumpkin-orange: #fc7c00;
+  --lavender-grey: #b3b4d0;
+  --yellow: #ffc306;
+  --light-yellow: #f5d075;
+  --dark-violet: #252146;
+  --grayly-blue: #565895;
+  --marine: #211d41;
+  --haiti: #161236;
+  --martinique: #2e2a4f;
+  --kinky-shark: #392b68;
+  --satiric-shark: #312955;
+  --arid-shark: #3b2d6a;
+  --tired-licorice: #2c274f;
+  --restrictive-jet: #1d1546;
+  --actual-jet: #151136;
+  --sober-earth: #bd9e59;
+  --chosen: #ad4cce;
+  --twitch: #6441a5;
+  --twitter: #1da1f2;
+  --youtube: #b14235;
+  --reddit: #ff5700;
+  --facebook: #0773f6;
+  --black-russian: #11172c;
+  --black: #000;
+  --metrics-good: #1dc49b;
+  --metrics-bad: #e54787;
+  --metrics-average: #ffffff;
+  --background-main: #151136;
+  --background-modal-default: #25204a;
+  --widget-main: #2c274f;
+  --widget-secondary: #252046;
+  --widget-borders: #382f66;
+  --borders: #382f66;
+  --labels: #6b6889;
+  --regular: #b3b4d0;
+  --warning: #ffb257;
+  --primary: #f2bf43;
+  --match-draw: #8890b5;
+  --match-loss: #e54787;
+  --match-win: #18bd9b;
+  --plus: #fc7c00;
+  --desktop-window-bar-height: 0px;
+  --app-expanded-sidebar-width: 200px;
+  --app-collapsed-sidebar-width: 64px;
+  --app-sidebar-item-height: 52px;
+  --app-content-min-width: calc(100% - var(--content-left));
+  --app-top-banner-height: 4.8rem;
+  --app-top-bar-height: 52px;
+  --app-to-top-bar-height: calc(var(--desktop-window-bar-height) + var(--app-top-banner-height));
+  --app-content-min-height: calc(100vh - var(--app-overall-header-height));
+  --app-lol-lc-status-bar-height: 0rem;
+  --app-overall-header-height: calc( var(--desktop-window-bar-height) + var(--app-top-banner-height) + var(--app-top-bar-height) + var(--app-lol-lc-status-bar-height) );
+  --content-left: var(--app-expanded-sidebar-width);
+  --sidebar-width: var(--app-expanded-sidebar-width);
+  --expanded-elements-display: flex;
+  --collased-logo-display: none;
+  --expanded-logo-display: flex;
+  --collapse-expand-icon-rotate: -180deg;
+  --ads-top-offset: calc(var(--app-overall-header-height) + 1.2rem);
+  box-sizing: border-box;
+  outline: none!important;
   display: flex;
   flex-direction: column;
+  border-radius: 0.6rem;
+  box-shadow: rgba(21, 11, 37, 0.5) 0px 2px 10px 0px;
+  background-color: var(--widget-main);
+  border: 1px solid var(--deep-purple);
+  
+  width: 100%;
+  min-width: 0px;
+  position: relative;
+}
+.upperight{
+
+}
+.upperightcontent{
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  font-family: 'Roboto',sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-size: 10px;
+  --nav-main-bg-color: #140e30;
+  --nav-hover-bg-color: #271c37;
+  --nav-border-color: #251e47;
+  --purple: #aaabca;
+  --dark-purple: #6b6889;
+  --deep-purple: #382f66;
+  --blue: #38c6f4;
+  --bluey-grey: #8890b5;
+  --white: #ffffff;
+  --success: #00b972;
+  --greeny: #4cb748;
+  --greeny-blue: #3cbdc2;
+  --gold: #bd9e59;
+  --dark-gold: #bd9e59;
+  --tier-platinum: #2a947b;
+  --strong-cyan: #18bd9b;
+  --tier-gold: #f9b439;
+  --pink: #c848c3;
+  --darkish-pink: #e54787;
+  --red: #ff2576;
+  --twilight: #565697;
+  --dark-blue-grey: #1a133d;
+  --pumpkin-orange: #fc7c00;
+  --lavender-grey: #b3b4d0;
+  --yellow: #ffc306;
+  --light-yellow: #f5d075;
+  --dark-violet: #252146;
+  --grayly-blue: #565895;
+  --marine: #211d41;
+  --haiti: #161236;
+  --martinique: #2e2a4f;
+  --kinky-shark: #392b68;
+  --satiric-shark: #312955;
+  --arid-shark: #3b2d6a;
+  --tired-licorice: #2c274f;
+  --restrictive-jet: #1d1546;
+  --actual-jet: #151136;
+  --sober-earth: #bd9e59;
+  --chosen: #ad4cce;
+  --twitch: #6441a5;
+  --twitter: #1da1f2;
+  --youtube: #b14235;
+  --reddit: #ff5700;
+  --facebook: #0773f6;
+  --black-russian: #11172c;
+  --black: #000;
+  --metrics-good: #1dc49b;
+  --metrics-bad: #e54787;
+  --metrics-average: #ffffff;
+  --background-main: #151136;
+  --background-modal-default: #25204a;
+  --widget-main: #2c274f;
+  --widget-secondary: #252046;
+  --widget-borders: #382f66;
+  --borders: #382f66;
+  --labels: #6b6889;
+  --regular: #b3b4d0;
+  --warning: #ffb257;
+  --primary: #f2bf43;
+  --match-draw: #8890b5;
+  --match-loss: #e54787;
+  --match-win: #18bd9b;
+  --plus: #fc7c00;
+  --desktop-window-bar-height: 0px;
+  --app-expanded-sidebar-width: 200px;
+  --app-collapsed-sidebar-width: 64px;
+  --app-sidebar-item-height: 52px;
+  --app-content-min-width: calc(100% - var(--content-left));
+  --app-top-banner-height: 4.8rem;
+  --app-top-bar-height: 52px;
+  --app-to-top-bar-height: calc(var(--desktop-window-bar-height) + var(--app-top-banner-height));
+  --app-content-min-height: calc(100vh - var(--app-overall-header-height));
+  --app-lol-lc-status-bar-height: 0rem;
+  --app-overall-header-height: calc( var(--desktop-window-bar-height) + var(--app-top-banner-height) + var(--app-top-bar-height) + var(--app-lol-lc-status-bar-height) );
+  --content-left: var(--app-expanded-sidebar-width);
+  --sidebar-width: var(--app-expanded-sidebar-width);
+  --expanded-elements-display: flex;
+  --collased-logo-display: none;
+  --expanded-logo-display: flex;
+  --collapse-expand-icon-rotate: -180deg;
+  --ads-top-offset: calc(var(--app-overall-header-height) + 1.2rem);
+  box-sizing: border-box;
+  outline: none!important;
+}
+.recharts-layer.recharts-pie{
+  margin-left:30px !important;
+}
+.upperleftcontent{
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  font-family: 'Roboto',sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-size: 10px;
+  --nav-main-bg-color: #140e30;
+  --nav-hover-bg-color: #271c37;
+  --nav-border-color: #251e47;
+  --purple: #aaabca;
+  --dark-purple: #6b6889;
+  --deep-purple: #382f66;
+  --blue: #38c6f4;
+  --bluey-grey: #8890b5;
+  --white: #ffffff;
+  --success: #00b972;
+  --greeny: #4cb748;
+  --greeny-blue: #3cbdc2;
+  --gold: #bd9e59;
+  --dark-gold: #bd9e59;
+  --tier-platinum: #2a947b;
+  --strong-cyan: #18bd9b;
+  --tier-gold: #f9b439;
+  --pink: #c848c3;
+  --darkish-pink: #e54787;
+  --red: #ff2576;
+  --twilight: #565697;
+  --dark-blue-grey: #1a133d;
+  --pumpkin-orange: #fc7c00;
+  --lavender-grey: #b3b4d0;
+  --yellow: #ffc306;
+  --light-yellow: #f5d075;
+  --dark-violet: #252146;
+  --grayly-blue: #565895;
+  --marine: #211d41;
+  --haiti: #161236;
+  --martinique: #2e2a4f;
+  --kinky-shark: #392b68;
+  --satiric-shark: #312955;
+  --arid-shark: #3b2d6a;
+  --tired-licorice: #2c274f;
+  --restrictive-jet: #1d1546;
+  --actual-jet: #151136;
+  --sober-earth: #bd9e59;
+  --chosen: #ad4cce;
+  --twitch: #6441a5;
+  --twitter: #1da1f2;
+  --youtube: #b14235;
+  --reddit: #ff5700;
+  --facebook: #0773f6;
+  --black-russian: #11172c;
+  --black: #000;
+  --metrics-good: #1dc49b;
+  --metrics-bad: #e54787;
+  --metrics-average: #ffffff;
+  --background-main: #151136;
+  --background-modal-default: #25204a;
+  --widget-main: #2c274f;
+  --widget-secondary: #252046;
+  --widget-borders: #382f66;
+  --borders: #382f66;
+  --labels: #6b6889;
+  --regular: #b3b4d0;
+  --warning: #ffb257;
+  --primary: #f2bf43;
+  --match-draw: #8890b5;
+  --match-loss: #e54787;
+  --match-win: #18bd9b;
+  --plus: #fc7c00;
+  --desktop-window-bar-height: 0px;
+  --app-expanded-sidebar-width: 200px;
+  --app-collapsed-sidebar-width: 64px;
+  --app-sidebar-item-height: 52px;
+  --app-content-min-width: calc(100% - var(--content-left));
+  --app-top-banner-height: 4.8rem;
+  --app-top-bar-height: 52px;
+  --app-to-top-bar-height: calc(var(--desktop-window-bar-height) + var(--app-top-banner-height));
+  --app-content-min-height: calc(100vh - var(--app-overall-header-height));
+  --app-lol-lc-status-bar-height: 0rem;
+  --app-overall-header-height: calc( var(--desktop-window-bar-height) + var(--app-top-banner-height) + var(--app-top-bar-height) + var(--app-lol-lc-status-bar-height) );
+  --content-left: var(--app-expanded-sidebar-width);
+  --sidebar-width: var(--app-expanded-sidebar-width);
+  --expanded-elements-display: flex;
+  --collased-logo-display: none;
+  --expanded-logo-display: flex;
+  --collapse-expand-icon-rotate: -180deg;
+  --ads-top-offset: calc(var(--app-overall-header-height) + 1.2rem);
+  box-sizing: border-box;
+  outline: none!important;
+  padding: 1.2rem;
+  margin: auto;
+}
+.question-list{
+  color:white;
+}
+.m-1rp16vj {
+  -webkit-text-size-adjust: 100%;
+  font-family: 'Roboto',sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+  --nav-main-bg-color: #140e30;
+  --nav-hover-bg-color: #271c37;
+  --nav-border-color: #251e47;
+  --purple: #aaabca;
+  --dark-purple: #6b6889;
+  --deep-purple: #382f66;
+  --blue: #38c6f4;
+  --bluey-grey: #8890b5;
+  --white: #ffffff;
+  --success: #00b972;
+  --greeny: #4cb748;
+  --greeny-blue: #3cbdc2;
+  --gold: #bd9e59;
+  --dark-gold: #bd9e59;
+  --tier-platinum: #2a947b;
+  --strong-cyan: #18bd9b;
+  --tier-gold: #f9b439;
+  --pink: #c848c3;
+  --darkish-pink: #e54787;
+  --red: #ff2576;
+  --twilight: #565697;
+  --dark-blue-grey: #1a133d;
+  --pumpkin-orange: #fc7c00;
+  --lavender-grey: #b3b4d0;
+  --yellow: #ffc306;
+  --light-yellow: #f5d075;
+  --dark-violet: #252146;
+  --grayly-blue: #565895;
+  --marine: #211d41;
+  --haiti: #161236;
+  --martinique: #2e2a4f;
+  --kinky-shark: #392b68;
+  --satiric-shark: #312955;
+  --arid-shark: #3b2d6a;
+  --tired-licorice: #2c274f;
+  --restrictive-jet: #1d1546;
+  --actual-jet: #151136;
+  --sober-earth: #bd9e59;
+  --chosen: #ad4cce;
+  --twitch: #6441a5;
+  --twitter: #1da1f2;
+  --youtube: #b14235;
+  --reddit: #ff5700;
+  --facebook: #0773f6;
+  --black-russian: #11172c;
+  --black: #000;
+  --metrics-good: #1dc49b;
+  --metrics-bad: #e54787;
+  --metrics-average: #ffffff;
+  --background-main: #151136;
+  --background-modal-default: #25204a;
+  --widget-main: #2c274f;
+  --widget-secondary: #252046;
+  --widget-borders: #382f66;
+  --borders: #382f66;
+  --labels: #6b6889;
+  --regular: #b3b4d0;
+  --warning: #ffb257;
+  --primary: #f2bf43;
+  --match-draw: #8890b5;
+  --match-loss: #e54787;
+  --match-win: #18bd9b;
+  --plus: #fc7c00;
+  --desktop-window-bar-height: 0px;
+  --app-expanded-sidebar-width: 200px;
+  --app-collapsed-sidebar-width: 64px;
+  --app-sidebar-item-height: 52px;
+  --app-content-min-width: calc(100% - var(--content-left));
+  --app-top-banner-height: 4.8rem;
+  --app-top-bar-height: 52px;
+  --app-to-top-bar-height: calc(var(--desktop-window-bar-height) + var(--app-top-banner-height));
+  --app-content-min-height: calc(100vh - var(--app-overall-header-height));
+  --app-lol-lc-status-bar-height: 0rem;
+  --app-overall-header-height: calc( var(--desktop-window-bar-height) + var(--app-top-banner-height) + var(--app-top-bar-height) + var(--app-lol-lc-status-bar-height) );
+  --content-left: var(--app-expanded-sidebar-width);
+  --sidebar-width: var(--app-expanded-sidebar-width);
+  --expanded-elements-display: flex;
+  --collased-logo-display: none;
+  --expanded-logo-display: flex;
+  --collapse-expand-icon-rotate: -180deg;
+  --ads-top-offset: calc(var(--app-overall-header-height) + 1.2rem);
+  box-sizing: border-box;
+  outline: none!important;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  text-transform: uppercase;
+  position: relative;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
   align-items: center;
+  padding: 0.6rem 1.2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  color: var(--white);
+  min-height: 3.4rem;
+}
+.m-yeouz0{
+  -webkit-text-size-adjust: 100%;
+  font-family: 'Roboto',sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+  --nav-main-bg-color: #140e30;
+  --nav-hover-bg-color: #271c37;
+  --nav-border-color: #251e47;
+  --purple: #aaabca;
+  --dark-purple: #6b6889;
+  --deep-purple: #382f66;
+  --blue: #38c6f4;
+  --bluey-grey: #8890b5;
+  --white: #ffffff;
+  --success: #00b972;
+  --greeny: #4cb748;
+  --greeny-blue: #3cbdc2;
+  --gold: #bd9e59;
+  --dark-gold: #bd9e59;
+  --tier-platinum: #2a947b;
+  --strong-cyan: #18bd9b;
+  --tier-gold: #f9b439;
+  --pink: #c848c3;
+  --darkish-pink: #e54787;
+  --red: #ff2576;
+  --twilight: #565697;
+  --dark-blue-grey: #1a133d;
+  --pumpkin-orange: #fc7c00;
+  --lavender-grey: #b3b4d0;
+  --yellow: #ffc306;
+  --light-yellow: #f5d075;
+  --dark-violet: #252146;
+  --grayly-blue: #565895;
+  --marine: #211d41;
+  --haiti: #161236;
+  --martinique: #2e2a4f;
+  --kinky-shark: #392b68;
+  --satiric-shark: #312955;
+  --arid-shark: #3b2d6a;
+  --tired-licorice: #2c274f;
+  --restrictive-jet: #1d1546;
+  --actual-jet: #151136;
+  --sober-earth: #bd9e59;
+  --chosen: #ad4cce;
+  --twitch: #6441a5;
+  --twitter: #1da1f2;
+  --youtube: #b14235;
+  --reddit: #ff5700;
+  --facebook: #0773f6;
+  --black-russian: #11172c;
+  --black: #000;
+  --metrics-good: #1dc49b;
+  --metrics-bad: #e54787;
+  --metrics-average: #ffffff;
+  --background-main: #151136;
+  --background-modal-default: #25204a;
+  --widget-main: #2c274f;
+  --widget-secondary: #252046;
+  --widget-borders: #382f66;
+  --borders: #382f66;
+  --labels: #6b6889;
+  --regular: #b3b4d0;
+  --warning: #ffb257;
+  --primary: #f2bf43;
+  --match-draw: #8890b5;
+  --match-loss: #e54787;
+  --match-win: #18bd9b;
+  --plus: #fc7c00;
+  --desktop-window-bar-height: 0px;
+  --app-expanded-sidebar-width: 200px;
+  --app-collapsed-sidebar-width: 64px;
+  --app-sidebar-item-height: 52px;
+  --app-content-min-width: calc(100% - var(--content-left));
+  --app-top-banner-height: 4.8rem;
+  --app-top-bar-height: 52px;
+  --app-to-top-bar-height: calc(var(--desktop-window-bar-height) + var(--app-top-banner-height));
+  --app-content-min-height: calc(100vh - var(--app-overall-header-height));
+  --app-lol-lc-status-bar-height: 0rem;
+  --app-overall-header-height: calc( var(--desktop-window-bar-height) + var(--app-top-banner-height) + var(--app-top-bar-height) + var(--app-lol-lc-status-bar-height) );
+  --content-left: var(--app-expanded-sidebar-width);
+  --sidebar-width: var(--app-expanded-sidebar-width);
+  --expanded-elements-display: flex;
+  --collased-logo-display: none;
+  --expanded-logo-display: flex;
+  --collapse-expand-icon-rotate: -180deg;
+  --ads-top-offset: calc(var(--app-overall-header-height) + 1.2rem);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  text-transform: uppercase;
+  color: var(--white);
+  box-sizing: border-box;
+  outline: none!important;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+.m-igyvwi{
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: subpixel-antialiased;
+  --nav-main-bg-color: #140e30;
+  --nav-hover-bg-color: #271c37;
+  --nav-border-color: #251e47;
+  --purple: #aaabca;
+  --dark-purple: #6b6889;
+  --deep-purple: #382f66;
+  --blue: #38c6f4;
+  --bluey-grey: #8890b5;
+  --white: #ffffff;
+  --success: #00b972;
+  --greeny: #4cb748;
+  --greeny-blue: #3cbdc2;
+  --gold: #bd9e59;
+  --dark-gold: #bd9e59;
+  --tier-platinum: #2a947b;
+  --strong-cyan: #18bd9b;
+  --tier-gold: #f9b439;
+  --pink: #c848c3;
+  --darkish-pink: #e54787;
+  --red: #ff2576;
+  --twilight: #565697;
+  --dark-blue-grey: #1a133d;
+  --pumpkin-orange: #fc7c00;
+  --lavender-grey: #b3b4d0;
+  --yellow: #ffc306;
+  --light-yellow: #f5d075;
+  --dark-violet: #252146;
+  --grayly-blue: #565895;
+  --marine: #211d41;
+  --haiti: #161236;
+  --martinique: #2e2a4f;
+  --kinky-shark: #392b68;
+  --satiric-shark: #312955;
+  --arid-shark: #3b2d6a;
+  --tired-licorice: #2c274f;
+  --restrictive-jet: #1d1546;
+  --actual-jet: #151136;
+  --sober-earth: #bd9e59;
+  --chosen: #ad4cce;
+  --twitch: #6441a5;
+  --twitter: #1da1f2;
+  --youtube: #b14235;
+  --reddit: #ff5700;
+  --facebook: #0773f6;
+  --black-russian: #11172c;
+  --black: #000;
+  --metrics-good: #1dc49b;
+  --metrics-bad: #e54787;
+  --metrics-average: #ffffff;
+  --background-main: #151136;
+  --background-modal-default: #25204a;
+  --widget-main: #2c274f;
+  --widget-secondary: #252046;
+  --widget-borders: #382f66;
+  --borders: #382f66;
+  --labels: #6b6889;
+  --regular: #b3b4d0;
+  --warning: #ffb257;
+  --primary: #f2bf43;
+  --match-draw: #8890b5;
+  --match-loss: #e54787;
+  --match-win: #18bd9b;
+  --plus: #fc7c00;
+  --desktop-window-bar-height: 0px;
+  --app-expanded-sidebar-width: 200px;
+  --app-collapsed-sidebar-width: 64px;
+  --app-sidebar-item-height: 52px;
+  --app-content-min-width: calc(100% - var(--content-left));
+  --app-top-banner-height: 4.8rem;
+  --app-top-bar-height: 52px;
+  --app-to-top-bar-height: calc(var(--desktop-window-bar-height) + var(--app-top-banner-height));
+  --app-content-min-height: calc(100vh - var(--app-overall-header-height));
+  --app-lol-lc-status-bar-height: 0rem;
+  --app-overall-header-height: calc( var(--desktop-window-bar-height) + var(--app-top-banner-height) + var(--app-top-bar-height) + var(--app-lol-lc-status-bar-height) );
+  --content-left: var(--app-expanded-sidebar-width);
+  --sidebar-width: var(--app-expanded-sidebar-width);
+  --expanded-elements-display: flex;
+  --collased-logo-display: none;
+  --expanded-logo-display: flex;
+  --collapse-expand-icon-rotate: -180deg;
+  --ads-top-offset: calc(var(--app-overall-header-height) + 1.2rem);
+  font-family: inherit;
+  margin: 0;
+  text-transform: none;
+  -webkit-appearance: button;
+  box-sizing: border-box;
+  outline: none!important;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0px;
+  font-style: normal;
+  transition: background-color 0.2s ease-in 0s, opacity 0.2s ease-in 0s, color 0.2s ease-in 0s;
+  flex: 0 0 auto;
+  position: relative;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  color: rgb(204, 173, 112);
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  justify-content: flex-end;
+}
+.pieHeader{
+  -webkit-text-size-adjust: 100%;
+  font-family: 'Roboto',sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+  --nav-main-bg-color: #140e30;
+  --nav-hover-bg-color: #271c37;
+  --nav-border-color: #251e47;
+  --purple: #aaabca;
+  --dark-purple: #6b6889;
+  --deep-purple: #382f66;
+  --blue: #38c6f4;
+  --bluey-grey: #8890b5;
+  --white: #ffffff;
+  --success: #00b972;
+  --greeny: #4cb748;
+  --greeny-blue: #3cbdc2;
+  --gold: #bd9e59;
+  --dark-gold: #bd9e59;
+  --tier-platinum: #2a947b;
+  --strong-cyan: #18bd9b;
+  --tier-gold: #f9b439;
+  --pink: #c848c3;
+  --darkish-pink: #e54787;
+  --red: #ff2576;
+  --twilight: #565697;
+  --dark-blue-grey: #1a133d;
+  --pumpkin-orange: #fc7c00;
+  --lavender-grey: #b3b4d0;
+  --yellow: #ffc306;
+  --light-yellow: #f5d075;
+  --dark-violet: #252146;
+  --grayly-blue: #565895;
+  --marine: #211d41;
+  --haiti: #161236;
+  --martinique: #2e2a4f;
+  --kinky-shark: #392b68;
+  --satiric-shark: #312955;
+  --arid-shark: #3b2d6a;
+  --tired-licorice: #2c274f;
+  --restrictive-jet: #1d1546;
+  --actual-jet: #151136;
+  --sober-earth: #bd9e59;
+  --chosen: #ad4cce;
+  --twitch: #6441a5;
+  --twitter: #1da1f2;
+  --youtube: #b14235;
+  --reddit: #ff5700;
+  --facebook: #0773f6;
+  --black-russian: #11172c;
+  --black: #000;
+  --metrics-good: #1dc49b;
+  --metrics-bad: #e54787;
+  --metrics-average: #ffffff;
+  --background-main: #151136;
+  --background-modal-default: #25204a;
+  --widget-main: #2c274f;
+  --widget-secondary: #252046;
+  --widget-borders: #382f66;
+  --borders: #382f66;
+  --labels: #6b6889;
+  --regular: #b3b4d0;
+  --warning: #ffb257;
+  --primary: #f2bf43;
+  --match-draw: #8890b5;
+  --match-loss: #e54787;
+  --match-win: #18bd9b;
+  --plus: #fc7c00;
+  --desktop-window-bar-height: 0px;
+  --app-expanded-sidebar-width: 200px;
+  --app-collapsed-sidebar-width: 64px;
+  --app-sidebar-item-height: 52px;
+  --app-content-min-width: calc(100% - var(--content-left));
+  --app-top-banner-height: 4.8rem;
+  --app-top-bar-height: 52px;
+  --app-to-top-bar-height: calc(var(--desktop-window-bar-height) + var(--app-top-banner-height));
+  --app-content-min-height: calc(100vh - var(--app-overall-header-height));
+  --app-lol-lc-status-bar-height: 0rem;
+  --app-overall-header-height: calc( var(--desktop-window-bar-height) + var(--app-top-banner-height) + var(--app-top-bar-height) + var(--app-lol-lc-status-bar-height) );
+  --content-left: var(--app-expanded-sidebar-width);
+  --sidebar-width: var(--app-expanded-sidebar-width);
+  --expanded-elements-display: flex;
+  --collased-logo-display: none;
+  --expanded-logo-display: flex;
+  --collapse-expand-icon-rotate: -180deg;
+  --ads-top-offset: calc(var(--app-overall-header-height) + 1.2rem);
+  box-sizing: border-box;
+  outline: none!important;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  text-transform: uppercase;
+  position: relative;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+  padding: 0.6rem 1.2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  color: var(--white);
+  min-height: 3.4rem;
+}
+.m-yeouz0{
+  -webkit-text-size-adjust: 100%;
+  font-family: 'Roboto',sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+  --nav-main-bg-color: #140e30;
+  --nav-hover-bg-color: #271c37;
+  --nav-border-color: #251e47;
+  --purple: #aaabca;
+  --dark-purple: #6b6889;
+  --deep-purple: #382f66;
+  --blue: #38c6f4;
+  --bluey-grey: #8890b5;
+  --white: #ffffff;
+  --success: #00b972;
+  --greeny: #4cb748;
+  --greeny-blue: #3cbdc2;
+  --gold: #bd9e59;
+  --dark-gold: #bd9e59;
+  --tier-platinum: #2a947b;
+  --strong-cyan: #18bd9b;
+  --tier-gold: #f9b439;
+  --pink: #c848c3;
+  --darkish-pink: #e54787;
+  --red: #ff2576;
+  --twilight: #565697;
+  --dark-blue-grey: #1a133d;
+  --pumpkin-orange: #fc7c00;
+  --lavender-grey: #b3b4d0;
+  --yellow: #ffc306;
+  --light-yellow: #f5d075;
+  --dark-violet: #252146;
+  --grayly-blue: #565895;
+  --marine: #211d41;
+  --haiti: #161236;
+  --martinique: #2e2a4f;
+  --kinky-shark: #392b68;
+  --satiric-shark: #312955;
+  --arid-shark: #3b2d6a;
+  --tired-licorice: #2c274f;
+  --restrictive-jet: #1d1546;
+  --actual-jet: #151136;
+  --sober-earth: #bd9e59;
+  --chosen: #ad4cce;
+  --twitch: #6441a5;
+  --twitter: #1da1f2;
+  --youtube: #b14235;
+  --reddit: #ff5700;
+  --facebook: #0773f6;
+  --black-russian: #11172c;
+  --black: #000;
+  --metrics-good: #1dc49b;
+  --metrics-bad: #e54787;
+  --metrics-average: #ffffff;
+  --background-main: #151136;
+  --background-modal-default: #25204a;
+  --widget-main: #2c274f;
+  --widget-secondary: #252046;
+  --widget-borders: #382f66;
+  --borders: #382f66;
+  --labels: #6b6889;
+  --regular: #b3b4d0;
+  --warning: #ffb257;
+  --primary: #f2bf43;
+  --match-draw: #8890b5;
+  --match-loss: #e54787;
+  --match-win: #18bd9b;
+  --plus: #fc7c00;
+  --desktop-window-bar-height: 0px;
+  --app-expanded-sidebar-width: 200px;
+  --app-collapsed-sidebar-width: 64px;
+  --app-sidebar-item-height: 52px;
+  --app-content-min-width: calc(100% - var(--content-left));
+  --app-top-banner-height: 4.8rem;
+  --app-top-bar-height: 52px;
+  --app-to-top-bar-height: calc(var(--desktop-window-bar-height) + var(--app-top-banner-height));
+  --app-content-min-height: calc(100vh - var(--app-overall-header-height));
+  --app-lol-lc-status-bar-height: 0rem;
+  --app-overall-header-height: calc( var(--desktop-window-bar-height) + var(--app-top-banner-height) + var(--app-top-bar-height) + var(--app-lol-lc-status-bar-height) );
+  --content-left: var(--app-expanded-sidebar-width);
+  --sidebar-width: var(--app-expanded-sidebar-width);
+  --expanded-elements-display: flex;
+  --collased-logo-display: none;
+  --expanded-logo-display: flex;
+  --collapse-expand-icon-rotate: -180deg;
+  --ads-top-offset: calc(var(--app-overall-header-height) + 1.2rem);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  text-transform: uppercase;
+  color: var(--white);
+  box-sizing: border-box;
+  outline: none!important;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.m-ccezno{
+  -webkit-text-size-adjust: 100%;
+  font-family: 'Roboto',sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+  --nav-main-bg-color: #140e30;
+  --nav-hover-bg-color: #271c37;
+  --nav-border-color: #251e47;
+  --purple: #aaabca;
+  --dark-purple: #6b6889;
+  --deep-purple: #382f66;
+  --blue: #38c6f4;
+  --bluey-grey: #8890b5;
+  --white: #ffffff;
+  --success: #00b972;
+  --greeny: #4cb748;
+  --greeny-blue: #3cbdc2;
+  --gold: #bd9e59;
+  --dark-gold: #bd9e59;
+  --tier-platinum: #2a947b;
+  --strong-cyan: #18bd9b;
+  --tier-gold: #f9b439;
+  --pink: #c848c3;
+  --darkish-pink: #e54787;
+  --red: #ff2576;
+  --twilight: #565697;
+  --dark-blue-grey: #1a133d;
+  --pumpkin-orange: #fc7c00;
+  --lavender-grey: #b3b4d0;
+  --yellow: #ffc306;
+  --light-yellow: #f5d075;
+  --dark-violet: #252146;
+  --grayly-blue: #565895;
+  --marine: #211d41;
+  --haiti: #161236;
+  --martinique: #2e2a4f;
+  --kinky-shark: #392b68;
+  --satiric-shark: #312955;
+  --arid-shark: #3b2d6a;
+  --tired-licorice: #2c274f;
+  --restrictive-jet: #1d1546;
+  --actual-jet: #151136;
+  --sober-earth: #bd9e59;
+  --chosen: #ad4cce;
+  --twitch: #6441a5;
+  --twitter: #1da1f2;
+  --youtube: #b14235;
+  --reddit: #ff5700;
+  --facebook: #0773f6;
+  --black-russian: #11172c;
+  --black: #000;
+  --metrics-good: #1dc49b;
+  --metrics-bad: #e54787;
+  --metrics-average: #ffffff;
+  --background-main: #151136;
+  --background-modal-default: #25204a;
+  --widget-main: #2c274f;
+  --widget-secondary: #252046;
+  --widget-borders: #382f66;
+  --borders: #382f66;
+  --labels: #6b6889;
+  --regular: #b3b4d0;
+  --warning: #ffb257;
+  --primary: #f2bf43;
+  --match-draw: #8890b5;
+  --match-loss: #e54787;
+  --match-win: #18bd9b;
+  --plus: #fc7c00;
+  --desktop-window-bar-height: 0px;
+  --app-expanded-sidebar-width: 200px;
+  --app-collapsed-sidebar-width: 64px;
+  --app-sidebar-item-height: 52px;
+  --app-content-min-width: calc(100% - var(--content-left));
+  --app-top-banner-height: 4.8rem;
+  --app-top-bar-height: 52px;
+  --app-to-top-bar-height: calc(var(--desktop-window-bar-height) + var(--app-top-banner-height));
+  --app-content-min-height: calc(100vh - var(--app-overall-header-height));
+  --app-lol-lc-status-bar-height: 0rem;
+  --app-overall-header-height: calc( var(--desktop-window-bar-height) + var(--app-top-banner-height) + var(--app-top-bar-height) + var(--app-lol-lc-status-bar-height) );
+  --content-left: var(--app-expanded-sidebar-width);
+  --sidebar-width: var(--app-expanded-sidebar-width);
+  --expanded-elements-display: flex;
+  --collased-logo-display: none;
+  --expanded-logo-display: flex;
+  --collapse-expand-icon-rotate: -180deg;
+  --ads-top-offset: calc(var(--app-overall-header-height) + 1.2rem);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  text-transform: uppercase;
+  color: var(--white);
+  border-style: none;
+  box-sizing: border-box;
+  outline: none!important;
+  width: 1.4rem;
+  height: 1.4rem;
+  cursor: pointer;
+  margin-right:5px;
+}
+.m-3gmgrq{
+  width:100% !important;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  font-family: 'Roboto',sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-size: 10px;
+  --nav-main-bg-color: #140e30;
+  --nav-hover-bg-color: #271c37;
+  --nav-border-color: #251e47;
+  --purple: #aaabca;
+  --dark-purple: #6b6889;
+  --deep-purple: #382f66;
+  --blue: #38c6f4;
+  --bluey-grey: #8890b5;
+  --white: #ffffff;
+  --success: #00b972;
+  --greeny: #4cb748;
+  --greeny-blue: #3cbdc2;
+  --gold: #bd9e59;
+  --dark-gold: #bd9e59;
+  --tier-platinum: #2a947b;
+  --strong-cyan: #18bd9b;
+  --tier-gold: #f9b439;
+  --pink: #c848c3;
+  --darkish-pink: #e54787;
+  --red: #ff2576;
+  --twilight: #565697;
+  --dark-blue-grey: #1a133d;
+  --pumpkin-orange: #fc7c00;
+  --lavender-grey: #b3b4d0;
+  --yellow: #ffc306;
+  --light-yellow: #f5d075;
+  --dark-violet: #252146;
+  --grayly-blue: #565895;
+  --marine: #211d41;
+  --haiti: #161236;
+  --martinique: #2e2a4f;
+  --kinky-shark: #392b68;
+  --satiric-shark: #312955;
+  --arid-shark: #3b2d6a;
+  --tired-licorice: #2c274f;
+  --restrictive-jet: #1d1546;
+  --actual-jet: #151136;
+  --sober-earth: #bd9e59;
+  --chosen: #ad4cce;
+  --twitch: #6441a5;
+  --twitter: #1da1f2;
+  --youtube: #b14235;
+  --reddit: #ff5700;
+  --facebook: #0773f6;
+  --black-russian: #11172c;
+  --black: #000;
+  --metrics-good: #1dc49b;
+  --metrics-bad: #e54787;
+  --metrics-average: #ffffff;
+  --background-main: #151136;
+  --background-modal-default: #25204a;
+  --widget-main: #2c274f;
+  --widget-secondary: #252046;
+  --widget-borders: #382f66;
+  --borders: #382f66;
+  --labels: #6b6889;
+  --regular: #b3b4d0;
+  --warning: #ffb257;
+  --primary: #f2bf43;
+  --match-draw: #8890b5;
+  --match-loss: #e54787;
+  --match-win: #18bd9b;
+  --plus: #fc7c00;
+  --desktop-window-bar-height: 0px;
+  --app-expanded-sidebar-width: 200px;
+  --app-collapsed-sidebar-width: 64px;
+  --app-sidebar-item-height: 52px;
+  --app-content-min-width: calc(100% - var(--content-left));
+  --app-top-banner-height: 4.8rem;
+  --app-top-bar-height: 52px;
+  --app-to-top-bar-height: calc(var(--desktop-window-bar-height) + var(--app-top-banner-height));
+  --app-content-min-height: calc(100vh - var(--app-overall-header-height));
+  --app-lol-lc-status-bar-height: 0rem;
+  --app-overall-header-height: calc( var(--desktop-window-bar-height) + var(--app-top-banner-height) + var(--app-top-bar-height) + var(--app-lol-lc-status-bar-height) );
+  --content-left: var(--app-expanded-sidebar-width);
+  --sidebar-width: var(--app-expanded-sidebar-width);
+  --expanded-elements-display: flex;
+  --collased-logo-display: none;
+  --expanded-logo-display: flex;
+  --collapse-expand-icon-rotate: -180deg;
+  --ads-top-offset: calc(var(--app-overall-header-height) + 1.2rem);
+  box-sizing: border-box;
+  outline: none!important;
+  width: 100%;
+  border-spacing: 0px;
+  border-collapse: separate;
+}
+.thead{
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  font-family: 'Roboto',sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-size: 10px;
+  --nav-main-bg-color: #140e30;
+  --nav-hover-bg-color: #271c37;
+  --nav-border-color: #251e47;
+  --purple: #aaabca;
+  --dark-purple: #6b6889;
+  --deep-purple: #382f66;
+  --blue: #38c6f4;
+  --bluey-grey: #8890b5;
+  --white: #ffffff;
+  --success: #00b972;
+  --greeny: #4cb748;
+  --greeny-blue: #3cbdc2;
+  --gold: #bd9e59;
+  --dark-gold: #bd9e59;
+  --tier-platinum: #2a947b;
+  --strong-cyan: #18bd9b;
+  --tier-gold: #f9b439;
+  --pink: #c848c3;
+  --darkish-pink: #e54787;
+  --red: #ff2576;
+  --twilight: #565697;
+  --dark-blue-grey: #1a133d;
+  --pumpkin-orange: #fc7c00;
+  --lavender-grey: #b3b4d0;
+  --yellow: #ffc306;
+  --light-yellow: #f5d075;
+  --dark-violet: #252146;
+  --grayly-blue: #565895;
+  --marine: #211d41;
+  --haiti: #161236;
+  --martinique: #2e2a4f;
+  --kinky-shark: #392b68;
+  --satiric-shark: #312955;
+  --arid-shark: #3b2d6a;
+  --tired-licorice: #2c274f;
+  --restrictive-jet: #1d1546;
+  --actual-jet: #151136;
+  --sober-earth: #bd9e59;
+  --chosen: #ad4cce;
+  --twitch: #6441a5;
+  --twitter: #1da1f2;
+  --youtube: #b14235;
+  --reddit: #ff5700;
+  --facebook: #0773f6;
+  --black-russian: #11172c;
+  --black: #000;
+  --metrics-good: #1dc49b;
+  --metrics-bad: #e54787;
+  --metrics-average: #ffffff;
+  --background-main: #151136;
+  --background-modal-default: #25204a;
+  --widget-main: #2c274f;
+  --widget-secondary: #252046;
+  --widget-borders: #382f66;
+  --borders: #382f66;
+  --labels: #6b6889;
+  --regular: #b3b4d0;
+  --warning: #ffb257;
+  --primary: #f2bf43;
+  --match-draw: #8890b5;
+  --match-loss: #e54787;
+  --match-win: #18bd9b;
+  --plus: #fc7c00;
+  --desktop-window-bar-height: 0px;
+  --app-expanded-sidebar-width: 200px;
+  --app-collapsed-sidebar-width: 64px;
+  --app-sidebar-item-height: 52px;
+  --app-content-min-width: calc(100% - var(--content-left));
+  --app-top-banner-height: 4.8rem;
+  --app-top-bar-height: 52px;
+  --app-to-top-bar-height: calc(var(--desktop-window-bar-height) + var(--app-top-banner-height));
+  --app-content-min-height: calc(100vh - var(--app-overall-header-height));
+  --app-lol-lc-status-bar-height: 0rem;
+  --app-overall-header-height: calc( var(--desktop-window-bar-height) + var(--app-top-banner-height) + var(--app-top-bar-height) + var(--app-lol-lc-status-bar-height) );
+  --content-left: var(--app-expanded-sidebar-width);
+  --sidebar-width: var(--app-expanded-sidebar-width);
+  --expanded-elements-display: flex;
+  --collased-logo-display: none;
+  --expanded-logo-display: flex;
+  --collapse-expand-icon-rotate: -180deg;
+  --ads-top-offset: calc(var(--app-overall-header-height) + 1.2rem);
+  border-spacing: 0px;
+  border-collapse: separate;
+  box-sizing: border-box;
+  outline: none!important;
+}
+.m-1itvjt0 {
+  user-select: none;
+  background: rgb(51, 46, 98);
+  box-shadow: rgba(21, 11, 37, 0.25) 0px 2px 10px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--white);
+  line-height: 10px;
+  letter-spacing: 0.25px;
+  text-transform: uppercase;
+  cursor:default;
+  padding: 8px 12px;
+}
+.m-1itvjt0 th {
+  padding: 6px 8px;
+}
+.tableContainer th{
+  padding:15px 8px;
+}
+
+.m-1itvjt0 th:last-child {
+  padding: 0px;
+  width: 0.8rem;
+  border-radius: 0px 6px 6px 0px;
+}
+.m-1itvjt0 th:first-child {
+  padding: 0px;
+  width: 0.8rem;
+  border-radius: 6px 0px 0px 6px;
+}
+.m-1m0ike6{
+  height:1.6rem;
+}
+.m-yjkzh {
+  position: relative;
+  min-width: 250px;
+  border-radius: 0.6rem;
+  box-shadow: rgba(21, 11, 37, 0.5) 0px 2px 10px 0px;
+  border: 1px solid var(--deep-purple);
+  display: flex;
+  flex-flow: row wrap;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100%;
+  
+  background-color: rgb(49, 41, 85);
+}
+.m-12f3mir {
+  display: grid;
+  grid-template-columns: 35rem minmax(50rem,100rem);
+  gap: 2rem;
+  position: relative;
+}
+.m-bxtrut {
+  padding: 0px 20px 1.2rem;
+}
+.m-a3hkcb {
+  display: flex;
+  flex-flow: row wrap;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+.m-11al0g7 {
+  position: relative;
+  width: 10rem;
+  height: 10rem;
+  flex: 0 0 10rem;
+  margin: 4.3rem 1.2rem 3.2rem;
+}
+.m-11al0g7 > span > * {
+  margin-top: 0px;
+  margin-left: 0px;
+  width: 100%;
+  height: 100%;
+  /*border-radius: 50%;*/
+  overflow: hidden;
+}
+.m-1kvt2p1 img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform: scale(1.15);
+}
+.m-0 {
+ 
+}
+.m-h0893i {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 36px;
+  letter-spacing: 0.15px;
+  color: var(--white);
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  width: 100%;
+}
+.m-lu2isw {
+  margin: 0px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 0.15px;
+}
+.m-1spa8xs {
+  position: relative;
+  display: flex;
+  padding: 0.8rem 1.2rem;
+  cursor: pointer;
+  pointer-events: none;
+  width: 100%;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+.m-1rmcrqn {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  position: relative;
+}
+.m-17nwc {
+  transition: opacity 0.4s ease 0s;
+  display: block;
+  width: 8rem;
+  height: 8rem;
+}
+.m-15leskn {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+}
+.m-18xjao8 {
+  width:fit-content;
+  margin:auto;
+  letter-spacing: 0.25px;
+  white-space: nowrap;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--regular);
+}
+.m-1s5vw6 {
+  height: 4px;
+  position: relative;
+  background: rgb(229, 71, 135);
+  border-radius: 4px;
+  margin: 0.4rem 0px 0.8rem;
+  width: 16.8rem;
+}
+.m-148kaov {
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  position: absolute;
+  background: rgb(24, 189, 155);
+  border-radius: 4px 0px 0px 4px;
+  transition: width 0.2s ease-out 0s;
+}
+.orangebar {
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  position: absolute;
+  background: rgb(235, 140, 52);
+  border-radius: 4px 0px 0px 4px;
+  transition: width 0.2s ease-out 0s;
+}
+.m-oxskvv {
+  position: absolute;
+  width: 0.2rem;
+  height: 100%;
+  background: var(--widget-main);
+  transform: translateX(-0.1rem);
+}
+.m-dytaiz {
+  color: var(--labels);
+}
+.areaChart{
+  position:relative;
+
+}
+.areaGraph{}
+.m-36y2kb {
+  position: relative;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+.m-ht4nkg{
+  padding: 0px 10px 0px;
+  min-height: var(--app-content-min-height);
+  --ads-top-offset: calc(var(--app-overall-header-height) + 1.2rem);
+  position: relative;
+  width:100%;
+}
+.m-1xw1ssn {
+  padding: 0px 1.6rem 6rem;
+  min-height: var(--app-content-min-height);
+  --ads-top-offset: calc(var(--app-overall-header-height) + 1.2rem);
+  position: relative;
+}
+tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+.m-14j0amg {
+  position: relative;
+  cursor: pointer;
+  background: var(--tired-licorice);
+  box-shadow: rgb(21 11 37 / 25%) 0px 2px 10px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  color: rgb(179, 180, 208);
+}
+.m-14j0amg:hover {
+  background: rgb(21 11 37);
+}
+.m-14j0amg td {
+  padding: 0px;
+}
+.userdash{
+  width:auto;
+}
+.m-36y2kb {
+  position: relative;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+.m-ht4nkg {
+  max-width: 118rem;
+  width: 100%;
+  flex: 1 1 100%;
+}
+.m-36y2kb{
+  background:#EBEBEB;
+}
+.m-1o5u912 {
+  position: relative;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+.m-ht4nkg {
+  max-width: 130rem;
+  width: 100%;
+  flex: 1 1 100%;
+}
+.m-ke934a {
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  justify-content: flex-end;
+  padding: 2rem 0px;
+  height: 12rem;
+}
+.m-kdvz65 {
+  display: grid;
+  grid-template-columns: 30rem minmax(30rem, 100rem);
+  gap: 2rem;
+}
+.m-wrdtjf {
+  display: flex;
+  width: 100%;
+  margin-bottom: 10px;
+  -webkit-box-pack: end;
+  justify-content: flex-end;
+}
+.m-15tgr3f {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: pointer;
+  background-image: none;
+  background-position: initial;
+  background-size: initial;
+  background-repeat: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  border: none;
+  outline: none;
+  font-style: normal;
+  transition: background-color 0.2s ease-in 0s, opacity 0.2s ease-in 0s, color 0.2s ease-in 0s;
+  flex: 0 0 auto;
+  position: relative;
+  font-weight: bold;
+  font-size: 9px;
+  letter-spacing: 0.25px;
+  text-transform: uppercase;
+  line-height: 10px;
+  color: var(--white);
+  border-radius: 4px;
+  padding: 8px 16px;
+  background-color: var(--grayly-blue);
+  min-width: 12rem;
+  min-height: 3.6rem;
+}
+.m-15tgr3f:hover{
+  background:rgb(51, 46, 98)
+}
+.pieCont .recharts-wrapper {
+  margin : 0 auto;
+  height:300px !important;
+  width:300px !important;
+  margin-right:20px;
+}
+.pieCont .recharts-surface{
+  height:270px !important;
+  width:270px !important;
+  top:-80px;
+  left:-36px;
+  position:relative;
+  overflow:visible;
+}
+.radarCont{
+  width:100%;
+  height:300px;
+}
+.radarCont .recharts-surface tspan{
+  font-size:12px !important;
+}
+.radarCont .recharts-wrapper {
+  margin : 0 auto;
+  height:300px !important;
+  width:300px !important;
+  margin-right:20px;
+}
+.radarCont .recharts-surface{
+  height:200px !important;
+  width:200px !important;  
+  left:33px;
+  top:40px;
+  position:relative;
+  overflow:visible;
+}
+.upperrightcontent{
+  width:100%;
+  margin:auto;
+}
+.urcontent{
+  position:relative;
+}
+.uppersection{
+  text-align:center;
+}
+td{
+  font-size: 10px;
+  white-space: nowrap;
+}
+th{
+  white-space: nowrap;
+}
+.uppersection,.upperleft{
+  max-height: 300px;
 }
 
-.App-link {
-  color: #61dafb;
+.lowercontent{
+  padding-top:10px;
+  min-height:334px;
+}
+.separator{
+  width:100%;
+  height:15px;
+}
+.solvedtext{
+  
+}
+.solvedContent{
+  position:relative;
+  top:220px;
+}
+@media only screen and (max-width: 998px) {
+  .uppersection,.upperleft{
+    max-height: 1000px;
+  }
+  .upperight{
+    margin-top:10px;
+    margin-left:10px;
+  }
+}
+.m-igyvwi img{
+  margin-left:10px;
+}
+.m-igyvwi:hover{
+  color:rgb(126, 101, 52);
+}
+.tablehover:hover{
+  cursor:pointer;
+}
+.text-green-s {
+  --tw-text-opacity: 1;
+  color: rgba(45,181,93,var(--tw-text-opacity));
+}
+.w-\[18px\] {
+  width: 18px;
+}
+.h-\[18px\] {
+  height: 18px;
+}
+.text-gray-5 {
+  --tw-text-opacity: 1;
+  color: rgba(175,180,189,var(--tw-text-opacity));
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+.mainTable td{  
+  color:#11172c;
+  box-shadow: none;
+}
+.mainTable tr:first-child{
+  box-shadow:none;
+}
+.mainTable tr{
+  background:white;
+  box-shadow:rgb(21 11 37 / 25%) 0px 3px 5px;
+}
+.mainTable tr:hover{
+  background: white !important;  
+}
+.mainTable tr:hover td{
+  color:blue;
+}
+.mainTable{
+  margin:0 auto;
+}
+.mainTable th{
+  padding-left:0px !important;
+  background:white;
+  color: #666;
+  box-shadow: none;
+  font-size:10px;
+}
+.mainTable th:hover{
+  color:black;
+}
+.mainTable th:first-child{
+  border-radius:6px 0px 0px 0px;
+}
+.mainTable th:last-child{
+  border-radius:0px 6px 0px 0px;
+}
+.filler{
+  width:120px;
+}
+.solved{
+  padding-left:0px !important;
+}
+.w-3\.5 {
+  width: .875rem;
+}
+.mainTable th:hover .w-3\.5{
+  color:#333;
+}
+.ml-2 {
+  margin-left: 12px;
+  right:0px;
+  position:relative;
+}
+.acceptance{
+  width: 100px;
+}
+.recharts-surface tspan{
+  font-size:9px;
+  fill:rgb(201, 201, 201) !important;
+}
+.customized-tooltip-content{
+  color:white;
+  background:#140e30;
+  border-radius: 3px;
+}
+.tooltip-content{
+  padding:8px;
+}
+.tooltipItem{
+  color:lightgrey;
+  width:50px !important;
+}
+.tooltipVal{
+  float:right;
+  margin-left:5px;
+  position:relative;
+  top:0px;
+}
+.loader{
+  width:fit-content;
+  margin:auto;
+  height:100%;
+  top:90px;
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#time-period{
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+  cursor: pointer;
+  width: 100%;
+  height: 3rem;
+  padding: 0px 6px;
+  border-style: solid;
+  border-radius: 6px;
+  border-color: rgb(126, 207, 191);
+  border-width: 1px;
+  background-color: var(--marine);
+  color: var(--regular);
+  text-transform: inherit;
+}
+.selectContainer{
+  width:100px;
+}
+/* NAVIGATION */
+nav {
+  width: 100%;
+  margin: 0 auto;
+}
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul li{
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: #6b6889;
+  font-size:12px;  
+  margin: 0 10px;
+}
+.selected{    
+  border-bottom: 1px solid #382f66;
+}
+
+.selected{
+  color:#18bd9b;  
+}
+.selected:hover{
+  color:#18bd9b !important;
+}
+nav ul li,
+nav ul li:after,
+nav ul li:before {
+  transition: all .5s;
+}
+.unselected:hover {
+  cursor:pointer;
+  color: #555;
+}
+
+
+/* stroke */
+nav.stroke ul li{
+  text-align:start;
+  float:left;
+  margin-bottom:20px;
+}
+nav.stroke ul li,
+nav.fill ul li{
+  position: relative;
+}
+.unselected li:after,
+.unselected li:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #aaa;
+  height: 1px;
+}
+.unselected li:hover:after {
+  width: 100%;
+}
+
+nav.fill ul li {
+  transition: all 2s;
+}
+
+nav.fill ul li:after {
+  text-align: left;
+  content: '.';
+  margin: 0;
+  opacity: 0;
+}
+nav.fill ul li:hover {
+  color: #fff;
+  z-index: 1;
+}
+nav.fill ul li:hover:after {
+  z-index: -10;
+  animation: fill 1s forwards;
+  -webkit-animation: fill 1s forwards;
+  -moz-animation: fill 1s forwards;
+  opacity: 1;
 }

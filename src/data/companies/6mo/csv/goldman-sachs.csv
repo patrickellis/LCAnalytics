@@ -1,0 +1,88 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,1,Two Sum,47.8%,Easy,0.0171352
+1,3,Longest Substring Without Repeating Characters,32.4%,Medium,0.0777902
+2,4,Median of Two Sorted Arrays,32.9%,Hard,9.00476
+3,5,Longest Palindromic Substring,31.4%,Medium,0.0620085
+4,8,String to Integer (atoi),16.1%,Medium,0.857296
+5,15,3Sum,29.8%,Medium,0.0939891
+6,17,Letter Combinations of a Phone Number,51.9%,Medium,0.46729
+7,31,Next Permutation,34.7%,Medium,0.787275
+8,33,Search in Rotated Sorted Array,37.0%,Medium,0.478739
+9,38,Count and Say,47.6%,Medium,0.331298
+10,39,Combination Sum,62.5%,Medium,0.13719
+11,42,Trapping Rain Water,54.2%,Hard,48.1554
+12,46,Permutations,69.9%,Medium,0.117596
+13,49,Group Anagrams,62.3%,Medium,4.39189
+14,50,"Pow(x, n)",31.6%,Medium,0.125646
+15,53,Maximum Subarray,48.9%,Easy,0.0384508
+16,55,Jump Game,36.8%,Medium,0.140143
+17,64,Minimum Path Sum,58.1%,Medium,2.02282
+18,78,Subsets,68.4%,Medium,0.339376
+19,79,Word Search,38.9%,Medium,0.468531
+20,83,Remove Duplicates from Sorted List,47.8%,Easy,0.313446
+21,91,Decode Ways,28.9%,Medium,0.758453
+22,119,Pascal's Triangle II,55.0%,Easy,0.521083
+23,121,Best Time to Buy and Sell Stock,52.9%,Easy,0.273842
+24,122,Best Time to Buy and Sell Stock II,60.4%,Medium,0.117993
+25,127,Word Ladder,33.7%,Hard,0.251665
+26,134,Gas Station,43.2%,Medium,0.98175
+27,142,Linked List Cycle II,41.9%,Medium,0.21916
+28,146,LRU Cache,38.3%,Medium,0.287329
+29,153,Find Minimum in Rotated Sorted Array,47.4%,Medium,0.274066
+30,155,Min Stack,48.8%,Easy,0.0759973
+31,166,Fraction to Recurring Decimal,23.0%,Medium,19.0566
+32,168,Excel Sheet Column Title,33.0%,Easy,0.654231
+33,188,Best Time to Buy and Sell Stock IV,31.8%,Hard,0.672215
+34,198,House Robber,45.0%,Medium,0.198573
+35,199,Binary Tree Right Side View,58.2%,Medium,0.15276
+36,200,Number of Islands,52.0%,Medium,0.321134
+37,204,Count Primes,32.8%,Medium,0.338326
+38,209,Minimum Size Subarray Sum,41.6%,Medium,9.74259
+39,210,Course Schedule II,44.9%,Medium,0.177973
+40,215,Kth Largest Element in an Array,61.4%,Medium,0.436584
+41,221,Maximal Square,41.3%,Medium,0.357856
+42,222,Count Complete Tree Nodes,53.3%,Medium,0.122799
+43,232,Implement Queue using Stacks,55.3%,Easy,0.259989
+44,238,Product of Array Except Self,62.7%,Medium,0.101762
+45,239,Sliding Window Maximum,45.7%,Hard,3.57285
+46,243,Shortest Word Distance,63.4%,Easy,1.72973
+47,259,3Sum Smaller,49.9%,Medium,6.8317
+48,270,Closest Binary Search Tree Value,52.3%,Easy,0.636814
+49,274,H-Index,37.0%,Medium,11.0348
+50,275,H-Index II,36.7%,Medium,2.5715
+51,277,Find the Celebrity,45.4%,Medium,0.76551
+52,283,Move Zeroes,59.6%,Easy,0.0699579
+53,295,Find Median from Data Stream,49.5%,Hard,0.286639
+54,297,Serialize and Deserialize Binary Tree,52.1%,Hard,0.561308
+55,325,Maximum Size Subarray Sum Equals k,48.5%,Medium,1.53056
+56,326,Power of Three,42.9%,Easy,0.837887
+57,348,Design Tic-Tac-Toe,56.7%,Medium,0.830822
+58,387,First Unique Character in a String,55.6%,Easy,7.81528
+59,443,String Compression,46.2%,Medium,5.25626
+60,453,Minimum Moves to Equal Array Elements,52.7%,Medium,2.39835
+61,457,Circular Array Loop,31.1%,Medium,3.5682
+62,498,Diagonal Traverse,53.3%,Medium,6.74842
+63,524,Longest Word in Dictionary through Deleting,50.7%,Medium,4.4919
+64,532,K-diff Pairs in an Array,36.9%,Medium,4.96013
+65,547,Number of Provinces,62.2%,Medium,0.188651
+66,592,Fraction Addition and Subtraction,51.2%,Medium,20.3268
+67,657,Robot Return to Origin,74.7%,Easy,5.61001
+68,688,Knight Probability in Chessboard,51.1%,Medium,1.81302
+69,692,Top K Frequent Words,53.9%,Medium,0.41785
+70,720,Longest Word in Dictionary,50.3%,Medium,5.60486
+71,724,Find Pivot Index,49.2%,Easy,35.0893
+72,740,Delete and Earn,53.7%,Medium,66.8551
+73,704,Binary Search,54.7%,Easy,0.055841
+74,706,Design HashMap,63.8%,Easy,6.63994
+75,829,Consecutive Numbers Sum,40.2%,Hard,40.754
+76,641,Design Circular Deque,56.8%,Medium,2.3822
+77,862,Shortest Subarray with Sum at Least K,25.9%,Hard,20.7811
+78,909,Snakes and Ladders,39.6%,Medium,8.33717
+79,983,Minimum Cost For Tickets,63.4%,Medium,1.68902
+80,1086,High Five,75.9%,Easy,100
+81,1041,Robot Bounded In Circle,54.5%,Medium,85.5547
+82,1382,Balance a Binary Search Tree,78.8%,Medium,1.18867
+83,1209,Remove All Adjacent Duplicates in String II,56.2%,Medium,6.08784
+84,1395,Count Number of Teams,70.8%,Medium,20.6253
+85,1823,Find the Winner of the Circular Game,74.2%,Medium,2.25524
+86,1836,Remove Duplicates From an Unsorted Linked List,69.4%,Medium,12.5588

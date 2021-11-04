@@ -1,0 +1,10 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,162,Find Peak Element,45.0%,Medium,10.6102
+1,239,Sliding Window Maximum,45.7%,Hard,2.15228
+2,300,Longest Increasing Subsequence,47.3%,Medium,1.66013
+3,380,Insert Delete GetRandom O(1),50.7%,Medium,5.14735
+4,381,Insert Delete GetRandom O(1) - Duplicates allowed,35.2%,Hard,12.7966
+5,1323,Maximum 69 Number,78.5%,Easy,19.1392
+6,1611,Minimum One Bit Operations to Make Integers Zero,61.6%,Hard,52.6094
+7,1775,Equal Sum Arrays With Minimum Number of Operations,50.9%,Medium,100
+8,1901,Find a Peak Element II,55.9%,Medium,66.5298

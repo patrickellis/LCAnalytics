@@ -1,0 +1,13 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,23,Merge k Sorted Lists,45.0%,Hard,1.77227
+1,41,First Missing Positive,35.2%,Hard,1.39842
+2,42,Trapping Rain Water,54.2%,Hard,0.694282
+3,68,Text Justification,32.9%,Hard,6.65897
+4,362,Design Hit Counter,66.5%,Medium,6.90561
+5,380,Insert Delete GetRandom O(1),50.7%,Medium,0.718072
+6,742,Closest Leaf in a Binary Tree,44.8%,Medium,75.6945
+7,945,Minimum Increment to Make Array Unique,48.0%,Medium,53.3339
+8,1206,Design Skiplist,59.9%,Hard,61.7691
+9,1235,Maximum Profit in Job Scheduling,50.2%,Hard,29.0284
+10,1242,Web Crawler Multithreaded,48.1%,Medium,100
+11,1861,Rotating the Box,63.5%,Medium,9.28892

@@ -1,0 +1,32 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,1,Two Sum,47.8%,Easy,0.214621
+1,3,Longest Substring Without Repeating Characters,32.4%,Medium,0.0271388
+2,4,Median of Two Sorted Arrays,32.9%,Hard,0.0766985
+3,5,Longest Palindromic Substring,31.4%,Medium,5.5219
+4,36,Valid Sudoku,53.4%,Medium,0.118028
+5,56,Merge Intervals,43.2%,Medium,0.488373
+6,69,Sqrt(x),36.0%,Easy,0.245139
+7,85,Maximal Rectangle,40.9%,Hard,2.26155
+8,125,Valid Palindrome,39.9%,Easy,5.13599
+9,210,Course Schedule II,44.9%,Medium,0.555896
+10,224,Basic Calculator,39.5%,Hard,1.63085
+11,252,Meeting Rooms,56.2%,Easy,0.363477
+12,409,Longest Palindrome,52.8%,Easy,1.55977
+13,415,Add Strings,50.8%,Easy,11.5621
+14,718,Maximum Length of Repeated Subarray,51.2%,Medium,5.11505
+15,759,Employee Free Time,70.2%,Hard,27.6446
+16,768,Max Chunks To Make Sorted II,51.2%,Hard,1.76415
+17,811,Subdomain Visit Count,73.1%,Medium,69.5714
+18,840,Magic Squares In Grid,38.2%,Medium,100
+19,1014,Best Sightseeing Pair,55.8%,Medium,1.1606
+20,1229,Meeting Scheduler,54.8%,Medium,1.56436
+21,1244,Design A Leaderboard,67.2%,Medium,6.3779
+22,1189,Maximum Number of Balloons,62.5%,Easy,5.76477
+23,1957,Delete Characters to Make Fancy String,55.2%,Easy,0
+24,1405,Longest Happy String,54.4%,Medium,0
+25,1895,Largest Magic Square,50.5%,Medium,0
+26,1193,Monthly Transactions I,68.2%,Medium,0
+27,1194,Tournament Winners,52.5%,Hard,32.3994
+28,1204,Last Person to Fit in the Bus,73.1%,Medium,47.6201
+29,1212,Team Scores in Football Tournament,57.1%,Medium,91.5227
+30,1604,Alert Using Same Key-Card Three or More Times in a One Hour Period,45.6%,Medium,14.2307

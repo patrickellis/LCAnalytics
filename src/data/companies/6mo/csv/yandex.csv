@@ -1,0 +1,28 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,2,Add Two Numbers,37.2%,Medium,0.251944
+1,3,Longest Substring Without Repeating Characters,32.4%,Medium,1.12058
+2,23,Merge k Sorted Lists,45.0%,Hard,3.86821
+3,26,Remove Duplicates from Sorted Array,47.7%,Easy,0.306826
+4,42,Trapping Rain Water,54.2%,Hard,3.40723
+5,49,Group Anagrams,62.3%,Medium,3.49032
+6,98,Validate Binary Search Tree,29.7%,Medium,0.972273
+7,101,Symmetric Tree,50.2%,Easy,2.24575
+8,125,Valid Palindrome,39.9%,Easy,11.1972
+9,159,Longest Substring with At Most Two Distinct Characters,51.7%,Medium,4.84225
+10,167,Two Sum II - Input Array Is Sorted,57.3%,Easy,0.432235
+11,200,Number of Islands,52.0%,Medium,0.939139
+12,206,Reverse Linked List,68.3%,Easy,0.291204
+13,228,Summary Ranges,44.1%,Easy,9.08297
+14,253,Meeting Rooms II,48.4%,Medium,0.958276
+15,283,Move Zeroes,59.6%,Easy,2.26276
+16,350,Intersection of Two Arrays II,53.8%,Easy,1.3887
+17,356,Line Reflection,33.9%,Medium,100
+18,362,Design Hit Counter,66.5%,Medium,12.1186
+19,438,Find All Anagrams in a String,46.5%,Medium,3.06899
+20,443,String Compression,46.2%,Medium,35.1516
+21,560,Subarray Sum Equals K,43.7%,Medium,0.577815
+22,567,Permutation in String,44.4%,Medium,15.349
+23,849,Maximize Distance to Closest Person,44.9%,Medium,35.7753
+24,977,Squares of a Sorted Array,71.5%,Easy,0.81107
+25,986,Interval List Intersections,69.7%,Medium,3.83763
+26,1493,Longest Subarray of 1's After Deleting One Element,59.8%,Medium,67.8876

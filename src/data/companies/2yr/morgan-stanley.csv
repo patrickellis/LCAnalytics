@@ -1,0 +1,36 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,1,Two Sum,47.8%,Easy,2.0577
+1,2,Add Two Numbers,37.2%,Medium,0.648229
+2,3,Longest Substring Without Repeating Characters,32.4%,Medium,1.84652
+3,5,Longest Palindromic Substring,31.4%,Medium,0.828404
+4,15,3Sum,29.8%,Medium,0.558331
+5,17,Letter Combinations of a Phone Number,51.9%,Medium,9.73117
+6,20,Valid Parentheses,40.5%,Easy,4.05994
+7,31,Next Permutation,34.7%,Medium,6.74859
+8,32,Longest Valid Parentheses,30.7%,Hard,100
+9,33,Search in Rotated Sorted Array,37.0%,Medium,1.02706
+10,42,Trapping Rain Water,54.2%,Hard,1.40968
+11,45,Jump Game II,35.1%,Medium,1.86998
+12,49,Group Anagrams,62.3%,Medium,3.24555
+13,53,Maximum Subarray,48.9%,Easy,1.15528
+14,56,Merge Intervals,43.2%,Medium,2.0876
+15,62,Unique Paths,58.1%,Medium,1.82506
+16,70,Climbing Stairs,50.0%,Easy,2.08283
+17,91,Decode Ways,28.9%,Medium,10.1326
+18,121,Best Time to Buy and Sell Stock,52.9%,Easy,7.1534
+19,122,Best Time to Buy and Sell Stock II,60.4%,Medium,9.79706
+20,146,LRU Cache,38.3%,Medium,6.81034
+21,149,Max Points on a Line,19.2%,Hard,24.6958
+22,155,Min Stack,48.8%,Easy,1.01529
+23,160,Intersection of Two Linked Lists,47.5%,Easy,4.90466
+24,232,Implement Queue using Stacks,55.3%,Easy,7.79205
+25,283,Move Zeroes,59.6%,Easy,0.934604
+26,453,Minimum Moves to Equal Array Elements,52.7%,Medium,32.0408
+27,702,Search in a Sorted Array of Unknown Size,69.9%,Medium,29.0282
+28,706,Design HashMap,63.8%,Easy,4.64117
+29,871,Minimum Number of Refueling Stops,35.2%,Hard,55.5135
+30,905,Sort Array By Parity,74.9%,Easy,5.43472
+31,1047,Remove All Adjacent Duplicates In String,71.2%,Easy,4.09439
+32,1143,Longest Common Subsequence,58.8%,Medium,4.99288
+33,1326,Minimum Number of Taps to Open to Water a Garden,48.0%,Hard,76.5273
+34,1712,Ways to Split Array Into Three Subarrays,29.7%,Medium,63.1037

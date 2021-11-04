@@ -1,0 +1,23 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,42,Trapping Rain Water,54.2%,Hard,0.875004
+1,48,Rotate Image,64.0%,Medium,1.08206
+2,54,Spiral Matrix,39.3%,Medium,3.42559
+3,56,Merge Intervals,43.2%,Medium,0.576363
+4,57,Insert Interval,36.6%,Medium,5.21897
+5,68,Text Justification,32.9%,Hard,3.74898
+6,93,Restore IP Addresses,39.9%,Medium,5.34725
+7,200,Number of Islands,52.0%,Medium,0.667201
+8,207,Course Schedule,44.7%,Medium,2.60665
+9,210,Course Schedule II,44.9%,Medium,28.9927
+10,224,Basic Calculator,39.5%,Hard,17.2352
+11,498,Diagonal Traverse,53.3%,Medium,29.4076
+12,569,Median Employee Salary,65.0%,Hard,26.8459
+13,611,Valid Triangle Number,49.2%,Medium,11.8206
+14,735,Asteroid Collision,44.1%,Medium,6.65097
+15,786,K-th Smallest Prime Fraction,46.9%,Hard,70.9679
+16,1052,Grumpy Bookstore Owner,56.3%,Medium,27.1657
+17,1329,Sort the Matrix Diagonally,81.5%,Medium,11.7143
+18,1391,Check if There is a Valid Path in a Grid,46.3%,Medium,50.1878
+19,1604,Alert Using Same Key-Card Three or More Times in a One Hour Period,45.6%,Medium,90.0887
+20,1801,Number of Orders in the Backlog,44.9%,Medium,100
+21,1861,Rotating the Box,63.5%,Medium,25.9302

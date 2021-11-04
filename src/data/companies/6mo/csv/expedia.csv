@@ -1,0 +1,22 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,20,Valid Parentheses,40.5%,Easy,2.36245
+1,33,Search in Rotated Sorted Array,37.0%,Medium,0.417221
+2,36,Valid Sudoku,53.4%,Medium,0.363132
+3,49,Group Anagrams,62.3%,Medium,0.260978
+4,70,Climbing Stairs,50.0%,Easy,0.0941934
+5,121,Best Time to Buy and Sell Stock,52.9%,Easy,1.68585
+6,122,Best Time to Buy and Sell Stock II,60.4%,Medium,0.640051
+7,127,Word Ladder,33.7%,Hard,2.41369
+8,200,Number of Islands,52.0%,Medium,0.194238
+9,332,Reconstruct Itinerary,39.4%,Hard,1.04238
+10,438,Find All Anagrams in a String,46.5%,Medium,0.636058
+11,443,String Compression,46.2%,Medium,6.62537
+12,697,Degree of an Array,55.2%,Easy,4.82466
+13,724,Find Pivot Index,49.2%,Easy,2.00108
+14,1008,Construct Binary Search Tree from Preorder Traversal,79.8%,Medium,0.33476
+15,1197,Minimum Knight Moves,39.1%,Medium,79.6885
+16,1507,Reformat Date,60.9%,Easy,100
+17,1465,Maximum Area of a Piece of Cake After Horizontal and Vertical Cuts,36.9%,Medium,53.3683
+18,1492,The kth Factor of n,62.4%,Medium,56.6555
+19,1481,Least Number of Unique Integers after K Removals,58.6%,Medium,18.189
+20,1487,Making File Names Unique,33.4%,Medium,41.2219

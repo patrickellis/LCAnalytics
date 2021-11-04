@@ -1,0 +1,46 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,1,Two Sum,47.8%,Easy,0.400296
+1,5,Longest Palindromic Substring,31.4%,Medium,3.25703
+2,15,3Sum,29.8%,Medium,2.19569
+3,20,Valid Parentheses,40.5%,Easy,4.54814
+4,49,Group Anagrams,62.3%,Medium,10.0722
+5,50,"Pow(x, n)",31.6%,Medium,2.93522
+6,56,Merge Intervals,43.2%,Medium,100
+7,99,Recover Binary Search Tree,44.8%,Medium,12.0945
+8,103,Binary Tree Zigzag Level Order Traversal,52.1%,Medium,4.50362
+9,126,Word Ladder II,25.8%,Hard,18.3229
+10,127,Word Ladder,33.7%,Hard,5.87917
+11,128,Longest Consecutive Sequence,48.0%,Medium,4.79691
+12,133,Clone Graph,43.4%,Medium,9.95357
+13,139,Word Break,43.3%,Medium,2.66694
+14,141,Linked List Cycle,44.3%,Easy,1.95243
+15,146,LRU Cache,38.3%,Medium,46.9875
+16,165,Compare Version Numbers,31.9%,Medium,83.8329
+17,236,Lowest Common Ancestor of a Binary Tree,52.7%,Medium,6.40071
+18,239,Sliding Window Maximum,45.7%,Hard,4.25149
+19,243,Shortest Word Distance,63.4%,Easy,18.1163
+20,314,Binary Tree Vertical Order Traversal,49.1%,Medium,8.68031
+21,341,Flatten Nested List Iterator,57.5%,Medium,63.1546
+22,347,Top K Frequent Elements,63.7%,Medium,3.17033
+23,410,Split Array Largest Sum,48.6%,Hard,29.3766
+24,441,Arranging Coins,43.3%,Easy,45.9643
+25,451,Sort Characters By Frequency,66.8%,Medium,2.42939
+26,459,Repeated Substring Pattern,43.4%,Easy,19.7899
+27,460,LFU Cache,38.3%,Hard,22.1328
+28,556,Next Greater Element III,33.4%,Medium,22.7801
+29,588,Design In-Memory File System,47.4%,Hard,36.3883
+30,621,Task Scheduler,53.7%,Medium,26.3157
+31,636,Exclusive Time of Functions,57.9%,Medium,12.1173
+32,647,Palindromic Substrings,63.7%,Medium,17.6775
+33,692,Top K Frequent Words,53.9%,Medium,9.76144
+34,696,Count Binary Substrings,62.9%,Easy,10.2868
+35,706,Design HashMap,63.8%,Easy,8.11578
+36,829,Consecutive Numbers Sum,40.2%,Hard,28.4692
+37,1010,Pairs of Songs With Total Durations Divisible by 60,51.9%,Medium,14.4016
+38,1200,Minimum Absolute Difference,67.6%,Easy,33.1503
+39,1283,Find the Smallest Divisor Given a Threshold,52.0%,Medium,39.6739
+40,1326,Minimum Number of Taps to Open to Water a Garden,48.0%,Hard,25.759
+41,1419,Minimum Number of Frogs Croaking,49.3%,Medium,79.4894
+42,1443,Minimum Time to Collect All Apples in a Tree,55.3%,Medium,78.5179
+43,1539,Kth Missing Positive Number,54.9%,Easy,13.1965
+44,1641,Count Sorted Vowel Strings,74.9%,Medium,30.4235

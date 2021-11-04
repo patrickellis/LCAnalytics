@@ -1,0 +1,25 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,10,Regular Expression Matching,28.0%,Hard,22.5655
+1,28,Implement strStr(),35.7%,Easy,50.1532
+2,75,Sort Colors,52.8%,Medium,19.9241
+3,133,Clone Graph,43.4%,Medium,48.8329
+4,139,Word Break,43.3%,Medium,3.04753
+5,214,Shortest Palindrome,31.3%,Hard,10.9575
+6,215,Kth Largest Element in an Array,61.4%,Medium,0.73571
+7,221,Maximal Square,41.3%,Medium,2.39827
+8,269,Alien Dictionary,34.3%,Hard,2.86339
+9,285,Inorder Successor in BST,45.3%,Medium,44.3559
+10,325,Maximum Size Subarray Sum Equals k,48.5%,Medium,4.57735
+11,347,Top K Frequent Elements,63.7%,Medium,16.3308
+12,366,Find Leaves of Binary Tree,75.0%,Medium,78.2097
+13,380,Insert Delete GetRandom O(1),50.7%,Medium,0
+14,424,Longest Repeating Character Replacement,49.8%,Medium,0
+15,442,Find All Duplicates in an Array,71.4%,Medium,0
+16,547,Number of Provinces,62.2%,Medium,70.691
+17,600,Non-negative Integers without Consecutive Ones,38.4%,Hard,0
+18,692,Top K Frequent Words,53.9%,Medium,0
+19,740,Delete and Earn,53.7%,Medium,100
+20,772,Basic Calculator III,46.2%,Hard,0
+21,1010,Pairs of Songs With Total Durations Divisible by 60,51.9%,Medium,48.2611
+22,1428,Leftmost Column with at Least a One,51.5%,Medium,7.70339
+23,1761,Minimum Degree of a Connected Trio in a Graph,40.5%,Hard,19.5859

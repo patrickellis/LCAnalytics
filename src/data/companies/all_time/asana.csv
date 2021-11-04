@@ -1,0 +1,8 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,50,"Pow(x, n)",31.6%,Medium,3.50001
+1,98,Validate Binary Search Tree,29.7%,Medium,72.1393
+2,146,LRU Cache,38.3%,Medium,31.4365
+3,238,Product of Array Except Self,62.7%,Medium,100
+4,973,K Closest Points to Origin,65.7%,Medium,44.2786
+5,1668,Maximum Repeating Substring,39.4%,Easy,0
+6,1743,Restore the Array From Adjacent Pairs,66.9%,Medium,4.80489

@@ -1,0 +1,77 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,1,Two Sum,47.8%,Easy,0.0951263
+1,17,Letter Combinations of a Phone Number,51.9%,Medium,0.162639
+2,20,Valid Parentheses,40.5%,Easy,0.0676876
+3,21,Merge Two Sorted Lists,58.3%,Easy,0.0315176
+4,23,Merge k Sorted Lists,45.0%,Hard,0.460101
+5,34,Find First and Last Position of Element in Sorted Array,38.9%,Medium,0.0592178
+6,42,Trapping Rain Water,54.2%,Hard,0.146455
+7,49,Group Anagrams,62.3%,Medium,0.0667662
+8,56,Merge Intervals,43.2%,Medium,1.51218
+9,57,Insert Interval,36.6%,Medium,10.6832
+10,68,Text Justification,32.9%,Hard,1.70862
+11,78,Subsets,68.4%,Medium,0.2096
+12,79,Word Search,38.9%,Medium,0.928742
+13,84,Largest Rectangle in Histogram,39.0%,Hard,0.196534
+14,128,Longest Consecutive Sequence,48.0%,Medium,0.284676
+15,133,Clone Graph,43.4%,Medium,0.725986
+16,139,Word Break,43.3%,Medium,0.0705067
+17,146,LRU Cache,38.3%,Medium,0.177455
+18,155,Min Stack,48.8%,Easy,0.0469363
+19,198,House Robber,45.0%,Medium,0.0545611
+20,204,Count Primes,32.8%,Medium,0.208952
+21,206,Reverse Linked List,68.3%,Easy,0.034637
+22,208,Implement Trie (Prefix Tree),55.8%,Medium,2.01335
+23,210,Course Schedule II,44.9%,Medium,0.109917
+24,211,Design Add and Search Words Data Structure,42.5%,Medium,0.588368
+25,212,Word Search II,38.4%,Hard,0.709517
+26,218,The Skyline Problem,37.8%,Hard,2.60766
+27,221,Maximal Square,41.3%,Medium,8.27395
+28,238,Product of Array Except Self,62.7%,Medium,0.0628486
+29,239,Sliding Window Maximum,45.7%,Hard,0.696464
+30,253,Meeting Rooms II,48.4%,Medium,0.453649
+31,256,Paint House,56.7%,Medium,17.975
+32,269,Alien Dictionary,34.3%,Hard,1.04424
+33,295,Find Median from Data Stream,49.5%,Hard,2.72741
+34,300,Longest Increasing Subsequence,47.3%,Medium,0.345467
+35,332,Reconstruct Itinerary,39.4%,Hard,1.05436
+36,340,Longest Substring with At Most K Distinct Characters,46.7%,Medium,0.298471
+37,341,Flatten Nested List Iterator,57.5%,Medium,6.23638
+38,358,Rearrange String k Distance Apart,36.3%,Hard,3.42665
+39,380,Insert Delete GetRandom O(1),50.7%,Medium,6.72649
+40,451,Sort Characters By Frequency,66.8%,Medium,0.0642266
+41,453,Minimum Moves to Equal Array Elements,52.7%,Medium,18.2874
+42,532,K-diff Pairs in an Array,36.9%,Medium,14.7471
+43,540,Single Element in a Sorted Array,58.1%,Medium,2.30122
+44,547,Number of Provinces,62.2%,Medium,1.81789
+45,609,Find Duplicate File in System,63.4%,Medium,1.62813
+46,635,Design Log Storage System,61.4%,Medium,74.3665
+47,642,Design Search Autocomplete System,47.6%,Hard,1.93246
+48,647,Palindromic Substrings,63.7%,Medium,1.28264
+49,691,Stickers to Spell Word,46.4%,Hard,3.02924
+50,697,Degree of an Array,55.2%,Easy,0.55412
+51,716,Max Stack,44.2%,Easy,1.86115
+52,721,Accounts Merge,54.2%,Medium,1.50461
+53,724,Find Pivot Index,49.2%,Easy,1.40343
+54,739,Daily Temperatures,66.1%,Medium,0.215957
+55,767,Reorganize String,51.2%,Medium,0.74942
+56,780,Reaching Points,30.8%,Hard,48.7329
+57,706,Design HashMap,63.8%,Easy,2.53937
+58,528,Random Pick with Weight,45.6%,Medium,0.46198
+59,921,Minimum Add to Make Parentheses Valid,76.9%,Medium,0.412336
+60,945,Minimum Increment to Make Array Unique,48.0%,Medium,7.52859
+61,981,Time Based Key-Value Store,53.4%,Medium,0.282938
+62,994,Rotting Oranges,51.1%,Medium,0.057631
+63,1151,Minimum Swaps to Group All 1's Together,59.0%,Medium,5.90744
+64,1197,Minimum Knight Moves,39.1%,Medium,0.535351
+65,1200,Minimum Absolute Difference,67.6%,Easy,0.876404
+66,1248,Count Number of Nice Subarrays,57.5%,Medium,2.41671
+67,1297,Maximum Number of Occurrences of a Substring,52.2%,Medium,20.085
+68,1326,Minimum Number of Taps to Open to Water a Garden,48.0%,Hard,16.2323
+69,1347,Minimum Number of Steps to Make Two Strings Anagram,75.4%,Medium,1.44963
+70,1348,Tweet Counts Per Frequency,41.6%,Medium,100
+71,1353,Maximum Number of Events That Can Be Attended,32.1%,Medium,1.04995
+72,1475,Final Prices With a Special Discount in a Shop,75.0%,Easy,0.832901
+73,1492,The kth Factor of n,62.4%,Medium,7.21149
+74,1751,Maximum Number of Events That Can Be Attended II,53.1%,Hard,2.88757
+75,1817,Finding the Users Active Minutes,79.7%,Medium,26.6541

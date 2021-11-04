@@ -1,0 +1,16 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,68,Text Justification,32.9%,Hard,32.8505
+1,79,Word Search,38.9%,Medium,0.115655
+2,85,Maximal Rectangle,40.9%,Hard,0.502497
+3,91,Decode Ways,28.9%,Medium,0.292617
+4,200,Number of Islands,52.0%,Medium,0.123682
+5,207,Course Schedule,44.7%,Medium,1.50253
+6,210,Course Schedule II,44.9%,Medium,3.51773
+7,224,Basic Calculator,39.5%,Hard,6.69937
+8,236,Lowest Common Ancestor of a Binary Tree,52.7%,Medium,0.18736
+9,252,Meeting Rooms,56.2%,Easy,0.316768
+10,718,Maximum Length of Repeated Subarray,51.2%,Medium,67.6968
+11,759,Employee Free Time,70.2%,Hard,6.71436
+12,811,Subdomain Visit Count,73.1%,Medium,100
+13,1143,Longest Common Subsequence,58.8%,Medium,0.255566
+14,1604,Alert Using Same Key-Card Three or More Times in a One Hour Period,45.6%,Medium,35.3935

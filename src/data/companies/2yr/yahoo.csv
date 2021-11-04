@@ -1,0 +1,126 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,1,Two Sum,47.8%,Easy,26.6985
+1,2,Add Two Numbers,37.2%,Medium,46.6455
+2,3,Longest Substring Without Repeating Characters,32.4%,Medium,7.38986
+3,4,Median of Two Sorted Arrays,32.9%,Hard,6.82549
+4,5,Longest Palindromic Substring,31.4%,Medium,2.44032
+5,7,Reverse Integer,26.2%,Medium,8.45689
+6,9,Palindrome Number,51.6%,Easy,0.90125
+7,11,Container With Most Water,53.2%,Medium,15.6184
+8,12,Integer to Roman,58.4%,Medium,4.09061
+9,13,Roman to Integer,57.7%,Easy,8.30748
+10,14,Longest Common Prefix,38.1%,Easy,12.1784
+11,15,3Sum,29.8%,Medium,8.92291
+12,18,4Sum,36.7%,Medium,4.98013
+13,20,Valid Parentheses,40.5%,Easy,7.65039
+14,21,Merge Two Sorted Lists,58.3%,Easy,8.00935
+15,22,Generate Parentheses,68.3%,Medium,8.79887
+16,23,Merge k Sorted Lists,45.0%,Hard,8.36559
+17,28,Implement strStr(),35.7%,Easy,12.6086
+18,31,Next Permutation,34.7%,Medium,2.21807
+19,32,Longest Valid Parentheses,30.7%,Hard,5.17759
+20,33,Search in Rotated Sorted Array,37.0%,Medium,1.34563
+21,42,Trapping Rain Water,54.2%,Hard,7.36652
+22,45,Jump Game II,35.1%,Medium,5.50374
+23,46,Permutations,69.9%,Medium,2.05831
+24,49,Group Anagrams,62.3%,Medium,4.25221
+25,53,Maximum Subarray,48.9%,Easy,4.19863
+26,55,Jump Game,36.8%,Medium,1.09097
+27,56,Merge Intervals,43.2%,Medium,14.798
+28,60,Permutation Sequence,40.9%,Hard,18.8006
+29,67,Add Binary,48.9%,Easy,3.13512
+30,72,Edit Distance,49.2%,Hard,5.60963
+31,74,Search a 2D Matrix,40.7%,Medium,2.23597
+32,75,Sort Colors,52.8%,Medium,4.48704
+33,77,Combinations,61.1%,Medium,4.47038
+34,83,Remove Duplicates from Sorted List,47.8%,Easy,2.44223
+35,85,Maximal Rectangle,40.9%,Hard,12.862
+36,91,Decode Ways,28.9%,Medium,3.33604
+37,93,Restore IP Addresses,39.9%,Medium,11.2867
+38,95,Unique Binary Search Trees II,47.3%,Medium,30.4461
+39,98,Validate Binary Search Tree,29.7%,Medium,1.45803
+40,102,Binary Tree Level Order Traversal,59.2%,Medium,1.7341
+41,108,Convert Sorted Array to Binary Search Tree,64.1%,Easy,7.81755
+42,118,Pascal's Triangle,60.4%,Easy,4.69568
+43,121,Best Time to Buy and Sell Stock,52.9%,Easy,9.37216
+44,124,Binary Tree Maximum Path Sum,36.8%,Hard,2.65829
+45,127,Word Ladder,33.7%,Hard,9.88295
+46,131,Palindrome Partitioning,55.8%,Medium,18.4455
+47,136,Single Number,67.8%,Easy,3.3738
+48,138,Copy List with Random Pointer,44.5%,Medium,15.4862
+49,139,Word Break,43.3%,Medium,7.96803
+50,143,Reorder List,44.0%,Medium,5.5299
+51,146,LRU Cache,38.3%,Medium,8.92269
+52,148,Sort List,49.0%,Medium,28.0276
+53,155,Min Stack,48.8%,Easy,2.99037
+54,160,Intersection of Two Linked Lists,47.5%,Easy,2.86127
+55,162,Find Peak Element,45.0%,Medium,2.5298
+56,169,Majority Element,61.4%,Easy,8.91598
+57,175,Combine Two Tables,67.8%,Easy,3.652
+58,178,Rank Scores,54.8%,Medium,19.4602
+59,199,Binary Tree Right Side View,58.2%,Medium,2.67379
+60,200,Number of Islands,52.0%,Medium,22.2893
+61,202,Happy Number,52.2%,Easy,9.78808
+62,205,Isomorphic Strings,41.6%,Easy,5.89011
+63,206,Reverse Linked List,68.3%,Easy,0.981632
+64,207,Course Schedule,44.7%,Medium,2.44921
+65,212,Word Search II,38.4%,Hard,2.25508
+66,215,Kth Largest Element in an Array,61.4%,Medium,1.9161
+67,221,Maximal Square,41.3%,Medium,6.26363
+68,224,Basic Calculator,39.5%,Hard,9.2245
+69,234,Palindrome Linked List,44.6%,Easy,2.53679
+70,237,Delete Node in a Linked List,70.0%,Easy,3.51215
+71,238,Product of Array Except Self,62.7%,Medium,1.78116
+72,239,Sliding Window Maximum,45.7%,Hard,7.15243
+73,240,Search a 2D Matrix II,46.9%,Medium,4.88044
+74,260,Single Number III,65.9%,Medium,42.1832
+75,287,Find the Duplicate Number,58.3%,Medium,2.74036
+76,300,Longest Increasing Subsequence,47.3%,Medium,2.45702
+77,309,Best Time to Buy and Sell Stock with Cooldown,50.7%,Medium,2.47837
+78,314,Binary Tree Vertical Order Traversal,49.1%,Medium,6.50369
+79,319,Bulb Switcher,46.4%,Medium,22.3971
+80,322,Coin Change,39.0%,Medium,1.97971
+81,334,Increasing Triplet Subsequence,41.1%,Medium,8.06732
+82,345,Reverse Vowels of a String,46.2%,Easy,10.5625
+83,347,Top K Frequent Elements,63.7%,Medium,5.33635
+84,362,Design Hit Counter,66.5%,Medium,18.3702
+85,371,Sum of Two Integers,50.7%,Medium,17.9899
+86,384,Shuffle an Array,55.9%,Medium,31.8452
+87,387,First Unique Character in a String,55.6%,Easy,2.03225
+88,392,Is Subsequence,50.0%,Easy,5.75632
+89,403,Frog Jump,42.4%,Hard,23.9274
+90,412,Fizz Buzz,65.3%,Easy,10.9065
+91,416,Partition Equal Subset Sum,45.7%,Medium,5.60229
+92,420,Strong Password Checker,13.9%,Hard,100
+93,445,Add Two Numbers II,57.7%,Medium,21.572
+94,448,Find All Numbers Disappeared in an Array,57.3%,Easy,4.51809
+95,518,Coin Change 2,55.1%,Medium,15.3951
+96,543,Diameter of Binary Tree,52.3%,Easy,1.32859
+97,560,Subarray Sum Equals K,43.7%,Medium,23.5931
+98,617,Merge Two Binary Trees,76.9%,Easy,3.34067
+99,665,Non-decreasing Array,21.2%,Medium,27.0342
+100,669,Trim a Binary Search Tree,64.4%,Medium,19.2902
+101,698,Partition to K Equal Sum Subsets,45.8%,Medium,10.1855
+102,718,Maximum Length of Repeated Subarray,51.2%,Medium,13.3664
+103,721,Accounts Merge,54.2%,Medium,6.95081
+104,746,Min Cost Climbing Stairs,55.8%,Easy,2.91872
+105,759,Employee Free Time,70.2%,Hard,15.2381
+106,767,Reorganize String,51.2%,Medium,9.49742
+107,775,Global and Local Inversions,45.7%,Medium,71.5007
+108,779,K-th Symbol in Grammar,39.4%,Medium,20.0639
+109,796,Rotate String,50.2%,Easy,13.942
+110,832,Flipping an Image,79.0%,Easy,13.1429
+111,834,Sum of Distances in Tree,52.3%,Hard,56.3336
+112,852,Peak Index in a Mountain Array,71.4%,Easy,6.81312
+113,863,All Nodes Distance K in Binary Tree,59.8%,Medium,6.06731
+114,888,Fair Candy Swap,59.9%,Easy,34.1536
+115,912,Sort an Array,62.8%,Medium,6.33575
+116,940,Distinct Subsequences II,43.2%,Hard,33.5585
+117,950,Reveal Cards In Increasing Order,76.4%,Medium,70.5832
+118,977,Squares of a Sorted Array,71.5%,Easy,1.2161
+119,981,Time Based Key-Value Store,53.4%,Medium,8.01862
+120,1108,Defanging an IP Address,88.6%,Easy,20.6175
+121,1235,Maximum Profit in Job Scheduling,50.2%,Hard,8.89231
+122,1249,Minimum Remove to Make Valid Parentheses,65.0%,Medium,7.46989
+123,1412,Find the Quiet Students in All Exams,62.8%,Hard,85.7504
+124,1464,Maximum Product of Two Elements in an Array,77.5%,Easy,16.9105

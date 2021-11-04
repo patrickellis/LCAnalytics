@@ -1,0 +1,63 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,1,Two Sum,47.8%,Easy,5.57855
+1,2,Add Two Numbers,37.2%,Medium,2.52956
+2,4,Median of Two Sorted Arrays,32.9%,Hard,5.09586
+3,5,Longest Palindromic Substring,31.4%,Medium,7.26835
+4,13,Roman to Integer,57.7%,Easy,3.97331
+5,16,3Sum Closest,46.9%,Medium,11.199
+6,17,Letter Combinations of a Phone Number,51.9%,Medium,24.3609
+7,20,Valid Parentheses,40.5%,Easy,10.1496
+8,31,Next Permutation,34.7%,Medium,14.8431
+9,33,Search in Rotated Sorted Array,37.0%,Medium,4.00787
+10,36,Valid Sudoku,53.4%,Medium,31.2394
+11,39,Combination Sum,62.5%,Medium,7.15206
+12,48,Rotate Image,64.0%,Medium,6.80264
+13,53,Maximum Subarray,48.9%,Easy,8.00973
+14,54,Spiral Matrix,39.3%,Medium,59.4272
+15,55,Jump Game,36.8%,Medium,12.9756
+16,56,Merge Intervals,43.2%,Medium,14.4665
+17,59,Spiral Matrix II,60.4%,Medium,53.0969
+18,62,Unique Paths,58.1%,Medium,7.12187
+19,68,Text Justification,32.9%,Hard,23.569
+20,73,Set Matrix Zeroes,46.7%,Medium,9.87463
+21,79,Word Search,38.9%,Medium,3.9221
+22,97,Interleaving String,34.1%,Medium,35.6541
+23,102,Binary Tree Level Order Traversal,59.2%,Medium,11.608
+24,121,Best Time to Buy and Sell Stock,52.9%,Easy,14.276
+25,138,Copy List with Random Pointer,44.5%,Medium,11.601
+26,141,Linked List Cycle,44.3%,Easy,4.35702
+27,142,Linked List Cycle II,41.9%,Medium,11.4254
+28,146,LRU Cache,38.3%,Medium,79.3471
+29,150,Evaluate Reverse Polish Notation,40.7%,Medium,86.7845
+30,151,Reverse Words in a String,26.8%,Medium,4.4374
+31,160,Intersection of Two Linked Lists,47.5%,Easy,8.52212
+32,199,Binary Tree Right Side View,58.2%,Medium,31.7231
+33,200,Number of Islands,52.0%,Medium,50.9652
+34,207,Course Schedule,44.7%,Medium,16.3874
+35,212,Word Search II,38.4%,Hard,6.71662
+36,227,Basic Calculator II,40.0%,Medium,12.8237
+37,253,Meeting Rooms II,48.4%,Medium,21.6026
+38,297,Serialize and Deserialize Binary Tree,52.1%,Hard,29.2623
+39,317,Shortest Distance from All Buildings,43.7%,Hard,39.687
+40,344,Reverse String,72.5%,Easy,3.64106
+41,394,Decode String,54.6%,Medium,12.9044
+42,415,Add Strings,50.8%,Easy,10.8546
+43,437,Path Sum III,49.6%,Medium,7.37882
+44,450,Delete Node in a BST,46.9%,Medium,22.6926
+45,468,Validate IP Address,25.8%,Medium,60.772
+46,560,Subarray Sum Equals K,43.7%,Medium,36.0674
+47,581,Shortest Unsorted Continuous Subarray,33.6%,Medium,97.7941
+48,680,Valid Palindrome II,37.9%,Easy,8.7556
+49,692,Top K Frequent Words,53.9%,Medium,84.8832
+50,694,Number of Distinct Islands,59.0%,Medium,68.3375
+51,725,Split Linked List in Parts,56.1%,Medium,100
+52,759,Employee Free Time,70.2%,Hard,45.3859
+53,430,Flatten a Multilevel Doubly Linked List,58.3%,Medium,25.7656
+54,763,Partition Labels,78.4%,Medium,19.9329
+55,706,Design HashMap,63.8%,Easy,40.5903
+56,863,All Nodes Distance K in Binary Tree,59.8%,Medium,40.5011
+57,938,Range Sum of BST,84.0%,Easy,10.4208
+58,981,Time Based Key-Value Store,53.4%,Medium,23.883
+59,994,Rotting Oranges,51.1%,Medium,10.9339
+60,1209,Remove All Adjacent Duplicates in String II,56.2%,Medium,27.2657
+61,1344,Angle Between Hands of a Clock,62.2%,Medium,37.3973

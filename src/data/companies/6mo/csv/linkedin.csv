@@ -1,0 +1,92 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,5,Longest Palindromic Substring,31.4%,Medium,0.113853
+1,8,String to Integer (atoi),16.1%,Medium,0.112749
+2,20,Valid Parentheses,40.5%,Easy,4.57663
+3,23,Merge k Sorted Lists,45.0%,Hard,0.0978928
+4,33,Search in Rotated Sorted Array,37.0%,Medium,4.82066
+5,34,Find First and Last Position of Element in Sorted Array,38.9%,Medium,1.55957
+6,39,Combination Sum,62.5%,Medium,0.112032
+7,46,Permutations,69.9%,Medium,0.596852
+8,47,Permutations II,52.1%,Medium,0.210299
+9,50,"Pow(x, n)",31.6%,Medium,1.24104
+10,53,Maximum Subarray,48.9%,Easy,6.97571
+11,56,Merge Intervals,43.2%,Medium,0.226607
+12,61,Rotate List,33.0%,Medium,1.62291
+13,65,Valid Number,17.3%,Hard,5.38667
+14,68,Text Justification,32.9%,Hard,8.42594
+15,69,Sqrt(x),36.0%,Easy,1.37181
+16,70,Climbing Stairs,50.0%,Easy,0.0318627
+17,72,Edit Distance,49.2%,Hard,2.30233
+18,76,Minimum Window Substring,37.9%,Hard,3.17038
+19,81,Search in Rotated Sorted Array II,34.2%,Medium,3.02846
+20,100,Same Tree,54.9%,Easy,0.22504
+21,101,Symmetric Tree,50.2%,Easy,0.199013
+22,102,Binary Tree Level Order Traversal,59.2%,Medium,4.3386
+23,103,Binary Tree Zigzag Level Order Traversal,52.1%,Medium,0.975005
+24,104,Maximum Depth of Binary Tree,70.1%,Easy,2.70805
+25,127,Word Ladder,33.7%,Hard,1.81663
+26,128,Longest Consecutive Sequence,48.0%,Medium,0.167682
+27,149,Max Points on a Line,19.2%,Hard,14.46
+28,150,Evaluate Reverse Polish Notation,40.7%,Medium,6.58456
+29,151,Reverse Words in a String,26.8%,Medium,0.0695086
+30,152,Maximum Product Subarray,33.6%,Medium,6.18841
+31,156,Binary Tree Upside Down,58.3%,Medium,23.5593
+32,160,Intersection of Two Linked Lists,47.5%,Easy,0.531608
+33,200,Number of Islands,52.0%,Medium,5.5737
+34,205,Isomorphic Strings,41.6%,Easy,1.69058
+35,215,Kth Largest Element in an Array,61.4%,Medium,4.77101
+36,224,Basic Calculator,39.5%,Hard,0.430371
+37,226,Invert Binary Tree,69.8%,Easy,0.0515656
+38,235,Lowest Common Ancestor of a Binary Search Tree,54.9%,Easy,0.63339
+39,236,Lowest Common Ancestor of a Binary Tree,52.7%,Medium,0.397001
+40,243,Shortest Word Distance,63.4%,Easy,26.3705
+41,244,Shortest Word Distance II,57.4%,Medium,100
+42,254,Factor Combinations,48.3%,Medium,5.74973
+43,256,Paint House,56.7%,Medium,10.5273
+44,261,Graph Valid Tree,44.7%,Medium,4.46484
+45,272,Closest Binary Search Tree Value II,54.7%,Hard,31.1063
+46,273,Integer to English Words,29.0%,Hard,2.66759
+47,277,Find the Celebrity,45.4%,Medium,1.3945
+48,297,Serialize and Deserialize Binary Tree,52.1%,Hard,4.8479
+49,319,Bulb Switcher,46.4%,Medium,1.04494
+50,323,Number of Connected Components in an Undirected Graph,59.8%,Medium,0.351776
+51,339,Nested List Weight Sum,78.5%,Medium,43.5968
+52,341,Flatten Nested List Iterator,57.5%,Medium,3.40338
+53,349,Intersection of Two Arrays,67.4%,Easy,1.21757
+54,350,Intersection of Two Arrays II,53.8%,Easy,0.0971993
+55,360,Sort Transformed Array,51.7%,Medium,11.6569
+56,361,Bomb Enemy,49.0%,Medium,7.95544
+57,364,Nested List Weight Sum II,66.1%,Medium,86.5171
+58,366,Find Leaves of Binary Tree,75.0%,Medium,15.1727
+59,367,Valid Perfect Square,42.6%,Easy,0.920526
+60,373,Find K Pairs with Smallest Sums,38.9%,Medium,9.43789
+61,380,Insert Delete GetRandom O(1),50.7%,Medium,6.70054
+62,432,All O`one Data Structure,34.6%,Hard,65.5973
+63,450,Delete Node in a BST,46.9%,Medium,0.795874
+64,464,Can I Win,29.6%,Medium,2.22473
+65,516,Longest Palindromic Subsequence,58.0%,Medium,2.99647
+66,526,Beautiful Arrangement,63.4%,Medium,36.4836
+67,560,Subarray Sum Equals K,43.7%,Medium,0.090874
+68,605,Can Place Flowers,31.8%,Easy,30.7462
+69,611,Valid Triangle Number,49.2%,Medium,4.48555
+70,636,Exclusive Time of Functions,57.9%,Medium,1.67085
+71,653,Two Sum IV - Input is a BST,58.0%,Easy,0.707084
+72,671,Second Minimum Node In a Binary Tree,43.2%,Easy,4.67084
+73,678,Valid Parenthesis String,32.4%,Medium,2.9461
+74,698,Partition to K Equal Sum Subsets,45.8%,Medium,5.50121
+75,713,Subarray Product Less Than K,42.0%,Medium,0.946601
+76,716,Max Stack,44.2%,Easy,44.6775
+77,730,Count Different Palindromic Subsequences,43.8%,Hard,3.64747
+78,744,Find Smallest Letter Greater Than Target,45.9%,Easy,3.82074
+79,701,Insert into a Binary Search Tree,74.8%,Medium,0.304872
+80,706,Design HashMap,63.8%,Easy,1.1242
+81,528,Random Pick with Weight,45.6%,Medium,1.08027
+82,973,K Closest Points to Origin,65.7%,Medium,2.04105
+83,981,Time Based Key-Value Store,53.4%,Medium,0.37411
+84,1197,Minimum Knight Moves,39.1%,Medium,0.707858
+85,1188,Design Bounded Blocking Queue,73.2%,Medium,5.77646
+86,1235,Maximum Profit in Job Scheduling,50.2%,Hard,3.60276
+87,1541,Minimum Insertions to Balance a Parentheses String,47.1%,Medium,3.41985
+88,1611,Minimum One Bit Operations to Make Integers Zero,61.6%,Hard,38.3388
+89,1650,Lowest Common Ancestor of a Binary Tree III,77.4%,Medium,1.8677
+90,1696,Jump Game VI,42.2%,Medium,1.67047

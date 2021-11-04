@@ -1,0 +1,39 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,1,Two Sum,47.8%,Easy,36.3344
+1,2,Add Two Numbers,37.2%,Medium,2.19298
+2,3,Longest Substring Without Repeating Characters,32.4%,Medium,1.56422
+3,5,Longest Palindromic Substring,31.4%,Medium,5.47105
+4,15,3Sum,29.8%,Medium,1.21029
+5,17,Letter Combinations of a Phone Number,51.9%,Medium,45.1737
+6,20,Valid Parentheses,40.5%,Easy,19.3993
+7,31,Next Permutation,34.7%,Medium,22.3507
+8,32,Longest Valid Parentheses,30.7%,Hard,70.7323
+9,33,Search in Rotated Sorted Array,37.0%,Medium,3.46992
+10,42,Trapping Rain Water,54.2%,Hard,3.05046
+11,45,Jump Game II,35.1%,Medium,4.04275
+12,49,Group Anagrams,62.3%,Medium,6.99716
+13,53,Maximum Subarray,48.9%,Easy,6.90956
+14,56,Merge Intervals,43.2%,Medium,7.98503
+15,62,Unique Paths,58.1%,Medium,2.22442
+16,70,Climbing Stairs,50.0%,Easy,4.50097
+17,91,Decode Ways,28.9%,Medium,8.55656
+18,121,Best Time to Buy and Sell Stock,52.9%,Easy,78.4302
+19,122,Best Time to Buy and Sell Stock II,60.4%,Medium,16.9705
+20,146,LRU Cache,38.3%,Medium,22.5505
+21,149,Max Points on a Line,19.2%,Hard,23.5168
+22,155,Min Stack,48.8%,Easy,3.43029
+23,160,Intersection of Two Linked Lists,47.5%,Easy,18.5476
+24,232,Implement Queue using Stacks,55.3%,Easy,29.1316
+25,283,Move Zeroes,59.6%,Easy,4.54048
+26,453,Minimum Moves to Equal Array Elements,52.7%,Medium,30.3986
+27,702,Search in a Sorted Array of Unknown Size,69.9%,Medium,15.7489
+28,706,Design HashMap,63.8%,Easy,9.97804
+29,871,Minimum Number of Refueling Stops,35.2%,Hard,100
+30,905,Sort Array By Parity,74.9%,Easy,2.94854
+31,1047,Remove All Adjacent Duplicates In String,71.2%,Easy,2.22136
+32,1143,Longest Common Subsequence,58.8%,Medium,2.70883
+33,1217,Minimum Cost to Move Chips to The Same Position,70.7%,Easy,0
+34,1326,Minimum Number of Taps to Open to Water a Garden,48.0%,Hard,66.7435
+35,1626,Best Team With No Conflicts,40.1%,Medium,0
+36,1712,Ways to Split Array Into Three Subarrays,29.7%,Medium,40.2256
+37,1964,Find the Longest Valid Obstacle Course at Each Position,43.5%,Hard,0

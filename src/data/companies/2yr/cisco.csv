@@ -1,0 +1,92 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,1,Two Sum,47.8%,Easy,1.27834
+1,2,Add Two Numbers,37.2%,Medium,0.145957
+2,3,Longest Substring Without Repeating Characters,32.4%,Medium,0.415346
+3,5,Longest Palindromic Substring,31.4%,Medium,1.6617
+4,8,String to Integer (atoi),16.1%,Medium,0.414897
+5,14,Longest Common Prefix,38.1%,Easy,0.103996
+6,15,3Sum,29.8%,Medium,0.223363
+7,16,3Sum Closest,46.9%,Medium,0.287352
+8,17,Letter Combinations of a Phone Number,51.9%,Medium,0.974357
+9,20,Valid Parentheses,40.5%,Easy,1.03622
+10,21,Merge Two Sorted Lists,58.3%,Easy,0.0682632
+11,22,Generate Parentheses,68.3%,Medium,0.168687
+12,23,Merge k Sorted Lists,45.0%,Hard,0.160353
+13,25,Reverse Nodes in k-Group,48.7%,Hard,0.373357
+14,33,Search in Rotated Sorted Array,37.0%,Medium,0.231182
+15,41,First Missing Positive,35.2%,Hard,0.638136
+16,42,Trapping Rain Water,54.2%,Hard,0.141148
+17,48,Rotate Image,64.0%,Medium,29.8035
+18,49,Group Anagrams,62.3%,Medium,1.29135
+19,50,"Pow(x, n)",31.6%,Medium,0.16807
+20,53,Maximum Subarray,48.9%,Easy,4.9733
+21,54,Spiral Matrix,39.3%,Medium,0.246106
+22,56,Merge Intervals,43.2%,Medium,3.82925
+23,67,Add Binary,48.9%,Easy,0.239596
+24,70,Climbing Stairs,50.0%,Easy,0.0521925
+25,72,Edit Distance,49.2%,Hard,0.428706
+26,74,Search a 2D Matrix,40.7%,Medium,0.17088
+27,79,Word Search,38.9%,Medium,5.45725
+28,88,Merge Sorted Array,42.2%,Easy,0.0936569
+29,91,Decode Ways,28.9%,Medium,70.4385
+30,102,Binary Tree Level Order Traversal,59.2%,Medium,0.528676
+31,108,Convert Sorted Array to Binary Search Tree,64.1%,Easy,0.266129
+32,121,Best Time to Buy and Sell Stock,52.9%,Easy,0.234645
+33,125,Valid Palindrome,39.9%,Easy,0.145135
+34,127,Word Ladder,33.7%,Hard,0.336641
+35,140,Word Break II,39.2%,Hard,0.46042
+36,141,Linked List Cycle,44.3%,Easy,0.251302
+37,146,LRU Cache,38.3%,Medium,4.16177
+38,151,Reverse Words in a String,26.8%,Medium,0.113858
+39,165,Compare Version Numbers,31.9%,Medium,1.22974
+40,191,Number of 1 Bits,57.0%,Easy,8.65017
+41,198,House Robber,45.0%,Medium,18.9044
+42,200,Number of Islands,52.0%,Medium,0.107627
+43,204,Count Primes,32.8%,Medium,1.01438
+44,206,Reverse Linked List,68.3%,Easy,0.299621
+45,207,Course Schedule,44.7%,Medium,0.187177
+46,212,Word Search II,38.4%,Hard,6.95108
+47,213,House Robber II,38.8%,Medium,0.237164
+48,215,Kth Largest Element in an Array,61.4%,Medium,0.329069
+49,234,Palindrome Linked List,44.6%,Easy,0.772435
+50,237,Delete Node in a Linked List,70.0%,Easy,0.26841
+51,241,Different Ways to Add Parentheses,59.7%,Medium,1.3015
+52,242,Valid Anagram,60.2%,Easy,0.299017
+53,246,Strobogrammatic Number,47.2%,Easy,3.65628
+54,253,Meeting Rooms II,48.4%,Medium,0.24687
+55,268,Missing Number,57.6%,Easy,0.414456
+56,273,Integer to English Words,29.0%,Hard,0.71681
+57,278,First Bad Version,39.9%,Easy,0.0859538
+58,283,Move Zeroes,59.6%,Easy,0.210387
+59,322,Coin Change,39.0%,Medium,0.33998
+60,327,Count of Range Sum,36.0%,Hard,4.73462
+61,329,Longest Increasing Path in a Matrix,48.3%,Hard,0.514943
+62,344,Reverse String,72.5%,Easy,0.21004
+63,362,Design Hit Counter,66.5%,Medium,1.40391
+64,394,Decode String,54.6%,Medium,39.2496
+65,402,Remove K Digits,28.9%,Medium,1.02079
+66,412,Fizz Buzz,65.3%,Easy,0.833508
+67,423,Reconstruct Original Digits from English,51.5%,Medium,6.96069
+68,443,String Compression,46.2%,Medium,1.34279
+69,450,Delete Node in a BST,46.9%,Medium,1.30368
+70,460,LFU Cache,38.3%,Hard,1.26732
+71,468,Validate IP Address,25.8%,Medium,68.8111
+72,518,Coin Change 2,55.1%,Medium,0.525233
+73,526,Beautiful Arrangement,63.4%,Medium,2.51689
+74,560,Subarray Sum Equals K,43.7%,Medium,0.148856
+75,724,Find Pivot Index,49.2%,Easy,0.494861
+76,739,Daily Temperatures,66.1%,Medium,1.85337
+77,759,Employee Free Time,70.2%,Hard,1.16455
+78,809,Expressive Words,46.2%,Medium,100
+79,844,Backspace String Compare,47.4%,Easy,0.401025
+80,867,Transpose Matrix,61.4%,Easy,1.57351
+81,881,Boats to Save People,49.6%,Medium,2.09994
+82,905,Sort Array By Parity,74.9%,Easy,2.15293
+83,909,Snakes and Ladders,39.6%,Medium,7.32923
+84,977,Squares of a Sorted Array,71.5%,Easy,0.0929384
+85,986,Interval List Intersections,69.7%,Medium,0.441038
+86,1010,Pairs of Songs With Total Durations Divisible by 60,51.9%,Medium,1.8426
+87,1197,Minimum Knight Moves,39.1%,Medium,1.1595
+88,1235,Maximum Profit in Job Scheduling,50.2%,Hard,10.1852
+89,1290,Convert Binary Number in a Linked List to Integer,81.8%,Easy,21.0168
+90,1492,The kth Factor of n,62.4%,Medium,1.07956

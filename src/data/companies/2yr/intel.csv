@@ -1,0 +1,22 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,1,Two Sum,47.8%,Easy,11.8803
+1,2,Add Two Numbers,37.2%,Medium,5.38707
+2,5,Longest Palindromic Substring,31.4%,Medium,15.479
+3,8,String to Integer (atoi),16.1%,Medium,34.4359
+4,14,Longest Common Prefix,38.1%,Easy,8.63153
+5,20,Valid Parentheses,40.5%,Easy,48.5267
+6,21,Merge Two Sorted Lists,58.3%,Easy,5.66576
+7,42,Trapping Rain Water,54.2%,Hard,72.8533
+8,49,Group Anagrams,62.3%,Medium,12.0022
+9,53,Maximum Subarray,48.9%,Easy,26.6321
+10,104,Maximum Depth of Binary Tree,70.1%,Easy,20.1765
+11,141,Linked List Cycle,44.3%,Easy,9.27891
+12,146,LRU Cache,38.3%,Medium,56.5969
+13,200,Number of Islands,52.0%,Medium,35.6535
+14,204,Count Primes,32.8%,Medium,37.5622
+15,205,Isomorphic Strings,41.6%,Easy,83.7436
+16,206,Reverse Linked List,68.3%,Easy,14.0008
+17,238,Product of Array Except Self,62.7%,Medium,25.3911
+18,380,Insert Delete GetRandom O(1),50.7%,Medium,12.1165
+19,912,Sort an Array,62.8%,Medium,40.1879
+20,1198,Find Smallest Common Element in All Rows,76.3%,Medium,100

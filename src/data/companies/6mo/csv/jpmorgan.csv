@@ -1,0 +1,16 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,1,Two Sum,47.8%,Easy,0.144969
+1,20,Valid Parentheses,40.5%,Easy,0.927229
+2,49,Group Anagrams,62.3%,Medium,2.05535
+3,53,Maximum Subarray,48.9%,Easy,0.325307
+4,56,Merge Intervals,43.2%,Medium,66.2509
+5,91,Decode Ways,28.9%,Medium,1.61251
+6,121,Best Time to Buy and Sell Stock,52.9%,Easy,0.835375
+7,242,Valid Anagram,60.2%,Easy,0.841487
+8,399,Evaluate Division,55.9%,Medium,5.42377
+9,423,Reconstruct Original Digits from English,51.5%,Medium,100
+10,453,Minimum Moves to Equal Array Elements,52.7%,Medium,9.12754
+11,560,Subarray Sum Equals K,43.7%,Medium,2.11565
+12,696,Count Binary Substrings,62.9%,Easy,32.5018
+13,509,Fibonacci Number,67.8%,Easy,1.69908
+14,1290,Convert Binary Number in a Linked List to Integer,81.8%,Easy,30.7487

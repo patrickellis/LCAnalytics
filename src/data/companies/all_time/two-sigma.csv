@@ -1,0 +1,18 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,43,Multiply Strings,36.2%,Medium,2.27304
+1,44,Wildcard Matching,26.1%,Hard,21.336
+2,49,Group Anagrams,62.3%,Medium,0.379939
+3,56,Merge Intervals,43.2%,Medium,0.351795
+4,123,Best Time to Buy and Sell Stock III,42.2%,Hard,8.37924
+5,146,LRU Cache,38.3%,Medium,20.4611
+6,289,Game of Life,61.2%,Medium,5.77718
+7,342,Power of Four,42.8%,Easy,9.36117
+8,349,Intersection of Two Arrays,67.4%,Easy,0.136382
+9,380,Insert Delete GetRandom O(1),50.7%,Medium,8.40299
+10,384,Shuffle an Array,55.9%,Medium,1.02835
+11,547,Number of Provinces,62.2%,Medium,100
+12,710,Random Pick with Blacklist,33.1%,Hard,45.479
+13,528,Random Pick with Weight,45.6%,Medium,12.4592
+14,918,Maximum Sum Circular Subarray,35.6%,Medium,30.9125
+15,1048,Longest String Chain,57.0%,Medium,72.7395
+16,1186,Maximum Subarray Sum with One Deletion,40.1%,Medium,0

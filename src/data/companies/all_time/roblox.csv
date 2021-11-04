@@ -1,0 +1,44 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,13,Roman to Integer,57.7%,Easy,1.22436
+1,17,Letter Combinations of a Phone Number,51.9%,Medium,0.683159
+2,21,Merge Two Sorted Lists,58.3%,Easy,0.0333337
+3,23,Merge k Sorted Lists,45.0%,Hard,0.0783023
+4,36,Valid Sudoku,53.4%,Medium,3.37812
+5,37,Sudoku Solver,51.5%,Hard,0.660253
+6,99,Recover Binary Search Tree,44.8%,Medium,0.33817
+7,146,LRU Cache,38.3%,Medium,1.65486
+8,162,Find Peak Element,45.0%,Medium,2.28885
+9,200,Number of Islands,52.0%,Medium,0.118142
+10,207,Course Schedule,44.7%,Medium,0.567478
+11,210,Course Schedule II,44.9%,Medium,1.81634
+12,224,Basic Calculator,39.5%,Hard,56.7455
+13,227,Basic Calculator II,40.0%,Medium,3.12138
+14,236,Lowest Common Ancestor of a Binary Tree,52.7%,Medium,0.178968
+15,239,Sliding Window Maximum,45.7%,Hard,1.05598
+16,253,Meeting Rooms II,48.4%,Medium,0.479791
+17,256,Paint House,56.7%,Medium,35.0267
+18,363,Max Sum of Rectangle No Larger Than K,40.1%,Hard,5.70648
+19,718,Maximum Length of Repeated Subarray,51.2%,Medium,4.25808
+20,770,Basic Calculator IV,55.3%,Hard,100
+21,811,Subdomain Visit Count,73.1%,Medium,78.3727
+22,829,Consecutive Numbers Sum,40.2%,Hard,34.5898
+23,528,Random Pick with Weight,45.6%,Medium,3.33827
+24,881,Boats to Save People,49.6%,Medium,31.7353
+25,931,Minimum Falling Path Sum,65.9%,Medium,0.468722
+26,1163,Last Substring in Lexicographical Order,35.9%,Hard,42.9918
+27,1289,Minimum Falling Path Sum II,62.5%,Hard,17.2822
+28,1328,Break a Palindrome,52.2%,Medium,5.63796
+29,1209,Remove All Adjacent Duplicates in String II,56.2%,Medium,13.797
+30,1248,Count Number of Nice Subarrays,57.5%,Medium,4.42542
+31,1282,Group the People Given the Group Size They Belong To,84.9%,Medium,0
+32,1290,Convert Binary Number in a Linked List to Integer,81.8%,Easy,4.51438
+33,1292,Maximum Side Length of a Square with Sum Less than or Equal to Threshold,52.0%,Medium,9.80277
+34,1280,Students and Examinations,75.2%,Easy,0
+35,1297,Maximum Number of Occurrences of a Substring,52.2%,Medium,21.2424
+36,1364,Number of Trusted Contacts of a Customer,79.6%,Medium,0
+37,1465,Maximum Area of a Piece of Cake After Horizontal and Vertical Cuts,36.9%,Medium,7.13998
+38,1470,Shuffle the Array,88.1%,Easy,0.266807
+39,1472,Design Browser History,73.7%,Medium,39.4611
+40,1481,Least Number of Unique Integers after K Removals,58.6%,Medium,10.2546
+41,1552,Magnetic Force Between Two Balls,52.4%,Medium,0
+42,1710,Maximum Units on a Truck,72.1%,Easy,1.49046

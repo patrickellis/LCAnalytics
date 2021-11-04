@@ -1,0 +1,45 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,1,Two Sum,47.8%,Easy,1.10669
+1,3,Longest Substring Without Repeating Characters,32.4%,Medium,1.25663
+2,4,Median of Two Sorted Arrays,32.9%,Hard,1.57904
+3,21,Merge Two Sorted Lists,58.3%,Easy,1.85377
+4,23,Merge k Sorted Lists,45.0%,Hard,4.35118
+5,33,Search in Rotated Sorted Array,37.0%,Medium,2.79185
+6,35,Search Insert Position,42.5%,Easy,1.96807
+7,42,Trapping Rain Water,54.2%,Hard,3.83067
+8,49,Group Anagrams,62.3%,Medium,10.8588
+9,53,Maximum Subarray,48.9%,Easy,0.621137
+10,54,Spiral Matrix,39.3%,Medium,6.67326
+11,56,Merge Intervals,43.2%,Medium,10.0544
+12,79,Word Search,38.9%,Medium,1.21533
+13,98,Validate Binary Search Tree,29.7%,Medium,3.02485
+14,103,Binary Tree Zigzag Level Order Traversal,52.1%,Medium,6.99173
+15,121,Best Time to Buy and Sell Stock,52.9%,Easy,4.42366
+16,138,Copy List with Random Pointer,44.5%,Medium,8.06783
+17,146,LRU Cache,38.3%,Medium,12.8338
+18,155,Min Stack,48.8%,Easy,2.75987
+19,206,Reverse Linked List,68.3%,Easy,0.905968
+20,210,Course Schedule II,44.9%,Medium,2.87498
+21,226,Invert Binary Tree,69.8%,Easy,1.02006
+22,232,Implement Queue using Stacks,55.3%,Easy,9.42199
+23,253,Meeting Rooms II,48.4%,Medium,2.9813
+24,279,Perfect Squares,51.1%,Medium,1.79239
+25,283,Move Zeroes,59.6%,Easy,2.54072
+26,300,Longest Increasing Subsequence,47.3%,Medium,5.09407
+27,328,Odd Even Linked List,58.3%,Medium,5.37041
+28,347,Top K Frequent Elements,63.7%,Medium,8.73681
+29,370,Range Addition,66.5%,Medium,16.4673
+30,460,LFU Cache,38.3%,Hard,15.3047
+31,564,Find the Closest Palindrome,20.9%,Hard,100
+32,696,Count Binary Substrings,62.9%,Easy,7.11328
+33,811,Subdomain Visit Count,73.1%,Medium,12.0354
+34,863,All Nodes Distance K in Binary Tree,59.8%,Medium,12.5499
+35,977,Squares of a Sorted Array,71.5%,Easy,2.52333
+36,994,Rotting Oranges,51.1%,Medium,1.5074
+37,1010,Pairs of Songs With Total Durations Divisible by 60,51.9%,Medium,39.1821
+38,1167,Minimum Cost to Connect Sticks,65.9%,Medium,14.0691
+39,1046,Last Stone Weight,62.7%,Easy,32.0002
+40,1116,Print Zero Even Odd,58.5%,Medium,67.8803
+41,1143,Longest Common Subsequence,58.8%,Medium,3.40102
+42,1328,Break a Palindrome,52.2%,Medium,81.1018
+43,1642,Furthest Building You Can Reach,43.8%,Medium,48.9821

@@ -1,0 +1,38 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,1,Two Sum,47.8%,Easy,0.0197361
+1,10,Regular Expression Matching,28.0%,Hard,0.689079
+2,17,Letter Combinations of a Phone Number,51.9%,Medium,0.134984
+3,20,Valid Parentheses,40.5%,Easy,0.684245
+4,23,Merge k Sorted Lists,45.0%,Hard,0.550493
+5,42,Trapping Rain Water,54.2%,Hard,0.273128
+6,63,Unique Paths II,36.6%,Medium,0.333097
+7,69,Sqrt(x),36.0%,Easy,0.160181
+8,76,Minimum Window Substring,37.9%,Hard,10.3228
+9,84,Largest Rectangle in Histogram,39.0%,Hard,0.366523
+10,88,Merge Sorted Array,42.2%,Easy,0.181304
+11,91,Decode Ways,28.9%,Medium,9.95151
+12,109,Convert Sorted List to Binary Search Tree,53.9%,Medium,4.57954
+13,114,Flatten Binary Tree to Linked List,55.7%,Medium,0.312022
+14,126,Word Ladder II,25.8%,Hard,5.44578
+15,127,Word Ladder,33.7%,Hard,18.1309
+16,143,Reorder List,44.0%,Medium,0.363892
+17,155,Min Stack,48.8%,Easy,0.0875329
+18,157,Read N Characters Given Read4,39.4%,Easy,6.79146
+19,158,Read N Characters Given read4 II - Call Multiple Times,39.6%,Hard,100
+20,200,Number of Islands,52.0%,Medium,0.369879
+21,210,Course Schedule II,44.9%,Medium,0.460292
+22,238,Product of Array Except Self,62.7%,Medium,39.1817
+23,253,Meeting Rooms II,48.4%,Medium,0.212568
+24,279,Perfect Squares,51.1%,Medium,0.127798
+25,304,Range Sum Query 2D - Immutable,45.4%,Medium,17.1206
+26,365,Water and Jug Problem,33.0%,Medium,66.3375
+27,409,Longest Palindrome,52.8%,Easy,0.580198
+28,567,Permutation in String,44.4%,Medium,0.218241
+29,642,Design Search Autocomplete System,47.6%,Hard,41.874
+30,692,Top K Frequent Words,53.9%,Medium,0.481275
+31,716,Max Stack,44.2%,Easy,77.1526
+32,735,Asteroid Collision,44.1%,Medium,64.7214
+33,426,Convert Binary Search Tree to Sorted Doubly Linked List,63.3%,Medium,0.866009
+34,981,Time Based Key-Value Store,53.4%,Medium,32.7733
+35,1060,Missing Element in Sorted Array,55.4%,Medium,1.6024
+36,1326,Minimum Number of Taps to Open to Water a Garden,48.0%,Hard,1.27002

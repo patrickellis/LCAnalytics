@@ -1,0 +1,12 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,1,Two Sum,47.8%,Easy,0.522868
+1,20,Valid Parentheses,40.5%,Easy,1.48664
+2,32,Longest Valid Parentheses,30.7%,Hard,100
+3,49,Group Anagrams,62.3%,Medium,1.4664
+4,70,Climbing Stairs,50.0%,Easy,0.529261
+5,146,LRU Cache,38.3%,Medium,1.73473
+6,149,Max Points on a Line,19.2%,Hard,25.0748
+7,453,Minimum Moves to Equal Array Elements,52.7%,Medium,14.6343
+8,871,Minimum Number of Refueling Stops,35.2%,Hard,11.2316
+9,1326,Minimum Number of Taps to Open to Water a Garden,48.0%,Hard,14.9569
+10,1712,Ways to Split Array Into Three Subarrays,29.7%,Medium,62.5374

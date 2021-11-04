@@ -1,0 +1,16 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,20,Valid Parentheses,40.5%,Easy,1.08926
+1,56,Merge Intervals,43.2%,Medium,6.16374
+2,88,Merge Sorted Array,42.2%,Easy,1.56393
+3,134,Gas Station,43.2%,Medium,9.69815
+4,206,Reverse Linked List,68.3%,Easy,1.25319
+5,221,Maximal Square,41.3%,Medium,100
+6,239,Sliding Window Maximum,45.7%,Hard,1.01821
+7,242,Valid Anagram,60.2%,Easy,0.556479
+8,259,3Sum Smaller,49.9%,Medium,79.1285
+9,268,Missing Number,57.6%,Easy,0.77165
+10,443,String Compression,46.2%,Medium,9.91487
+11,844,Backspace String Compare,47.4%,Easy,10.3364
+12,1010,Pairs of Songs With Total Durations Divisible by 60,51.9%,Medium,7.70686
+13,1151,Minimum Swaps to Group All 1's Together,59.0%,Medium,58.9118
+14,1518,Water Bottles,60.3%,Easy,34.6241

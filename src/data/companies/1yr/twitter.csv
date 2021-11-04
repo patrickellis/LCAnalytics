@@ -1,0 +1,65 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,1,Two Sum,47.8%,Easy,0.045633
+1,17,Letter Combinations of a Phone Number,51.9%,Medium,0.175408
+2,20,Valid Parentheses,40.5%,Easy,0.0324632
+3,23,Merge k Sorted Lists,45.0%,Hard,0.318356
+4,34,Find First and Last Position of Element in Sorted Array,38.9%,Medium,0.063867
+5,42,Trapping Rain Water,54.2%,Hard,0.0702852
+6,49,Group Anagrams,62.3%,Medium,0.072008
+7,56,Merge Intervals,43.2%,Medium,0.733819
+8,57,Insert Interval,36.6%,Medium,4.40858
+9,68,Text Justification,32.9%,Hard,0.674117
+10,78,Subsets,68.4%,Medium,0.226055
+11,79,Word Search,38.9%,Medium,0.79369
+12,128,Longest Consecutive Sequence,48.0%,Medium,0.136774
+13,133,Clone Graph,43.4%,Medium,0.503032
+14,146,LRU Cache,38.3%,Medium,0.0851844
+15,204,Count Primes,32.8%,Medium,0.225356
+16,208,Implement Trie (Prefix Tree),55.8%,Medium,1.80366
+17,211,Design Add and Search Words Data Structure,42.5%,Medium,0.63456
+18,212,Word Search II,38.4%,Hard,0.533093
+19,218,The Skyline Problem,37.8%,Hard,1.60843
+20,221,Maximal Square,41.3%,Medium,7.73276
+21,239,Sliding Window Maximum,45.7%,Hard,0.482501
+22,253,Meeting Rooms II,48.4%,Medium,0.489265
+23,256,Paint House,56.7%,Medium,2.34255
+24,269,Alien Dictionary,34.3%,Hard,0.284816
+25,295,Find Median from Data Stream,49.5%,Hard,1.68356
+26,300,Longest Increasing Subsequence,47.3%,Medium,0.372589
+27,332,Reconstruct Itinerary,39.4%,Hard,0.28761
+28,340,Longest Substring with At Most K Distinct Characters,46.7%,Medium,0.321903
+29,341,Flatten Nested List Iterator,57.5%,Medium,3.9339
+30,358,Rearrange String k Distance Apart,36.3%,Hard,3.69567
+31,380,Insert Delete GetRandom O(1),50.7%,Medium,4.38402
+32,451,Sort Characters By Frequency,66.8%,Medium,0.069269
+33,453,Minimum Moves to Equal Array Elements,52.7%,Medium,19.7231
+34,532,K-diff Pairs in an Array,36.9%,Medium,9.77447
+35,540,Single Element in a Sorted Array,58.1%,Medium,0.408571
+36,547,Number of Provinces,62.2%,Medium,0.500072
+37,635,Design Log Storage System,61.4%,Medium,64.3733
+38,642,Design Search Autocomplete System,47.6%,Hard,2.08418
+39,647,Palindromic Substrings,63.7%,Medium,0.504036
+40,697,Degree of an Array,55.2%,Easy,0.597624
+41,716,Max Stack,44.2%,Easy,0.512216
+42,721,Accounts Merge,54.2%,Medium,0.264515
+43,724,Find Pivot Index,49.2%,Easy,1.51361
+44,739,Daily Temperatures,66.1%,Medium,0.232911
+45,780,Reaching Points,30.8%,Hard,23.6979
+46,706,Design HashMap,63.8%,Easy,0.231404
+47,921,Minimum Add to Make Parentheses Valid,76.9%,Medium,0.444708
+48,945,Minimum Increment to Make Array Unique,48.0%,Medium,5.39922
+49,981,Time Based Key-Value Store,53.4%,Medium,0.305151
+50,994,Rotting Oranges,51.1%,Medium,0.0621556
+51,1151,Minimum Swaps to Group All 1's Together,59.0%,Medium,6.37122
+52,1197,Minimum Knight Moves,39.1%,Medium,0.57738
+53,1200,Minimum Absolute Difference,67.6%,Easy,0.945209
+54,1248,Count Number of Nice Subarrays,57.5%,Medium,2.60644
+55,1297,Maximum Number of Occurrences of a Substring,52.2%,Medium,21.6618
+56,1326,Minimum Number of Taps to Open to Water a Garden,48.0%,Hard,8.11847
+57,1347,Minimum Number of Steps to Make Two Strings Anagram,75.4%,Medium,1.56344
+58,1348,Tweet Counts Per Frequency,41.6%,Medium,100
+59,1353,Maximum Number of Events That Can Be Attended,32.1%,Medium,1.13238
+60,1475,Final Prices With a Special Discount in a Shop,75.0%,Easy,0.898292
+61,1492,The kth Factor of n,62.4%,Medium,7.77766
+62,1751,Maximum Number of Events That Can Be Attended II,53.1%,Hard,3.11427
+63,1817,Finding the Users Active Minutes,79.7%,Medium,28.7466

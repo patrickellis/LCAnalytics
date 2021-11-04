@@ -1,0 +1,24 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,1,Two Sum,47.8%,Easy,0.125564
+1,4,Median of Two Sorted Arrays,32.9%,Hard,0.114729
+2,17,Letter Combinations of a Phone Number,51.9%,Medium,8.13587
+3,140,Word Break II,39.2%,Hard,2.8136
+4,146,LRU Cache,38.3%,Medium,5.723
+5,200,Number of Islands,52.0%,Medium,0.287623
+6,239,Sliding Window Maximum,45.7%,Hard,3.11297
+7,289,Game of Life,61.2%,Medium,80.0658
+8,290,Word Pattern,39.1%,Easy,3.01246
+9,291,Word Pattern II,45.4%,Medium,36.5647
+10,362,Design Hit Counter,66.5%,Medium,41.768
+11,379,Design Phone Directory,49.7%,Medium,56.6921
+12,547,Number of Provinces,62.2%,Medium,3.97334
+13,609,Find Duplicate File in System,63.4%,Medium,100
+14,695,Max Area of Island,68.0%,Medium,0.642183
+15,924,Minimize Malware Spread,41.8%,Hard,67.189
+16,928,Minimize Malware Spread II,41.8%,Hard,28.0701
+17,1001,Grid Illumination,35.9%,Hard,39.1587
+18,1236,Web Crawler,65.3%,Medium,6.13805
+19,1178,Number of Valid Words for Each Puzzle,41.1%,Hard,54.3001
+20,1242,Web Crawler Multithreaded,48.1%,Medium,37.9091
+21,1250,Check If It Is a Good Array,57.5%,Hard,0
+22,1845,Seat Reservation Manager,58.1%,Medium,0

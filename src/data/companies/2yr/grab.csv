@@ -1,0 +1,25 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,12,Integer to Roman,58.4%,Medium,0.236799
+1,42,Trapping Rain Water,54.2%,Hard,0.240272
+2,53,Maximum Subarray,48.9%,Easy,0.0389596
+3,56,Merge Intervals,43.2%,Medium,0.0704248
+4,146,LRU Cache,38.3%,Medium,0.129579
+5,215,Kth Largest Element in an Array,61.4%,Medium,0.11092
+6,227,Basic Calculator II,40.0%,Medium,0.249238
+7,234,Palindrome Linked List,44.6%,Easy,0.585097
+8,242,Valid Anagram,60.2%,Easy,0.100779
+9,301,Remove Invalid Parentheses,45.9%,Hard,0.453609
+10,322,Coin Change,39.0%,Medium,0.114602
+11,445,Add Two Numbers II,57.7%,Medium,0.558465
+12,460,LFU Cache,38.3%,Hard,0.95996
+13,462,Minimum Moves to Equal Array Elements II,56.1%,Medium,2.02743
+14,915,Partition Array into Disjoint Intervals,48.1%,Medium,2.27344
+15,983,Minimum Cost For Tickets,63.4%,Medium,0.767103
+16,984,String Without AAA or BBB,40.0%,Medium,3.09792
+17,1017,Convert to Base -2,59.5%,Medium,68.4491
+18,1031,Maximum Sum of Two Non-Overlapping Subarrays,59.2%,Medium,5.75235
+19,1073,Adding Two Negabinary Numbers,34.9%,Medium,100
+20,1405,Longest Happy String,54.4%,Medium,8.48357
+21,1342,Number of Steps to Reduce a Number to Zero,85.6%,Easy,0.642269
+22,1375,Bulb Switcher III,65.1%,Medium,36.8982
+23,1654,Minimum Jumps to Reach Home,25.5%,Medium,2.50878

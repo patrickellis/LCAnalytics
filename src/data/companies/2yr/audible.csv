@@ -1,0 +1,20 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,42,Trapping Rain Water,54.2%,Hard,1.51415
+1,56,Merge Intervals,43.2%,Medium,0.997369
+2,73,Set Matrix Zeroes,46.7%,Medium,2.71802
+3,98,Validate Binary Search Tree,29.7%,Medium,1.19533
+4,121,Best Time to Buy and Sell Stock,52.9%,Easy,2.51714
+5,139,Word Break,43.3%,Medium,1.63817
+6,140,Word Break II,39.2%,Hard,19.5738
+7,200,Number of Islands,52.0%,Medium,10.3308
+8,208,Implement Trie (Prefix Tree),55.8%,Medium,1.59153
+9,244,Shortest Word Distance II,57.4%,Medium,13.7311
+10,472,Concatenated Words,43.0%,Hard,14.5873
+11,545,Boundary of Binary Tree,41.9%,Medium,100
+12,547,Number of Provinces,62.2%,Medium,6.07791
+13,849,Maximize Distance to Closest Person,44.9%,Medium,46.414
+14,863,All Nodes Distance K in Binary Tree,59.8%,Medium,11.1481
+15,937,Reorder Data in Log Files,55.6%,Easy,73.2542
+16,1010,Pairs of Songs With Total Durations Divisible by 60,51.9%,Medium,8.84622
+17,1152,Analyze User Website Visit Pattern,43.3%,Medium,18.351
+18,1344,Angle Between Hands of a Clock,62.2%,Medium,10.2937

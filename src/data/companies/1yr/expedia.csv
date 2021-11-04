@@ -1,0 +1,41 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,1,Two Sum,47.8%,Easy,0.217347
+1,20,Valid Parentheses,40.5%,Easy,4.2831
+2,21,Merge Two Sorted Lists,58.3%,Easy,0.161934
+3,33,Search in Rotated Sorted Array,37.0%,Medium,1.31861
+4,36,Valid Sudoku,53.4%,Medium,0.212261
+5,38,Count and Say,47.6%,Medium,0.4675
+6,42,Trapping Rain Water,54.2%,Hard,0.1489
+7,49,Group Anagrams,62.3%,Medium,0.342815
+8,54,Spiral Matrix,39.3%,Medium,0.259622
+9,70,Climbing Stairs,50.0%,Easy,1.1074
+10,79,Word Search,38.9%,Medium,0.106163
+11,98,Validate Binary Search Tree,29.7%,Medium,0.117547
+12,121,Best Time to Buy and Sell Stock,52.9%,Easy,1.85267
+13,122,Best Time to Buy and Sell Stock II,60.4%,Medium,0.663877
+14,127,Word Ladder,33.7%,Hard,1.41087
+15,143,Reorder List,44.0%,Medium,0.445823
+16,198,House Robber,45.0%,Medium,0.124663
+17,200,Number of Islands,52.0%,Medium,1.79698
+18,238,Product of Array Except Self,62.7%,Medium,0.143598
+19,253,Meeting Rooms II,48.4%,Medium,0.260428
+20,295,Find Median from Data Stream,49.5%,Hard,0.404481
+21,332,Reconstruct Itinerary,39.4%,Hard,3.73197
+22,416,Partition Equal Subset Sum,45.7%,Medium,0.451659
+23,438,Find All Anagrams in a String,46.5%,Medium,0.371795
+24,443,String Compression,46.2%,Medium,3.87273
+25,532,K-diff Pairs in an Array,36.9%,Medium,2.59304
+26,647,Palindromic Substrings,63.7%,Medium,1.0678
+27,697,Degree of an Array,55.2%,Easy,4.94492
+28,724,Find Pivot Index,49.2%,Easy,2.06742
+29,426,Convert Binary Search Tree to Sorted Doubly Linked List,63.3%,Medium,0.473343
+30,787,Cheapest Flights Within K Stops,36.8%,Medium,3.4082
+31,528,Random Pick with Weight,45.6%,Medium,1.86671
+32,1008,Construct Binary Search Tree from Preorder Traversal,79.8%,Medium,0.439583
+33,1041,Robot Bounded In Circle,54.5%,Medium,0.54821
+34,1197,Minimum Knight Moves,39.1%,Medium,82.6992
+35,1507,Reformat Date,60.9%,Easy,100
+36,1465,Maximum Area of a Piece of Cake After Horizontal and Vertical Cuts,36.9%,Medium,70.5795
+37,1492,The kth Factor of n,62.4%,Medium,51.6465
+38,1481,Least Number of Unique Integers after K Removals,58.6%,Medium,17.9992
+39,1487,Making File Names Unique,33.4%,Medium,32.7136

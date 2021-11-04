@@ -1,0 +1,23 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,1,Two Sum,47.8%,Easy,57.2932
+1,2,Add Two Numbers,37.2%,Medium,18.8391
+2,5,Longest Palindromic Substring,31.4%,Medium,6.10672
+3,8,String to Integer (atoi),16.1%,Medium,9.95348
+4,14,Longest Common Prefix,38.1%,Easy,1.41394
+5,20,Valid Parentheses,40.5%,Easy,11.7754
+6,21,Merge Two Sorted Lists,58.3%,Easy,2.5741
+7,42,Trapping Rain Water,54.2%,Hard,100
+8,49,Group Anagrams,62.3%,Medium,1.96542
+9,53,Maximum Subarray,48.9%,Easy,14.9926
+10,104,Maximum Depth of Binary Tree,70.1%,Easy,1.47024
+11,141,Linked List Cycle,44.3%,Easy,10.697
+12,146,LRU Cache,38.3%,Medium,16.2722
+13,200,Number of Islands,52.0%,Medium,26.7047
+14,204,Count Primes,32.8%,Medium,16.8372
+15,205,Isomorphic Strings,41.6%,Easy,23.9228
+16,206,Reverse Linked List,68.3%,Easy,35.3302
+17,238,Product of Array Except Self,62.7%,Medium,33.521
+18,380,Insert Delete GetRandom O(1),50.7%,Medium,0.882918
+19,912,Sort an Array,62.8%,Medium,6.56213
+20,1198,Find Smallest Common Element in All Rows,76.3%,Medium,79.2563
+21,1614,Maximum Nesting Depth of the Parentheses,82.8%,Easy,0

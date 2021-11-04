@@ -1,0 +1,26 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,2,Add Two Numbers,37.2%,Medium,0.147167
+1,5,Longest Palindromic Substring,31.4%,Medium,0.422864
+2,15,3Sum,29.8%,Medium,0.285069
+3,17,Letter Combinations of a Phone Number,51.9%,Medium,0.798707
+4,20,Valid Parentheses,40.5%,Easy,0.147819
+5,23,Merge k Sorted Lists,45.0%,Hard,0.816954
+6,38,Count and Say,47.6%,Medium,1.00483
+7,42,Trapping Rain Water,54.2%,Hard,0.320039
+8,54,Spiral Matrix,39.3%,Medium,1.25293
+9,64,Minimum Path Sum,58.1%,Medium,1.55508
+10,146,LRU Cache,38.3%,Medium,1.54615
+11,179,Largest Number,32.0%,Medium,1.79439
+12,200,Number of Islands,52.0%,Medium,0.974
+13,283,Move Zeroes,59.6%,Easy,0.212183
+14,543,Diameter of Binary Tree,52.3%,Easy,0.517553
+15,560,Subarray Sum Equals K,43.7%,Medium,0.758453
+16,572,Subtree of Another Tree,44.9%,Easy,0.775448
+17,588,Design In-Memory File System,47.4%,Hard,10.4477
+18,976,Largest Perimeter Triangle,59.8%,Easy,6.87538
+19,1189,Maximum Number of Balloons,62.5%,Easy,33.6226
+20,1239,Maximum Length of a Concatenated String with Unique Characters,50.6%,Medium,100
+21,1304,Find N Unique Integers Sum up to Zero,76.6%,Easy,30.6793
+22,1578,Minimum Deletion Cost to Avoid Repeating Letters,61.3%,Medium,66.8113
+23,1647,Minimum Deletions to Make Character Frequencies Unique,55.9%,Medium,2.08468
+24,1758,Minimum Changes To Make Alternating Binary String,58.8%,Easy,10.4169

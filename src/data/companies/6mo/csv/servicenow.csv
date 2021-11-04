@@ -1,0 +1,14 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,3,Longest Substring Without Repeating Characters,32.4%,Medium,3.19619
+1,20,Valid Parentheses,40.5%,Easy,4.50305
+2,33,Search in Rotated Sorted Array,37.0%,Medium,3.15874
+3,53,Maximum Subarray,48.9%,Easy,1.57984
+4,56,Merge Intervals,43.2%,Medium,2.85577
+5,103,Binary Tree Zigzag Level Order Traversal,52.1%,Medium,7.92092
+6,121,Best Time to Buy and Sell Stock,52.9%,Easy,4.05696
+7,146,LRU Cache,38.3%,Medium,5.25453
+8,200,Number of Islands,52.0%,Medium,13.1945
+9,215,Kth Largest Element in an Array,61.4%,Medium,4.49787
+10,238,Product of Array Except Self,62.7%,Medium,4.18112
+11,741,Cherry Pickup,35.9%,Hard,100
+12,1010,Pairs of Songs With Total Durations Divisible by 60,51.9%,Medium,56.5973

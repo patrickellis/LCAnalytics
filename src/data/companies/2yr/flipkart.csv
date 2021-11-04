@@ -1,0 +1,46 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,4,Median of Two Sorted Arrays,32.9%,Hard,0.551207
+1,11,Container With Most Water,53.2%,Medium,0.413833
+2,15,3Sum,29.8%,Medium,0.235671
+3,20,Valid Parentheses,40.5%,Easy,0.618022
+4,31,Next Permutation,34.7%,Medium,1.60554
+5,34,Find First and Last Position of Element in Sorted Array,38.9%,Medium,0.540689
+6,42,Trapping Rain Water,54.2%,Hard,3.70032
+7,45,Jump Game II,35.1%,Medium,1.77315
+8,54,Spiral Matrix,39.3%,Medium,1.03749
+9,74,Search a 2D Matrix,40.7%,Medium,0.720364
+10,76,Minimum Window Substring,37.9%,Hard,1.11816
+11,84,Largest Rectangle in Histogram,39.0%,Hard,1.79446
+12,103,Binary Tree Zigzag Level Order Traversal,52.1%,Medium,1.08711
+13,120,Triangle,48.7%,Medium,1.69172
+14,124,Binary Tree Maximum Path Sum,36.8%,Hard,0.856423
+15,134,Gas Station,43.2%,Medium,5.53612
+16,135,Candy,36.0%,Hard,12.1633
+17,169,Majority Element,61.4%,Easy,0.720615
+18,198,House Robber,45.0%,Medium,1.11976
+19,236,Lowest Common Ancestor of a Binary Tree,52.7%,Medium,0.687635
+20,241,Different Ways to Add Parentheses,59.7%,Medium,12.2112
+21,269,Alien Dictionary,34.3%,Hard,5.3991
+22,295,Find Median from Data Stream,49.5%,Hard,1.61637
+23,337,House Robber III,52.4%,Medium,3.0803
+24,355,Design Twitter,33.4%,Medium,13.1347
+25,452,Minimum Number of Arrows to Burst Balloons,50.7%,Medium,14.3813
+26,460,LFU Cache,38.3%,Hard,5.34254
+27,480,Sliding Window Median,40.2%,Hard,8.44299
+28,581,Shortest Unsorted Continuous Subarray,33.6%,Medium,4.80847
+29,675,Cut Off Trees for Golf Event,35.4%,Hard,15.5552
+30,752,Open the Lock,55.0%,Medium,6.46063
+31,431,Encode N-ary Tree to Binary Tree,75.7%,Hard,64.1993
+32,871,Minimum Number of Refueling Stops,35.2%,Hard,100
+33,968,Binary Tree Cameras,41.2%,Hard,11.6653
+34,973,K Closest Points to Origin,65.7%,Medium,0.899894
+35,977,Squares of a Sorted Array,71.5%,Easy,0.880839
+36,994,Rotting Oranges,51.1%,Medium,1.1827
+37,1000,Minimum Cost to Merge Stones,41.6%,Hard,23.7864
+38,1011,Capacity To Ship Packages Within D Days,61.7%,Medium,12.8757
+39,1219,Path with Maximum Gold,66.0%,Medium,9.0992
+40,1326,Minimum Number of Taps to Open to Water a Garden,48.0%,Hard,6.21786
+41,1423,Maximum Points You Can Obtain from Cards,49.4%,Medium,3.75964
+42,1519,Number of Nodes in the Sub-Tree With the Same Label,38.6%,Medium,45.541
+43,1574,Shortest Subarray to be Removed to Make Array Sorted,34.7%,Medium,28.0336
+44,1700,Number of Students Unable to Eat Lunch,67.6%,Easy,81.3417

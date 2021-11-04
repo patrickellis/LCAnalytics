@@ -1,0 +1,34 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,1,Two Sum,47.8%,Easy,0.713165
+1,3,Longest Substring Without Repeating Characters,32.4%,Medium,2.97403
+2,15,3Sum,29.8%,Medium,0.193755
+3,20,Valid Parentheses,40.5%,Easy,15.829
+4,22,Generate Parentheses,68.3%,Medium,3.14422
+5,66,Plus One,42.1%,Easy,6.34276
+6,75,Sort Colors,52.8%,Medium,0.132348
+7,79,Word Search,38.9%,Medium,0.155091
+8,104,Maximum Depth of Binary Tree,70.1%,Easy,0.66516
+9,108,Convert Sorted Array to Binary Search Tree,64.1%,Easy,2.53933
+10,110,Balanced Binary Tree,45.8%,Easy,0.481163
+11,127,Word Ladder,33.7%,Hard,1.16398
+12,128,Longest Consecutive Sequence,48.0%,Medium,19.0813
+13,141,Linked List Cycle,44.3%,Easy,0.387282
+14,146,LRU Cache,38.3%,Medium,4.14633
+15,204,Count Primes,32.8%,Medium,2.76442
+16,206,Reverse Linked List,68.3%,Easy,0.461746
+17,215,Kth Largest Element in an Array,61.4%,Medium,10.5615
+18,242,Valid Anagram,60.2%,Easy,0.817938
+19,286,Walls and Gates,57.8%,Medium,17.6062
+20,341,Flatten Nested List Iterator,57.5%,Medium,1.41912
+21,346,Moving Average from Data Stream,74.9%,Easy,100
+22,347,Top K Frequent Elements,63.7%,Medium,1.11493
+23,383,Ransom Note,54.6%,Easy,45.9178
+24,414,Third Maximum Number,31.1%,Easy,1.94888
+25,443,String Compression,46.2%,Medium,5.65756
+26,480,Sliding Window Median,40.2%,Hard,72.9589
+27,609,Find Duplicate File in System,63.4%,Medium,5.43442
+28,784,Letter Case Permutation,70.5%,Medium,2.1878
+29,973,K Closest Points to Origin,65.7%,Medium,0.738854
+30,1152,Analyze User Website Visit Pattern,43.3%,Medium,28.7118
+31,1917,Leetcodify Friends Recommendations,31.0%,Hard,0
+32,1919,Leetcodify Similar Friends,44.0%,Hard,0

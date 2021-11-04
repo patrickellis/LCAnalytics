@@ -1,0 +1,25 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,1,Two Sum,47.8%,Easy,25.8604
+1,5,Longest Palindromic Substring,31.4%,Medium,39.2405
+2,9,Palindrome Number,51.6%,Easy,7.07468
+3,18,4Sum,36.7%,Medium,26.8869
+4,20,Valid Parentheses,40.5%,Easy,9.10324
+5,38,Count and Say,47.6%,Medium,31.2388
+6,53,Maximum Subarray,48.9%,Easy,11.8518
+7,135,Candy,36.0%,Hard,14.8502
+8,146,LRU Cache,38.3%,Medium,12.1739
+9,177,Nth Highest Salary,35.1%,Medium,43.5403
+10,209,Minimum Size Subarray Sum,41.6%,Medium,3.85683
+11,239,Sliding Window Maximum,45.7%,Hard,2.78873
+12,283,Move Zeroes,59.6%,Easy,1.072
+13,410,Split Array Largest Sum,48.6%,Hard,8.61853
+14,421,Maximum XOR of Two Numbers in an Array,55.0%,Medium,73.0766
+15,424,Longest Repeating Character Replacement,49.8%,Medium,6.61518
+16,509,Fibonacci Number,67.8%,Easy,3.07739
+17,1124,Longest Well-Performing Interval,33.8%,Medium,0
+18,1175,Prime Arrangements,52.1%,Easy,100
+19,1353,Maximum Number of Events That Can Be Attended,32.1%,Medium,70.4637
+20,1540,Can Convert String in K Moves,32.0%,Medium,0
+21,1798,Maximum Number of Consecutive Values You Can Make,49.7%,Medium,0
+22,1872,Stone Game VIII,52.0%,Hard,0
+23,1946,Largest Number After Mutating Substring,33.3%,Medium,0

@@ -1,0 +1,27 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,1,Two Sum,47.8%,Easy,8.4727
+1,14,Longest Common Prefix,38.1%,Easy,1.03303
+2,15,3Sum,29.8%,Medium,1.08782
+3,20,Valid Parentheses,40.5%,Easy,6.47682
+4,21,Merge Two Sorted Lists,58.3%,Easy,1.73032
+5,53,Maximum Subarray,48.9%,Easy,0.184529
+6,56,Merge Intervals,43.2%,Medium,3.65279
+7,88,Merge Sorted Array,42.2%,Easy,7.10602
+8,125,Valid Palindrome,39.9%,Easy,1.43959
+9,134,Gas Station,43.2%,Medium,29.7195
+10,160,Intersection of Two Linked Lists,47.5%,Easy,0.348825
+11,206,Reverse Linked List,68.3%,Easy,1.90029
+12,221,Maximal Square,41.3%,Medium,83.1173
+13,239,Sliding Window Maximum,45.7%,Hard,3.44969
+14,242,Valid Anagram,60.2%,Easy,0.477001
+15,259,3Sum Smaller,49.9%,Medium,100
+16,268,Missing Number,57.6%,Easy,10.1561
+17,283,Move Zeroes,59.6%,Easy,1.81574
+18,412,Fizz Buzz,65.3%,Easy,72.6692
+19,443,String Compression,46.2%,Medium,11.2162
+20,844,Backspace String Compare,47.4%,Easy,5.6358
+21,1010,Pairs of Songs With Total Durations Divisible by 60,51.9%,Medium,11.3402
+22,1012,Numbers With Repeated Digits,38.4%,Hard,25.4846
+23,1151,Minimum Swaps to Group All 1's Together,59.0%,Medium,75.6883
+24,1355,Activity Participants,74.8%,Medium,55.7866
+25,1518,Water Bottles,60.3%,Easy,45.7254

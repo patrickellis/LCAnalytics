@@ -1,0 +1,71 @@
+,#,Title,Acceptance,Difficulty,FrequencyFrequency of problems that appear in real interviews,Frequency
+0,5,Longest Palindromic Substring,31.4%,Medium,,1.05379
+1,21,Merge Two Sorted Lists,58.3%,Easy,,0.867358
+2,22,Generate Parentheses,68.3%,Medium,,0.953151
+3,23,Merge k Sorted Lists,45.0%,Hard,,3.61246
+4,31,Next Permutation,34.7%,Medium,,0.957816
+5,33,Search in Rotated Sorted Array,37.0%,Medium,,2.31944
+6,34,Find First and Last Position of Element in Sorted Array,38.9%,Medium,,1.62884
+7,51,N-Queens,54.6%,Hard,,3.87299
+8,56,Merge Intervals,43.2%,Medium,,3.27254
+9,66,Plus One,42.1%,Easy,,0.789932
+10,67,Add Binary,48.9%,Easy,,1.35382
+11,74,Search a 2D Matrix,40.7%,Medium,,0.965544
+12,76,Minimum Window Substring,37.9%,Hard,,1.49873
+13,78,Subsets,68.4%,Medium,,10.1668
+14,79,Word Search,38.9%,Medium,,1.27835
+15,85,Maximal Rectangle,40.9%,Hard,,5.55413
+16,93,Restore IP Addresses,39.9%,Medium,,4.87389
+17,98,Validate Binary Search Tree,29.7%,Medium,,1.41529
+18,105,Construct Binary Tree from Preorder and Inorder Traversal,55.4%,Medium,,1.66644
+19,124,Binary Tree Maximum Path Sum,36.8%,Hard,,2.57836
+20,131,Palindrome Partitioning,55.8%,Medium,,7.96521
+21,139,Word Break,43.3%,Medium,,0.862869
+22,146,LRU Cache,38.3%,Medium,,6.00478
+23,151,Reverse Words in a String,26.8%,Medium,,0.643347
+24,163,Missing Ranges,29.8%,Easy,,5.12622
+25,198,House Robber,45.0%,Medium,,0.667726
+26,199,Binary Tree Right Side View,58.2%,Medium,,18.0997
+27,200,Number of Islands,52.0%,Medium,,1.36706
+28,202,Happy Number,52.2%,Easy,,1.88385
+29,207,Course Schedule,44.7%,Medium,,2.37589
+30,209,Minimum Size Subarray Sum,41.6%,Medium,,1.90238
+31,210,Course Schedule II,44.9%,Medium,,5.35478
+32,221,Maximal Square,41.3%,Medium,,2.70479
+33,224,Basic Calculator,39.5%,Hard,,3.98336
+34,236,Lowest Common Ancestor of a Binary Tree,52.7%,Medium,,5.72724
+35,239,Sliding Window Maximum,45.7%,Hard,,1.37554
+36,240,Search a 2D Matrix II,46.9%,Medium,,4.72692
+37,253,Meeting Rooms II,48.4%,Medium,,5.55182
+38,283,Move Zeroes,59.6%,Easy,,1.18878
+39,295,Find Median from Data Stream,49.5%,Hard,,4.85886
+40,297,Serialize and Deserialize Binary Tree,52.1%,Hard,,1.89092
+41,298,Binary Tree Longest Consecutive Sequence,49.7%,Medium,,20.7053
+42,300,Longest Increasing Subsequence,47.3%,Medium,,2.38346
+43,333,Largest BST Subtree,39.8%,Medium,,15.6504
+44,347,Top K Frequent Elements,63.7%,Medium,,1.02574
+45,354,Russian Doll Envelopes,39.2%,Hard,,19.4362
+46,398,Random Pick Index,61.5%,Medium,,4.29833
+47,490,The Maze,54.0%,Medium,,10.0212
+48,494,Target Sum,45.2%,Medium,,2.7701
+49,518,Coin Change 2,55.1%,Medium,,2.96779
+50,560,Subarray Sum Equals K,43.7%,Medium,,3.35423
+51,616,Add Bold Tag in String,46.3%,Medium,,23.5455
+52,628,Maximum Product of Three Numbers,46.7%,Easy,,10.5584
+53,630,Course Schedule III,35.3%,Hard,,19.9731
+54,647,Palindromic Substrings,63.7%,Medium,,2.55169
+55,679,24 Game,48.1%,Hard,,72.985
+56,694,Number of Distinct Islands,59.0%,Medium,,9.90779
+57,726,Number of Atoms,51.4%,Hard,,100
+58,767,Reorganize String,51.2%,Medium,,4.10121
+59,489,Robot Room Cleaner,74.6%,Hard,,7.98986
+60,839,Similar String Groups,44.0%,Hard,,45.9699
+61,864,Shortest Path to Get All Keys,43.4%,Hard,,35.1145
+62,470,Implement Rand10() Using Rand7(),46.4%,Medium,,19.459
+63,528,Random Pick with Weight,45.6%,Medium,,2.52228
+64,886,Possible Bipartition,46.4%,Medium,,10.3841
+65,935,Knight Dialer,48.1%,Medium,,10.4559
+66,1110,Delete Nodes And Return Forest,68.8%,Medium,,3.85683
+67,1352,Product of the Last K Numbers,46.7%,Medium,,15.6947
+68,1477,Find Two Non-overlapping Sub-arrays Each With Target Sum,36.1%,Medium,,21.4962
+69,1454,Active Users,38.5%,Medium,,22.9815

@@ -1,0 +1,29 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,42,Trapping Rain Water,54.2%,Hard,0.739225
+1,48,Rotate Image,64.0%,Medium,0.91389
+2,54,Spiral Matrix,39.3%,Medium,41.1723
+3,56,Merge Intervals,43.2%,Medium,0.865045
+4,57,Insert Interval,36.6%,Medium,5.3954
+5,68,Text Justification,32.9%,Hard,51.2946
+6,93,Restore IP Addresses,39.9%,Medium,2.01018
+7,200,Number of Islands,52.0%,Medium,0.563828
+8,207,Course Schedule,44.7%,Medium,2.70827
+9,210,Course Schedule II,44.9%,Medium,28.7145
+10,224,Basic Calculator,39.5%,Hard,51.026
+11,498,Diagonal Traverse,53.3%,Medium,33.5023
+12,569,Median Employee Salary,65.0%,Hard,10.0921
+13,611,Valid Triangle Number,49.2%,Medium,4.44368
+14,735,Asteroid Collision,44.1%,Medium,2.50028
+15,786,K-th Smallest Prime Fraction,46.9%,Hard,81.4978
+16,1052,Grumpy Bookstore Owner,56.3%,Medium,10.2123
+17,1329,Sort the Matrix Diagonally,81.5%,Medium,9.75403
+18,1391,Check if There is a Valid Path in a Grid,46.3%,Medium,65.508
+19,1393,Capital Gain/Loss,91.6%,Medium,0
+20,1604,Alert Using Same Key-Card Three or More Times in a One Hour Period,45.6%,Medium,100
+21,1684,Count the Number of Consistent Strings,81.7%,Easy,0
+22,1711,Count Good Meals,27.7%,Medium,0
+23,1712,Ways to Split Array Into Three Subarrays,29.7%,Medium,0
+24,1743,Restore the Array From Adjacent Pairs,66.9%,Medium,0
+25,1801,Number of Orders in the Backlog,44.9%,Medium,65.7623
+26,1861,Rotating the Box,63.5%,Medium,9.74787
+27,2021,Brightest Position on Street,68.1%,Medium,0

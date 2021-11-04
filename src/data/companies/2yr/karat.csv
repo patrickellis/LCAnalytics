@@ -1,0 +1,17 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,36,Valid Sudoku,53.4%,Medium,0.0920614
+1,68,Text Justification,32.9%,Hard,35.3431
+2,79,Word Search,38.9%,Medium,0.103512
+3,85,Maximal Rectangle,40.9%,Hard,1.0036
+4,91,Decode Ways,28.9%,Medium,0.261895
+5,200,Number of Islands,52.0%,Medium,0.196542
+6,207,Course Schedule,44.7%,Medium,1.69313
+7,210,Course Schedule II,44.9%,Medium,3.71493
+8,224,Basic Calculator,39.5%,Hard,21.0529
+9,236,Lowest Common Ancestor of a Binary Tree,52.7%,Medium,0.167689
+10,252,Meeting Rooms,56.2%,Easy,0.634574
+11,718,Maximum Length of Repeated Subarray,51.2%,Medium,67.6715
+12,759,Employee Free Time,70.2%,Hard,6.0094
+13,811,Subdomain Visit Count,73.1%,Medium,100
+14,1143,Longest Common Subsequence,58.8%,Medium,0.228733
+15,1604,Alert Using Same Key-Card Three or More Times in a One Hour Period,45.6%,Medium,31.6775

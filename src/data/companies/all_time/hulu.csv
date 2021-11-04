@@ -1,0 +1,12 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,15,3Sum,29.8%,Medium,23.5026
+1,127,Word Ladder,33.7%,Hard,67.4043
+2,139,Word Break,43.3%,Medium,28.5313
+3,326,Power of Three,42.9%,Easy,100
+4,371,Sum of Two Integers,50.7%,Medium,28.7784
+5,394,Decode String,54.6%,Medium,34.8086
+6,440,K-th Smallest in Lexicographical Order,30.2%,Hard,0
+7,772,Basic Calculator III,46.2%,Hard,0
+8,814,Binary Tree Pruning,71.1%,Medium,0
+9,981,Time Based Key-Value Store,53.4%,Medium,28.7125
+10,1063,Number of Valid Subarrays,72.8%,Hard,0

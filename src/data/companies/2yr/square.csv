@@ -1,0 +1,33 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,1,Two Sum,47.8%,Easy,0.227477
+1,17,Letter Combinations of a Phone Number,51.9%,Medium,2.75764
+2,43,Multiply Strings,36.2%,Medium,6.09769
+3,56,Merge Intervals,43.2%,Medium,0.92216
+4,64,Minimum Path Sum,58.1%,Medium,1.34825
+5,68,Text Justification,32.9%,Hard,2.66799
+6,72,Edit Distance,49.2%,Hard,44.2623
+7,91,Decode Ways,28.9%,Medium,4.47589
+8,122,Best Time to Buy and Sell Stock II,60.4%,Medium,0.696317
+9,165,Compare Version Numbers,31.9%,Medium,5.42523
+10,200,Number of Islands,52.0%,Medium,0.474818
+11,212,Word Search II,38.4%,Hard,0.760315
+12,271,Encode and Decode Strings,35.4%,Medium,9.62835
+13,273,Integer to English Words,29.0%,Hard,58.7081
+14,277,Find the Celebrity,45.4%,Medium,4.51753
+15,282,Expression Add Operators,38.7%,Hard,5.37138
+16,289,Game of Life,61.2%,Medium,24.9119
+17,297,Serialize and Deserialize Binary Tree,52.1%,Hard,1.47638
+18,332,Reconstruct Itinerary,39.4%,Hard,5.7054
+19,336,Palindrome Pairs,36.2%,Hard,76.8043
+20,353,Design Snake Game,37.3%,Medium,22.3629
+21,359,Logger Rate Limiter,74.0%,Easy,2.53618
+22,388,Longest Absolute File Path,44.7%,Medium,45.3712
+23,415,Add Strings,50.8%,Easy,10.8947
+24,529,Minesweeper,63.4%,Medium,16.5884
+25,642,Design Search Autocomplete System,47.6%,Hard,8.33659
+26,815,Bus Routes,44.6%,Hard,94.9005
+27,969,Pancake Sorting,69.3%,Medium,37.41
+28,999,Available Captures for Rook,67.7%,Easy,29.0747
+29,1336,Number of Transactions per Visit,51.0%,Hard,100
+30,1366,Rank Teams by Votes,58.2%,Medium,34.5744
+31,1861,Rotating the Box,63.5%,Medium,18.4534

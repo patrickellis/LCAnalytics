@@ -1,0 +1,15 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,2,Add Two Numbers,37.2%,Medium,19.5297
+1,3,Longest Substring Without Repeating Characters,32.4%,Medium,21.7316
+2,5,Longest Palindromic Substring,31.4%,Medium,38.7328
+3,14,Longest Common Prefix,38.1%,Easy,4.42553
+4,15,3Sum,29.8%,Medium,2.37997
+5,42,Trapping Rain Water,54.2%,Hard,16.616
+6,44,Wildcard Matching,26.1%,Hard,100
+7,55,Jump Game,36.8%,Medium,1.5783
+8,56,Merge Intervals,43.2%,Medium,3.95685
+9,217,Contains Duplicate,59.0%,Easy,2.75162
+10,946,Validate Stack Sequences,64.9%,Medium,69.3664
+11,1329,Sort the Matrix Diagonally,81.5%,Medium,35.7711
+12,1275,Find Winner on a Tic Tac Toe Game,55.7%,Easy,0
+13,1910,Remove All Occurrences of a Substring,70.4%,Medium,0

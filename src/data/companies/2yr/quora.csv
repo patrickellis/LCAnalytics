@@ -1,0 +1,28 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,14,Longest Common Prefix,38.1%,Easy,0.25612
+1,48,Rotate Image,64.0%,Medium,0.965787
+2,68,Text Justification,32.9%,Hard,1.48938
+3,113,Path Sum II,52.3%,Medium,3.88716
+4,139,Word Break,43.3%,Medium,0.37609
+5,162,Find Peak Element,45.0%,Medium,5.74832
+6,253,Meeting Rooms II,48.4%,Medium,3.76689
+7,297,Serialize and Deserialize Binary Tree,52.1%,Hard,9.84676
+8,380,Insert Delete GetRandom O(1),50.7%,Medium,4.35584
+9,381,Insert Delete GetRandom O(1) - Duplicates allowed,35.2%,Hard,3.56465
+10,437,Path Sum III,49.6%,Medium,1.04746
+11,493,Reverse Pairs,28.8%,Hard,4.01026
+12,498,Diagonal Traverse,53.3%,Medium,22.2317
+13,560,Subarray Sum Equals K,43.7%,Medium,4.44056
+14,780,Reaching Points,30.8%,Hard,55.0812
+15,855,Exam Room,43.5%,Medium,12.5054
+16,968,Binary Tree Cameras,41.2%,Hard,6.81495
+17,1053,Previous Permutation With One Swap,52.3%,Medium,16.2671
+18,1074,Number of Submatrices That Sum to Target,65.9%,Hard,13.1403
+19,1095,Find in Mountain Array,35.9%,Hard,6.71397
+20,1256,Encode Number,69.0%,Medium,82.8624
+21,1329,Sort the Matrix Diagonally,81.5%,Medium,27.2999
+22,1281,Subtract the Product and Sum of Digits of an Integer,85.7%,Easy,10.4424
+23,1295,Find Numbers with Even Number of Digits,77.6%,Easy,0.888513
+24,1354,Construct Target Array With Multiple Sums,31.3%,Hard,100
+25,1743,Restore the Array From Adjacent Pairs,66.9%,Medium,26.0547
+26,1861,Rotating the Box,63.5%,Medium,4.65084

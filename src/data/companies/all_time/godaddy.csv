@@ -1,0 +1,14 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,1,Two Sum,47.8%,Easy,7.32399
+1,20,Valid Parentheses,40.5%,Easy,8.77685
+2,36,Valid Sudoku,53.4%,Medium,4.051
+3,46,Permutations,69.9%,Medium,10.1276
+4,103,Binary Tree Zigzag Level Order Traversal,52.1%,Medium,1.87833
+5,139,Word Break,43.3%,Medium,3.07976
+6,169,Majority Element,61.4%,Easy,0.554585
+7,200,Number of Islands,52.0%,Medium,2.17403
+8,253,Meeting Rooms II,48.4%,Medium,7.11343
+9,290,Word Pattern,39.1%,Easy,7.68917
+10,441,Arranging Coins,43.3%,Easy,100
+11,443,String Compression,46.2%,Medium,0
+12,1236,Web Crawler,65.3%,Medium,55.0638

@@ -1,0 +1,31 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,23,Merge k Sorted Lists,45.0%,Hard,0.567818
+1,36,Valid Sudoku,53.4%,Medium,1.60039
+2,37,Sudoku Solver,51.5%,Hard,8.45194
+3,68,Text Justification,32.9%,Hard,13.1042
+4,71,Simplify Path,36.4%,Medium,1.43431
+5,76,Minimum Window Substring,37.9%,Hard,0.939235
+6,79,Word Search,38.9%,Medium,2.21929
+7,126,Word Ladder II,25.8%,Hard,3.71516
+8,146,LRU Cache,38.3%,Medium,1.36099
+9,202,Happy Number,52.2%,Easy,1.18059
+10,208,Implement Trie (Prefix Tree),55.8%,Medium,4.69047
+11,210,Course Schedule II,44.9%,Medium,5.22457
+12,269,Alien Dictionary,34.3%,Hard,46.4374
+13,277,Find the Celebrity,45.4%,Medium,41.2799
+14,298,Binary Tree Longest Consecutive Sequence,49.7%,Medium,12.9757
+15,323,Number of Connected Components in an Undirected Graph,59.8%,Medium,2.04044
+16,362,Design Hit Counter,66.5%,Medium,70.0019
+17,373,Find K Pairs with Smallest Sums,38.9%,Medium,3.77982
+18,392,Is Subsequence,50.0%,Easy,1.55777
+19,529,Minesweeper,63.4%,Medium,6.00174
+20,621,Task Scheduler,53.7%,Medium,20.7174
+21,698,Partition to K Equal Sum Subsets,45.8%,Medium,6.16137
+22,721,Accounts Merge,54.2%,Medium,4.21336
+23,723,Candy Crush,74.1%,Medium,10.0733
+24,726,Number of Atoms,51.4%,Hard,28.987
+25,759,Employee Free Time,70.2%,Hard,100
+26,811,Subdomain Visit Count,73.1%,Medium,76.4355
+27,710,Random Pick with Blacklist,33.1%,Hard,17.0676
+28,986,Interval List Intersections,69.7%,Medium,1.56174
+29,1306,Jump Game III,61.6%,Medium,9.97793

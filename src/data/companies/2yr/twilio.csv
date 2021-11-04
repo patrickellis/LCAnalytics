@@ -1,0 +1,21 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,17,Letter Combinations of a Phone Number,51.9%,Medium,7.22922
+1,20,Valid Parentheses,40.5%,Easy,0.0500577
+2,49,Group Anagrams,62.3%,Medium,0.99155
+3,68,Text Justification,32.9%,Hard,61.7489
+4,70,Climbing Stairs,50.0%,Easy,0.0400754
+5,146,LRU Cache,38.3%,Medium,15.1627
+6,207,Course Schedule,44.7%,Medium,0.322862
+7,210,Course Schedule II,44.9%,Medium,0.410463
+8,221,Maximal Square,41.3%,Medium,0.367555
+9,225,Implement Stack using Queues,50.4%,Easy,2.21046
+10,239,Sliding Window Maximum,45.7%,Hard,1.15825
+11,253,Meeting Rooms II,48.4%,Medium,0.189556
+12,295,Find Median from Data Stream,49.5%,Hard,0.294407
+13,332,Reconstruct Itinerary,39.4%,Hard,14.1105
+14,560,Subarray Sum Equals K,43.7%,Medium,1.80158
+15,935,Knight Dialer,48.1%,Medium,23.4979
+16,974,Subarray Sums Divisible by K,52.4%,Medium,100
+17,1010,Pairs of Songs With Total Durations Divisible by 60,51.9%,Medium,0.633187
+18,1507,Reformat Date,60.9%,Easy,1.86216
+19,1636,Sort Array by Increasing Frequency,67.9%,Easy,16.7547

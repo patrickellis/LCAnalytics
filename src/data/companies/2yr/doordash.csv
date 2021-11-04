@@ -1,0 +1,24 @@
+,#,Title,Acceptance,Difficulty,FrequencyFrequency of problems that appear in real interviews,Frequency
+0,36,Valid Sudoku,53.4%,Medium,,19.7321
+1,37,Sudoku Solver,51.5%,Hard,,77.0794
+2,124,Binary Tree Maximum Path Sum,36.8%,Hard,,42.6527
+3,150,Evaluate Reverse Polish Notation,40.7%,Medium,,1.71278
+4,200,Number of Islands,52.0%,Medium,,0.144072
+5,210,Course Schedule II,44.9%,Medium,,1.97505
+6,239,Sliding Window Maximum,45.7%,Hard,,5.08892
+7,286,Walls and Gates,57.8%,Medium,,5.25917
+8,295,Find Median from Data Stream,49.5%,Hard,,0.513261
+9,317,Shortest Distance from All Buildings,43.7%,Hard,,15.5246
+10,332,Reconstruct Itinerary,39.4%,Hard,,0.773167
+11,498,Diagonal Traverse,53.3%,Medium,,9.01959
+12,547,Number of Provinces,62.2%,Medium,,5.2706
+13,695,Max Area of Island,68.0%,Medium,,1.29336
+14,759,Employee Free Time,70.2%,Hard,,9.36142
+15,839,Similar String Groups,44.0%,Hard,,10.8906
+16,854,K-Similar Strings,38.8%,Hard,,9.06573
+17,1004,Max Consecutive Ones III,61.6%,Medium,,2.83327
+18,1229,Meeting Scheduler,54.8%,Medium,,3.56997
+19,1235,Maximum Profit in Job Scheduling,50.2%,Hard,,100
+20,1347,Minimum Number of Steps to Make Two Strings Anagram,75.4%,Medium,,1.89014
+21,1761,Minimum Degree of a Connected Trio in a Graph,40.5%,Hard,,51.5916
+22,1779,Find Nearest Point That Has the Same X or Y Coordinate,67.8%,Easy,,65.2233

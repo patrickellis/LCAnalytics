@@ -1,0 +1,41 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,1,Two Sum,47.8%,Easy,0.379038
+1,10,Regular Expression Matching,28.0%,Hard,3.32373
+2,17,Letter Combinations of a Phone Number,51.9%,Medium,3.28403
+3,20,Valid Parentheses,40.5%,Easy,0.91045
+4,23,Merge k Sorted Lists,45.0%,Hard,1.25301
+5,42,Trapping Rain Water,54.2%,Hard,20.9539
+6,63,Unique Paths II,36.6%,Medium,2.34695
+7,69,Sqrt(x),36.0%,Easy,0.652938
+8,76,Minimum Window Substring,37.9%,Hard,15.5135
+9,84,Largest Rectangle in Histogram,39.0%,Hard,0.167676
+10,88,Merge Sorted Array,42.2%,Easy,0.44873
+11,91,Decode Ways,28.9%,Medium,17.5782
+12,109,Convert Sorted List to Binary Search Tree,53.9%,Medium,3.97315
+13,114,Flatten Binary Tree to Linked List,55.7%,Medium,0.320189
+14,126,Word Ladder II,25.8%,Hard,17.1628
+15,127,Word Ladder,33.7%,Hard,29.2563
+16,143,Reorder List,44.0%,Medium,0.166472
+17,155,Min Stack,48.8%,Easy,2.75959
+18,157,Read N Characters Given Read4,39.4%,Easy,5.80572
+19,158,Read N Characters Given read4 II - Call Multiple Times,39.6%,Hard,86.6712
+20,200,Number of Islands,52.0%,Medium,28.1695
+21,210,Course Schedule II,44.9%,Medium,0.3733
+22,238,Product of Array Except Self,62.7%,Medium,70.5867
+23,253,Meeting Rooms II,48.4%,Medium,1.9083
+24,279,Perfect Squares,51.1%,Medium,2.03381
+25,304,Range Sum Query 2D - Immutable,45.4%,Medium,14.6275
+26,365,Water and Jug Problem,33.0%,Medium,47.5678
+27,409,Longest Palindrome,52.8%,Easy,0.593829
+28,443,String Compression,46.2%,Medium,0
+29,567,Permutation in String,44.4%,Medium,0.0998401
+30,632,Smallest Range Covering Elements from K Lists,56.7%,Hard,1.22602
+31,642,Design Search Autocomplete System,47.6%,Hard,59.0185
+32,692,Top K Frequent Words,53.9%,Medium,0.493057
+33,716,Max Stack,44.2%,Easy,79.2954
+34,735,Asteroid Collision,44.1%,Medium,100
+35,426,Convert Binary Search Tree to Sorted Doubly Linked List,63.3%,Medium,2.70627
+36,981,Time Based Key-Value Store,53.4%,Medium,42.5851
+37,1060,Missing Element in Sorted Array,55.4%,Medium,0.733061
+38,1094,Car Pooling,59.5%,Medium,0.519566
+39,1326,Minimum Number of Taps to Open to Water a Garden,48.0%,Hard,0.581002

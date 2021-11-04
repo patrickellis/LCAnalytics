@@ -1,0 +1,13 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,146,LRU Cache,38.3%,Medium,3.46443
+1,200,Number of Islands,52.0%,Medium,0.0411851
+2,239,Sliding Window Maximum,45.7%,Hard,3.17347
+3,289,Game of Life,61.2%,Medium,56.09
+4,362,Design Hit Counter,66.5%,Medium,1.19467
+5,379,Design Phone Directory,49.7%,Medium,30.3998
+6,547,Number of Provinces,62.2%,Medium,4.97473
+7,609,Find Duplicate File in System,63.4%,Medium,100
+8,695,Max Area of Island,68.0%,Medium,0.825158
+9,1001,Grid Illumination,35.9%,Hard,38.3252
+10,1178,Number of Valid Words for Each Puzzle,41.1%,Hard,74.575
+11,1242,Web Crawler Multithreaded,48.1%,Medium,55.4676

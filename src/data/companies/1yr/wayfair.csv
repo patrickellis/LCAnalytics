@@ -1,0 +1,15 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,1,Two Sum,47.8%,Easy,0.0595071
+1,4,Median of Two Sorted Arrays,32.9%,Hard,0.339462
+2,5,Longest Palindromic Substring,31.4%,Medium,6.40912
+3,36,Valid Sudoku,53.4%,Medium,0.522383
+4,125,Valid Palindrome,39.9%,Easy,5.94138
+5,252,Meeting Rooms,56.2%,Easy,1.60872
+6,409,Longest Palindrome,52.8%,Easy,3.91381
+7,415,Add Strings,50.8%,Easy,17.3036
+8,718,Maximum Length of Repeated Subarray,51.2%,Medium,10.3941
+9,759,Employee Free Time,70.2%,Hard,64.117
+10,768,Max Chunks To Make Sorted II,51.2%,Hard,7.80801
+11,811,Subdomain Visit Count,73.1%,Medium,100
+12,1204,Last Person to Fit in the Bus,73.1%,Medium,66.459
+13,1604,Alert Using Same Key-Card Three or More Times in a One Hour Period,45.6%,Medium,30.576

@@ -1,0 +1,13 @@
+,#,Title,Acceptance,Difficulty,FrequencyFrequency of problems that appear in real interviews,Frequency
+0,15,3Sum,29.8%,Medium,,1.29015
+1,36,Valid Sudoku,53.4%,Medium,,10.4301
+2,37,Sudoku Solver,51.5%,Hard,,100
+3,44,Wildcard Matching,26.1%,Hard,,15.1212
+4,54,Spiral Matrix,39.3%,Medium,,22.6053
+5,146,LRU Cache,38.3%,Medium,,8.86989
+6,234,Palindrome Linked List,44.6%,Easy,,4.47411
+7,259,3Sum Smaller,49.9%,Medium,,35.553
+8,543,Diameter of Binary Tree,52.3%,Easy,,2.34322
+9,811,Subdomain Visit Count,73.1%,Medium,,75.5423
+10,1110,Delete Nodes And Return Forest,68.8%,Medium,,15.7523
+11,1537,Get the Maximum Score,38.1%,Hard,,60.0107

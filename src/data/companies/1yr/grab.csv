@@ -1,0 +1,16 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,42,Trapping Rain Water,54.2%,Hard,0.125367
+1,146,LRU Cache,38.3%,Medium,0.151942
+2,234,Palindrome Linked List,44.6%,Easy,0.172195
+3,242,Valid Anagram,60.2%,Easy,0.118171
+4,301,Remove Invalid Parentheses,45.9%,Hard,0.531894
+5,460,LFU Cache,38.3%,Hard,1.12563
+6,462,Minimum Moves to Equal Array Elements II,56.1%,Medium,2.37733
+7,984,String Without AAA or BBB,40.0%,Medium,3.63257
+8,1017,Convert to Base -2,59.5%,Medium,66.6816
+9,1031,Maximum Sum of Two Non-Overlapping Subarrays,59.2%,Medium,3.08403
+10,1073,Adding Two Negabinary Numbers,34.9%,Medium,100
+11,1405,Longest Happy String,54.4%,Medium,9.94767
+12,1342,Number of Steps to Reduce a Number to Zero,85.6%,Easy,0.753112
+13,1375,Bulb Switcher III,65.1%,Medium,43.2661
+14,1654,Minimum Jumps to Reach Home,25.5%,Medium,2.94175

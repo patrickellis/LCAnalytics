@@ -1,0 +1,52 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,1,Two Sum,47.8%,Easy,9.72671
+1,2,Add Two Numbers,37.2%,Medium,2.34744
+2,10,Regular Expression Matching,28.0%,Hard,3.15379
+3,20,Valid Parentheses,40.5%,Easy,0.446812
+4,23,Merge k Sorted Lists,45.0%,Hard,0.228691
+5,39,Combination Sum,62.5%,Medium,25.7936
+6,42,Trapping Rain Water,54.2%,Hard,13.3154
+7,68,Text Justification,32.9%,Hard,33.9609
+8,108,Convert Sorted Array to Binary Search Tree,64.1%,Easy,0.378138
+9,136,Single Number,67.8%,Easy,0.319673
+10,160,Intersection of Two Linked Lists,47.5%,Easy,0.604688
+11,166,Fraction to Recurring Decimal,23.0%,Medium,41.637
+12,190,Reverse Bits,45.7%,Easy,0.341568
+13,198,House Robber,45.0%,Medium,0.949866
+14,202,Happy Number,52.2%,Easy,0.47261
+15,212,Word Search II,38.4%,Hard,2.09221
+16,217,Contains Duplicate,59.0%,Easy,0.0592579
+17,219,Contains Duplicate II,40.1%,Easy,1.11278
+18,220,Contains Duplicate III,21.5%,Medium,1.00903
+19,221,Maximal Square,41.3%,Medium,0.246174
+20,227,Basic Calculator II,40.0%,Medium,0
+21,251,Flatten 2D Vector,47.2%,Medium,79.3885
+22,269,Alien Dictionary,34.3%,Hard,55.2539
+23,295,Find Median from Data Stream,49.5%,Hard,1.35565
+24,322,Coin Change,39.0%,Medium,3.4535
+25,336,Palindrome Pairs,36.2%,Hard,100
+26,341,Flatten Nested List Iterator,57.5%,Medium,28.9313
+27,385,Mini Parser,35.3%,Medium,2.51616
+28,415,Add Strings,50.8%,Easy,0
+29,588,Design In-Memory File System,47.4%,Hard,9.13897
+30,591,Tag Validator,35.8%,Hard,19.4073
+31,751,IP to CIDR,56.0%,Medium,67.3212
+32,755,Pour Water,44.9%,Medium,89.8163
+33,756,Pyramid Transition Matrix,55.6%,Medium,25.126
+34,759,Employee Free Time,70.2%,Hard,11.8814
+35,773,Sliding Puzzle,62.5%,Hard,44.6139
+36,787,Cheapest Flights Within K Stops,36.8%,Medium,35.8497
+37,864,Shortest Path to Get All Keys,43.4%,Hard,26.2188
+38,875,Koko Eating Bananas,54.2%,Medium,18.4443
+39,1058,Minimize Rounding Error to Meet Target,44.0%,Medium,45.9645
+40,1017,Convert to Base -2,59.5%,Medium,0
+41,1041,Robot Bounded In Circle,54.5%,Medium,0
+42,1166,Design File System,59.5%,Medium,30.099
+43,1257,Smallest Common Region,61.9%,Medium,26.8533
+44,1235,Maximum Profit in Job Scheduling,50.2%,Hard,7.87163
+45,1283,Find the Smallest Divisor Given a Threshold,52.0%,Medium,0.521337
+46,1284,Minimum Number of Flips to Convert Binary Matrix to Zero Matrix,70.8%,Hard,0
+47,1298,Maximum Candies You Can Get from Boxes,60.5%,Hard,0
+48,1387,Sort Integers by The Power Value,70.3%,Medium,1.58791
+49,1557,Minimum Number of Vertices to Reach All Nodes,77.0%,Medium,0
+50,1554,Strings Differ by One Character,65.3%,Medium,0

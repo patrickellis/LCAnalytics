@@ -1,0 +1,14 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,4,Median of Two Sorted Arrays,32.9%,Hard,76.1511
+1,25,Reverse Nodes in k-Group,48.7%,Hard,52.3023
+2,41,First Missing Positive,35.2%,Hard,3.3429
+3,72,Edit Distance,49.2%,Hard,44.3446
+4,136,Single Number,67.8%,Easy,39.8975
+5,143,Reorder List,44.0%,Medium,19.708
+6,206,Reverse Linked List,68.3%,Easy,100
+7,222,Count Complete Tree Nodes,53.3%,Medium,4.33975
+8,394,Decode String,54.6%,Medium,15.4694
+9,543,Diameter of Binary Tree,52.3%,Easy,7.43494
+10,546,Remove Boxes,47.2%,Hard,0
+11,625,Minimum Factorization,33.2%,Medium,0
+12,1143,Longest Common Subsequence,58.8%,Medium,3.31145

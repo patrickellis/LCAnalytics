@@ -1,0 +1,17 @@
+,#,Title,Acceptance,Difficulty,FrequencyFrequency of problems that appear in real interviews,Frequency
+0,69,Sqrt(x),36.0%,Easy,,8.62839
+1,75,Sort Colors,52.8%,Medium,,8.95568
+2,121,Best Time to Buy and Sell Stock,52.9%,Easy,,6.12611
+3,138,Copy List with Random Pointer,44.5%,Medium,,13.8063
+4,139,Word Break,43.3%,Medium,,7.08291
+5,141,Linked List Cycle,44.3%,Easy,,11.6558
+6,146,LRU Cache,38.3%,Medium,,7.93447
+7,160,Intersection of Two Linked Lists,47.5%,Easy,,10.1422
+8,200,Number of Islands,52.0%,Medium,,11.2216
+9,206,Reverse Linked List,68.3%,Easy,,13.8969
+10,268,Missing Number,57.6%,Easy,,8.55702
+11,297,Serialize and Deserialize Binary Tree,52.1%,Hard,,34.8251
+12,304,Range Sum Query 2D - Immutable,45.4%,Medium,,34.8241
+13,622,Design Circular Queue,48.1%,Medium,,100
+14,894,All Possible Full Binary Trees,78.8%,Medium,,77.5853
+15,1046,Last Stone Weight,62.7%,Easy,,55.1706

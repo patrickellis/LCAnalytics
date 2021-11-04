@@ -1,0 +1,45 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,1,Two Sum,47.8%,Easy,0.227387
+1,14,Longest Common Prefix,38.1%,Easy,4.11805
+2,18,4Sum,36.7%,Medium,8.46808
+3,22,Generate Parentheses,68.3%,Medium,1.67346
+4,25,Reverse Nodes in k-Group,48.7%,Hard,3.70389
+5,41,First Missing Positive,35.2%,Hard,2.82039
+6,45,Jump Game II,35.1%,Medium,1.85748
+7,49,Group Anagrams,62.3%,Medium,1.43458
+8,56,Merge Intervals,43.2%,Medium,2.07364
+9,76,Minimum Window Substring,37.9%,Hard,23.3474
+10,79,Word Search,38.9%,Medium,24.5585
+11,91,Decode Ways,28.9%,Medium,15.6659
+12,121,Best Time to Buy and Sell Stock,52.9%,Easy,9.267
+13,123,Best Time to Buy and Sell Stock III,42.2%,Hard,2.04504
+14,127,Word Ladder,33.7%,Hard,13.2679
+15,146,LRU Cache,38.3%,Medium,41.2868
+16,200,Number of Islands,52.0%,Medium,1.06771
+17,210,Course Schedule II,44.9%,Medium,20.9855
+18,212,Word Search II,38.4%,Hard,6.81492
+19,227,Basic Calculator II,40.0%,Medium,3.26424
+20,231,Power of Two,44.0%,Easy,2.95689
+21,241,Different Ways to Add Parentheses,59.7%,Medium,28.7363
+22,289,Game of Life,61.2%,Medium,9.2569
+23,297,Serialize and Deserialize Binary Tree,52.1%,Hard,20.506
+24,329,Longest Increasing Path in a Matrix,48.3%,Hard,11.4443
+25,332,Reconstruct Itinerary,39.4%,Hard,5.7299
+26,340,Longest Substring with At Most K Distinct Characters,46.7%,Medium,25.3212
+27,347,Top K Frequent Elements,63.7%,Medium,7.17709
+28,351,Android Unlock Patterns,50.4%,Medium,82.8586
+29,394,Decode String,54.6%,Medium,39.255
+30,415,Add Strings,50.8%,Easy,2.76302
+31,438,Find All Anagrams in a String,46.5%,Medium,13.8861
+32,697,Degree of an Array,55.2%,Easy,11.9061
+33,736,Parse Lisp Expression,50.6%,Hard,100
+34,772,Basic Calculator III,46.2%,Hard,21.4601
+35,787,Cheapest Flights Within K Stops,36.8%,Medium,32.0508
+36,871,Minimum Number of Refueling Stops,35.2%,Hard,10.9878
+37,528,Random Pick with Weight,45.6%,Medium,4.42839
+38,935,Knight Dialer,48.1%,Medium,40.6736
+39,939,Minimum Area Rectangle,52.9%,Medium,34.5007
+40,1091,Shortest Path in Binary Matrix,41.3%,Medium,5.57672
+41,1096,Brace Expansion II,62.0%,Hard,70.0235
+42,1130,Minimum Cost Tree From Leaf Values,68.2%,Medium,25.5763
+43,1712,Ways to Split Array Into Three Subarrays,29.7%,Medium,58.4282

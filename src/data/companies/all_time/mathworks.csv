@@ -1,0 +1,35 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,1,Two Sum,47.8%,Easy,0.475218
+1,5,Longest Palindromic Substring,31.4%,Medium,0.316795
+2,15,3Sum,29.8%,Medium,0.148645
+3,20,Valid Parentheses,40.5%,Easy,3.4769
+4,25,Reverse Nodes in k-Group,48.7%,Hard,26.1578
+5,49,Group Anagrams,62.3%,Medium,1.50586
+6,62,Unique Paths,58.1%,Medium,0.941166
+7,115,Distinct Subsequences,41.6%,Hard,57.9983
+8,134,Gas Station,43.2%,Medium,0.250035
+9,200,Number of Islands,52.0%,Medium,1.35898
+10,206,Reverse Linked List,68.3%,Easy,10.2814
+11,225,Implement Stack using Queues,50.4%,Easy,1.22716
+12,255,Verify Preorder Sequence in Binary Search Tree,47.1%,Medium,49.8375
+13,259,3Sum Smaller,49.9%,Medium,3.8955
+14,317,Shortest Distance from All Buildings,43.7%,Hard,11.0333
+15,338,Counting Bits,71.9%,Easy,2.53433
+16,453,Minimum Moves to Equal Array Elements,52.7%,Medium,5.14527
+17,500,Keyboard Row,67.0%,Easy,26.0764
+18,526,Beautiful Arrangement,63.4%,Medium,79.7207
+19,566,Reshape the Matrix,62.0%,Easy,0
+20,647,Palindromic Substrings,63.7%,Medium,1.18421
+21,697,Degree of an Array,55.2%,Easy,22.5544
+22,741,Cherry Pickup,35.9%,Hard,29.5582
+23,829,Consecutive Numbers Sum,40.2%,Hard,0.694891
+24,1010,Pairs of Songs With Total Durations Divisible by 60,51.9%,Medium,0.351522
+25,1048,Longest String Chain,57.0%,Medium,1.76796
+26,1163,Last Substring in Lexicographical Order,35.9%,Hard,69.7376
+27,1197,Minimum Knight Moves,39.1%,Medium,23.9753
+28,1130,Minimum Cost Tree From Leaf Values,68.2%,Medium,100
+29,1290,Convert Binary Number in a Linked List to Integer,81.8%,Easy,16.6338
+30,1319,Number of Operations to Make Network Connected,56.3%,Medium,0.63931
+31,1326,Minimum Number of Taps to Open to Water a Garden,48.0%,Hard,0.628739
+32,1696,Jump Game VI,42.2%,Medium,1.16642
+33,2038,Remove Colored Pieces if Both Neighbors are the Same Color,53.4%,Medium,0

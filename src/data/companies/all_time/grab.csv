@@ -1,0 +1,26 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,12,Integer to Roman,58.4%,Medium,0.501803
+1,42,Trapping Rain Water,54.2%,Hard,2.00767
+2,53,Maximum Subarray,48.9%,Easy,0.0367904
+3,56,Merge Intervals,43.2%,Medium,0.59553
+4,146,LRU Cache,38.3%,Medium,3.58121
+5,215,Kth Largest Element in an Array,61.4%,Medium,0.235381
+6,227,Basic Calculator II,40.0%,Medium,0.235361
+7,234,Palindrome Linked List,44.6%,Easy,0.55252
+8,242,Valid Anagram,60.2%,Easy,0.379642
+9,301,Remove Invalid Parentheses,45.9%,Hard,0.428353
+10,322,Coin Change,39.0%,Medium,0.243186
+11,445,Add Two Numbers II,57.7%,Medium,0.52737
+12,460,LFU Cache,38.3%,Hard,3.53598
+13,462,Minimum Moves to Equal Array Elements II,56.1%,Medium,1.91455
+14,915,Partition Array into Disjoint Intervals,48.1%,Medium,12.1728
+15,983,Minimum Cost For Tickets,63.4%,Medium,18.4274
+16,984,String Without AAA or BBB,40.0%,Medium,58.829
+17,1017,Convert to Base -2,59.5%,Medium,79.4145
+18,1031,Maximum Sum of Two Non-Overlapping Subarrays,59.2%,Medium,24.4721
+19,1073,Adding Two Negabinary Numbers,34.9%,Medium,100
+20,1405,Longest Happy String,54.4%,Medium,11.1835
+21,1253,Reconstruct a 2-Row Binary Matrix,42.6%,Medium,43.1343
+22,1342,Number of Steps to Reduce a Number to Zero,85.6%,Easy,1.35495
+23,1375,Bulb Switcher III,65.1%,Medium,53.7161
+24,1654,Minimum Jumps to Reach Home,25.5%,Medium,5.18798

@@ -1,0 +1,22 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,1,Two Sum,47.8%,Easy,19.0657
+1,2,Add Two Numbers,37.2%,Medium,23.9483
+2,5,Longest Palindromic Substring,31.4%,Medium,4.94004
+3,13,Roman to Integer,57.7%,Easy,9.46897
+4,20,Valid Parentheses,40.5%,Easy,8.72002
+5,82,Remove Duplicates from Sorted List II,41.2%,Medium,22.2012
+6,83,Remove Duplicates from Sorted List,47.8%,Easy,6.25339
+7,121,Best Time to Buy and Sell Stock,52.9%,Easy,13.932
+8,138,Copy List with Random Pointer,44.5%,Medium,53.185
+9,151,Reverse Words in a String,26.8%,Medium,15.1895
+10,160,Intersection of Two Linked Lists,47.5%,Easy,78.7596
+11,191,Number of 1 Bits,57.0%,Easy,74.4253
+12,206,Reverse Linked List,68.3%,Easy,100
+13,215,Kth Largest Element in an Array,61.4%,Medium,2.18399
+14,237,Delete Node in a Linked List,70.0%,Easy,78.3488
+15,242,Valid Anagram,60.2%,Easy,7.91584
+16,283,Move Zeroes,59.6%,Easy,16.9761
+17,287,Find the Duplicate Number,58.3%,Medium,3.1235
+18,622,Design Circular Queue,48.1%,Medium,36.6741
+19,1021,Remove Outermost Parentheses,79.5%,Easy,24.139
+20,1183,Maximum Number of Ones,59.1%,Hard,0

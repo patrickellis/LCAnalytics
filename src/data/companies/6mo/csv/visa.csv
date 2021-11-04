@@ -1,0 +1,13 @@
+,#,Title,Acceptance,Difficulty,FrequencyFrequency of problems that appear in real interviews,Frequency
+0,33,Search in Rotated Sorted Array,37.0%,Medium,,5.57929
+1,88,Merge Sorted Array,42.2%,Easy,,2.26029
+2,121,Best Time to Buy and Sell Stock,52.9%,Easy,,1.41741
+3,141,Linked List Cycle,44.3%,Easy,,2.69805
+4,179,Largest Number,32.0%,Medium,,19.0991
+5,221,Maximal Square,41.3%,Medium,,71.0005
+6,383,Ransom Note,54.6%,Easy,,19.8337
+7,387,First Unique Character in a String,55.6%,Easy,,3.74824
+8,692,Top K Frequent Words,53.9%,Medium,,13.4893
+9,829,Consecutive Numbers Sum,40.2%,Hard,,100
+10,1071,Greatest Common Divisor of Strings,51.8%,Easy,,48.8332
+11,1356,Sort Integers by The Number of 1 Bits,70.7%,Easy,,62.7142

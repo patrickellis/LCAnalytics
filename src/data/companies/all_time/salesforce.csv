@@ -1,0 +1,126 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,1,Two Sum,47.8%,Easy,6.95077
+1,2,Add Two Numbers,37.2%,Medium,1.27
+2,3,Longest Substring Without Repeating Characters,32.4%,Medium,0.906978
+3,5,Longest Palindromic Substring,31.4%,Medium,2.04556
+4,7,Reverse Integer,26.2%,Medium,0.795601
+5,11,Container With Most Water,53.2%,Medium,0.120843
+6,15,3Sum,29.8%,Medium,4.30226
+7,17,Letter Combinations of a Phone Number,51.9%,Medium,27.8819
+8,20,Valid Parentheses,40.5%,Easy,6.28054
+9,22,Generate Parentheses,68.3%,Medium,4.11493
+10,23,Merge k Sorted Lists,45.0%,Hard,4.81026
+11,31,Next Permutation,34.7%,Medium,3.28238
+12,32,Longest Valid Parentheses,30.7%,Hard,1.93286
+13,37,Sudoku Solver,51.5%,Hard,2.93822
+14,39,Combination Sum,62.5%,Medium,0.507497
+15,41,First Missing Positive,35.2%,Hard,6.83615
+16,42,Trapping Rain Water,54.2%,Hard,6.05425
+17,45,Jump Game II,35.1%,Medium,0.230489
+18,48,Rotate Image,64.0%,Medium,3.3782
+19,49,Group Anagrams,62.3%,Medium,7.23194
+20,50,"Pow(x, n)",31.6%,Medium,1.28541
+21,53,Maximum Subarray,48.9%,Easy,0.56825
+22,54,Spiral Matrix,39.3%,Medium,3.6432
+23,56,Merge Intervals,43.2%,Medium,60.6212
+24,62,Unique Paths,58.1%,Medium,1.39687
+25,66,Plus One,42.1%,Easy,0.386755
+26,76,Minimum Window Substring,37.9%,Hard,6.39288
+27,98,Validate Binary Search Tree,29.7%,Medium,1.66616
+28,99,Recover Binary Search Tree,44.8%,Medium,0.852505
+29,103,Binary Tree Zigzag Level Order Traversal,52.1%,Medium,1.26317
+30,121,Best Time to Buy and Sell Stock,52.9%,Easy,0.881708
+31,122,Best Time to Buy and Sell Stock II,60.4%,Medium,0.436577
+32,126,Word Ladder II,25.8%,Hard,5.05919
+33,127,Word Ladder,33.7%,Hard,13.8398
+34,128,Longest Consecutive Sequence,48.0%,Medium,0.338121
+35,133,Clone Graph,43.4%,Medium,1.24355
+36,134,Gas Station,43.2%,Medium,0.722054
+37,138,Copy List with Random Pointer,44.5%,Medium,2.26623
+38,139,Word Break,43.3%,Medium,4.58643
+39,141,Linked List Cycle,44.3%,Easy,1.67162
+40,146,LRU Cache,38.3%,Medium,77.4269
+41,151,Reverse Words in a String,26.8%,Medium,7.56525
+42,165,Compare Version Numbers,31.9%,Medium,9.07112
+43,173,Binary Search Tree Iterator,63.3%,Medium,1.08029
+44,179,Largest Number,32.0%,Medium,14.4543
+45,186,Reverse Words in a String II,49.3%,Medium,13.0021
+46,200,Number of Islands,52.0%,Medium,11.239
+47,206,Reverse Linked List,68.3%,Easy,1.46641
+48,211,Design Add and Search Words Data Structure,42.5%,Medium,4.29217
+49,212,Word Search II,38.4%,Hard,1.89171
+50,215,Kth Largest Element in an Array,61.4%,Medium,2.84201
+51,224,Basic Calculator,39.5%,Hard,10.0976
+52,225,Implement Stack using Queues,50.4%,Easy,7.78712
+53,232,Implement Queue using Stacks,55.3%,Easy,8.29793
+54,236,Lowest Common Ancestor of a Binary Tree,52.7%,Medium,5.88546
+55,239,Sliding Window Maximum,45.7%,Hard,0.299675
+56,242,Valid Anagram,60.2%,Easy,0.368091
+57,243,Shortest Word Distance,63.4%,Easy,2.84827
+58,253,Meeting Rooms II,48.4%,Medium,2.69906
+59,278,First Bad Version,39.9%,Easy,0.65929
+60,287,Find the Duplicate Number,58.3%,Medium,4.03936
+61,295,Find Median from Data Stream,49.5%,Hard,9.10917
+62,314,Binary Tree Vertical Order Traversal,49.1%,Medium,7.22465
+63,341,Flatten Nested List Iterator,57.5%,Medium,12.9952
+64,347,Top K Frequent Elements,63.7%,Medium,2.70022
+65,348,Design Tic-Tac-Toe,56.7%,Medium,5.35257
+66,403,Frog Jump,42.4%,Hard,13.2304
+67,410,Split Array Largest Sum,48.6%,Hard,2.07067
+68,412,Fizz Buzz,65.3%,Easy,5.45072
+69,441,Arranging Coins,43.3%,Easy,3.23989
+70,445,Add Two Numbers II,57.7%,Medium,0.907589
+71,451,Sort Characters By Frequency,66.8%,Medium,0.171241
+72,459,Repeated Substring Pattern,43.4%,Easy,24.7541
+73,460,LFU Cache,38.3%,Hard,44.0018
+74,488,Zuma Game,37.6%,Hard,100
+75,495,Teemo Attacking,56.5%,Easy,2.95619
+76,496,Next Greater Element I,68.6%,Easy,0.37876
+77,532,K-diff Pairs in an Array,36.9%,Medium,44.694
+78,545,Boundary of Binary Tree,41.9%,Medium,2.31281
+79,556,Next Greater Element III,33.4%,Medium,6.2588
+80,557,Reverse Words in a String III,75.5%,Easy,0.569212
+81,582,Kill Process,65.2%,Medium,3.74044
+82,588,Design In-Memory File System,47.4%,Hard,34.2513
+83,617,Merge Two Binary Trees,76.9%,Easy,0.314281
+84,621,Task Scheduler,53.7%,Medium,1.85492
+85,628,Maximum Product of Three Numbers,46.7%,Easy,2.30025
+86,636,Exclusive Time of Functions,57.9%,Medium,1.91055
+87,647,Palindromic Substrings,63.7%,Medium,4.88451
+88,678,Valid Parenthesis String,32.4%,Medium,17.0856
+89,692,Top K Frequent Words,53.9%,Medium,8.0887
+90,695,Max Area of Island,68.0%,Medium,0.298811
+91,696,Count Binary Substrings,62.9%,Easy,4.43942
+92,698,Partition to K Equal Sum Subsets,45.8%,Medium,3.77355
+93,724,Find Pivot Index,49.2%,Easy,5.34051
+94,733,Flood Fill,56.9%,Easy,0.328437
+95,739,Daily Temperatures,66.1%,Medium,0.575784
+96,426,Convert Binary Search Tree to Sorted Doubly Linked List,63.3%,Medium,0.552352
+97,767,Reorganize String,51.2%,Medium,1.9981
+98,776,Split BST,57.8%,Medium,7.849
+99,780,Reaching Points,30.8%,Hard,78.3158
+100,706,Design HashMap,63.8%,Easy,27.6107
+101,829,Consecutive Numbers Sum,40.2%,Hard,4.45417
+102,895,Maximum Frequency Stack,64.2%,Hard,19.1107
+103,920,Number of Music Playlists,48.7%,Hard,78.9248
+104,973,K Closest Points to Origin,65.7%,Medium,0.262778
+105,994,Rotting Oranges,51.1%,Medium,1.37361
+106,1010,Pairs of Songs With Total Durations Divisible by 60,51.9%,Medium,2.26825
+107,1150,Check If a Number Is Majority Element in a Sorted Array,56.9%,Easy,0
+108,1163,Last Substring in Lexicographical Order,35.9%,Hard,20.6801
+109,1051,Height Checker,73.7%,Easy,0
+110,1197,Minimum Knight Moves,39.1%,Medium,1.42735
+111,1110,Delete Nodes And Return Forest,68.8%,Medium,9.79217
+112,1200,Minimum Absolute Difference,67.6%,Easy,2.33667
+113,1283,Find the Smallest Divisor Given a Threshold,52.0%,Medium,66.6715
+114,1326,Minimum Number of Taps to Open to Water a Garden,48.0%,Hard,4.03527
+115,1353,Maximum Number of Events That Can Be Attended,32.1%,Medium,1.25486
+116,1413,Minimum Value to Get Positive Step by Step Sum,65.8%,Easy,8.79347
+117,1419,Minimum Number of Frogs Croaking,49.3%,Medium,5.60298
+118,1443,Minimum Time to Collect All Apples in a Tree,55.3%,Medium,5.5345
+119,1465,Maximum Area of a Piece of Cake After Horizontal and Vertical Cuts,36.9%,Medium,4.84604
+120,1539,Kth Missing Positive Number,54.9%,Easy,0.930186
+121,1641,Count Sorted Vowel Strings,74.9%,Medium,2.14446
+122,1659,Maximize Grid Happiness,36.8%,Hard,89.2446
+123,1701,Average Waiting Time,61.2%,Medium,0
+124,1718,Construct the Lexicographically Largest Valid Sequence,50.2%,Medium,49.8658

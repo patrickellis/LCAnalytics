@@ -1,0 +1,90 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,1,Two Sum,47.8%,Easy,0.151663
+1,2,Add Two Numbers,37.2%,Medium,0.429466
+2,3,Longest Substring Without Repeating Characters,32.4%,Medium,2.74826
+3,5,Longest Palindromic Substring,31.4%,Medium,3.42012
+4,7,Reverse Integer,26.2%,Medium,1.54385
+5,10,Regular Expression Matching,28.0%,Hard,5.29525
+6,15,3Sum,29.8%,Medium,0.831895
+7,17,Letter Combinations of a Phone Number,51.9%,Medium,12.5571
+8,20,Valid Parentheses,40.5%,Easy,2.6898
+9,23,Merge k Sorted Lists,45.0%,Hard,4.23029
+10,24,Swap Nodes in Pairs,55.9%,Medium,3.59045
+11,25,Reverse Nodes in k-Group,48.7%,Hard,5.54094
+12,33,Search in Rotated Sorted Array,37.0%,Medium,0.680452
+13,39,Combination Sum,62.5%,Medium,7.53997
+14,40,Combination Sum II,51.5%,Medium,2.30062
+15,46,Permutations,69.9%,Medium,12.5995
+16,48,Rotate Image,64.0%,Medium,1.15494
+17,49,Group Anagrams,62.3%,Medium,38.8725
+18,50,"Pow(x, n)",31.6%,Medium,4.43319
+19,53,Maximum Subarray,48.9%,Easy,3.05441
+20,54,Spiral Matrix,39.3%,Medium,1.62843
+21,56,Merge Intervals,43.2%,Medium,15.1512
+22,68,Text Justification,32.9%,Hard,15.8125
+23,70,Climbing Stairs,50.0%,Easy,0.345347
+24,74,Search a 2D Matrix,40.7%,Medium,1.13068
+25,75,Sort Colors,52.8%,Medium,2.26899
+26,78,Subsets,68.4%,Medium,1.33731
+27,79,Word Search,38.9%,Medium,2.65811
+28,84,Largest Rectangle in Histogram,39.0%,Hard,6.31451
+29,103,Binary Tree Zigzag Level Order Traversal,52.1%,Medium,20.5014
+30,121,Best Time to Buy and Sell Stock,52.9%,Easy,4.73929
+31,138,Copy List with Random Pointer,44.5%,Medium,30.5958
+32,139,Word Break,43.3%,Medium,6.28113
+33,146,LRU Cache,38.3%,Medium,59.9045
+34,179,Largest Number,32.0%,Medium,5.23642
+35,198,House Robber,45.0%,Medium,1.75757
+36,200,Number of Islands,52.0%,Medium,6.37212
+37,206,Reverse Linked List,68.3%,Easy,1.98253
+38,207,Course Schedule,44.7%,Medium,2.78223
+39,208,Implement Trie (Prefix Tree),55.8%,Medium,0.981671
+40,213,House Robber II,38.8%,Medium,13.9446
+41,215,Kth Largest Element in an Array,61.4%,Medium,0.968926
+42,221,Maximal Square,41.3%,Medium,19.4663
+43,224,Basic Calculator,39.5%,Hard,10.4332
+44,226,Invert Binary Tree,69.8%,Easy,0.558898
+45,230,Kth Smallest Element in a BST,65.1%,Medium,1.84603
+46,232,Implement Queue using Stacks,55.3%,Easy,2.30116
+47,244,Shortest Word Distance II,57.4%,Medium,8.46947
+48,253,Meeting Rooms II,48.4%,Medium,14.5078
+49,268,Missing Number,57.6%,Easy,1.22074
+50,269,Alien Dictionary,34.3%,Hard,8.47438
+51,279,Perfect Squares,51.1%,Medium,0.982067
+52,283,Move Zeroes,59.6%,Easy,1.39209
+53,295,Find Median from Data Stream,49.5%,Hard,15.6438
+54,297,Serialize and Deserialize Binary Tree,52.1%,Hard,2.21431
+55,299,Bulls and Cows,46.1%,Medium,5.23923
+56,301,Remove Invalid Parentheses,45.9%,Hard,3.96245
+57,332,Reconstruct Itinerary,39.4%,Hard,8.55711
+58,341,Flatten Nested List Iterator,57.5%,Medium,6.09307
+59,345,Reverse Vowels of a String,46.2%,Easy,5.34123
+60,347,Top K Frequent Elements,63.7%,Medium,2.69847
+61,366,Find Leaves of Binary Tree,75.0%,Medium,4.60833
+62,380,Insert Delete GetRandom O(1),50.7%,Medium,2.17069
+63,399,Evaluate Division,55.9%,Medium,22.3106
+64,443,String Compression,46.2%,Medium,8.88498
+65,450,Delete Node in a BST,46.9%,Medium,3.85273
+66,545,Boundary of Binary Tree,41.9%,Medium,12.4316
+67,557,Reverse Words in a String III,75.5%,Easy,3.05958
+68,655,Print Binary Tree,57.9%,Medium,100
+69,680,Valid Palindrome II,37.9%,Easy,3.3383
+70,695,Max Area of Island,68.0%,Medium,3.6064
+71,729,My Calendar I,54.7%,Medium,62.0725
+72,785,Is Graph Bipartite?,49.6%,Medium,17.7669
+73,706,Design HashMap,63.8%,Easy,3.07488
+74,846,Hand of Straights,55.9%,Medium,48.1494
+75,945,Minimum Increment to Make Array Unique,48.0%,Medium,18.9511
+76,953,Verifying an Alien Dictionary,52.2%,Easy,5.70317
+77,509,Fibonacci Number,67.8%,Easy,1.77753
+78,977,Squares of a Sorted Array,71.5%,Easy,1.38256
+79,1027,Longest Arithmetic Subsequence,48.7%,Medium,24.1262
+80,1167,Minimum Cost to Connect Sticks,65.9%,Medium,7.70862
+81,1188,Design Bounded Blocking Queue,73.2%,Medium,62.6088
+82,1295,Find Numbers with Even Number of Digits,77.6%,Easy,5.35477
+83,1381,Design a Stack With Increment Operation,77.1%,Medium,14.9507
+84,1636,Sort Array by Increasing Frequency,67.9%,Easy,18.3251
+85,1665,Minimum Initial Energy to Finish Tasks,55.4%,Hard,88.697
+86,1743,Restore the Array From Adjacent Pairs,66.9%,Medium,18.466
+87,1740,Find Distance in a Binary Tree,68.2%,Medium,75.6529
+88,1854,Maximum Population Year,57.9%,Easy,19.6193

@@ -1,0 +1,9 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,297,Serialize and Deserialize Binary Tree,52.1%,Hard,2.23057
+1,380,Insert Delete GetRandom O(1),50.7%,Medium,3.88063
+2,560,Subarray Sum Equals K,43.7%,Medium,3.95673
+3,1256,Encode Number,69.0%,Medium,100
+4,1281,Subtract the Product and Sum of Digits of an Integer,85.7%,Easy,7.21953
+5,1354,Construct Target Array With Multiple Sums,31.3%,Hard,70.4518
+6,1743,Restore the Array From Adjacent Pairs,66.9%,Medium,40.9035
+7,1861,Rotating the Box,63.5%,Medium,12.5872

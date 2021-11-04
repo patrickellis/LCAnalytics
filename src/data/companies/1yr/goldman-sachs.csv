@@ -1,0 +1,147 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,1,Two Sum,47.8%,Easy,0.0728013
+1,3,Longest Substring Without Repeating Characters,32.4%,Medium,0.287239
+2,4,Median of Two Sorted Arrays,32.9%,Hard,15.5226
+3,5,Longest Palindromic Substring,31.4%,Medium,0.377981
+4,8,String to Integer (atoi),16.1%,Medium,2.28039
+5,11,Container With Most Water,53.2%,Medium,0.310964
+6,15,3Sum,29.8%,Medium,0.177355
+7,17,Letter Combinations of a Phone Number,51.9%,Medium,0.317916
+8,20,Valid Parentheses,40.5%,Easy,0.0745632
+9,23,Merge k Sorted Lists,45.0%,Hard,0.183253
+10,28,Implement strStr(),35.7%,Easy,0.0788465
+11,31,Next Permutation,34.7%,Medium,1.04269
+12,32,Longest Valid Parentheses,30.7%,Hard,0.20125
+13,33,Search in Rotated Sorted Array,37.0%,Medium,0.468122
+14,36,Valid Sudoku,53.4%,Medium,0.102337
+15,38,Count and Say,47.6%,Medium,0.89355
+16,39,Combination Sum,62.5%,Medium,0.093336
+17,42,Trapping Rain Water,54.2%,Hard,54.6528
+18,46,Permutations,69.9%,Medium,0.0800051
+19,49,Group Anagrams,62.3%,Medium,14.4853
+20,50,"Pow(x, n)",31.6%,Medium,0.340761
+21,53,Maximum Subarray,48.9%,Easy,0.0588333
+22,54,Spiral Matrix,39.3%,Medium,0.125171
+23,55,Jump Game,36.8%,Medium,0.0953449
+24,57,Insert Interval,36.6%,Medium,0.190909
+25,64,Minimum Path Sum,58.1%,Medium,3.02823
+26,70,Climbing Stairs,50.0%,Easy,0.106069
+27,73,Set Matrix Zeroes,46.7%,Medium,0.128866
+28,74,Search a 2D Matrix,40.7%,Medium,0.0869106
+29,78,Subsets,68.4%,Medium,0.409493
+30,79,Word Search,38.9%,Medium,0.31876
+31,83,Remove Duplicates from Sorted List,47.8%,Easy,1.49069
+32,91,Decode Ways,28.9%,Medium,2.02267
+33,94,Binary Tree Inorder Traversal,68.8%,Easy,0.123985
+34,103,Binary Tree Zigzag Level Order Traversal,52.1%,Medium,0.294461
+35,111,Minimum Depth of Binary Tree,41.3%,Easy,0.152257
+36,115,Distinct Subsequences,41.6%,Hard,0.728634
+37,118,Pascal's Triangle,60.4%,Easy,0.182518
+38,119,Pascal's Triangle II,55.0%,Easy,0.627943
+39,121,Best Time to Buy and Sell Stock,52.9%,Easy,0.600295
+40,122,Best Time to Buy and Sell Stock II,60.4%,Medium,0.180378
+41,127,Word Ladder,33.7%,Hard,0.384144
+42,128,Longest Consecutive Sequence,48.0%,Medium,0.139699
+43,134,Gas Station,43.2%,Medium,0.667923
+44,139,Word Break,43.3%,Medium,0.0776686
+45,141,Linked List Cycle,44.3%,Easy,0.226924
+46,142,Linked List Cycle II,41.9%,Medium,0.149103
+47,146,LRU Cache,38.3%,Medium,1.05214
+48,151,Reverse Words in a String,26.8%,Medium,0.057909
+49,152,Maximum Product Subarray,33.6%,Medium,0.0862696
+50,153,Find Minimum in Rotated Sorted Array,47.4%,Medium,0.515663
+51,155,Min Stack,48.8%,Easy,0.206389
+52,166,Fraction to Recurring Decimal,23.0%,Medium,27.0454
+53,168,Excel Sheet Column Title,33.0%,Easy,0.994132
+54,171,Excel Sheet Column Number,58.4%,Easy,0.364397
+55,188,Best Time to Buy and Sell Stock IV,31.8%,Hard,1.02126
+56,198,House Robber,45.0%,Medium,0.239837
+57,199,Binary Tree Right Side View,58.2%,Medium,0.413993
+58,200,Number of Islands,52.0%,Medium,1.09317
+59,204,Count Primes,32.8%,Medium,0.230177
+60,206,Reverse Linked List,68.3%,Easy,0.0381554
+61,208,Implement Trie (Prefix Tree),55.8%,Medium,0.169565
+62,209,Minimum Size Subarray Sum,41.6%,Medium,31.5837
+63,210,Course Schedule II,44.9%,Medium,0.121082
+64,212,Word Search II,38.4%,Hard,0.0876534
+65,215,Kth Largest Element in an Array,61.4%,Medium,1.48002
+66,221,Maximal Square,41.3%,Medium,0.545583
+67,222,Count Complete Tree Nodes,53.3%,Medium,0.0835451
+68,225,Implement Stack using Queues,50.4%,Easy,0.371448
+69,226,Invert Binary Tree,69.8%,Easy,0.0429603
+70,232,Implement Queue using Stacks,55.3%,Easy,0.176881
+71,238,Product of Array Except Self,62.7%,Medium,0.155594
+72,239,Sliding Window Maximum,45.7%,Hard,2.97877
+73,240,Search a 2D Matrix II,46.9%,Medium,0.1897
+74,242,Valid Anagram,60.2%,Easy,0.269942
+75,243,Shortest Word Distance,63.4%,Easy,4.5003
+76,253,Meeting Rooms II,48.4%,Medium,0.125559
+77,259,3Sum Smaller,49.9%,Medium,4.64788
+78,266,Palindrome Permutation,64.1%,Easy,0.6602
+79,268,Missing Number,57.6%,Easy,0.0938332
+80,270,Closest Binary Search Tree Value,52.3%,Easy,0.43325
+81,274,H-Index,37.0%,Medium,12.4561
+82,275,H-Index II,36.7%,Medium,3.8273
+83,277,Find the Celebrity,45.4%,Medium,0.520807
+84,283,Move Zeroes,59.6%,Easy,0.0475951
+85,287,Find the Duplicate Number,58.3%,Medium,0.106516
+86,295,Find Median from Data Stream,49.5%,Hard,1.71957
+87,297,Serialize and Deserialize Binary Tree,52.1%,Hard,0.38188
+88,309,Best Time to Buy and Sell Stock with Cooldown,50.7%,Medium,0.0963325
+89,322,Coin Change,39.0%,Medium,1.21261
+90,325,Maximum Size Subarray Sum Equals k,48.5%,Medium,2.30347
+91,326,Power of Three,42.9%,Easy,1.00749
+92,344,Reverse String,72.5%,Easy,0.106828
+93,346,Moving Average from Data Stream,74.9%,Easy,0.470262
+94,348,Design Tic-Tac-Toe,56.7%,Medium,0.565241
+95,376,Wiggle Subsequence,43.6%,Medium,0.652149
+96,387,First Unique Character in a String,55.6%,Easy,17.0068
+97,390,Elimination Game,46.0%,Medium,12.0089
+98,443,String Compression,46.2%,Medium,14.1737
+99,453,Minimum Moves to Equal Array Elements,52.7%,Medium,1.63169
+100,457,Circular Array Loop,31.1%,Medium,8.88818
+101,460,LFU Cache,38.3%,Hard,0.644568
+102,498,Diagonal Traverse,53.3%,Medium,4.59121
+103,516,Longest Palindromic Subsequence,58.0%,Medium,0.285745
+104,524,Longest Word in Dictionary through Deleting,50.7%,Medium,10.9627
+105,532,K-diff Pairs in an Array,36.9%,Medium,6.3509
+106,547,Number of Provinces,62.2%,Medium,1.13958
+107,592,Fraction Addition and Subtraction,51.2%,Medium,55.2885
+108,642,Design Search Autocomplete System,47.6%,Hard,0.96109
+109,647,Palindromic Substrings,63.7%,Medium,4.39674
+110,657,Robot Return to Origin,74.7%,Easy,11.1723
+111,688,Knight Probability in Chessboard,51.1%,Medium,16.0656
+112,692,Top K Frequent Words,53.9%,Medium,0.28428
+113,720,Longest Word in Dictionary,50.3%,Medium,10.6304
+114,724,Find Pivot Index,49.2%,Easy,41.9397
+115,740,Delete and Earn,53.7%,Medium,70.1923
+116,767,Reorganize String,51.2%,Medium,0.369159
+117,704,Binary Search,54.7%,Easy,0.0379909
+118,780,Reaching Points,30.8%,Hard,4.50331
+119,706,Design HashMap,63.8%,Easy,19.8261
+120,829,Consecutive Numbers Sum,40.2%,Hard,30.5177
+121,641,Design Circular Deque,56.8%,Medium,3.55263
+122,862,Shortest Subarray with Sum at Least K,25.9%,Hard,29.0835
+123,863,All Nodes Distance K in Binary Tree,59.8%,Medium,0.235832
+124,876,Middle of the Linked List,70.7%,Easy,0.0777978
+125,909,Snakes and Ladders,39.6%,Medium,5.67211
+126,983,Minimum Cost For Tickets,63.4%,Medium,1.14911
+127,1086,High Five,75.9%,Easy,100
+128,1041,Robot Bounded In Circle,54.5%,Medium,85.0962
+129,1167,Minimum Cost to Connect Sticks,65.9%,Medium,0.592531
+130,1049,Last Stone Weight II,49.3%,Medium,1.20178
+131,1163,Last Substring in Lexicographical Order,35.9%,Hard,8.54427
+132,1051,Height Checker,73.7%,Easy,4.40043
+133,1146,Snapshot Array,37.1%,Medium,1.08089
+134,1382,Balance a Binary Search Tree,78.8%,Medium,1.42583
+135,1186,Maximum Subarray Sum with One Deletion,40.1%,Medium,3.04496
+136,1209,Remove All Adjacent Duplicates in String II,56.2%,Medium,5.32322
+137,1219,Path with Maximum Gold,66.0%,Medium,1.0978
+138,1249,Minimum Remove to Make Valid Parentheses,65.0%,Medium,0.29035
+139,1268,Search Suggestions System,65.7%,Medium,0.444175
+140,1296,Divide Array in Sets of K Consecutive Numbers,56.0%,Medium,1.91267
+141,1306,Jump Game III,61.6%,Medium,0.643737
+142,1351,Count Negative Numbers in a Sorted Matrix,75.3%,Easy,0.563964
+143,1395,Count Number of Teams,70.8%,Medium,51.6128
+144,1823,Find the Winner of the Circular Game,74.2%,Medium,1.53433
+145,1836,Remove Duplicates From an Unsorted Linked List,69.4%,Medium,12.6121

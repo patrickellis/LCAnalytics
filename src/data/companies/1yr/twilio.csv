@@ -1,0 +1,18 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,17,Letter Combinations of a Phone Number,51.9%,Medium,3.58561
+1,20,Valid Parentheses,40.5%,Easy,0.0751336
+2,49,Group Anagrams,62.3%,Medium,0.664673
+3,68,Text Justification,32.9%,Hard,62.5739
+4,70,Climbing Stairs,50.0%,Easy,0.0601508
+5,146,LRU Cache,38.3%,Medium,3.90568
+6,207,Course Schedule,44.7%,Medium,0.484596
+7,210,Course Schedule II,44.9%,Medium,0.274366
+8,225,Implement Stack using Queues,50.4%,Easy,0.841686
+9,239,Sliding Window Maximum,45.7%,Hard,1.11671
+10,332,Reconstruct Itinerary,39.4%,Hard,5.81077
+11,560,Subarray Sum Equals K,43.7%,Medium,0.684141
+12,935,Knight Dialer,48.1%,Medium,8.22645
+13,974,Subarray Sums Divisible by K,52.4%,Medium,100
+14,1010,Pairs of Songs With Total Durations Divisible by 60,51.9%,Medium,0.950376
+15,1507,Reformat Date,60.9%,Easy,2.79499
+16,1636,Sort Array by Increasing Frequency,67.9%,Easy,25.1479

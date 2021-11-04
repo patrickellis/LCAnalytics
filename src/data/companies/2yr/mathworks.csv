@@ -1,0 +1,33 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,1,Two Sum,47.8%,Easy,0.0166706
+1,5,Longest Palindromic Substring,31.4%,Medium,0.0603275
+2,15,3Sum,29.8%,Medium,0.091441
+3,20,Valid Parentheses,40.5%,Easy,0.106626
+4,25,Reverse Nodes in k-Group,48.7%,Hard,6.40675
+5,49,Group Anagrams,62.3%,Medium,0.939213
+6,62,Unique Paths,58.1%,Medium,0.132908
+7,115,Distinct Subsequences,41.6%,Hard,71.92
+8,134,Gas Station,43.2%,Medium,0.426609
+9,200,Number of Islands,52.0%,Medium,0.0782781
+10,206,Reverse Linked List,68.3%,Easy,1.93003
+11,225,Implement Stack using Queues,50.4%,Easy,0.531173
+12,255,Verify Preorder Sequence in Binary Search Tree,47.1%,Medium,21.5974
+13,259,3Sum Smaller,49.9%,Medium,2.48886
+14,317,Shortest Distance from All Buildings,43.7%,Hard,6.3234
+15,338,Counting Bits,71.9%,Easy,0.280732
+16,453,Minimum Moves to Equal Array Elements,52.7%,Medium,4.08034
+17,500,Keyboard Row,67.0%,Easy,6.19518
+18,526,Beautiful Arrangement,63.4%,Medium,100
+19,647,Palindromic Substrings,63.7%,Medium,0.736193
+20,697,Degree of an Array,55.2%,Easy,5.23565
+21,741,Cherry Pickup,35.9%,Hard,26.7072
+22,829,Consecutive Numbers Sum,40.2%,Hard,1.18562
+23,1010,Pairs of Songs With Total Durations Divisible by 60,51.9%,Medium,0.599766
+24,1048,Longest String Chain,57.0%,Medium,3.01649
+25,1163,Last Substring in Lexicographical Order,35.9%,Hard,52.3273
+26,1197,Minimum Knight Moves,39.1%,Medium,20.9981
+27,1130,Minimum Cost Tree From Leaf Values,68.2%,Medium,97.5401
+28,1290,Convert Binary Number in a Linked List to Integer,81.8%,Easy,17.7554
+29,1319,Number of Operations to Make Network Connected,56.3%,Medium,1.09079
+30,1326,Minimum Number of Taps to Open to Water a Garden,48.0%,Hard,1.07275
+31,1696,Jump Game VI,42.2%,Medium,1.99014

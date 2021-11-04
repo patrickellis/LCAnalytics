@@ -1,0 +1,12 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,1,Two Sum,47.8%,Easy,0.881305
+1,5,Longest Palindromic Substring,31.4%,Medium,3.18925
+2,9,Palindrome Number,51.6%,Easy,5.95516
+3,135,Candy,36.0%,Hard,49.8441
+4,146,LRU Cache,38.3%,Medium,6.57755
+5,177,Nth Highest Salary,35.1%,Medium,23.8956
+6,239,Sliding Window Maximum,45.7%,Hard,9.36022
+7,421,Maximum XOR of Two Numbers in an Array,55.0%,Medium,100
+8,424,Longest Repeating Character Replacement,49.8%,Medium,22.2035
+9,509,Fibonacci Number,67.8%,Easy,10.3291
+10,1353,Maximum Number of Events That Can Be Attended,32.1%,Medium,75.7925

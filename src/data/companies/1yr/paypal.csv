@@ -1,0 +1,50 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,1,Two Sum,47.8%,Easy,4.43825
+1,2,Add Two Numbers,37.2%,Medium,5.58528
+2,3,Longest Substring Without Repeating Characters,32.4%,Medium,12.1658
+3,4,Median of Two Sorted Arrays,32.9%,Hard,2.81664
+4,6,Zigzag Conversion,40.0%,Medium,58.8166
+5,14,Longest Common Prefix,38.1%,Easy,2.24024
+6,15,3Sum,29.8%,Medium,2.70831
+7,19,Remove Nth Node From End of List,37.1%,Medium,1.93751
+8,20,Valid Parentheses,40.5%,Easy,5.60998
+9,22,Generate Parentheses,68.3%,Medium,8.16431
+10,33,Search in Rotated Sorted Array,37.0%,Medium,4.98002
+11,46,Permutations,69.9%,Medium,3.38854
+12,49,Group Anagrams,62.3%,Medium,19.3695
+13,53,Maximum Subarray,48.9%,Easy,1.10796
+14,56,Merge Intervals,43.2%,Medium,24.3616
+15,68,Text Justification,32.9%,Hard,29.1623
+16,83,Remove Duplicates from Sorted List,47.8%,Easy,4.02058
+17,102,Binary Tree Level Order Traversal,59.2%,Medium,2.8548
+18,121,Best Time to Buy and Sell Stock,52.9%,Easy,1.26517
+19,146,LRU Cache,38.3%,Medium,73.0029
+20,151,Reverse Words in a String,26.8%,Medium,2.45268
+21,155,Min Stack,48.8%,Easy,2.18988
+22,160,Intersection of Two Linked Lists,47.5%,Easy,10.5789
+23,162,Find Peak Element,45.0%,Medium,4.16475
+24,189,Rotate Array,37.2%,Medium,2.17403
+25,200,Number of Islands,52.0%,Medium,2.31845
+26,202,Happy Number,52.2%,Easy,85.8137
+27,224,Basic Calculator,39.5%,Hard,15.1861
+28,225,Implement Stack using Queues,50.4%,Easy,35.1808
+29,226,Invert Binary Tree,69.8%,Easy,1.81954
+30,234,Palindrome Linked List,44.6%,Easy,4.17627
+31,238,Product of Array Except Self,62.7%,Medium,6.59004
+32,240,Search a 2D Matrix II,46.9%,Medium,8.03455
+33,242,Valid Anagram,60.2%,Easy,2.86603
+34,253,Meeting Rooms II,48.4%,Medium,5.31796
+35,287,Find the Duplicate Number,58.3%,Medium,10.1326
+36,344,Reverse String,72.5%,Easy,2.01252
+37,355,Design Twitter,33.4%,Medium,100
+38,387,First Unique Character in a String,55.6%,Easy,3.34564
+39,438,Find All Anagrams in a String,46.5%,Medium,7.59209
+40,557,Reverse Words in a String III,75.5%,Easy,9.96075
+41,560,Subarray Sum Equals K,43.7%,Medium,7.20571
+42,572,Subtree of Another Tree,44.9%,Easy,7.36718
+43,658,Find K Closest Elements,43.7%,Medium,77.732
+44,739,Daily Temperatures,66.1%,Medium,10.0758
+45,811,Subdomain Visit Count,73.1%,Medium,21.4684
+46,881,Boats to Save People,49.6%,Medium,45.236
+47,986,Interval List Intersections,69.7%,Medium,9.50064
+48,1010,Pairs of Songs With Total Durations Divisible by 60,51.9%,Medium,17.7639

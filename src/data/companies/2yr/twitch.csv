@@ -1,0 +1,18 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,20,Valid Parentheses,40.5%,Easy,2.93258
+1,32,Longest Valid Parentheses,30.7%,Hard,4.45574
+2,42,Trapping Rain Water,54.2%,Hard,3.57193
+3,56,Merge Intervals,43.2%,Medium,1.04695
+4,65,Valid Number,17.3%,Hard,33.7716
+5,146,LRU Cache,38.3%,Medium,4.32802
+6,200,Number of Islands,52.0%,Medium,1.21196
+7,212,Word Search II,38.4%,Hard,1.94068
+8,419,Battleships in a Board,72.5%,Medium,80.2366
+9,443,String Compression,46.2%,Medium,6.75445
+10,460,LFU Cache,38.3%,Hard,14.271
+11,695,Max Area of Island,68.0%,Medium,16.9377
+12,841,Keys and Rooms,67.7%,Medium,9.6622
+13,943,Find the Shortest Superstring,45.6%,Hard,100
+14,977,Squares of a Sorted Array,71.5%,Easy,1.04655
+15,1136,Parallel Courses,60.2%,Medium,57.0041
+16,1197,Minimum Knight Moves,39.1%,Medium,13.0568

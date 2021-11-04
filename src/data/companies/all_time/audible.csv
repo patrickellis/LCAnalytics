@@ -1,0 +1,23 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,42,Trapping Rain Water,54.2%,Hard,1.66334
+1,56,Merge Intervals,43.2%,Medium,0.487532
+2,73,Set Matrix Zeroes,46.7%,Medium,5.28725
+3,98,Validate Binary Search Tree,29.7%,Medium,2.33191
+4,121,Best Time to Buy and Sell Stock,52.9%,Easy,3.75585
+5,139,Word Break,43.3%,Medium,4.97776
+6,140,Word Break II,39.2%,Hard,28.5832
+7,200,Number of Islands,52.0%,Medium,19.8147
+8,208,Implement Trie (Prefix Tree),55.8%,Medium,1.74823
+9,244,Shortest Word Distance II,57.4%,Medium,26.1748
+10,472,Concatenated Words,43.0%,Hard,7.13055
+11,545,Boundary of Binary Tree,41.9%,Medium,100
+12,547,Number of Provinces,62.2%,Medium,2.97099
+13,849,Maximize Distance to Closest Person,44.9%,Medium,83.4511
+14,863,All Nodes Distance K in Binary Tree,59.8%,Medium,5.44937
+15,937,Reorder Data in Log Files,55.6%,Easy,55.7997
+16,1010,Pairs of Songs With Total Durations Divisible by 60,51.9%,Medium,4.32419
+17,1152,Analyze User Website Visit Pattern,43.3%,Medium,19.8977
+18,1228,Missing Number In Arithmetic Progression,51.2%,Easy,56.2346
+19,1200,Minimum Absolute Difference,67.6%,Easy,9.95362
+20,1344,Angle Between Hands of a Clock,62.2%,Medium,5.03176
+21,1747,Leetflex Banned Accounts,68.2%,Medium,0

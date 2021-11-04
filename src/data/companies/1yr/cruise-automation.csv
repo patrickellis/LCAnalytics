@@ -1,0 +1,10 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,23,Merge k Sorted Lists,45.0%,Hard,5.69881
+1,63,Unique Paths II,36.6%,Medium,54.5649
+2,79,Word Search,38.9%,Medium,3.57654
+3,146,LRU Cache,38.3%,Medium,6.07964
+4,200,Number of Islands,52.0%,Medium,8.59833
+5,311,Sparse Matrix Multiplication,65.0%,Medium,100
+6,695,Max Area of Island,68.0%,Medium,8.62669
+7,528,Random Pick with Weight,45.6%,Medium,35.5602
+8,980,Unique Paths III,77.6%,Hard,73.0665

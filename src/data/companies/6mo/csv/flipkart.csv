@@ -1,0 +1,18 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,15,3Sum,29.8%,Medium,0.333137
+1,45,Jump Game II,35.1%,Medium,1.11575
+2,54,Spiral Matrix,39.3%,Medium,1.46656
+3,74,Search a 2D Matrix,40.7%,Medium,1.01828
+4,76,Minimum Window Substring,37.9%,Hard,1.58059
+5,124,Binary Tree Maximum Path Sum,36.8%,Hard,1.21061
+6,134,Gas Station,43.2%,Medium,3.49533
+7,135,Candy,36.0%,Hard,7.72498
+8,169,Majority Element,61.4%,Easy,1.01864
+9,198,House Robber,45.0%,Medium,0.704198
+10,752,Open the Lock,55.0%,Medium,9.13254
+11,871,Minimum Number of Refueling Stops,35.2%,Hard,59.7392
+12,973,K Closest Points to Origin,65.7%,Medium,1.27206
+13,1011,Capacity To Ship Packages Within D Days,61.7%,Medium,4.62148
+14,1326,Minimum Number of Taps to Open to Water a Garden,48.0%,Hard,8.78936
+15,1519,Number of Nodes in the Sub-Tree With the Same Label,38.6%,Medium,49.3934
+16,1700,Number of Students Unable to Eat Lunch,67.6%,Easy,100

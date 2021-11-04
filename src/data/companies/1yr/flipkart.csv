@@ -1,0 +1,29 @@
+,#,Title,Acceptance,Difficulty,Frequency
+0,4,Median of Two Sorted Arrays,32.9%,Hard,0.700714
+1,15,3Sum,29.8%,Medium,0.299593
+2,34,Find First and Last Position of Element in Sorted Array,38.9%,Medium,0.687342
+3,42,Trapping Rain Water,54.2%,Hard,0.756416
+4,45,Jump Game II,35.1%,Medium,2.25409
+5,54,Spiral Matrix,39.3%,Medium,1.31889
+6,74,Search a 2D Matrix,40.7%,Medium,0.915752
+7,76,Minimum Window Substring,37.9%,Hard,1.42144
+8,124,Binary Tree Maximum Path Sum,36.8%,Hard,1.08872
+9,134,Gas Station,43.2%,Medium,3.14339
+10,135,Candy,36.0%,Hard,6.94715
+11,169,Majority Element,61.4%,Easy,0.916071
+12,198,House Robber,45.0%,Medium,0.633292
+13,236,Lowest Common Ancestor of a Binary Tree,52.7%,Medium,0.874145
+14,241,Different Ways to Add Parentheses,59.7%,Medium,6.97479
+15,355,Design Twitter,33.4%,Medium,16.6973
+16,452,Minimum Number of Arrows to Burst Balloons,50.7%,Medium,18.282
+17,480,Sliding Window Median,40.2%,Hard,10.733
+18,752,Open the Lock,55.0%,Medium,8.21298
+19,871,Minimum Number of Refueling Stops,35.2%,Hard,63.793
+20,968,Binary Tree Cameras,41.2%,Hard,14.8293
+21,973,K Closest Points to Origin,65.7%,Medium,1.14398
+22,977,Squares of a Sorted Array,71.5%,Easy,1.11975
+23,1011,Capacity To Ship Packages Within D Days,61.7%,Medium,16.3681
+24,1219,Path with Maximum Gold,66.0%,Medium,11.5672
+25,1326,Minimum Number of Taps to Open to Water a Garden,48.0%,Hard,7.90436
+26,1519,Number of Nodes in the Sub-Tree With the Same Label,38.6%,Medium,54.489
+27,1700,Number of Students Unable to Eat Lunch,67.6%,Easy,100
