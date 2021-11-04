@@ -7,6 +7,8 @@ import {fetchGithubRepo} from '../scripts/github'
 import Stats from './StatsSection';
 import RadarChart from './RadarChart';
 import StatsHeader from './StatsHeader';
+import CompaniesData from '../data/companies/companies';
+console.log(CompaniesData);
 const client_id = 'c3dfbec01089dd36fa64';
 class CompanyListPage extends Component {
     constructor(props){
