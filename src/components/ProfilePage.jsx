@@ -9,30 +9,27 @@ import RadarChart from './RadarChart';
 import StatsHeader from './StatsHeader';
 import {setActiveLink} from '../scripts/util';
 
-const client_id = 'c3dfbec01089dd36fa64';
-class CompanyListPage extends Component {
+class ProfilePage extends Component {
     constructor(props){
         super(props);
         this.state = {
-            data : this.props.data
+            
         };
     }
     
     componentDidMount(){        
-        //const userData = await fetchGithubRepo('patrickellis','LeetCode','main',this.setUserData);
-        //await new Promise(r => setTimeout(r, 500));
-        setActiveLink(1);
-        console.log(this.state.data);
+        setActiveLink(0);
     }
 
     render(){
         return(
-            <>                                                    
-                <CompaniesTable updateData={this.props.updateData} data={this.state.data}/>
+            <>       
+                <div class="m-ke934a"><div class="m-kdvz65"><div></div><div class="m-wrdtjf"><div class="m-171jxkh"></div></div></div></div>                                                                                                    
+                <h1>Profile</h1>
             </>
         )
     }
 }
 
 
-export default CompanyListPage
+export default ProfilePage

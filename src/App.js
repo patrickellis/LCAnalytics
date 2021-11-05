@@ -5,6 +5,9 @@ import CompanyListPage from './components/CompanyListPage';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { HashRouter as Router, Switch, Route, Link } from "react-router-dom";
 import {React,Component} from 'react';
+import NavBar from './components/Navbar';
+import ProfilePage from './components/ProfilePage';
+
 const randComp = () => {
   return <h1>Component</h1>;
 }
@@ -12,6 +15,7 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state = {
+      companyData : require('./data/companies/companies'),
       data : [],
       name : "",
       readyToCall : false
@@ -27,23 +31,31 @@ class App extends Component {
   }
   render(){
     return (
-      <main className="m-36y2kb">
-        <div className="m-ht4nkg">
-          <Router>
-            <Switch>
-              <Route exact path="/">
-                <CompanyPage />
-              </Route> 
-              <Route path="/companies">
-                <CompanyListPage updateData={this.updateData}/>
-              </Route>
-              <Route path="/company">                
-                <CompanyPage name={this.state.name} data={this.state.data}/>
-              </Route>                    
-          </Switch> 
+      <div>
+        <Router>
+        <NavBar data={this.state.companyData} updateData={this.updateData}/>
+        <main className="m-36y2kb">
+          <div className="m-ht4nkg">
+            
+              <Switch>
+                <Route exact path="/">
+                  <CompanyPage />
+                </Route> 
+                <Route path="/companies">
+                  <CompanyListPage data = {this.state.companyData} updateData={this.updateData}/>
+                </Route>
+                <Route path="/company">                
+                  <CompanyPage name={this.state.name} data={this.state.data}/>
+                </Route>    
+                <Route path="/profile">
+                  <ProfilePage/>  
+                </Route>                
+            </Switch> 
+            </div>
+        </main>
           </Router>           
-        </div>
-      </main>
+          
+      </div>
     );
   }
 }

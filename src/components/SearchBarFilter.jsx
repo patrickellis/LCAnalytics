@@ -11,16 +11,20 @@ function onFocus(){
     console.log("focus");
 }
 function onBlur(){
+    const box = document.querySelector('.ekk3vtk3');       
     console.log("blur");
     const dropEl = document.querySelector('.drop')        
     //document.getElementById('search').value="";
-    dropEl.style.height = 0    
+    dropEl.style.height = 0;
+    box.style.borderBottomLeftRadius ='5px';
+    box.style.borderBottomRightRadius ='5px';  
 }
 
 function SearchBarFilter(props){
     let history = useHistory();
 
     const handleKeyDown = (e)=>{   
+        const box = document.querySelector('.ekk3vtk3');        
         let input = capitalizeFirstLetter(e.target.value.toLowerCase());
         if(!companies.includes(input.toLowerCase())){
             console.log("input not in company list", input);
@@ -33,6 +37,10 @@ function SearchBarFilter(props){
         console.log(data);
         console.log(e.target.value);
         props.updateData(data,input);
+        document.querySelector('.drop').style.height = 0;
+        
+        box.style.borderBottomLeftRadius ='5px';
+        box.style.borderBottomRightRadius ='5px';
         let path = `/company`;
         history.push(path);
     }
@@ -45,6 +53,7 @@ function SearchBarFilter(props){
                     
             <div class="search-container">
                 <input 
+                  aria-autocomplete="list" aria-controls="downshift-1344-menu" aria-labelledby="downshift-1344-label" autocomplete="off" placeholder="Search…" class="m-465o7i e199xoio3"
                     onFocus={onFocus}
                     onBlur={onBlur}
                     id="search" 
@@ -58,7 +67,7 @@ function SearchBarFilter(props){
                     }   
                 }}
                 />
-                <ul class="drop"></ul>
+                
             </div>        
     );
     

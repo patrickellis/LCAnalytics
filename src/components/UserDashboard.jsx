@@ -62,7 +62,7 @@ class UserDashboard extends Component {
                                                 <td></td>
                                                 <td> {idx++} </td>
                                                 <td> {item.title}</td>
-                                                <td> <span class="m-14c7t56 esfbxh91" style={{color: '#0773f6'}}>{item.daysAgo} days ago</span></td>
+                                                <td class="lastSolved"> <span class="m-14c7t56 esfbxh91" style={{color: '#0773f6'}}>{item.daysAgo} days ago</span></td>
                                                 <td></td>
                                             </tr>
                                             )
@@ -113,7 +113,7 @@ class UserDashboard extends Component {
                                 <PercentAreaChart data={this.props.solvedOverTimeData}/>
                                 :
                                 <div class="loader">
-                                <ScaleLoader color={'#FFF'} loading={true} size={150} />
+                                <ScaleLoader color={'rgb(49, 41, 85)'} loading={true} size={150} />
                             </div>
                             }
                         

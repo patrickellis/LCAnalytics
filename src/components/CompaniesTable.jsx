@@ -34,27 +34,23 @@ class CompaniesTable extends Component {
 
     render() {
         const keys = Object.keys(this.state.data['6mo']);
-        let idx = 1;
-        
+        let idx = 1;        
       return(
           <>            
             {this.state.redirect ? 
                 <Redirect to ='/company'/>
                 :                
-                <div class="tableContainer">                                                           
-                    <table class="m-3gmgrq mainTable">
-                        
+                
+                <div class="tableContainer">    
+                    <div class="m-ke934a"><div class="m-kdvz65"><div></div><div class="m-wrdtjf"><div class="m-171jxkh"></div></div></div></div>                                                       
+                    <table class="m-3gmgrq mainTable">                        
                          <thead class="thead">                                        
                             <tr class="m-1itvjt0 ejhqg10">
                                 <th class="m-1itvjt0"></th>
                                 <th class="m-1itvjt0 filler"></th>
                                 <th class="m-1itvjt0 solved">#</th>
                                 <th class="m-1itvjt0">Company</th>                                                               
-                                <th class="m-1itvjt0 filler"> 
-                                    <SearchBar
-                                        data = {this.props.data}
-                                        updateData = {this.props.updateData}
-                                    /> 
+                                <th class="m-1itvjt0 filler">                                    
                                 </th>
                                 <th class="m-1itvjt0"></th>
                             </tr>
