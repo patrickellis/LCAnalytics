@@ -19,7 +19,9 @@ class ProblemBar extends Component {
   
         };
     }
-
+    componentWillReceiveProps(nextProps){
+        
+    }
     async componentDidMount(){                
     }
     render(){       
@@ -30,19 +32,17 @@ class ProblemBar extends Component {
         ew = ew.toString()+'%';
         mw = mw.toString()+'%';
         dividerTwoLeft = dividerTwoLeft.toString()+'%';
-        console.log("mw: ", mw, "ew: ", ew);
-        console.log("dividertwoleft: ", dividerTwoLeft);
         return(
             <>
                 <div class='m-1rmcrqn'>
                     <div class="m-1spa8xs">
                         <div class="m-15leskn">
                             <div class="m-18xjao8">
-                                {this.props.easy}<span class="m-dytaiz">E</span>
+                                {this.props.easy}<span class="m-dytaiz green">E</span>
                                 &nbsp;
-                                {this.props.medium}<span class="m-dytaiz">M</span>
+                                {this.props.medium}<span class="m-dytaiz orange">M</span>
                                 &nbsp;
-                                {this.props.hard}<span class="m-dytaiz">H</span>                                                        
+                                {this.props.hard}<span class="m-dytaiz red">H</span>                                                        
                             </div>
                             <div class="m-1s5vw6 e5mzqaz1">
                                 <div data-progress="47" class="m-148kaov e5mzqaz0" style={{width: ew}}></div>

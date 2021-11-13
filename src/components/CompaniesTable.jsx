@@ -24,9 +24,11 @@ class CompaniesTable extends Component {
     }
 
     handleClick(key){
-        let data = this.state.data['6mo'][key];
-        console.log(data);
-        this.props.updateData(data,key);
+        let data = this.state.data['6mo'][key];  
+        let func = this.props.updateData;
+        setTimeout(function(){                   
+            func(data,key);
+        }, 1);        
         this.setState({
             redirect : true
         })
@@ -39,8 +41,7 @@ class CompaniesTable extends Component {
           <>            
             {this.state.redirect ? 
                 <Redirect to ='/company'/>
-                :                
-                
+                :                                
                 <div class="tableContainer">    
                     <div class="m-ke934a"><div class="m-kdvz65"><div></div><div class="m-wrdtjf"><div class="m-171jxkh"></div></div></div></div>                                                       
                     <table class="m-3gmgrq mainTable">                        

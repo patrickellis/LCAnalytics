@@ -14,7 +14,7 @@ const easy = 23
 const medium = 45
 const hard = 54
 
-class CompanyNav extends Component {
+class UserProfileNav extends Component {
     constructor(props){
         super(props);
         this.state = { 
@@ -50,10 +50,26 @@ class CompanyNav extends Component {
             loading : !this.state.loading
         })
     }
-    flipNavClasses(){
-        this.props.toggleDisplay();
-        const allquestions = document.getElementById('allquestions');
-        const studyorder = document.getElementById('studyorder'); 
+    flipNavClasses(id){
+        console.log("Flipping nav with id: ", id);
+        // this needs to be generalised to function with 5 headers///
+        
+        const tabs = document.getElementsByClassName('upNav');
+        if(tabs[id].classList.contains('selected')) return;
+        this.props.toggleDisplay(id);
+        for(let i = 0; i < tabs.length; ++i){
+            if(i==id){                
+                if(!tabs[i].classList.contains('selected')){
+                    tabs[i].classList.add('selected');
+                    tabs[i].classList.remove('unselected');
+                }
+            }
+            else{
+                tabs[i].classList.remove('selected');
+                tabs[i].classList.add('unselected');
+            }
+        }
+        /*
         if(allquestions.classList.contains('selected')){
             allquestions.classList.remove('selected');
             allquestions.classList.add('unselected');
@@ -66,38 +82,32 @@ class CompanyNav extends Component {
             studyorder.classList.add('unselected');
             studyorder.classList.remove('selected');
         }
+        */
     }
     async componentDidMount(){      
-        const allquestions = document.getElementById('allquestions');
-        const studyorder = document.getElementById('studyorder');       
-        allquestions.addEventListener("click", this.flipNavClasses);
-        studyorder.addEventListener("click", this.flipNavClasses);
+        const tabs = document.getElementsByClassName('upNav');
+        for(let i = 0; i < tabs.length; ++i){
+            tabs[i].addEventListener('click',()=>this.flipNavClasses(i));
+        }        
     }
     render(){              
-        return(
+        return(                        
             <div class="nav-container">
-                <div class="loaderDiv" id="loaderDiv">
-                    <div class="loaderContainer">
-                        <BeatLoader color={'rgb(49,41,85)'} loading={true} size={15} />    
-                        </div>
-                 </div>
                 <nav class="stroke">
                     <ul>
-                        <li class="selected" id="allquestions">All Questions</li>
-                        <li class="unselected" id="studyorder">Study Order (Beta)</li>       
+                      <li class="selected upNav" id="statisticsTab">Statistics</li>    
+                        <li class="unselected upNav" id="goalsTab">Goal Tracking</li>
+                        <li class="unselected upNav" id="listsTab">Lists</li>    
+                        <li class="unselected upNav" id="SRSTab">Spaced Repetition</li>       
+                        <li class="unselected upNav" id="allQuestionsTab">All Questions</li>    
                     </ul>
                 </nav>
-                <div class="timeSelectContainer">
-                    <div onClick={()=>this.switchTimePeriod(0,'6mo')} class="timeSelectItem activeLink">6 Months</div>
-                    <div onClick={()=>this.switchTimePeriod(1, '1yr')} class="timeSelectItem">1 Year</div>
-                    <div onClick={()=>this.switchTimePeriod(2,'2yr')} class="timeSelectItem">2 Years</div>
-                    <div onClick={()=>this.switchTimePeriod(3,'all_time')} class="timeSelectItem">All Time</div>
-                </div>
+                
                         
                             
-            </div>
+            </div>            
         )
     }
 }
 
-export default CompanyNav
+export default UserProfileNav

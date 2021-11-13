@@ -5,14 +5,11 @@ import ActiveShapePieChart from './CustomActivePieChart';
 import PieChart from './PieChart';
 import PercentAreaChart from './PercentAreaChart';
 import RadarChartCustom from './RadarChart';
-import Categories from '../data/categoryList';
 import CategoryToProblemIds from '../data/categoryToProblemIds.json';
-import ProblemIdToCategories from '../data/problemIdToCategories.json';
 import UserDashboard from './UserDashboard';
 import CompanyDashboard from './CompanyDashboard';
-console.log(Categories)
-console.log(CategoryToProblemIds)
-console.log(ProblemIdToCategories)
+import ScaleLoader from "react-spinners/ScaleLoader";
+
 class Stats extends Component {
     constructor(props){
         super(props);
@@ -31,26 +28,40 @@ class Stats extends Component {
             solvedOverTimeData: {},
             commonIDS : [],
             dateDict: {},
-            slugData: []
+            slugData: [],
+            idList: [],
+            computingStats: true
         };
         this.computeStats = this.computeStats.bind(this);
         this.updateProgress = this.updateProgress.bind(this);
-        this.setSlugAndDatesData = this.setSlugAndDatesData.bind(this);
+        this.setSlugAndDatesData = this.setSlugAndDatesData.bind(this);        
     }
 
     componentDidMount(){     
         
     }
-    updateProgress(weeks){
-        console.log("Updating progress ");
-        let solvedOverTime = weeklyProgressFromDates(this.state.dateDict['oldest_commits'],weeks,this.state.numProblems,this.state.numCompleted); 
+    async componentWillReceiveProps(nextProps){                
+        if(nextProps.data != this.data){
+        this.setState({
+            data : nextProps.data,
+            computingStats : true
+        },async ()=>{            
+            let res = await this.computeStats();
+            this.setState({
+                computingStats : false
+            },this.props.setLoadingStatus)
+        })
+        
+      }
+    }
+   
+    updateProgress(weeks){        
+        let solvedOverTime = weeklyProgressFromDates(this.state.dateDict['oldest_commits'],weeks,this.state.numProblems,this.state.numCompleted,true); 
             this.setState({
                 solvedOverTimeData : solvedOverTime,                
             })
     }
     setSlugAndDatesData(slugdata,datesdata,solvedOverTime){
-        console.log("setting slug and dates");
-        console.log(slugdata, " ### ", datesdata);
         this.setState({
             slugData : slugdata,
             dateDict: datesdata,
@@ -58,9 +69,7 @@ class Stats extends Component {
             overTimeDataComputed : true
         })
     }
-    computeStats(){
-        console.log("Computing stats #####")
-        console.log(this.state.data);
+    async computeStats(){ 
         const numProblems = this.state.data.length;              
         let cpd = {};
         let db = {'Easy':0,'Medium':0,'Hard':0};
@@ -71,24 +80,23 @@ class Stats extends Component {
             db[this.state.data[i]['Difficulty']] += 1;
             cpd[this.state.data[i]['#']] = true;
             if(this.state.userData['user_solved_dict'][this.state.data[i]['#']]){
-                commonIDS.push(this.state.data[i]['#'])
-                console.log('incrementing')
-                solvedCounter += 1;
+                commonIDS.push(this.state.data[i]['#'])               
+                solvedCounter += 1;                
             }
+        }   
+        var idList = []; 
+        for(let i = 0; i < this.state.data.length; ++i){
+            idList.push(this.state.data[i]['#']);
         }        
-        let radarData = idsToRadar(this.state.data,ProblemIdToCategories,Categories);
-        console.log(radarData);
-        console.log(commonIDS)
-        let dates = fetchDatesFromIds('PatrickEllis','LeetCode',commonIDS,this.setSlugAndDatesData,numProblems,solvedCounter);
-        {/*
-        setTimeout(function(){ 
-            console.log("this is a weekly call from computestats func")
-            let solvedOverTime = weeklyProgressFromDates(dates['oldest_commits'],4,numProblems,solvedCounter); 
-            this.setState({
-                solvedOverTimeData : solvedOverTime,
-                overTimeDataComputed : true
-            })
-        }.bind(this), 1000);*/}
+        console.timeEnd('computeStats');  
+         
+        this.setState({
+            difficultyBreakdown : db,
+            idList : idList
+        })
+        let radarData = idsToRadar(idList);
+        await fetchDatesFromIds('PatrickEllis','LeetCode',commonIDS,this.setSlugAndDatesData,numProblems,solvedCounter);
+        
         
         this.setState({
             radarData : radarData,            
@@ -96,13 +104,13 @@ class Stats extends Component {
             numCompleted : solvedCounter,
             companyProblemDict : cpd,
             numProblems : numProblems,
-            statsComputed : true,
-            difficultyBreakdown : db,
+            statsComputed : true,            
             chartDataCompleted : [
                 { name: "Completed", value: solvedCounter },
                 { name: "Yet to Complete", value: numProblems-solvedCounter }
               ]
         });
+        document.getElementById('loaderDiv').style.display = 'none';
     }
     render(){
         if(!this.state.statsComputed && this.state.isLoaded){
@@ -125,7 +133,8 @@ class Stats extends Component {
                 {/*{this.state.overTimeDataComputed && <PercentAreaChart data={this.state.solvedOverTimeData}/>}*/}
                 
                 <div class='m-12f3mir'>
-                    <CompanyDashboard 
+                     
+                    <CompanyDashboard                         
                         name = {this.props.name}
                         radarData={this.state.radarData}
                         easy={this.state.difficultyBreakdown['Easy']}

@@ -4,7 +4,11 @@ import problemIdToCategories from '../data/problemIdToCategories.json'
 import {fetchGithubRepo,getURLfromId} from '../scripts/github'
 import {userHasSolvedProblem} from '../scripts/util'
 import getJSON from '../scripts/JSONloader'
+import problems from '../data/problems.json'
+import { isObjectBindingPattern } from 'typescript';
 
+const data = problems.reverse();
+console.log("PROBLEMS:",problems);
 
 const TAGS = ['two-pointers','string','dynamic-programming','hash-table','math','depth-first-search','sorting','greedy','breadth-first-search',
 'tree','binary-search','matrix','two-pointers','bit-manipulation','stack','design','heap-priority-queue','backtracking','graph','simulation',
@@ -15,8 +19,14 @@ const TAGS = ['two-pointers','string','dynamic-programming','hash-table','math',
 'quickselect','bucket-sort','minimum-spanning-tree','counting-sort','suffix-array','shell','line-sweep','reservoir-sampling',
 'strongly-connected-component','eulerian-circuit','radix-sort','rejection-sampling','biconnected-component']
 
+
 const COLORS =["rgb(64,129,236)", "rgb(7,92,98)", "rgb(159,102,237)", "rgb(118,7,150)", "rgb(103,72,106)", "rgb(51, 138, 96)", "rgb(161,8,92)", "rgb(31,60,166)", "rgb(39,15,226)", "rgb(116,141,19)"]
 
+function getLevel(level){
+    if(level==1) return 'Easy';
+    if(level==2) return 'Medium';
+    return 'Hard';
+}
 function getColor(item){
     var itemname = item.toLowerCase();    
     itemname = itemname.split(' ').join('-');    
@@ -47,71 +57,54 @@ function getTagStyle(tag){
     return getColor(tag);
 }
 
-class CompanyTable extends Component {
+class AllProblemsTable extends Component {
     constructor(props){
         super(props);
         this.state = {
-            isLoaded : this.props.isLoaded,
+            isLoaded : true,
             data: this.props.data,
             userData: this.props.userData,   
             tagsChecked: true,
             tagFilter: 'All'     
         };        
         this.isSolved = this.isSolved.bind(this);
-        this.setEventListeners = this.setEventListeners.bind(this);
-        this.sortByFrequency = this.sortByFrequency.bind(this);
+        this.setEventListeners = this.setEventListeners.bind(this);       
         this.sortByAcceptance = this.sortByAcceptance.bind(this);
         this.sortByDifficulty = this.sortByDifficulty.bind(this);
         this.handleClick = this.handleClick.bind(this);
         this.onCheckChange = this.onCheckChange.bind(this);
         this.onSelectChange = this.onSelectChange.bind(this);
     }
-    componentDidMount(){        
-            
+    componentDidMount(){     
+        const keys = Object.keys(problemIdToCategories);  
+        
     }
     componentWillReceiveProps(nextProps) {        
         // You don't have to do this check first, but it can help prevent an unneeded render
         if (nextProps.isLoaded !== this.state.isLoaded) {
           this.setState({ 
-              isLoaded: nextProps.isLoaded,
-              data : nextProps.data,
+               isLoaded: nextProps.isLoaded,              
                userData : nextProps.userData
             });
-        }
-        if(nextProps.data != this.state.data){            
-            this.setState({
-                data : nextProps.data
-            })
-        }
+        }       
       }
     setEventListeners(){
-        const freq = document.getElementById('FrequencyTab');        
+        // nothing done here for now      
     }
     sortByDifficulty(){        
         var newData = this.state.data;
         if(newData.length < 2) return;
         const dtoi = {'Easy':0,'Medium':1,'Hard':2}
-        if(parseFloat(newData[0]['Frequency']) > parseFloat(newData[1]['Frequency'])){
-            newData.sort((a,b) => (parseFloat(dtoi[a['Difficulty']]) > parseFloat(dtoi[b['Difficulty']]))? 1 : -1)
+        if(newData[0]['level'] > newData[newData.length-1]['level']){
+            newData.sort((a,b) => a['level'] > b['level'] ? 1 : -1)
         } else {
-            newData.sort((a,b) => (parseFloat(dtoi[a['Difficulty']]) < parseFloat(dtoi[b['Difficulty']]))? 1 : -1)
+            newData.sort((a,b) => a['level'] < b['level'] ? 1 : -1)
         }        
         this.setState({
             data : newData
         })
     }
-    sortByFrequency(){        
-        var newData = this.state.data;
-        if(newData.length < 2) return;
-        if(parseFloat(newData[0]['Frequency']) > parseFloat(newData[1]['Frequency'])){
-            newData.sort((a,b) => (parseFloat(a['Frequency']) > parseFloat(b['Frequency']))? 1 : -1)
-        } else {
-            newData.sort((a,b) => (parseFloat(a['Frequency']) < parseFloat(b['Frequency']))? 1 : -1)
-        }        
-        this.setState({
-            data : newData
-        })
-    }
+
     sortByAcceptance(){        
         var newData = this.state.data;
         if(newData.length < 2) return;
@@ -137,10 +130,7 @@ class CompanyTable extends Component {
     }
 
     isSolved(id){
-        if(this.state.userData['user_solved_dict']){
-            return this.state.userData['user_solved_dict'][id];
-        }
-        return false;        
+        return this.state.userData['user_solved_dict'][id];
     }
     
     handleClick(id){
@@ -150,6 +140,7 @@ class CompanyTable extends Component {
     render() {
         const {isLoaded, data} = this.state;
         const keys = Object.keys(problemIdToCategories);        
+        console.log("PROBLEM DICT:",problemIdToCategories['64']);
       return(
                       
                 <div class="tableContainer">
@@ -159,7 +150,6 @@ class CompanyTable extends Component {
                          <thead class="thead">                                        
                             <tr class="m-1itvjt0 ejhqg10">
                                 <th class="m-1itvjt0"></th>
-                                
                                 <th class="m-1itvjt0 solved"></th>
                                 <th class="m-1itvjt0 idHeader">#</th>
                                 <th class="m-1itvjt0 titleHeader">Title</th>   
@@ -189,7 +179,7 @@ class CompanyTable extends Component {
                                             <option value="Dynamic Programming">Dynamic Programming</option>                                            
                                             <option value="Graph">Graph</option>
                                             <option value="Greedy">Greedy</option>
-                                            <option value="Heap">Heap</option>
+                                            <option value="Heap Priority Queue">Heap</option>
                                             <option value="Linked List">Linked List</option>
                                             <option value="Intervals">Intervals</option>
                                             <option value="Sliding Window">Sliding Window</option>
@@ -197,10 +187,20 @@ class CompanyTable extends Component {
                                             <option value="Topological Sort">Topological Sort</option>
                                             <option value="Trie">Trie</option>
                                             <option value="Two Pointers">Two Pointers</option>
-                                            <option value="Union Find">Union Find</option>                                                                                        
+                                            <option value="Union Find">Union Find</option>       
+                                            <option value="Randomized">Randomized</option>                                                                                        
+                                            <option value="Ordered Set">Ordered Set</option>       
+                                            <option value="Strongly Connected Component">Strongly Connected Component</option>     
+                                            <option value="Minimum Spanning Tree">Minimum Spanning Tree</option>     
+                                            <option value="Memoization">Memoization</option>     
+                                            <option value="Tree">Tree</option>     
+                                            <option value="Doubly Linked List">Doubly Linked List</option>     
+                                            <option value="Biconnected Component">Biconnected Component</option>   
+                                            <option value="Radix Sort">Radix Sort</option>   
+                                            <option value="Merge Sort">Merge Sort</option>   
                                         </select>
                                     </div>
-                                </th> 
+                                </th>                                 
                                 {/*
                                 <th class="m-1itvjt0 tablehover acceptance" onClick={this.sortByAcceptance}>
                                     Acceptance
@@ -211,10 +211,7 @@ class CompanyTable extends Component {
                                     Difficulty
                                     <span class="w-3.5 h-3.5 ml-2 text-gray-5 dark:text-dark-gray-5 group-hover:text-gray-7 dark:group-hover:text-dark-gray-7"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor"><path d="M18.695 9.378L12.83 3.769a1.137 1.137 0 00-.06-.054c-.489-.404-1.249-.377-1.7.06L5.303 9.381a.51.51 0 00-.16.366c0 .297.27.539.602.539h12.512a.64.64 0 00.411-.146.501.501 0 00.028-.762zM12.77 20.285c.021-.017.042-.035.062-.054l5.863-5.609a.5.5 0 00-.028-.762.64.64 0 00-.41-.146H5.743c-.332 0-.601.242-.601.54a.51.51 0 00.16.365l5.769 5.606c.45.437 1.21.464 1.698.06z"></path></svg></span>
                                 </th>
-                                <th class="m-1itvjt0 tablehover frequencyHeader"  onClick={this.sortByFrequency}>
-                                    Frequency
-                                    <span class="w-3.5 h-3.5 ml-2 text-gray-5 dark:text-dark-gray-5 group-hover:text-gray-7 dark:group-hover:text-dark-gray-7"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor"><path d="M18.695 9.378L12.83 3.769a1.137 1.137 0 00-.06-.054c-.489-.404-1.249-.377-1.7.06L5.303 9.381a.51.51 0 00-.16.366c0 .297.27.539.602.539h12.512a.64.64 0 00.411-.146.501.501 0 00.028-.762zM12.77 20.285c.021-.017.042-.035.062-.054l5.863-5.609a.5.5 0 00-.028-.762.64.64 0 00-.41-.146H5.743c-.332 0-.601.242-.601.54a.51.51 0 00.16.365l5.769 5.606c.45.437 1.21.464 1.698.06z"></path></svg></span>
-                                </th>
+                               
                                 
                                 <th class="m-1itvjt0"></th>
                             </tr>
@@ -222,30 +219,30 @@ class CompanyTable extends Component {
                        
                         <tbody>                            
                             {this.state.data.map(item =>   
-                                this.state.tagFilter == 'All' ?
-                                <tr onClick={()=>this.handleClick(item['#'])} class="m-14j0amg e98qpmo0">                                    
+                                this.state.tagFilter == 'All'?
+                               
+                                <tr onClick={()=>this.handleClick(item['id'])} class="m-14j0amg e98qpmo0">                                    
                                     <td></td>
-                                    <td class="solved">{this.isSolved(item['#'])?
+                                    <td class="solved">{this.isSolved(item['id'])?
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" class="w-[18px] h-[18px] text-green-s dark:text-dark-green-s"><path fill-rule="evenodd" d="M9.688 15.898l-3.98-3.98a1 1 0 00-1.415 1.414L8.98 18.02a1 1 0 001.415 0L20.707 7.707a1 1 0 00-1.414-1.414l-9.605 9.605z" clip-rule="evenodd"></path></svg>
                                         :
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" class="w-[18px] h-[18px] text-gray-5 dark:text-dark-gray-5"><path fill-rule="evenodd" d="M4 12a1 1 0 011-1h14a1 1 0 110 2H5a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>                                        
                                         }</td>
-                                    <td>{item['#']}.</td>
-                                    <td>{item['Title']}</td>     
+                                    <td>{item['id']}.</td>
+                                    <td>{item['title']}</td>     
                                     <td class="tags">                                                                       
                                         {                 
-                                        inArray(keys,item['#'])?    
+                                        inArray(keys,item['id'])?    
                                             <>
                                             <div class="upperdiv">                                       
-                                                {problemIdToCategories[item['#']].slice(0,3).map(e => 
-                                                    this.state.tagsChecked?                                            
-                                                    <span class="tagItem" style={{background:getTagStyle(e)[1],color:getTagStyle(e)[0]}}>• {e}</span>
-                                                    :
-                                                    <span class="tagItem" style={{background:'#000'}}>***</span>
-
-                                                 )}</div>
+                                            {problemIdToCategories[item['id']].slice(0,3).map(e =>     
+                                                this.state.tagsChecked?                                        
+                                                <span class="tagItem" style={{background:getTagStyle(e)[1],color:getTagStyle(e)[0]}}>• {e}</span>
+                                                :
+                                                <span class="tagItem" style={{background:'#000'}}>***</span>                                                                                  
+                                            )}</div>
                                             <div class="upperdiv">                                       
-                                            {problemIdToCategories[item['#']].slice(3,7).map(e =>     
+                                            {problemIdToCategories[item['id']].slice(3,7).map(e =>     
                                                 this.state.tagsChecked?                                        
                                                 <span class="tagItem" style={{background:getTagStyle(e)[1],color:getTagStyle(e)[0]}}>• {e}</span>
                                                 :
@@ -256,27 +253,26 @@ class CompanyTable extends Component {
                                                                                                                                               
                                     </td>                               
                                     {/*<td>{item['Acceptance']}</td>*/}
-                                    <td style={item['Difficulty']=='Easy'?{color:'rgba(0,175,155,1)'}:item['Difficulty']=='Medium'?{color:'rgba(255,184,0,1'}:{color:'rgba(255,45,85,1)'}}>{item['Difficulty']}</td>
-                                    <td><div class="frequency-bar frequencyHeader" style={{width:item['Frequency']+'%'}}></div></td>
+                                    <td style={getLevel(item['level'])=='Easy'?{color:'rgba(0,175,155,1)'}:getLevel(item['level'])=='Medium'?{color:'rgba(255,184,0,1'}:{color:'rgba(255,45,85,1)'}}>{getLevel(item['level'])}</td>                                    
                                     <td class="bookend"></td>                                    
                                 </tr>
                                 :
-                                inArray(problemIdToCategories[item['#']],this.state.tagFilter)?
-                                <tr onClick={()=>this.handleClick(item['#'])} class="m-14j0amg e98qpmo0">                                    
+                                inArray(problemIdToCategories[item['id']],this.state.tagFilter)?                                
+                                <tr onClick={()=>this.handleClick(item['id'])} class="m-14j0amg e98qpmo0">                                    
                                     <td></td>
-                                    <td class="solved">{this.isSolved(item['#'])?
+                                    <td class="solved">{this.isSolved(item['id'])?
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" class="w-[18px] h-[18px] text-green-s dark:text-dark-green-s"><path fill-rule="evenodd" d="M9.688 15.898l-3.98-3.98a1 1 0 00-1.415 1.414L8.98 18.02a1 1 0 001.415 0L20.707 7.707a1 1 0 00-1.414-1.414l-9.605 9.605z" clip-rule="evenodd"></path></svg>
                                         :
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" class="w-[18px] h-[18px] text-gray-5 dark:text-dark-gray-5"><path fill-rule="evenodd" d="M4 12a1 1 0 011-1h14a1 1 0 110 2H5a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>                                        
                                         }</td>
-                                    <td>{item['#']}.</td>
-                                    <td>{item['Title']}</td>     
+                                    <td>{item['id']}.</td>
+                                    <td>{item['title']}</td>     
                                     <td class="tags">                                                                       
                                         {                 
-                                        inArray(keys,item['#'])?    
+                                        inArray(keys,item['id'])?    
                                             <>
                                             <div class="upperdiv">                                       
-                                                {problemIdToCategories[item['#']].slice(0,3).map(e => 
+                                                {problemIdToCategories[item['id']].slice(0,3).map(e => 
                                                     this.state.tagsChecked?                                            
                                                     <span class="tagItem" style={{background:getTagStyle(e)[1],color:getTagStyle(e)[0]}}>• {e}</span>
                                                     :
@@ -284,7 +280,7 @@ class CompanyTable extends Component {
 
                                                  )}</div>
                                             <div class="upperdiv">                                       
-                                            {problemIdToCategories[item['#']].slice(3,7).map(e =>     
+                                            {problemIdToCategories[item['id']].slice(3,7).map(e =>     
                                                 this.state.tagsChecked?                                        
                                                 <span class="tagItem" style={{background:getTagStyle(e)[1],color:getTagStyle(e)[0]}}>• {e}</span>
                                                 :
@@ -295,8 +291,7 @@ class CompanyTable extends Component {
                                                                                                                                               
                                     </td>                               
                                     {/*<td>{item['Acceptance']}</td>*/}
-                                    <td style={item['Difficulty']=='Easy'?{color:'rgba(0,175,155,1)'}:item['Difficulty']=='Medium'?{color:'rgba(255,184,0,1'}:{color:'rgba(255,45,85,1)'}}>{item['Difficulty']}</td>
-                                    <td><div class="frequency-bar frequencyHeader" style={{width:item['Frequency']+'%'}}></div></td>
+                                    <td style={getLevel(item['level'])=='Easy'?{color:'rgba(0,175,155,1)'}:getLevel(item['level'])=='Medium'?{color:'rgba(255,184,0,1'}:{color:'rgba(255,45,85,1)'}}>{getLevel(item['level'])}</td>                                                                      
                                     <td class="bookend"></td>                                    
                                 </tr>     
                                 : <></>                           
@@ -311,4 +306,4 @@ class CompanyTable extends Component {
     }
   }
   
-  export default CompanyTable
+  export default AllProblemsTable

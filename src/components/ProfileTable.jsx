@@ -5,7 +5,6 @@ import {fetchGithubRepo,getURLfromId} from '../scripts/github'
 import {userHasSolvedProblem} from '../scripts/util'
 import getJSON from '../scripts/JSONloader'
 
-
 const TAGS = ['two-pointers','string','dynamic-programming','hash-table','math','depth-first-search','sorting','greedy','breadth-first-search',
 'tree','binary-search','matrix','two-pointers','bit-manipulation','stack','design','heap-priority-queue','backtracking','graph','simulation',
 'prefix-sum','sliding-window','linked-list','counting','union-find','recursion','binary-search-tree','trie','monotonic-stack','ordered-set',
@@ -46,18 +45,14 @@ function inArray(arr, item){
 function getTagStyle(tag){
     return getColor(tag);
 }
-
-class CompanyTable extends Component {
+class ProfileTable extends Component {
     constructor(props){
         super(props);
         this.state = {
-            isLoaded : this.props.isLoaded,
-            data: this.props.data,
-            userData: this.props.userData,   
             tagsChecked: true,
             tagFilter: 'All'     
-        };        
-        this.isSolved = this.isSolved.bind(this);
+
+        };                
         this.setEventListeners = this.setEventListeners.bind(this);
         this.sortByFrequency = this.sortByFrequency.bind(this);
         this.sortByAcceptance = this.sortByAcceptance.bind(this);
@@ -71,7 +66,7 @@ class CompanyTable extends Component {
     }
     componentWillReceiveProps(nextProps) {        
         // You don't have to do this check first, but it can help prevent an unneeded render
-        if (nextProps.isLoaded !== this.state.isLoaded) {
+        if (nextProps.isLoaded != this.state.isLoaded) {
           this.setState({ 
               isLoaded: nextProps.isLoaded,
               data : nextProps.data,
@@ -135,32 +130,27 @@ class CompanyTable extends Component {
             tagFilter : document.getElementById('tags-select').value
         })
     }
-
     isSolved(id){
-        if(this.state.userData['user_solved_dict']){
-            return this.state.userData['user_solved_dict'][id];
-        }
-        return false;        
+        return this.state.userData['user_solved_dict'][id];
     }
     
     handleClick(id){
         window.open(getURLfromId(id), '_blank').focus();        
     }
-    
     render() {
-        const {isLoaded, data} = this.state;
+        const data = this.props.userData;        
+        const isLoaded = this.props.isLoaded;
         const keys = Object.keys(problemIdToCategories);        
       return(
                       
-                <div class="tableContainer">
+                <div class="tableContainer userProfileTable">
                     { isLoaded &&  
                     <table class="m-3gmgrq mainTable">
                         
                          <thead class="thead">                                        
                             <tr class="m-1itvjt0 ejhqg10">
                                 <th class="m-1itvjt0"></th>
-                                
-                                <th class="m-1itvjt0 solved"></th>
+                                                                
                                 <th class="m-1itvjt0 idHeader">#</th>
                                 <th class="m-1itvjt0 titleHeader">Title</th>   
                                 <th class="m-1itvjt0 tagsHeader">
@@ -212,7 +202,7 @@ class CompanyTable extends Component {
                                     <span class="w-3.5 h-3.5 ml-2 text-gray-5 dark:text-dark-gray-5 group-hover:text-gray-7 dark:group-hover:text-dark-gray-7"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor"><path d="M18.695 9.378L12.83 3.769a1.137 1.137 0 00-.06-.054c-.489-.404-1.249-.377-1.7.06L5.303 9.381a.51.51 0 00-.16.366c0 .297.27.539.602.539h12.512a.64.64 0 00.411-.146.501.501 0 00.028-.762zM12.77 20.285c.021-.017.042-.035.062-.054l5.863-5.609a.5.5 0 00-.028-.762.64.64 0 00-.41-.146H5.743c-.332 0-.601.242-.601.54a.51.51 0 00.16.365l5.769 5.606c.45.437 1.21.464 1.698.06z"></path></svg></span>
                                 </th>
                                 <th class="m-1itvjt0 tablehover frequencyHeader"  onClick={this.sortByFrequency}>
-                                    Frequency
+                                    Last Solved
                                     <span class="w-3.5 h-3.5 ml-2 text-gray-5 dark:text-dark-gray-5 group-hover:text-gray-7 dark:group-hover:text-dark-gray-7"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor"><path d="M18.695 9.378L12.83 3.769a1.137 1.137 0 00-.06-.054c-.489-.404-1.249-.377-1.7.06L5.303 9.381a.51.51 0 00-.16.366c0 .297.27.539.602.539h12.512a.64.64 0 00.411-.146.501.501 0 00.028-.762zM12.77 20.285c.021-.017.042-.035.062-.054l5.863-5.609a.5.5 0 00-.028-.762.64.64 0 00-.41-.146H5.743c-.332 0-.601.242-.601.54a.51.51 0 00.16.365l5.769 5.606c.45.437 1.21.464 1.698.06z"></path></svg></span>
                                 </th>
                                 
@@ -221,23 +211,18 @@ class CompanyTable extends Component {
                         </thead>
                        
                         <tbody>                            
-                            {this.state.data.map(item =>   
-                                this.state.tagFilter == 'All' ?
+                            {this.props.userData['slugData'].map(item =>                         
                                 <tr onClick={()=>this.handleClick(item['#'])} class="m-14j0amg e98qpmo0">                                    
                                     <td></td>
-                                    <td class="solved">{this.isSolved(item['#'])?
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" class="w-[18px] h-[18px] text-green-s dark:text-dark-green-s"><path fill-rule="evenodd" d="M9.688 15.898l-3.98-3.98a1 1 0 00-1.415 1.414L8.98 18.02a1 1 0 001.415 0L20.707 7.707a1 1 0 00-1.414-1.414l-9.605 9.605z" clip-rule="evenodd"></path></svg>
-                                        :
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" class="w-[18px] h-[18px] text-gray-5 dark:text-dark-gray-5"><path fill-rule="evenodd" d="M4 12a1 1 0 011-1h14a1 1 0 110 2H5a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>                                        
-                                        }</td>
-                                    <td>{item['#']}.</td>
-                                    <td>{item['Title']}</td>     
+                                    
+                                    <td>{item.id}.</td>
+                                    <td>{item.title}</td>     
                                     <td class="tags">                                                                       
                                         {                 
-                                        inArray(keys,item['#'])?    
+                                        inArray(keys,item.id)?    
                                             <>
                                             <div class="upperdiv">                                       
-                                                {problemIdToCategories[item['#']].slice(0,3).map(e => 
+                                                {problemIdToCategories[item.id].slice(0,3).map(e => 
                                                     this.state.tagsChecked?                                            
                                                     <span class="tagItem" style={{background:getTagStyle(e)[1],color:getTagStyle(e)[0]}}>• {e}</span>
                                                     :
@@ -245,7 +230,7 @@ class CompanyTable extends Component {
 
                                                  )}</div>
                                             <div class="upperdiv">                                       
-                                            {problemIdToCategories[item['#']].slice(3,7).map(e =>     
+                                            {problemIdToCategories[item.id].slice(3,7).map(e =>     
                                                 this.state.tagsChecked?                                        
                                                 <span class="tagItem" style={{background:getTagStyle(e)[1],color:getTagStyle(e)[0]}}>• {e}</span>
                                                 :
@@ -256,50 +241,10 @@ class CompanyTable extends Component {
                                                                                                                                               
                                     </td>                               
                                     {/*<td>{item['Acceptance']}</td>*/}
-                                    <td style={item['Difficulty']=='Easy'?{color:'rgba(0,175,155,1)'}:item['Difficulty']=='Medium'?{color:'rgba(255,184,0,1'}:{color:'rgba(255,45,85,1)'}}>{item['Difficulty']}</td>
-                                    <td><div class="frequency-bar frequencyHeader" style={{width:item['Frequency']+'%'}}></div></td>
+                                    <td style={item['difficulty']=='Easy'?{color:'rgba(0,175,155,1)'}:item['difficulty']=='Medium'?{color:'rgba(255,184,0,1'}:{color:'rgba(255,45,85,1)'}}>{item['difficulty']}</td>
+                                    <td><div class="">{item['daysAgo']} days ago</div></td>
                                     <td class="bookend"></td>                                    
                                 </tr>
-                                :
-                                inArray(problemIdToCategories[item['#']],this.state.tagFilter)?
-                                <tr onClick={()=>this.handleClick(item['#'])} class="m-14j0amg e98qpmo0">                                    
-                                    <td></td>
-                                    <td class="solved">{this.isSolved(item['#'])?
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" class="w-[18px] h-[18px] text-green-s dark:text-dark-green-s"><path fill-rule="evenodd" d="M9.688 15.898l-3.98-3.98a1 1 0 00-1.415 1.414L8.98 18.02a1 1 0 001.415 0L20.707 7.707a1 1 0 00-1.414-1.414l-9.605 9.605z" clip-rule="evenodd"></path></svg>
-                                        :
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" class="w-[18px] h-[18px] text-gray-5 dark:text-dark-gray-5"><path fill-rule="evenodd" d="M4 12a1 1 0 011-1h14a1 1 0 110 2H5a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>                                        
-                                        }</td>
-                                    <td>{item['#']}.</td>
-                                    <td>{item['Title']}</td>     
-                                    <td class="tags">                                                                       
-                                        {                 
-                                        inArray(keys,item['#'])?    
-                                            <>
-                                            <div class="upperdiv">                                       
-                                                {problemIdToCategories[item['#']].slice(0,3).map(e => 
-                                                    this.state.tagsChecked?                                            
-                                                    <span class="tagItem" style={{background:getTagStyle(e)[1],color:getTagStyle(e)[0]}}>• {e}</span>
-                                                    :
-                                                    <span class="tagItem" style={{background:'#000'}}>***</span>
-
-                                                 )}</div>
-                                            <div class="upperdiv">                                       
-                                            {problemIdToCategories[item['#']].slice(3,7).map(e =>     
-                                                this.state.tagsChecked?                                        
-                                                <span class="tagItem" style={{background:getTagStyle(e)[1],color:getTagStyle(e)[0]}}>• {e}</span>
-                                                :
-                                                <span class="tagItem" style={{background:'#000'}}>***</span>                                                                                  
-                                            )}</div>
-                                            </>
-                                        :<></>}                                        
-                                                                                                                                              
-                                    </td>                               
-                                    {/*<td>{item['Acceptance']}</td>*/}
-                                    <td style={item['Difficulty']=='Easy'?{color:'rgba(0,175,155,1)'}:item['Difficulty']=='Medium'?{color:'rgba(255,184,0,1'}:{color:'rgba(255,45,85,1)'}}>{item['Difficulty']}</td>
-                                    <td><div class="frequency-bar frequencyHeader" style={{width:item['Frequency']+'%'}}></div></td>
-                                    <td class="bookend"></td>                                    
-                                </tr>     
-                                : <></>                           
                             )};
                             
                         </tbody>
@@ -311,4 +256,4 @@ class CompanyTable extends Component {
     }
   }
   
-  export default CompanyTable
+  export default ProfileTable

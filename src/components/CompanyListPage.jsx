@@ -22,7 +22,6 @@ class CompanyListPage extends Component {
         //const userData = await fetchGithubRepo('patrickellis','LeetCode','main',this.setUserData);
         //await new Promise(r => setTimeout(r, 500));
         setActiveLink(1);
-        console.log(this.state.data);
     }
 
     render(){

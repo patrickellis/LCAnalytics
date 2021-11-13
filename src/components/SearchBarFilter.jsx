@@ -8,13 +8,11 @@ function capitalizeFirstLetter(string) {
   }
   
 function onFocus(){            
-    console.log("focus");
 }
 function onBlur(){
-    const box = document.querySelector('.ekk3vtk3');       
-    console.log("blur");
+    const box = document.querySelector('.ekk3vtk3');           
     const dropEl = document.querySelector('.drop')        
-    //document.getElementById('search').value="";
+    document.getElementById('search').value="";
     dropEl.style.height = 0;
     box.style.borderBottomLeftRadius ='5px';
     box.style.borderBottomRightRadius ='5px';  
@@ -27,15 +25,13 @@ function SearchBarFilter(props){
         const box = document.querySelector('.ekk3vtk3');        
         let input = capitalizeFirstLetter(e.target.value.toLowerCase());
         if(!companies.includes(input.toLowerCase())){
-            console.log("input not in company list", input);
-             console.log("len:",input.length)
-            document.getElementById('search').style.border="1px solid red";
+
+            document.getElementById('searchBox').style.border="1px solid #CF000F";
             return;
         }
 
         let data = props.data['6mo'][input];
-        console.log(data);
-        console.log(e.target.value);
+
         props.updateData(data,input);
         document.querySelector('.drop').style.height = 0;
         

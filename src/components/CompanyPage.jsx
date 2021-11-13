@@ -1,21 +1,23 @@
 import {React,Component} from 'react';
 import CompanyTable from './CompanyTable';
+import problemIdToCategories from '../data/problemIdToCategories.json'
+import CompanyTableNew from './CompanyTableNew'
 import CompanyNav from './CompanyNav';
 import {fetchGithubRepo} from '../scripts/github'
+import { setActiveLink } from '../scripts/util';
 import Stats from './StatsSection';
 import RadarChart from './RadarChart';
 import StatsHeader from './StatsHeader';
+import BeatLoader from "react-spinners/BeatLoader";
+import AllProblemsTable from './AllProblemsTable';
 const client_id = 'c3dfbec01089dd36fa64';
 class CompanyPage extends Component {
     constructor(props){
         super(props);
-        this.state = {
-            isLoaded : false,
-            data: this.props.data,
-            userData: [],
-            displayQuestions : true,
-        };
-        this.setUserData = this.setUserData.bind(this);
+        this.state = {            
+            data: this.props.data,            
+            displayQuestions : true
+        };        
         this.toggleDisplay = this.toggleDisplay.bind(this);
     }
     toggleDisplay(){
@@ -25,37 +27,41 @@ class CompanyPage extends Component {
             displayQuestions : cur,
         })
     }
-    setUserData(userData){
-        this.setState({
-            userData : userData
-        }, ()=>{
-            this.setState({
-                isLoaded : true
-            })
-        })
+    componentWillUnmount(){
+        this.props.setLoadingStatusTopLevel();
     }
-    async componentDidMount(){        
-        console.log("mounting");
-        const userData = await fetchGithubRepo('patrickellis','LeetCode','main',this.setUserData);
-        //await new Promise(r => setTimeout(r, 500));
-        
+    async componentDidMount(){                        
+        setActiveLink(10);       
+
     }
-    render(){
+
+    render(){        
         return(
-            <>                                    
-            {this.state.isLoaded &&                
+            
+            <>                 
+            <div class="companypopup" id="companypopup">
+                <div class="popupcontent">
+                    <h3 id="popuptext"> Add to your tracked lists </h3>
+                </div>
+            </div>  
+            {this.props.isLoaded ?                
                 <>                
                 <StatsHeader/>
                 <div class="m-ht4nkg">
-                    <Stats name={this.props.name} userData={this.state.userData} data={this.state.data} isLoaded={this.state.isLoaded}/>
+                    <Stats setLoadingStatus={this.props.setLoadingStatus} name={this.props.name} userData={this.props.userData} data={this.props.data} isLoaded={this.props.isLoaded}/>
                     <div class="separator"></div>
-                    <CompanyNav toggleDisplay={this.toggleDisplay}/>
+                    <CompanyNav setLoadingStatus={this.props.setLoadingStatus} name={this.props.name} updateDataTimePeriod={this.props.updateDataTimePeriod} toggleDisplay={this.toggleDisplay}/>
                     {this.state.displayQuestions && 
-                    <CompanyTable userData={this.state.userData} data={this.state.data} isLoaded={this.state.isLoaded}/>
+                    <CompanyTableNew setLoadingStatusTopLevel={this.props.setLoadingStatusTopLevel} userData={this.props.userData} data={this.props.data} isLoaded={this.props.isLoaded}/>
                     }
                 </div>
                 </>
-            }
+            :
+            <div class="loaderDiv" id="loaderDiv">
+                <div class="loaderContainer">
+                    <BeatLoader color={'rgb(255,255,255)'} loading={true} size={12} />    
+                    </div>
+            </div>}  
             </>
         )
     }

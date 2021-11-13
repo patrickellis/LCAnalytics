@@ -1,0 +1,54 @@
+.profUpperSection{
+    width:45%;
+    border-radius:5px;
+    display:inline-block;
+    background:white;
+    display:relative;
+    padding:10px;   
+}
+.profUpperSection:first-child{
+    margin-right:5px;
+}
+.statsPage h1{
+    margin-bottom:10px;
+    font-size:1.6rem;
+}
+.radarContainer{
+    width:280px;
+    height:280px;
+    margin:0 auto;
+    position:relative
+}
+.radarContainer .recharts-surface{
+    width:280px !important;
+    height:280px !important;    
+    position:relative;
+    overflow:visible !important;
+}
+.radarContainer .recharts-wrapper{
+    width:200px !important;
+    height:200px !important;
+    margin: 0px !important;
+}
+.rightSection{
+    flex:1;
+    margin:10px;
+    margin:0 0 0 10px;
+}
+.leftSection{
+    flex:1;
+    margin:0 10px 0 0;
+}
+.upperContent{
+    display:flex;
+    width:100%;
+    margin-bottom:10px;
+}
+.lowerContent{
+    display:flex;
+    width:100%;
+    min-height:45rem;
+    background:white;
+    padding: 10px;
+    border-radius:5px;
+}
