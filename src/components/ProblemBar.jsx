@@ -32,7 +32,8 @@ class ProblemBar extends Component {
         ew = ew.toString()+'%';
         mw = mw.toString()+'%';
         dividerTwoLeft = dividerTwoLeft.toString()+'%';
-        let barwidth = this.props.width != undefined ? (this.props.width / 100) * 35 + 'rem' : '18rem'; 
+        let count = this.props.count <= 20 ? this.props.count : 20;
+        let barwidth = this.props.width != undefined ? (this.props.width / 100) * count * 3 + 'rem' : '18rem'; 
         console.log(barwidth);
         return(            
             <>

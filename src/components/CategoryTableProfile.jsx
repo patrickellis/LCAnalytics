@@ -17,14 +17,16 @@ class CategoryTableProfile extends Component {
         };
         this.handleListClick = this.handleListClick.bind(this);
     }
-    handleListClick(){
-        console.log("handling list click");
+    handleListClick(item){
+        console.log("handling list click", item);
+        
     }
     componentWillReceiveProps(nextProps){
         
     }
     async componentDidMount(){                
     }
+
     render(){       
         let data = this.props.data;
         return(
@@ -41,12 +43,12 @@ class CategoryTableProfile extends Component {
                     {data != undefined ? data.map(item =>                
                     {                        
                         return(
-                        <tr onClick={()=>this.handleListClick(item)} class="m-14j0amg e98qpmo0">
+                        <tr onClick={() => this.props.switchToCategoryPage(item)} class="m-14j0amg e98qpmo0">
                             <td></td>
                             <td>{item.category}</td>    
                             <td>{item.count}</td>                                                                                                   
                             <td>
-                                <ProblemBar width={item['percent_width']} easy={item['Easy']} medium={item['Medium']} hard={item['Hard']}/>                                
+                                <ProblemBar count={item['count']} width={item['percent_width']} easy={item['Easy']} medium={item['Medium']} hard={item['Hard']}/>                                
                                 {/*
                                 <div class="m-1s5vw6 e5mzqaz1">
                                     <div data-progress="47" class="m-148kaov e5mzqaz0" style={{width: completedWidth+'%'}}></div>                                                

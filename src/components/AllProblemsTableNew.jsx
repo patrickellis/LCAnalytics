@@ -74,6 +74,7 @@ class AllProblemsTable extends Component {
         this.onSelectChange = this.onSelectChange.bind(this);
         this.setCurrentPage = this.setCurrentPage.bind(this); 
         this.sortByCompleted = this.sortByCompleted.bind(this);
+        this.flipNavClasses = this.flipNavClasses.bind(this);
     }
     componentDidMount(){     
         /*
@@ -90,6 +91,11 @@ class AllProblemsTable extends Component {
         })
         )
         */
+       if(this.props.initialFilter.length > 3){
+            document.getElementById('tags-select').value=this.props.initialFilter;
+            this.flipNavClasses(2);
+            this.onSelectChange();
+       }
         this.setState({
             filteredData : this.state.data,
             currentData : this.state.data.slice(0,100),
@@ -114,6 +120,26 @@ class AllProblemsTable extends Component {
             data : newData
         })        
         */
+    }
+    flipNavClasses(id){
+        console.log("Flipping nav with id: ", id);
+        // this needs to be generalised to function with 5 headers///
+        
+        const tabs = document.getElementsByClassName('upNav');
+        if(tabs[id].classList.contains('selected')) return;
+        
+        for(let i = 0; i < tabs.length; ++i){
+            if(i==id){                
+                if(!tabs[i].classList.contains('selected')){
+                    tabs[i].classList.add('selected');
+                    tabs[i].classList.remove('unselected');
+                }
+            }
+            else{
+                tabs[i].classList.remove('selected');
+                tabs[i].classList.add('unselected');
+            }
+        }
     }
     setCurrentPage(page){
         this.setState({            

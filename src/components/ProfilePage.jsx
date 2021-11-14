@@ -50,7 +50,8 @@ class ProfilePage extends Component {
             isCompanyList : false,
             listId : "",
             listCompletion : {},
-            haveUpdatedSolvedOverTime : false,            
+            haveUpdatedSolvedOverTime : false, 
+            initialFilter : '',           
         };
         this.updateProgress = this.updateProgress.bind(this);
         this.toggleDisplay = this.toggleDisplay.bind(this);
@@ -58,6 +59,7 @@ class ProfilePage extends Component {
         this.computeListCompletion = this.computeListCompletion.bind(this);
         this.isSolved = this.isSolved.bind(this);
         this.removeCompanyFromUserLists = this.removeCompanyFromUserLists.bind(this);
+        this.switchToCategoryPage = this.switchToCategoryPage.bind(this);
     }
     
     componentDidMount(){        
@@ -156,6 +158,19 @@ class ProfilePage extends Component {
             trackedCompanies : lists
         })
     }
+    
+    switchToCategoryPage(item){
+        console.log(item);
+        setTimeout(function(){
+            document.getElementById('tags-select').value=item['category'];
+         }, 3000);
+
+        this.setState({
+            initialFilter : item['category'],
+            displayIndex : 2,            
+        })
+    }
+
     render(){
         let idx = this.state.displayIndex;
         const listkeys = Object.keys(AllLists);
@@ -185,7 +200,7 @@ class ProfilePage extends Component {
                             <ProfileStatisticsProgress options={options} updateProgress={this.updateProgress} data={this.state.haveUpdatedSolvedOverTime?this.state.solvedOverTime:this.props.userData.solvedOverTime}/>
                             
                         </div>
-                        <CategoryTableProfile data={this.props.userData['category_completion_list']}/>
+                        <CategoryTableProfile switchToCategoryPage={this.switchToCategoryPage} data={this.props.userData['category_completion_list']}/>
                         {/*<Heatmap/>*/}
 
                         </div>
@@ -202,7 +217,7 @@ class ProfilePage extends Component {
                         :
                         <>
                         <button class="backButton m-tuly59" onClick={()=>this.setState({displayingList : false})}>back</button>
-                        <AllProblemsTable data={AllLists[this.state.listId]} userData={this.props.userData}/>
+                        <AllProblemsTable switchToCategoryPage={this.switchToCategoryPage} data={AllLists[this.state.listId]} userData={this.props.userData}/>
                         </>
                     :
                     <div class="tableContainer">
@@ -269,7 +284,7 @@ class ProfilePage extends Component {
                 }
                 */}
                 {idx == 2 && 
-                    <AllProblemsTableNew data={this.state.data} userData={this.props.userData} />                    
+                    <AllProblemsTableNew initialFilter={this.state.initialFilter} data={this.state.data} userData={this.props.userData} />                    
                 }
                 
                 </div>
