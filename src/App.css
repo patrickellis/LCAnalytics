@@ -38,7 +38,7 @@ body,html{
   background:rgb(222, 225, 233) !important; 
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
-  font-family: 'Aktiv Grotesk','Roboto',sans-serif;
+  font-family: 'Aktiv Grotesk','Roboto',sans-serif !important;
   -webkit-font-smoothing: subpixel-antialiased;
   font-size: 10px;
   --nav-main-bg-color: #140e30;
@@ -1172,7 +1172,7 @@ tspan{
   position: absolute;
   left: 310px;
   top:10px;
-  width:30px;
+  width:3rem;
   z-index:100;
   box-sizing: border-box;  
   border-radius: 3px;
@@ -1427,7 +1427,7 @@ tspan{
 .thead{
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
-  font-family: 'Roboto',sans-serif;
+  font-family: 'Aktiv Grotesk','Roboto',sans-serif !important;
   -webkit-font-smoothing: subpixel-antialiased;
   font-size: 1.4rem;
   --nav-main-bg-color: #140e30;
@@ -1681,6 +1681,9 @@ tspan{
 }
 .red{
   color:rgb(229, 71, 135) !important;
+}
+.statsPage h1{
+  font-family:'Roboto'!important;
 }
 .m-18xjao8 {
   width:fit-content;
@@ -2654,6 +2657,7 @@ les {
   transform: translate(-50%,-50%);
   background:#140a32;
   border-radius:2rem;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 .loginTitle{
@@ -2677,7 +2681,7 @@ les {
 .button-container{
   margin:auto;
   width:fit-content;
-  margin-top:10rem;
+  margin-top:12rem;
 }
 .image-container{
   width:fit-content;

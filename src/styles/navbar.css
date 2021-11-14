@@ -161,10 +161,16 @@
     background: #1c2545;
     border-bottom: 1px solid rgb(129, 129, 129);
 }
+.upNav{
+    font-weight:600 !important;
+}
+.statsPage p{
+    font-family:'Roboto' !important;
+}
 .m-8bmlvk {
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
-    font-family: 'Roboto',sans-serif;
+    font-family: 'Aktiv Grotesk','Roboto',sans-serif !important;
     -webkit-font-smoothing: subpixel-antialiased;
     font-size: 10px;
     --nav-main-bg-color: #140e30;
