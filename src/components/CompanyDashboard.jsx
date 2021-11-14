@@ -91,9 +91,9 @@ class CompanyDashboard extends Component {
                             <div class="m-a3hkcb">
                                 <div class="e7v3szw0 m-11al0g7 e7v3szw2">
                                     <span>
-                                        <div class="m-1kvt2p1" role="img">
-                                            <span>
-                                                <img src={"//logo.clearbit.com/"+this.props.name+".com"} alt="sizzvpaul" loading="lazy" class="m-0"/>
+                                        <div style={{overflow:'visible'}}class="m-1kvt2p1" role="img">
+                                            <span style={{overflow:'visible'}}>
+                                                <img src={'./logo/'+this.props.name+".png"} style={{margin:'auto',lineHeight:'0',width:'100%',height:'100%'}}alt="company_logo" loading="lazy" class="m-0"/>
                                             </span>
                                         </div>
                                     </span>

@@ -6,17 +6,39 @@ import companies from '../data/companyList'
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
   }
-  
+ 
+
 function onFocus(){            
 }
 function onBlur(){
-    const box = document.querySelector('.ekk3vtk3');           
-    const dropEl = document.querySelector('.drop')        
-    document.getElementById('search').value="";
-    dropEl.style.height = 0;
-    box.style.borderBottomLeftRadius ='5px';
-    box.style.borderBottomRightRadius ='5px';  
+    setTimeout(function(){
+        const box = document.querySelector('.ekk3vtk3');           
+        const dropEl = document.querySelector('.drop')      
+        if(!companies.includes(document.getElementById('search').value.toLowerCase())){
+            document.getElementById('search').value="";
+        }
+        //document.getElementById('search').value="";
+        dropEl.style.height = 0;
+        box.style.borderBottomLeftRadius ='5px';
+        box.style.borderBottomRightRadius ='5px';   
+    }, 100);
 }
+function hideOnClickOutside(element) {
+    const outsideClickListener = event => {
+        if (!element.contains(event.target) && isVisible(element)) { // or use: event.target.closest(selector) === null
+          element.style.display = 'none'
+          removeClickListener()
+        }
+    }
+
+    const removeClickListener = () => {
+        document.removeEventListener('click', outsideClickListener)
+    }
+
+    document.addEventListener('click', outsideClickListener)
+}
+
+const isVisible = elem => !!elem && !!( elem.offsetWidth || elem.offsetHeight || elem.getClientRects().length ) // source (2018-03-11): https://github.com/jquery/jquery/blob/master/src/css/hiddenVisibleSelectors.js 
 
 function SearchBarFilter(props){
     let history = useHistory();
@@ -43,6 +65,7 @@ function SearchBarFilter(props){
     
     useEffect(() => {          
       filter();
+      hideOnClickOutside(document.querySelector('.drop'));
     }, []);
 
     return (

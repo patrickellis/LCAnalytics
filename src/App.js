@@ -34,6 +34,7 @@ import { initializeApp} from 'firebase/app';
 import { getAnalytics } from "firebase/analytics";
 import { getAuth, signInWithPopup, GoogleAuthProvider,GithubAuthProvider} from "firebase/auth";
 import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
+import {setPersistence, browserLocalPersistence } from "firebase/auth";
 import GithubList from './components/GithubList';
 var firebaseui = require('firebaseui');
 //var ui = new firebaseui.auth.AuthUI(auth());
@@ -59,8 +60,7 @@ provider.addScope('repo');
 provider.setCustomParameters({
   'allow_signup': 'false'
 });
-
-
+//Handle Account Status
 
 
 class App extends Component {
@@ -76,7 +76,8 @@ class App extends Component {
       setLoadingStatus : function(){},
       user : undefined,
       userObject : {},    
-      displayModal : false,  
+      displayModal : false,
+      displayModalNav : false  
     }
     this.setLoadingStatusTopLevel = this.setLoadingStatusTopLevel.bind(this);
     this.updateData = this.updateData.bind(this);
@@ -85,19 +86,21 @@ class App extends Component {
     this.setUserRepositoryAndBranch = this.setUserRepositoryAndBranch.bind(this);
     this.getUserData = this.getUserData.bind(this);
     this.toggleModal = this.toggleModal.bind(this);
+    this.toggleModalFromNav = this.toggleModalFromNav.bind(this);
   }
 
   setUserRepositoryAndBranch(user){
     this.setState({
       userObject:user,
       displayModal:false,
+      displayModalNav:false,      
     }, () => {
       this.getUserData(user);
     })
   }
   async getUserData(user){
     console.log("User:",user);
-    await fetchGithubRepo(user.username,user.repo,user.branch,this.setUserData);   
+    await fetchGithubRepo(user.username,user.repo,user.branch,this.setUserData,user['token']);   
   }
   updateData(data,name){
     this.setState({
@@ -122,8 +125,14 @@ class App extends Component {
   }
   toggleModal(){
     this.setState({
-      displayModal : !this.state.displayModal
+      displayModal : false
     })
+  }
+  toggleModalFromNav(){
+    console.log('toggle modal');
+    this.setState({      
+      displayModalNav : true
+    }, console.log(this.state.displayModalNav))
   }
   setUserData(userData){
     this.setState({
@@ -134,47 +143,58 @@ class App extends Component {
         })
     })
 }
-  async componentDidMount(){                            
-      signInWithPopup(auth, provider)
-      .then((result) => {
-        // This gives you a GitHub Access Token. You can use it to access the GitHub API.
-        const credential = GithubAuthProvider.credentialFromResult(result);
-        const token = credential.accessToken;
-        // logic for displaying modal here
-        this.setState({
-          displayModal : true
-        })
-        // The signed-in user info.
-        const user = result.user;
-        user['responseToken'] = token;
-        console.log("USER: ", user);
-        this.setState({
-          user : user
-        })
-        // ...
-      }).catch((error) => {
-        // Handle Errors here.
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        // The email of the user's account used.
-        const email = error.email;
-        console.log("EMAIL:",email);
-        // The AuthCredential type that was used.
-        const credential = GithubAuthProvider.credentialFromError(error);
-        // ...
-      });               
+  async componentDidMount(){           
+      //if (lastLoginExpired(localStorage.getItem("lastSignIn"))) {               
+        setPersistence(auth, browserLocalPersistence)
+          .then(() => {
+              signInWithPopup(auth, provider)
+              .then((result) => {
+                // This gives you a GitHub Access Token. You can use it to access the GitHub API.
+                const credential = GithubAuthProvider.credentialFromResult(result);
+                const token = credential.accessToken;
+                // logic for displaying modal here
+                this.setState({
+                  displayModal : true
+                })
+                // The signed-in user info.
+                const user = result.user;
+                user['responseToken'] = token;
+                console.log("USER: ", user);
+
+                let userStore = JSON.stringify(user);
+                let lastSignInStore = JSON.stringify(Date.now());
+                console.log("Updating local storage with: ", userStore, ", ", lastSignInStore);
+                localStorage.setItem('User',JSON.stringify(user));
+                localStorage.setItem('lastSignIn', JSON.stringify(Date.now()));
+                          
+                this.setState({
+                  user : user
+                })
+                // ...
+              }).catch((error) => {
+                // Handle Errors here.
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                // The email of the user's account used.
+                const email = error.email;
+                console.log("EMAIL:",email);
+                // The AuthCredential type that was used.
+                const credential = GithubAuthProvider.credentialFromError(error);
+                // ...
+              });    
+          });           
   }
   render(){
     return (
       <div style={{position:'relative'}}>    
         <div class="app-background"></div>
-        {this.state.user && this.state.displayModal?           
-          <GithubList setUserRepositoryAndBranch={this.setUserRepositoryAndBranch} user={this.state.user}/> : <></>  
+        {this.state.user && (this.state.displayModal || this.state.displayModalNav)?           
+          <GithubList displayModalNav={this.state.displayModalNav} toggleModal={this.toggleModal} setUserRepositoryAndBranch={this.setUserRepositoryAndBranch} user={this.state.user}/> : <></>  
         }
           <main className="m-36y2kb">            
             <div className="m-ht4nkg">             
               <Router>   
-              <NavBar toggleModal={this.toggleModal} data={this.state.companyData} updateData={this.updateData}/>
+              <NavBar toggleModal={this.toggleModalFromNav} data={this.state.companyData} updateData={this.updateData}/>
                   <Switch>                    
                     <Route exact path="/">
                       {this.state.user ?
@@ -199,7 +219,7 @@ class App extends Component {
                     </Route>
                     <Route path="/company">      
                        {this.state.user ?          
-                      <CompanyPage setLoadingStatusTopLevel={this.setLoadingStatusTopLevel} isLoaded={this.state.isLoaded} userData={this.state.userData} setLoadingStatus={this.state.setLoadingStatus} updateDataTimePeriod={this.updateDataTimePeriod} name={this.state.name} data={this.state.data}/>
+                      <CompanyPage user={this.state.userObject} setLoadingStatusTopLevel={this.setLoadingStatusTopLevel} isLoaded={this.state.isLoaded} userData={this.state.userData} setLoadingStatus={this.state.setLoadingStatus} updateDataTimePeriod={this.updateDataTimePeriod} name={this.state.name} data={this.state.data}/>
                       :
                       <Redirect to="/"/>
                        }

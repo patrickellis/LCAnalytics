@@ -212,7 +212,10 @@ class AllProblemsTable extends Component {
     }
 
     isSolved(id){
-        return this.state.userData['user_solved_dict'][id];
+        if(this.state.userData['user_solved_dict']){
+            return this.state.userData['user_solved_dict'][id];
+        }
+        return false;        
     }
     
     handleClick(id){

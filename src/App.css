@@ -1158,7 +1158,14 @@ tspan{
   cursor:pointer;
   color:white;
 }
-
+.dropdown-li{
+  position:absolute;
+  z-index:100;
+}
+.dropdown-li:hover{
+  cursor:pointer;
+  background:#e6e6e6;
+}
 .add-company-button {
   position: absolute;
   left: 310px;
@@ -1655,7 +1662,7 @@ tspan{
 .githublistcont{
   width:fit-content;
   margin:auto;
-  margin-top:30%;  
+  margin-top:10%;  
 }
 .background{
   width:100%;

@@ -131,7 +131,8 @@ class ProfileTable extends Component {
         })
     }
     isSolved(id){
-        return this.state.userData['user_solved_dict'][id];
+        if(!this.props.userData['user_solved_dict'] || this.props.userData['user_solved_dict'][id] == undefined) return false;
+        return this.props.userData['user_solved_dict'][id];
     }
     
     handleClick(id){

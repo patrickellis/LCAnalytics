@@ -95,7 +95,7 @@ class Stats extends Component {
             idList : idList
         })
         let radarData = idsToRadar(idList);
-        await fetchDatesFromIds('PatrickEllis','LeetCode',commonIDS,this.setSlugAndDatesData,numProblems,solvedCounter);
+        await fetchDatesFromIds('PatrickEllis','LeetCode',commonIDS,this.setSlugAndDatesData,numProblems,solvedCounter,this.props.user['token']);
         
         
         this.setState({

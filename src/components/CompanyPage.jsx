@@ -48,7 +48,7 @@ class CompanyPage extends Component {
                 <>                
                 <StatsHeader/>
                 <div class="m-ht4nkg">
-                    <Stats setLoadingStatus={this.props.setLoadingStatus} name={this.props.name} userData={this.props.userData} data={this.props.data} isLoaded={this.props.isLoaded}/>
+                    <Stats user={this.props.user} setLoadingStatus={this.props.setLoadingStatus} name={this.props.name} userData={this.props.userData} data={this.props.data} isLoaded={this.props.isLoaded}/>
                     <div class="separator"></div>
                     <CompanyNav setLoadingStatus={this.props.setLoadingStatus} name={this.props.name} updateDataTimePeriod={this.props.updateDataTimePeriod} toggleDisplay={this.toggleDisplay}/>
                     {this.state.displayQuestions && 

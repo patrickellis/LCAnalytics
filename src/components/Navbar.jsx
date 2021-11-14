@@ -26,7 +26,13 @@ class NavBar extends Component {
         })       
     }
     logout(){
-        console.log("signing out");
+        console.log("signing out");        
+        for (let i = 0; i < window.localStorage.length; i++) {
+            let key = window.localStorage.key(i);
+            if (key.slice(0,8) === "firebase") {
+                localStorage.removeItem(key);
+            }
+        }
         this.setState({
             redirect : true
         })

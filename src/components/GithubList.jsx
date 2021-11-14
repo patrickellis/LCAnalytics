@@ -1,39 +1,55 @@
 import {React,Component} from 'react';
 import {getUserRepositories} from '../scripts/github';
 import { Route, Redirect } from 'react-router'
+
+function lastListMount(){
+    var lastAccess = localStorage.getItem('lastListMount');
+    lastAccess = new Date(lastAccess);
+    
+}
 class GithubList extends Component {
     constructor(props){
         super(props);
         this.state = {
             repos : [],            
-            redirect : false
+            redirect : false            
         }
         this.setRepos = this.setRepos.bind(this);
     }
   
-    componentDidMount(){        
+    componentDidMount(){       
+        if(localStorage.getItem('userObject') !== null && !this.props.displayModalNav){
+            this.props.toggleModal();
+            const userObject = JSON.parse(localStorage.getItem('userObject'));
+            this.props.setUserRepositoryAndBranch(userObject);     
+            window.sessionStorage.setItem('firstListMount', 'complete');       
+        } 
         const currentUser = this.props.user['auth']['currentUser'];
         const ghUsername = currentUser['reloadUserInfo']['screenName'];
         const token = this.props.user['responseToken'];
         console.log("USER INFO: ", currentUser, ", ", ghUsername, ", ", token);
         console.log("USER:",ghUsername);
-        getUserRepositories(ghUsername,token,this.setRepos);
+        getUserRepositories(ghUsername,token,this.setRepos);        
     }
     onClick(userObject){        
+        console.log("userObject: ", userObject);
         this.props.setUserRepositoryAndBranch(userObject);
+        // localStorage updates here:
+        console.log("updating localstorage");
+        localStorage.setItem('userObject',JSON.stringify(userObject));
+        //localStorage.setItem('user',JSON.stringify(this.props.user));
         this.setState({
             redirect:true
         })
     }
-    setRepos(repos){
+    setRepos(repos){        
         this.setState({
             repos:repos
         })
     }
     render() {   
         let areWeRedirecting = this.state.redirect;         
-      return(      
-        <>                     
+      return(                                               
             <> 
             <div class="background">
                 <div class="outer-container-github">
@@ -58,9 +74,7 @@ class GithubList extends Component {
                 </div>
                 </div>
             </div>
-            </>
-            
-        </>
+            </>                   
       )
     }
   }

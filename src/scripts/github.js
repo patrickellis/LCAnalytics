@@ -1,5 +1,4 @@
 import axios from 'axios';
-import TOKEN from '../data/authToken';
 import { idsToRadar } from './util';
 const problems = require('../data/problems.json');
 
@@ -75,7 +74,8 @@ export const getUserRepositories = (username,token,setRepos) => {
  * @param {*} setUserData - function passed from App.js that sets object state to hold all user data
  * @returns 
  */
-export const fetchGithubRepo = (username,repo_name,branch_name,setUserData) => {
+export const fetchGithubRepo = (username,repo_name,branch_name,setUserData,token) => {
+    console.log("TOKEN: ",token);
     var new_difficulties = {'Easy':0,'Medium':0,'Hard':0};
     var new_solved = []
     var new_solved_total = 0
@@ -83,7 +83,7 @@ export const fetchGithubRepo = (username,repo_name,branch_name,setUserData) => {
     var url = 'https://api.github.com/repos/'+username+'/'+repo_name+'/git/trees/'+branch_name+'?recursive=0' 
     axios.get(url,{
         'headers' : {
-            'Authorization' : 'token ' + TOKEN
+            'Authorization' : 'token ' + token
         }
     })
             .then(res => {
@@ -104,7 +104,7 @@ export const fetchGithubRepo = (username,repo_name,branch_name,setUserData) => {
                 difficulties = new_difficulties;  
                 ids_solved = new_solved;     
                 user_solved_dict = new_user_solved_dict;             
-                fetchDatesFromAllUserIds(username,repo_name,ids_solved,setUserData);                                                
+                fetchDatesFromAllUserIds(username,repo_name,ids_solved,setUserData, token);                                                
                 return 
             })       
     return;
@@ -216,7 +216,7 @@ function setAllUserInfo(oldest_commits,newest_commits,slugData,setUserData){
  * @param {*} setUserData - setter method that updates the state of the object that calls this function (App.js)
  * @returns 
  */
-export const fetchDatesFromAllUserIds = (username,repo_name,ids,setUserData) => {    
+export const fetchDatesFromAllUserIds = (username,repo_name,ids,setUserData,token) => {    
     var oldest_commits = []
     var newest_commits = []
     var slugData = []
@@ -227,7 +227,7 @@ export const fetchDatesFromAllUserIds = (username,repo_name,ids,setUserData) => 
         var url = 'https://api.github.com/repos/'+username+'/'+repo_name+'/commits?path='+id_slugs[i];
         axios.get(url,{
             'headers' : {
-                'Authorization' : 'token ' + TOKEN
+                'Authorization' : 'token ' + token
             }
             })
                 .then(res => {                    
@@ -266,7 +266,7 @@ export const fetchDatesFromAllUserIds = (username,repo_name,ids,setUserData) => 
  * @param {*} solvedCounter - number of solved problems by user (today)
  * @returns - no return value, instead the setData function is used to update calling objects' state
  */
-export const fetchDatesFromIds = (username,repo_name,ids,setData,numProblems,solvedCounter) => {    
+export const fetchDatesFromIds = (username,repo_name,ids,setData,numProblems,solvedCounter,token) => {    
     var id_slugs = convert_ids_to_slugs(ids)    
     var oldest_commits = []
     var newest_commits = []    
@@ -279,7 +279,7 @@ export const fetchDatesFromIds = (username,repo_name,ids,setData,numProblems,sol
         var url = 'https://api.github.com/repos/'+username+'/'+repo_name+'/commits?path='+id_slugs[i];
         axios.get(url,{
             'headers' : {
-                'Authorization' : 'token ' + TOKEN
+                'Authorization' : 'token ' + token
             }
             })
             .then(res => {

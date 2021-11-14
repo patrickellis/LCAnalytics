@@ -15,21 +15,26 @@ function filter(){
             box.style.borderBottomLeftRadius ='5px';
             box.style.borderBottomRightRadius ='5px';
             dropEl.style.height = 0
+            dropEl.style.display = 'none';
             return dropEl.innerHTML = ''              
         }
-
+        else{
+            dropEl.style.display = 'block';
+        }
         const filteredWords = words.filter(word => word.toLowerCase().includes(userInput)).sort().splice(0, 5)
         
         dropEl.innerHTML = ''
         filteredWords.forEach(item => {
             const listEl = document.createElement('li')
+            listEl.classList.add('dropdown-li')
             const spanColored = document.createElement('span');
             const spanUncolored = document.createElement('span');
             spanColored.classList.add('spanColored');
             spanUncolored.classList.add('spanUncolored');
-            listEl.addEventListener('click', ()=>{                
+            listEl.addEventListener('click', ()=>{                             
                 formEl.value=item;
                 formEl.focus();
+                dropEl.style.height = 0;
             })
             spanColored.textContent = item.slice(0,lengthInput);
             spanUncolored.textContent=item.slice(lengthInput,item.length);
