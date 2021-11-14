@@ -87,11 +87,13 @@ class NavBar extends Component {
                                 <Link to='/companies' replace>Companies</Link>                    
                             </span>
                         </div>
+                        {/*
                         <div class="m-ijakdu activeLink">
                             <span class="m-1nu064n">
                                 <Link to='/home' replace>Home</Link>                    
                             </span>
                         </div>
+                        */}
                     </div>
                     </div>
                     <div class="m-8bmlvk">
