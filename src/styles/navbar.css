@@ -167,6 +167,27 @@
 .statsPage p{
     font-family:'Roboto' !important;
 }
+#loading-gif{
+    transition: 1s all;
+    top:0px;
+    position:relative;
+}
+.button-container,.loginTitle{
+    transition: 0.4s all;
+    opacity:1;
+}
+#leetdata{
+    font-family: 'Aktiv Grotesk' !important;
+    font-weight:300 !important;
+    font-size:3rem;
+    position:absolute;
+    left:50%;
+    top:65%;
+    transform:translate(-50%,-50%);
+    color:white;
+    opacity: 0;
+    transition:1s all;
+}
 .m-8bmlvk {
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;

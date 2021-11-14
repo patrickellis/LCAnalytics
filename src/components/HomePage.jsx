@@ -6,27 +6,59 @@ class HomePage extends Component {
     constructor(props){
         super(props);
        
+        this.loadingAnimation = this.loadingAnimation.bind(this);
+        this.unloadingAnimation = this.unloadingAnimation.bind(this);
       
     }
     componentDidMount(){
         setActiveLink(2);
+        //setTimeout(this.loadingAnimation, 1000);
+        //setTimeout(this.unloadingAnimation, 3000);
     }
 
-
-  
+    loadingAnimation(){
+      const gif = document.getElementById('loading-gif');
+      const form = document.getElementById('button-container');
+      const header = document.getElementById('loginTitle');
+      const leetdata = document.getElementById('leetdata');
+      leetdata.style.opacity = 1;
+      form.style.opacity = '0';
+      header.style.opacity ='0';
+      gif.style.width='280px';
+      gif.style.height='213px';
+      gif.style.top='13rem';
+    }
+    unloadingAnimation(){
+      const gif = document.getElementById('loading-gif');
+      const form = document.getElementById('button-container');
+      const header = document.getElementById('loginTitle');
+      const leetdata = document.getElementById('leetdata');
+      leetdata.style.opacity = '0';
+      setTimeout(()=>{
+        form.style.opacity = '1';
+        header.style.opacity ='1';
+      }, 500);
+      gif.style.width='210px';
+      gif.style.height='160px';
+      gif.style.top='0rem';
+    }
     render() {            
       return(
         <>            
           <div class="login-background">
             <div class="login">
                   <div class="loginFormContainer">
+                    <h1 id="leetdata">Leetdata</h1>
                       {/*<BeatLoader color={'rgb(255,255,255)'} loading={true} size={15} />  */}
                       <div class="image-container">
-                        <img style={{width:'210px',height:'160px'}} src="loading-animation.gif"/>
+                        <img id="loading-gif" style={{width:'210px',height:'160px'}} src="loading-animation.gif"/>                        
                       </div>
-                      <h1 class="loginTitle">Sign In</h1>
-                      <div class="button-container">
-                        <button class="login-button" onClick={this.props.login}>
+                      <h1 class="loginTitle" id="loginTitle">Sign In</h1>
+                      <div class="button-container" id="button-container">
+                        <button class="login-button" onClick={() => {
+                          this.props.login();
+                          this.loadingAnimation();
+                        }}>
                           <img src="https://d33wubrfki0l68.cloudfront.net/9af0ed00377bb3a2b96af81329a8cb70b0fbdaaa/5e71e/assets/images/github.png" style={{width:'35px',height:'35px',marginRight:'0.5rem'}}/>
                           Login
                           </button>
