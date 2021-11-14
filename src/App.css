@@ -2,6 +2,8 @@
   text-align: center;
   background:#6b6889;
 }
+@import url(//db.onlinewebfonts.com/c/c8f8ca27fbfaebae06ac77d4ec007453?family=Aktiv+Grotesk);
+@import url(//db.onlinewebfonts.com/c/a59a10fc173a405262ecba082980066e?family=Aktiv+Grotesk);
 * {
   user-select: none;
 }
@@ -36,7 +38,7 @@ body,html{
   background:rgb(222, 225, 233) !important; 
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
-  font-family: 'Roboto',sans-serif;
+  font-family: 'Aktiv Grotesk','Roboto',sans-serif;
   -webkit-font-smoothing: subpixel-antialiased;
   font-size: 10px;
   --nav-main-bg-color: #140e30;
@@ -2642,4 +2644,50 @@ les {
 }
 .tagsHeader{
   width: 512px !important;
+}
+.login{
+  width:55rem;
+  height:58rem;
+  left:50%;
+  top:50%;
+  position:fixed;
+  transform: translate(-50%,-50%);
+  background:#140a32;
+  border-radius:2rem;
+}
+
+.loginTitle{
+  width:100%;
+  text-align:center;
+  font-size:3.2rem;
+  color:white;
+  font-weight:300;
+}
+.login-button{
+  width:30rem;
+  height:4rem;
+  font-size:1.4rem;
+  color:white;
+  border-radius:10px;
+  margin:auto;
+  text-align: center;
+  background: rgb(81,120,232);
+  background: linear-gradient(0deg, rgba(81,120,232,1) 0%, rgba(79,125,255,1) 100%);
+}
+.button-container{
+  margin:auto;
+  width:fit-content;
+  margin-top:10rem;
+}
+.image-container{
+  width:fit-content;
+  margin:auto;
+}
+.input-label{
+  color:white;
+  margin-left:0.3rem;
+  font-size:1.1rem; 
+}
+.remember-me-container{
+  margin-top:1rem;
 }

@@ -65,7 +65,7 @@ class ProfilePage extends Component {
     componentDidMount(){        
         setActiveLink(0);        
         this.computeListCompletion();        
-        
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
     }
     componentWillReceiveProps(){
         console.log("receiving props");
@@ -164,6 +164,7 @@ class ProfilePage extends Component {
             initialFilter : item['category'],
             displayIndex : 2,            
         })
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
     }
 
     render(){

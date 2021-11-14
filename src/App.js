@@ -87,6 +87,7 @@ class App extends Component {
     this.getUserData = this.getUserData.bind(this);
     this.toggleModal = this.toggleModal.bind(this);
     this.toggleModalFromNav = this.toggleModalFromNav.bind(this);
+    this.login = this.login.bind(this);
   }
 
   setUserRepositoryAndBranch(user){
@@ -144,7 +145,7 @@ class App extends Component {
     })
 }
   async componentDidMount(){           
-      //if (lastLoginExpired(localStorage.getItem("lastSignIn"))) {               
+      {/*      
         setPersistence(auth, browserLocalPersistence)
           .then(() => {
               signInWithPopup(auth, provider)
@@ -182,7 +183,48 @@ class App extends Component {
                 const credential = GithubAuthProvider.credentialFromError(error);
                 // ...
               });    
-          });           
+          }); 
+        */}          
+  }
+  async login(){
+    setPersistence(auth, browserLocalPersistence)
+          .then(() => {
+              signInWithPopup(auth, provider)
+              .then((result) => {
+                // This gives you a GitHub Access Token. You can use it to access the GitHub API.
+                const credential = GithubAuthProvider.credentialFromResult(result);
+                const token = credential.accessToken;
+                // logic for displaying modal here
+                this.setState({
+                  displayModal : true
+                })
+                // The signed-in user info.
+                const user = result.user;
+                user['responseToken'] = token;
+                console.log("USER: ", user);
+
+                let userStore = JSON.stringify(user);
+                let lastSignInStore = JSON.stringify(Date.now());
+                console.log("Updating local storage with: ", userStore, ", ", lastSignInStore);
+                localStorage.setItem('User',JSON.stringify(user));
+                localStorage.setItem('lastSignIn', JSON.stringify(Date.now()));
+                          
+                this.setState({
+                  user : user
+                })
+                // ...
+              }).catch((error) => {
+                // Handle Errors here.
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                // The email of the user's account used.
+                const email = error.email;
+                console.log("EMAIL:",email);
+                // The AuthCredential type that was used.
+                const credential = GithubAuthProvider.credentialFromError(error);
+                // ...
+              });    
+          });        
   }
   render(){
     return (
@@ -200,7 +242,7 @@ class App extends Component {
                       {this.state.user ?
                         <Redirect to="/profile"/>
                         :
-                        <HomePage setUserRepositoryAndBranch={this.setUserRepositoryAndBranch} user={this.state.user}/>
+                        <HomePage login={this.login} setUserRepositoryAndBranch={this.setUserRepositoryAndBranch} user={this.state.user}/>
                         }
                     </Route> 
                     <Route exact path="/home">
