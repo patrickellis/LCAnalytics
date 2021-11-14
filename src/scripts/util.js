@@ -10,7 +10,7 @@ export const userHasSolvedProblem = (problemID, userdata) => {
     }
     return false
 }
-    
+
 export const idsToRadar = (data) => {
     var cat_name_to_idx = {}
     for(let i = 0; i < category_list.length; ++i){

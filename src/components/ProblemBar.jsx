@@ -32,11 +32,14 @@ class ProblemBar extends Component {
         ew = ew.toString()+'%';
         mw = mw.toString()+'%';
         dividerTwoLeft = dividerTwoLeft.toString()+'%';
-        return(
+        let barwidth = this.props.width != undefined ? (this.props.width / 100) * 35 + 'rem' : '18rem'; 
+        console.log(barwidth);
+        return(            
             <>
                 <div class='m-1rmcrqn'>
                     <div class="m-1spa8xs">
                         <div class="m-15leskn">
+                            {this.props.width == undefined ?
                             <div class="m-18xjao8">
                                 {this.props.easy}<span class="m-dytaiz green">E</span>
                                 &nbsp;
@@ -44,7 +47,9 @@ class ProblemBar extends Component {
                                 &nbsp;
                                 {this.props.hard}<span class="m-dytaiz red">H</span>                                                        
                             </div>
-                            <div class="m-1s5vw6 e5mzqaz1">
+                            : null
+                            }
+                            <div style={ {width: barwidth}} class="m-1s5vw6 e5mzqaz1">
                                 <div data-progress="47" class="m-148kaov e5mzqaz0" style={{width: ew}}></div>
                                 <div data-progress="47" class="m-148kaov e5mzqaz0 orangebar" style={{width: mw, left:ew}}></div>
                                 <div class="m-oxskvv" style={{left: ew}}></div>

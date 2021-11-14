@@ -2586,6 +2586,9 @@ les {
   
   transform: translate(-0%,30%);
 }
+.lowerContent{
+  margin-bottom:1rem;
+}
 .companypopup{
   display:none;
   width:150px;

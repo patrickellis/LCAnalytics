@@ -3,7 +3,7 @@ import AreaChart from './AreaChart';
 import CompanyTable from './CompanyTable';
 import CompaniesTable from './CompaniesTable'
 import CompanyNav from './CompanyNav';
-import {fetchGithubRepo} from '../scripts/github'
+import {category_completion_list} from '../scripts/github'
 import Stats from './StatsSection';
 import RadarChart from './RadarChart';
 import StatsHeader from './StatsHeader';
@@ -20,7 +20,7 @@ import '../styles/profileStatistics.css';
 import AllProblemsTable from './AllProblemsTable';
 import AllProblemsTableNew from './AllProblemsTableNew';
 import CompanyTableNew from './CompanyTableNew'
-
+import CategoryTableProfile from './CategoryTableProfile';
 import LCpatterns from '../data/Lists/LeetcodePatterns';
 import AllLists from '../data/Lists/AllLists';
 
@@ -62,12 +62,13 @@ class ProfilePage extends Component {
     
     componentDidMount(){        
         setActiveLink(0);        
-        this.computeListCompletion();
+        this.computeListCompletion();        
         
     }
     componentWillReceiveProps(){
         console.log("receiving props");
         this.computeListCompletion();
+        
     }
     computeListCompletion(){
         let trackedCompanies = localStorage.getItem('Lists')===null?[]:JSON.parse(localStorage.getItem('Lists'));
@@ -141,7 +142,6 @@ class ProfilePage extends Component {
         }
     }
     removeCompanyFromUserLists(company){
-        
         let lists = JSON.parse(localStorage.getItem('Lists'));
         console.log("removing company from list, list before removal: ", lists);
         for(let i = 0; i < lists.length; ++i){
@@ -183,8 +183,11 @@ class ProfilePage extends Component {
                         
                         <div class="lowerContent">
                             <ProfileStatisticsProgress options={options} updateProgress={this.updateProgress} data={this.state.haveUpdatedSolvedOverTime?this.state.solvedOverTime:this.props.userData.solvedOverTime}/>
+                            
                         </div>
-                        <Heatmap/>
+                        <CategoryTableProfile data={this.props.userData['category_completion_list']}/>
+                        {/*<Heatmap/>*/}
+
                         </div>
                         </>
                     }        

@@ -1,3 +1,6 @@
+
+import idToCategories from '../data/problemIdToCategories.json';
+import category_list from '../data/categoryList';
 import axios from 'axios';
 import { idsToRadar } from './util';
 const problems = require('../data/problems.json');
@@ -15,6 +18,53 @@ var levelIdToText = {1:'Easy',2:'Medium',3:'Hard'};
 var difficulties = {'Easy':0,'Medium':0,'Hard':0};
 var userSolvedTotal = 0;
 var ids_solved = []
+
+export const category_completion_list = (ids_solved) => {
+    // obj keys => 'category', 'count', 'easy', 'medium', 'hard'
+    // number of problems in each category
+    let counts = new Array(category_list.length).fill(0);    
+    let cat_name_to_id = {};
+    let result = {};
+
+    for(let i = 0; i < category_list.length; ++i){
+        cat_name_to_id[category_list[i]] = i;
+        result[category_list[i]] = {'category':category_list[i],'count':0, 'maxCount':0,'Easy':0,'Medium':0,'Hard':0,'1':0,'2':0,'3':0};
+    }
+
+    for(let i = 0; i < ids_solved.length; ++i){
+        let id = ids_solved[i];
+        let level = id_to_level[id]; // 1,2,3
+        let level_text = levelIdToText[level];
+
+        let categories = idToCategories[id];
+        if(categories == undefined) continue;
+        for(let j = 0; j < categories.length; ++j){   
+            result[categories[j]][level]++;
+            result[categories[j]][level_text]++;
+            counts[cat_name_to_id[categories[j]]]++;
+        }
+    }
+    let maxCount = 0;
+    for(let i = 0; i < category_list.length; ++i){
+        let count =  counts[i];
+        maxCount = count > maxCount ? count : maxCount;
+    }
+    for(let i = 0; i < category_list.length; ++i){
+        result[category_list[i]]['count'] = counts[i];
+        result[category_list[i]]['maxCount'] = maxCount;
+        result[category_list[i]]['percent_width'] = maxCount == 0 ? 0 : counts[i] / maxCount * 100;
+    }
+    let resultArray = []
+    for(let i = 0; i < category_list.length; ++i){
+        resultArray.push(result[category_list[i]]);
+    }
+    resultArray.sort((a,b) => {
+        let a_count = a['count'];
+        let b_count = b['count'];
+        return a_count < b_count ? 1 : a_count == b_count ? 0 : -1;
+    })
+    return resultArray;
+}
 
 /**
  *  initialises dictionaries
@@ -104,7 +154,7 @@ export const fetchGithubRepo = (username,repo_name,branch_name,setUserData,token
                 difficulties = new_difficulties;  
                 ids_solved = new_solved;     
                 user_solved_dict = new_user_solved_dict;             
-                fetchDatesFromAllUserIds(username,repo_name,ids_solved,setUserData, token);                                                
+                fetchDatesFromAllUserIds(username,repo_name,ids_solved,setUserData,token);                                                
                 return 
             })       
     return;
@@ -190,6 +240,7 @@ function setInfo(oldest_commits,newest_commits,flag,slugData,numProblems,solvedC
  */
 function setAllUserInfo(oldest_commits,newest_commits,slugData,setUserData){
     let solvedOverTime = weeklyProgressFromDates(oldest_commits,4,2000,userSolvedTotal,false);
+    let category_data = category_completion_list(ids_solved);
     let user_data = {
         'oldest_commits' : oldest_commits,
         'newest_commits' : newest_commits,        
@@ -198,7 +249,8 @@ function setAllUserInfo(oldest_commits,newest_commits,slugData,setUserData){
         'ids_solved' : ids_solved, 
         'user_solved_dict' : user_solved_dict,
         'difficulties' : difficulties,
-        'radar_data' : idsToRadar(ids_solved)
+        'radar_data' : idsToRadar(ids_solved),
+        'category_completion_list' : category_data
     }
     user_data['slugData'].sort(function(a,b){
         if(a['daysAgo'] < b['daysAgo']) return -1;
