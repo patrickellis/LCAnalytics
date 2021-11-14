@@ -159,12 +159,7 @@ class ProfilePage extends Component {
         })
     }
     
-    switchToCategoryPage(item){
-        console.log(item);
-        setTimeout(function(){
-            document.getElementById('tags-select').value=item['category'];
-         }, 3000);
-
+    switchToCategoryPage(item){        
         this.setState({
             initialFilter : item['category'],
             displayIndex : 2,            

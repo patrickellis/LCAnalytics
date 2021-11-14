@@ -2,7 +2,7 @@ import {React,Component} from 'react';
 import problemIdToCategories from '../data/problemIdToCategories.json'
 import {getURLfromId} from '../scripts/github'
 import Pagination from './Pagination';
-
+import Categories from '../data/categoryList.js';
 const TAGS = ['two-pointers','string','dynamic-programming','hash-table','math','depth-first-search','sorting','greedy','breadth-first-search',
 'tree','binary-search','matrix','two-pointers','bit-manipulation','stack','design','heap-priority-queue','backtracking','graph','simulation',
 'prefix-sum','sliding-window','linked-list','counting','union-find','recursion','binary-search-tree','trie','monotonic-stack','ordered-set',
@@ -91,18 +91,19 @@ class AllProblemsTable extends Component {
         })
         )
         */
-       if(this.props.initialFilter.length > 3){
-            document.getElementById('tags-select').value=this.props.initialFilter;
-            this.flipNavClasses(2);
-            this.onSelectChange();
-       }
         this.setState({
             filteredData : this.state.data,
             currentData : this.state.data.slice(0,100),
             currentIndex : 1,
             totalCount : this.state.data.length,
             pageSize : 100            
-        })
+        },() => {if(this.props.initialFilter.length > 3){
+            document.getElementById('tags-select').value=this.props.initialFilter;
+            this.flipNavClasses(2);
+            this.onSelectChange();
+       }})
+        
+       
         /*
         
         let newData = []  
@@ -294,7 +295,9 @@ class AllProblemsTable extends Component {
                                      </label>    
                                     </div>
                                     <div class="selectContainer">
-                                        <select name="tags" id="tags-select" onChange={this.onSelectChange}>                                            
+                                        <select name="tags" id="tags-select" onChange={this.onSelectChange}>    
+                                            {Categories.map(item => <option value={item}>{item}</option>)}
+                                        {/*                                        
                                             <option value="All">All</option>
                                             <option value="String">String</option>
                                             <option value="Backtracking">Backtracking</option>
@@ -326,6 +329,7 @@ class AllProblemsTable extends Component {
                                             <option value="Biconnected Component">Biconnected Component</option>   
                                             <option value="Radix Sort">Radix Sort</option>   
                                             <option value="Merge Sort">Merge Sort</option>   
+                                        */}
                                         </select>
                                     </div>
                                 </th>                                 
