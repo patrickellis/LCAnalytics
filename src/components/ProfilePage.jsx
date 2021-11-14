@@ -49,7 +49,8 @@ class ProfilePage extends Component {
             displayingList : false,
             isCompanyList : false,
             listId : "",
-            listCompletion : {}
+            listCompletion : {},
+            haveUpdatedSolvedOverTime : false,            
         };
         this.updateProgress = this.updateProgress.bind(this);
         this.toggleDisplay = this.toggleDisplay.bind(this);
@@ -96,13 +97,14 @@ class ProfilePage extends Component {
             }*/}
             listCompletion[trackedCompanies[i]] = counter;
         }
-        
+        //this.updateProgress(4);
         console.log(listCompletion);
         this.setState({
             listCompletion:listCompletion,
             trackedCompanies : trackedCompanies
         });
     }
+
     isSolved(id){
         if(!this.props.userData['user_solved_dict'] || this.props.userData['user_solved_dict'][id] == undefined) return false;
         return this.props.userData['user_solved_dict'][id];
@@ -117,7 +119,7 @@ class ProfilePage extends Component {
         let solvedOverTime = weeklyProgressFromDates(this.props.userData['oldest_commits'],weeks,this.state.numProblems,this.props.userData.ids_solved.length,false); 
             this.setState({
                 solvedOverTime : solvedOverTime,                
-            })
+            },this.setState({haveUpdatedSolvedOverTime : true}))
     }
     handleListClick(id){
 
@@ -163,7 +165,7 @@ class ProfilePage extends Component {
             {value: "24", label: "6 Months"}
         ]
         let {trackedCompanies} = this.state;
-        
+        console.log("Current index: ", idx);
 
         return(            
             <>       
@@ -180,13 +182,13 @@ class ProfilePage extends Component {
                             </div>
                         
                         <div class="lowerContent">
-                            <ProfileStatisticsProgress options={options} updateProgress={this.updateProgress} data={this.state.solvedOverTime}/>
+                            <ProfileStatisticsProgress options={options} updateProgress={this.updateProgress} data={this.state.haveUpdatedSolvedOverTime?this.state.solvedOverTime:this.props.userData.solvedOverTime}/>
                         </div>
                         <Heatmap/>
                         </div>
                         </>
                     }        
-                {idx == 2 &&
+                {idx == 1 &&
                     (                    
                     this.state.displayingList?
                         this.state.isCompanyList?
@@ -258,12 +260,15 @@ class ProfilePage extends Component {
                     </div>
                     )
                 }
-                {idx == 3 &&
+                {/*
+                {idx == 2 &&
                     <ProfileTable userData={this.props.userData} isLoaded={true}/>
                 }
-                {idx == 4 && 
+                */}
+                {idx == 2 && 
                     <AllProblemsTableNew data={this.state.data} userData={this.props.userData} />                    
                 }
+                
                 </div>
                                                 
             </>       

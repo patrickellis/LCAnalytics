@@ -7,7 +7,8 @@ class ProfileStatisticsProgress extends Component {
 
     }
 
-    async componentDidMount(){                
+    async componentDidMount(){        
+        //this.props.updateProgress(4);        
     }
     render(){        
         return(

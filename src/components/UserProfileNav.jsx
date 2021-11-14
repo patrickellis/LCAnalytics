@@ -96,15 +96,12 @@ class UserProfileNav extends Component {
                 <nav class="stroke">
                     <ul>
                       <li class="selected upNav" id="statisticsTab">Statistics</li>    
-                        <li class="unselected upNav" id="goalsTab">Goal Tracking</li>
+                        {/*<li class="unselected upNav" id="goalsTab">Goal Tracking</li>*/}
                         <li class="unselected upNav" id="listsTab">Lists</li>    
-                        <li class="unselected upNav" id="SRSTab">Spaced Repetition</li>       
+                        {/*<li class="unselected upNav" id="SRSTab">Spaced Repetition</li>*/}
                         <li class="unselected upNav" id="allQuestionsTab">All Questions</li>    
                     </ul>
                 </nav>
-                
-                        
-                            
             </div>            
         )
     }

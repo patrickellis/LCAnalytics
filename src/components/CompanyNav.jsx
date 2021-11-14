@@ -39,6 +39,7 @@ class CompanyNav extends Component {
         this.setState({
             loading : true
         },()=>{
+            document.getElementById('time-period').selectedIndex = '0';
             document.getElementById('loaderDiv').style.display = 'block';
             setTimeout(function(){ this.props.updateDataTimePeriod(this.props.name,period,this.setLoadingStatus); }.bind(this), 10);
             // 1yr, 2yr, 6mo, all_time            

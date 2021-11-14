@@ -10,19 +10,7 @@ function capitalizeFirstLetter(string) {
 
 function onFocus(){            
 }
-function onBlur(){
-    setTimeout(function(){
-        const box = document.querySelector('.ekk3vtk3');           
-        const dropEl = document.querySelector('.drop')      
-        if(!companies.includes(document.getElementById('search').value.toLowerCase())){
-            document.getElementById('search').value="";
-        }
-        //document.getElementById('search').value="";
-        dropEl.style.height = 0;
-        box.style.borderBottomLeftRadius ='5px';
-        box.style.borderBottomRightRadius ='5px';   
-    }, 100);
-}
+
 function hideOnClickOutside(element) {
     const outsideClickListener = event => {
         if (!element.contains(event.target) && isVisible(element)) { // or use: event.target.closest(selector) === null
@@ -62,7 +50,29 @@ function SearchBarFilter(props){
         let path = `/company`;
         history.push(path);
     }
-    
+    const onBlur = () => {
+        setTimeout(function(){
+            const box = document.querySelector('.ekk3vtk3');           
+            const dropEl = document.querySelector('.drop')      
+            if(!companies.includes(document.getElementById('search').value.toLowerCase())){
+                document.getElementById('search').value="";
+            }
+            else{
+                let input = document.getElementById('search').value;
+                document.getElementById('search').value="";
+                input = capitalizeFirstLetter(input);                
+                let data = props.data['6mo'][input];
+                props.updateData(data,input);
+                let path = '/company';
+                history.push(path);
+            }
+            //document.getElementById('search').value="";
+            dropEl.style.height = 0;
+            box.style.borderBottomLeftRadius ='5px';
+            box.style.borderBottomRightRadius ='5px';   
+        }, 100);
+    }
+
     useEffect(() => {          
       filter();
       hideOnClickOutside(document.querySelector('.drop'));

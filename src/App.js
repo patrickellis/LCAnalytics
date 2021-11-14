@@ -198,10 +198,10 @@ class App extends Component {
                   <Switch>                    
                     <Route exact path="/">
                       {this.state.user ?
-                      <h1>homepage</h1>
-                      :
-                      <Redirect to="/"/>
-                      }
+                        <Redirect to="/profile"/>
+                        :
+                        <HomePage setUserRepositoryAndBranch={this.setUserRepositoryAndBranch} user={this.state.user}/>
+                        }
                     </Route> 
                     <Route exact path="/home">
                       {this.state.user ?

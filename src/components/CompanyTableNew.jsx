@@ -146,10 +146,10 @@ class AllProblemsTable extends Component {
         var newData = this.state.filteredData;
         if(newData.length < 2) return;
         const dtoi = {'Easy':0,'Medium':1,'Hard':2}
-        if(newData[0]['level'] > newData[newData.length-1]['level']){
-            newData.sort((a,b) => a['level'] > b['level'] ? 1 : -1)
+        if(dtoi[newData[0]['Difficulty']] > dtoi[newData[newData.length-1]['Difficulty']]){
+            newData.sort((a,b) => dtoi[a['Difficulty']] > dtoi[b['Difficulty']] ? 1 : -1)
         } else {
-            newData.sort((a,b) => a['level'] < b['level'] ? 1 : -1)
+            newData.sort((a,b) => dtoi[a['Difficulty']] < dtoi[b['Difficulty']] ? 1 : -1)
         }        
         this.setState({
             filteredData : newData,
