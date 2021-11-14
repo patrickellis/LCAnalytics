@@ -2,6 +2,7 @@ import {React,Component} from 'react';
 import GithubList from './GithubList';
 import { setActiveLink } from '../scripts/util';
 import BeatLoader from "react-spinners/BeatLoader";
+import '../styles/navbar.css';
 class HomePage extends Component {
     constructor(props){
         super(props);
@@ -12,6 +13,7 @@ class HomePage extends Component {
     }
     componentDidMount(){
         setActiveLink(2);
+        document.getElementById('loading-gif').play();
         //setTimeout(this.loadingAnimation, 1000);
         //setTimeout(this.unloadingAnimation, 3000);
     }
@@ -51,7 +53,11 @@ class HomePage extends Component {
                     <h1 id="leetdata">Leetdata</h1>
                       {/*<BeatLoader color={'rgb(255,255,255)'} loading={true} size={15} />  */}
                       <div class="image-container">
-                        <img id="loading-gif" style={{width:'210px',height:'160px'}} src="loading-animation.gif"/>                        
+                        {/*<img id="loading-gif" style={{width:'210px',height:'160px'}} src="loading-animation.gif"/>*/}
+                        <video id='loading-gif' width="210" height="160" loop>
+                          <source src="loading-animation.mp4" type="video/mp4" />                          
+                          Your browser does not support the video tag.
+                        </video>                        
                       </div>
                       <h1 class="loginTitle" id="loginTitle">Sign In</h1>
                       <div class="button-container" id="button-container">

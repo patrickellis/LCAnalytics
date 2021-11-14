@@ -177,7 +177,7 @@
     opacity:1;
 }
 #leetdata{
-    font-family: 'Aktiv Grotesk' !important;
+    font-family: "Aktiv Grotesk", 'Roboto', sans-serif !important;
     font-weight:300 !important;
     font-size:3rem;
     position:absolute;
