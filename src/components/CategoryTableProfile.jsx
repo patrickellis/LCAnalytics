@@ -13,7 +13,7 @@ class CategoryTableProfile extends Component {
     constructor(props){
         super(props);
         this.state = {
-            goal : 20
+            goal : 25
         };
         this.handleListClick = this.handleListClick.bind(this);
     }
