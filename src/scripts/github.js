@@ -131,11 +131,12 @@ export const fetchGithubRepo = (username,repo_name,branch_name,setUserData,token
     var new_solved_total = 0
     var new_user_solved_dict = {}
     var url = 'https://api.github.com/repos/'+username+'/'+repo_name+'/git/trees/'+branch_name+'?recursive=0' 
+    console.log(url);
     axios.get(url,{
         'headers' : {
             'Authorization' : 'token ' + token
         }
-    })
+    })  
             .then(res => {
                 var tree = res.data.tree   
                 console.log(tree);             
@@ -154,10 +155,8 @@ export const fetchGithubRepo = (username,repo_name,branch_name,setUserData,token
                 difficulties = new_difficulties;  
                 ids_solved = new_solved;     
                 user_solved_dict = new_user_solved_dict;             
-                fetchDatesFromAllUserIds(username,repo_name,ids_solved,setUserData,token);                                                
-                return 
-            })       
-    return;
+                fetchDatesFromAllUserIds(username,repo_name,ids_solved,setUserData,token);                                                                
+            })           
 }
 export const get_object_from_id = (id) => {
     console.log("inside with id: ", id);   
@@ -257,6 +256,7 @@ function setAllUserInfo(oldest_commits,newest_commits,slugData,setUserData){
         if(a['daysAgo'] > b['daysAgo']) return 1;
         return 0;
     });
+    console.log("user data: ", user_data);    
     setUserData(user_data);
     return user_data;
 }
@@ -269,6 +269,7 @@ function setAllUserInfo(oldest_commits,newest_commits,slugData,setUserData){
  * @returns 
  */
 export const fetchDatesFromAllUserIds = (username,repo_name,ids,setUserData,token) => {    
+    console.log("fetching dates");
     var oldest_commits = []
     var newest_commits = []
     var slugData = []

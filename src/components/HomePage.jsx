@@ -12,12 +12,17 @@ class HomePage extends Component {
       
     }
     componentDidMount(){
-        setActiveLink(2);
-        document.getElementById('loading-gif').play();
+        setActiveLink(2);        
+        setTimeout(document.getElementById('loading-gif').play(),1000);
         //setTimeout(this.loadingAnimation, 1000);
         //setTimeout(this.unloadingAnimation, 3000);
     }
 
+    componentWillReceiveProps(nextprops){
+      if(nextprops.keyfound){
+        this.loadingAnimation();
+      }
+    }
     loadingAnimation(){
       const gif = document.getElementById('loading-gif');
       const form = document.getElementById('button-container');
@@ -54,7 +59,7 @@ class HomePage extends Component {
                       {/*<BeatLoader color={'rgb(255,255,255)'} loading={true} size={15} />  */}
                       <div class="image-container">
                         {/*<img id="loading-gif" style={{width:'210px',height:'160px'}} src="loading-animation.gif"/>*/}
-                        <video id='loading-gif' width="210" height="160" loop>
+                        <video id='loading-gif' width="210" height="160" autoplay loop muted>
                           <source src="loading-animation.mp4" type="video/mp4" />                          
                           Your browser does not support the video tag.
                         </video>                        

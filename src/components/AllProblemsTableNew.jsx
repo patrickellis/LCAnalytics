@@ -296,6 +296,7 @@ class AllProblemsTable extends Component {
                                     </div>
                                     <div class="selectContainer">
                                         <select name="tags" id="tags-select" onChange={this.onSelectChange}>    
+                                            <option value="All">All</option>
                                             {Categories.map(item => <option value={item}>{item}</option>)}
                                         {/*                                        
                                             <option value="All">All</option>

@@ -2695,3 +2695,20 @@ les {
 .remember-me-container{
   margin-top:1rem;
 }
+.target-line{
+  position:absolute;
+  width:58rem;
+  height: 110%;
+  top:0;
+  border-right:1px dashed rgb(39, 202, 180);
+  z-index:1;
+}
+.target-text{
+  position:absolute;  
+  font-size:1.1rem;
+  color:rgb(17, 0, 255);
+}
+.text{
+  float:right;
+  transform:translate(50%,0%);
+}

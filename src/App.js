@@ -77,7 +77,8 @@ class App extends Component {
       user : undefined,
       userObject : {},    
       displayModal : false,
-      displayModalNav : false  
+      displayModalNav : false  ,
+      keyfound : false,
     }
     this.setLoadingStatusTopLevel = this.setLoadingStatusTopLevel.bind(this);
     this.updateData = this.updateData.bind(this);
@@ -91,6 +92,7 @@ class App extends Component {
   }
 
   setUserRepositoryAndBranch(user){
+    console.log("set user repo");
     this.setState({
       userObject:user,
       displayModal:false,
@@ -145,7 +147,16 @@ class App extends Component {
     })
 }
   async componentDidMount(){           
-      {/*      
+    let keyfound = false;
+    for (let i = 0; i < window.localStorage.length; i++) {
+        let key = window.localStorage.key(i);
+        if (key.slice(0,8) === "firebase") {            
+            keyfound = true;
+            break;
+        }
+    }          
+    if(keyfound){
+      this.setState({keyfound:keyfound})
         setPersistence(auth, browserLocalPersistence)
           .then(() => {
               signInWithPopup(auth, provider)
@@ -184,7 +195,8 @@ class App extends Component {
                 // ...
               });    
           }); 
-        */}          
+        }
+                
   }
   async login(){
     setPersistence(auth, browserLocalPersistence)
@@ -242,7 +254,7 @@ class App extends Component {
                       {this.state.user ?
                         <Redirect to="/profile"/>
                         :
-                        <HomePage login={this.login} setUserRepositoryAndBranch={this.setUserRepositoryAndBranch} user={this.state.user}/>
+                        <HomePage keyfound={this.state.keyfound} login={this.login} setUserRepositoryAndBranch={this.setUserRepositoryAndBranch} user={this.state.user}/>
                         }
                     </Route> 
                     <Route exact path="/home">
@@ -268,7 +280,7 @@ class App extends Component {
                     </Route>                        
                     <Route path="/profile">
                       {this.state.user ?
-                      <ProfilePage data={problems} userData={this.state.userData} setLoadingStatusTopLevel={this.setLoadingStatusTopLevel} companyData={this.state.companyData['6mo']} updateData={this.updateData}/>  
+                      <ProfilePage isLoaded={this.state.isLoaded} data={problems} userData={this.state.userData} setLoadingStatusTopLevel={this.setLoadingStatusTopLevel} companyData={this.state.companyData['6mo']} updateData={this.updateData}/>  
                       :
                       <Redirect to="/"/>
                       }                      

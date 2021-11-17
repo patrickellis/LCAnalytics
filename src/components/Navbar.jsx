@@ -33,12 +33,13 @@ class NavBar extends Component {
                 localStorage.removeItem(key);
             }
         }
-        this.setState({
-            redirect : true
-        })
+        
         const auth = getAuth();
         signOut(auth).then(() => {
         // Sign-out successful.
+        this.setState({
+            redirect : true
+        })
         }).catch((error) => {
         // An error happened.
         });

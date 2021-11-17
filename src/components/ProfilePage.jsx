@@ -23,7 +23,7 @@ import CompanyTableNew from './CompanyTableNew'
 import CategoryTableProfile from './CategoryTableProfile';
 import LCpatterns from '../data/Lists/LeetcodePatterns';
 import AllLists from '../data/Lists/AllLists';
-
+import BeatLoader from "react-spinners/BeatLoader";
 
 
 
@@ -51,7 +51,9 @@ class ProfilePage extends Component {
             listId : "",
             listCompletion : {},
             haveUpdatedSolvedOverTime : false, 
-            initialFilter : '',           
+            initialFilter : '',  
+            haveComputedData : false,
+            goal : 18         
         };
         this.updateProgress = this.updateProgress.bind(this);
         this.toggleDisplay = this.toggleDisplay.bind(this);
@@ -65,6 +67,7 @@ class ProfilePage extends Component {
     componentDidMount(){        
         setActiveLink(0);        
         this.computeListCompletion();        
+       
         document.body.scrollTop = document.documentElement.scrollTop = 0;
     }
     componentWillReceiveProps(){
@@ -104,7 +107,8 @@ class ProfilePage extends Component {
         console.log(listCompletion);
         this.setState({
             listCompletion:listCompletion,
-            trackedCompanies : trackedCompanies
+            trackedCompanies : trackedCompanies,
+            haveComputedData : true
         });
     }
 
@@ -113,9 +117,11 @@ class ProfilePage extends Component {
         return this.props.userData['user_solved_dict'][id];
     }
 
-    toggleDisplay(id){                
+    toggleDisplay(id){       
+                 
         this.setState({
             displayIndex : id,
+            displayingList : false
         })
     }
     updateProgress(weeks){        
@@ -180,26 +186,36 @@ class ProfilePage extends Component {
 
         return(            
             <>       
+                {this.state.haveComputedData?null:
+                    <div class="loaderDiv" id="loaderDiv">
+                        <div class="loaderContainer">
+                            <BeatLoader color={'rgb(49,41,85)'} loading={true} size={15} />    
+                            </div>
+                    </div>}
                 <div class="m-ke934a"><div class="m-kdvz65"><div></div><div class="m-wrdtjf"><div class="m-171jxkh"></div></div></div></div>                                                                                                    
                 <div class="m-ht4nkg">
                     
                     <UserProfileNav toggleDisplay={this.toggleDisplay}/>
                     {idx == 0 &&
-                        <>
+                        <>                       
                         <div style={{width:'100%',paddingTop:'0px'}}>
                             <div class="upperContent">
-                            <ProfileStatisticsProblems difficulties = {this.props.userData.difficulties}/>
-                            <ProfileStatisticsRadar radar_data={this.props.userData.radar_data}/>
-                            </div>
-                        
-                        <div class="lowerContent">
-                            <ProfileStatisticsProgress options={options} updateProgress={this.updateProgress} data={this.state.haveUpdatedSolvedOverTime?this.state.solvedOverTime:this.props.userData.solvedOverTime}/>
-                            
-                        </div>
-                        <CategoryTableProfile switchToCategoryPage={this.switchToCategoryPage} data={this.props.userData['category_completion_list']}/>
+                                {this.state.haveComputedData ?       
+                                    <>                          
+                                    <ProfileStatisticsProblems difficulties = {this.props.userData.difficulties}/>
+                                    <ProfileStatisticsRadar radar_data={this.props.userData.radar_data}/>                                
+                                    </>
+                                : null}
+                            </div>                       
+                            <div class="lowerContent">
+                            {this.state.haveComputedData ?       
+                                <ProfileStatisticsProgress options={options} updateProgress={this.updateProgress} data={this.state.haveUpdatedSolvedOverTime?this.state.solvedOverTime:this.props.userData.solvedOverTime}/>                            
+                                : null}
+                            </div>                        
+                            <CategoryTableProfile switchToCategoryPage={this.switchToCategoryPage} data={this.props.userData['category_completion_list']}/>
                         {/*<Heatmap/>*/}
 
-                        </div>
+                        </div>:
                         </>
                     }        
                 {idx == 1 &&
