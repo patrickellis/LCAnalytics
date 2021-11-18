@@ -283,6 +283,7 @@ class AllProblemsTable extends Component {
                                 <th class="m-1itvjt0 idHeader">#</th>
                                 <th class="m-1itvjt0 titleHeader">Title</th>   
                                 <th class="m-1itvjt0 tagsHeader">
+                                    <div class="switchtextcont">
                                     <div class="tagsText">Tags</div>
                                     <div class="switchContainer">
                                         <label class="switch">
@@ -293,6 +294,7 @@ class AllProblemsTable extends Component {
                                         />
                                         <span class="slider round"></span>
                                      </label>    
+                                    </div>
                                     </div>
                                     <div class="selectContainer">
                                         <select name="tags" id="tags-select" onChange={this.onSelectChange}>    
@@ -361,7 +363,7 @@ class AllProblemsTable extends Component {
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" class="w-[18px] h-[18px] text-gray-5 dark:text-dark-gray-5"><path fill-rule="evenodd" d="M4 12a1 1 0 011-1h14a1 1 0 110 2H5a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>                                        
                                         }</td>
                                     <td>{item['id']}.</td>
-                                    <td>{item['title']}</td>     
+                                    <td class="bold">{item['title']}</td>     
                                     <td class="tags">                                                                       
                                                                                 
                                             <>

@@ -4,6 +4,8 @@
 }
 @import url(//db.onlinewebfonts.com/c/c8f8ca27fbfaebae06ac77d4ec007453?family=Aktiv+Grotesk);
 @import url(//db.onlinewebfonts.com/c/a59a10fc173a405262ecba082980066e?family=Aktiv+Grotesk);
+@import url(//db.onlinewebfonts.com/c/0a086e32e41c5e5960b26626757f07f3?family=Apercu);
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap);
 * {
   user-select: none;
 }
@@ -1536,6 +1538,19 @@ tspan{
 .tableContainer th{
   padding:15px 8px;
 }
+#tags-select{
+  border-radius:5px;
+  padding:3px;
+  border: 1px solid rgb(182, 181, 181);
+}
+.switchtextcont{
+  top:6.5px;
+  position:relative;  
+  height:fit-content;  
+  align-items:center;
+  width:fit-content;
+  display:inline-block;
+}
 
 .m-1itvjt0 th:last-child {
   padding: 0px;
@@ -1544,8 +1559,11 @@ tspan{
 }
 .m-1itvjt0 th:first-child {
   padding: 0px;
-  width: 0.8rem;
+  width: 1.3rem;
   border-radius: 6px 0px 0px 6px;
+}
+.solved:hover{
+  cursor:pointer;
 }
 .m-1m0ike6{
   height:1.6rem;
@@ -1764,12 +1782,19 @@ tbody {
   position: relative;
   cursor: pointer;
   background: var(--tired-licorice);
-
-  font-weight: 500;
-  font-size: 14px;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight:500;
+  font-size: 12px;
   line-height: 20px;
   letter-spacing: 0.25px;
   color:#1d1546
+}
+.bold{
+  
+}
+
+th{
+  font-weight:600 !important;
 }
 .m-14j0amg:hover {
   background: rgb(21 11 37);
@@ -2013,7 +2038,7 @@ svg:not(:root) {
 .mainTable th{
   padding-left:0px !important;
   background:rgb(243, 243, 243);
-  color: #666;
+  color: #6973a1;
   box-shadow: none;
   font-size:1.4rem;
 }
@@ -2021,7 +2046,7 @@ svg:not(:root) {
   color:black;
 }
 .mainTable th:first-child{
-  border-radius:6px 0px 0px 0px;
+  border-radius:1rem 0px 0px 0px;
 }
 .mainTable th:last-child{
   border-radius:0px 6px 0px 0px;
@@ -2275,6 +2300,7 @@ nav.fill ul li:hover:after {
 .solved{
   width:25px !important;
   margin-right:10px !important;
+  margin-left:1rem !important;
   padding:5px 10px 5px 0px !important;
 }
 .frequencyHeader{
@@ -2711,4 +2737,13 @@ les {
 .text{
   float:right;
   transform:translate(50%,0%);
+}
+.pagination-container{
+  padding:5px;
+  background:white;
+  border-radius:5px;
+  
+}
+.paginationContainer{
+  margin-bottom:10px !important;
 }

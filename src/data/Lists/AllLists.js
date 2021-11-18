@@ -825,7 +825,7 @@ const Lists = {'Leetcode Patterns' : [
         "title": "Median of Two Sorted Arrays"
     }
 ],
-"blind75" : [
+"Blind75" : [
     {
         "id": 1,
         "level": 1,

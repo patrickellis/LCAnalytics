@@ -38,12 +38,7 @@ class UserDashboard extends Component {
                         <div class="upperleft"> 
                             <header class="m-1rp16vj e2l7c7j4">
                                 <div class="m-yeouz0 e2l7c7j3">Recently Solved</div>       
-                                <Link to='/profile' replace>
-                                    <button class="e2l7c7j2 m-igyvwi">
-                                        See all your Solved Questions   
-                                        <img src="https://cdn1.iconfinder.com/data/icons/material-design-icons-light/24/logout-512.png" style={{width:'18px',height:'15px'}} alt="See more" class="m-x0yz92 e2l7c7j1"/>
-                                    </button>    
-                                </Link>              
+                                      
                                 
                             </header>     
                             <div class="upperleftcontent question-list">

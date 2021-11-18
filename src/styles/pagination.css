@@ -26,7 +26,7 @@
     cursor: pointer;
 }
 .pagination-container .pagination-item.selected {
-    background-color: #4a80db;
+    background-color: #2196F3;
     color:white !important;
 }
 .pagination-container .pagination-item .arrow::before {
