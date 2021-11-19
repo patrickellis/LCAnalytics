@@ -37,9 +37,7 @@ class NavBar extends Component {
         const auth = getAuth();
         signOut(auth).then(() => {
         // Sign-out successful.
-        this.setState({
-            redirect : true
-        })
+            this.props.signoutUser();
         }).catch((error) => {
         // An error happened.
         });
@@ -48,8 +46,6 @@ class NavBar extends Component {
     render(){       
         return(
             <>
-            {this.state.redirect ? <Redirect to = '/'/>
-            : 
             <div class="m-fdciay">
             <div class="m-0">
                 <div class="m-8qejy6">
@@ -144,7 +140,7 @@ class NavBar extends Component {
                 </div>
                 </div>
            
-                        } </>)
+             </>)
         
     }
 }

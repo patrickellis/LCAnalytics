@@ -19,8 +19,10 @@ class GithubList extends Component {
   
     componentDidMount(){       
         if(localStorage.getItem('userObject') !== null && !this.props.displayModalNav){
+            
             this.props.toggleModal();
             const userObject = JSON.parse(localStorage.getItem('userObject'));
+            //console.log("USER FOUND IN LOCALSTORAGE: ", userObject);
             this.props.setUserRepositoryAndBranch(userObject);     
             window.sessionStorage.setItem('firstListMount', 'complete');       
         } 

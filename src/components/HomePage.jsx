@@ -21,6 +21,7 @@ class HomePage extends Component {
     componentWillReceiveProps(nextprops){
       if(nextprops.keyfound){
         this.loadingAnimation();
+        
       }
     }
     loadingAnimation(){

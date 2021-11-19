@@ -2,10 +2,32 @@
   text-align: center;
   background:#6b6889;
 }
-@import url(//db.onlinewebfonts.com/c/c8f8ca27fbfaebae06ac77d4ec007453?family=Aktiv+Grotesk);
-@import url(//db.onlinewebfonts.com/c/a59a10fc173a405262ecba082980066e?family=Aktiv+Grotesk);
-@import url(//db.onlinewebfonts.com/c/0a086e32e41c5e5960b26626757f07f3?family=Apercu);
-@import url(https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap);
+/* @import url(//db.onlinewebfonts.com/c/c8f8ca27fbfaebae06ac77d4ec007453?family=Aktiv+Grotesk);
+
+@import url(//db.onlinewebfonts.com/c/a59a10fc173a405262ecba082980066e?family=Aktiv+Grotesk); */
+
+@font-face {
+  font-family: 'Aktiv Grotesk';
+  src: local('Atkiv Grotesk'), url(./fonts/AktivGrotesk/AktivGroteskRegular.ttf) format('ttf');
+}
+@font-face {
+  font-family: 'Aktiv Grotesk';
+  src: local('Atkiv Grotesk'), url(./fonts/AktivGrotesk/AktivGroteskThin.ttf) format('ttf');
+}
+@font-face {
+  font-family: 'Aktiv Grotesk';
+  src: local('Atkiv Grotesk'), url(./fonts/AktivGrotesk/AktivGroteskThin.ttf) format('ttf');
+}
+@font-face {
+  font-family: 'Noto Sans';
+  src: local('Noto Sans'), url(./fonts/NotoSans/NotoSans-Regular.ttf) format('ttf');
+}
+@font-face {
+  font-family: 'Noto Sans';
+  src: local('Noto Sans'), url(./fonts/NotoSans/NotoSans-Bold.ttf) format('ttf');
+}
+/* @import url(//db.onlinewebfonts.com/c/0a086e32e41c5e5960b26626757f07f3?family=Apercu); */
+/*@import url(https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap);*/
 * {
   user-select: none;
 }

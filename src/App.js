@@ -3,7 +3,7 @@ import React, { Suspense,Component } from 'react';
 import './App.css';
 //import CompanyListPage from './components/CompanyListPage';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, useHistory } from "react-router-dom";
 import NavBar from './components/Navbar';
 //import ProfilePage from './components/ProfilePage';
 //import HomePage from './components/HomePage';
@@ -43,8 +43,8 @@ const firebaseConfig = {
   measurementId: "G-M3Z8QSX5RT"
 };
 const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
-const analytics = getAnalytics(app);
+// const db = getFirestore(app);
+// const analytics = getAnalytics(app);
 const provider = new GithubAuthProvider();
 const auth = getAuth();
 provider.addScope('repo');
@@ -54,7 +54,7 @@ provider.setCustomParameters({
 //Handle Account Status
 
 
-class App extends Component {
+class App extends Component {  
   constructor(props){
     super(props);
     this.state = {
@@ -80,6 +80,7 @@ class App extends Component {
     this.toggleModal = this.toggleModal.bind(this);
     this.toggleModalFromNav = this.toggleModalFromNav.bind(this);
     this.login = this.login.bind(this);
+    this.signoutUser = this.signoutUser.bind(this);
   }
 
   setUserRepositoryAndBranch(user){
@@ -127,6 +128,11 @@ class App extends Component {
     this.setState({      
       displayModalNav : true
     }, console.log(this.state.displayModalNav))
+  }
+  signoutUser(){
+    this.setState({
+      user : undefined
+    })
   }
   setUserData(userData){
     this.setState({
@@ -239,7 +245,7 @@ class App extends Component {
           <main className="m-36y2kb">            
             <div className="m-ht4nkg">             
               <Router>                   
-              <NavBar toggleModal={this.toggleModalFromNav} data={this.state.companyData} updateData={this.updateData}/>
+              <NavBar signoutUser={this.signoutUser} toggleModal={this.toggleModalFromNav} data={this.state.companyData} updateData={this.updateData}/>
               <Suspense fallback={
                 <div class="loaderDiv" id="loaderDiv">
                     <div class="loaderContainer">
