@@ -1,41 +1,32 @@
-import logo from './logo.svg';
+import React, { Suspense,Component } from 'react';
+
 import './App.css';
-import CompanyPage from './components/CompanyPage'
-import CompanyListPage from './components/CompanyListPage';
+//import CompanyListPage from './components/CompanyListPage';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import {React,Component} from 'react';
 import NavBar from './components/Navbar';
-import ProfilePage from './components/ProfilePage';
-import HomePage from './components/HomePage';
+//import ProfilePage from './components/ProfilePage';
+//import HomePage from './components/HomePage';
 import {fetchGithubRepo, actual_to_id, get_object_from_id} from './scripts/github';
 import BeatLoader from "react-spinners/BeatLoader";
-import blind75 from './data/Lists/Blind75';
 import { Redirect } from "react-router-dom"
 import problems from './data/problems.json'
-//import * as firebase from 'firebase';
-
-
-
-//console.log("LCDATA:",LCpatterns);
-/*
-var newda = [];
-for(let i = 0; i < blind75.length; ++i){
-  newda.push(get_object_from_id(blind75[i]));
-}
-
-
-// 121,153,139,377,206,141,19,235,211,212
-//newda = newda.filter(n=>n);
-
-console.log("BLIND&%",newda );
-*/
+//import BeatLoaderComponent from './components/BeatLoader';
 import { initializeApp} from 'firebase/app';
 import { getAnalytics } from "firebase/analytics";
 import { getAuth, signInWithPopup, GoogleAuthProvider,GithubAuthProvider} from "firebase/auth";
 import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
 import {setPersistence, browserLocalPersistence } from "firebase/auth";
 import GithubList from './components/GithubList';
+
+// REACT LAZY IMPORTS
+const CompanyPage = React.lazy(() => import('./components/CompanyPage'));
+const CompanyListPage = React.lazy(() => import('./components/CompanyListPage'));
+const ProfilePage = React.lazy(() => import('./components/ProfilePage'));
+const HomePage = React.lazy(() => import('./components/HomePage'));
+//const GithubList = React.lazy(() => import('./components/GithubList'));
+//import CompanyPage from './components/CompanyPage'
+
 var firebaseui = require('firebaseui');
 //var ui = new firebaseui.auth.AuthUI(auth());
 
@@ -247,8 +238,15 @@ class App extends Component {
         }
           <main className="m-36y2kb">            
             <div className="m-ht4nkg">             
-              <Router>   
+              <Router>                   
               <NavBar toggleModal={this.toggleModalFromNav} data={this.state.companyData} updateData={this.updateData}/>
+              <Suspense fallback={
+                <div class="loaderDiv" id="loaderDiv">
+                    <div class="loaderContainer">
+                       <BeatLoader color={'rgb(255,255,255)'} loading={true} size={16} />    
+                    </div>
+                </div>
+                }>
                   <Switch>                    
                     <Route exact path="/">
                       {this.state.user ?
@@ -272,8 +270,10 @@ class App extends Component {
                       }
                     </Route>
                     <Route path="/company">      
-                       {this.state.user ?          
+                       {this.state.user ?       
+                       
                       <CompanyPage user={this.state.userObject} setLoadingStatusTopLevel={this.setLoadingStatusTopLevel} isLoaded={this.state.isLoaded} userData={this.state.userData} setLoadingStatus={this.state.setLoadingStatus} updateDataTimePeriod={this.updateDataTimePeriod} name={this.state.name} data={this.state.data}/>
+                     
                       :
                       <Redirect to="/"/>
                        }
@@ -286,6 +286,7 @@ class App extends Component {
                       }                      
                     </Route>                
                 </Switch> 
+                </Suspense>
                 </Router>   
               </div>
           </main>
