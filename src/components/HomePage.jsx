@@ -61,7 +61,7 @@ class HomePage extends Component {
                       <div class="image-container">
                         {/*<img id="loading-gif" style={{width:'210px',height:'160px'}} src="loading-animation.gif"/>*/}
                         <video id='loading-gif' width="210" height="160" autoplay loop muted>
-                          <source src="loading-animation.mp4" type="video/mp4" />                          
+                          <source src="loading-animation2.mp4" type="video/mp4" />                          
                           Your browser does not support the video tag.
                         </video>                        
                       </div>

@@ -160,12 +160,15 @@
     clip-path: polygon(0 0, 100% 0, 100% 2000%, 0 2000%);
     background: #1c2545;    
 }
+
 .upNav{
     font-weight:600 !important;
 }
+
 .statsPage p{
     font-family:'Roboto' !important;
 }
+
 #loading-gif{
     transition: 1s all;
     top:0px;
@@ -183,7 +186,7 @@
     left:50%;
     top:65%;
     transform:translate(-50%,-50%);
-    color:white;
+    color:#140a32;
     opacity: 0;
     transition:1s all;
 }
