@@ -167,9 +167,10 @@ class ProfilePage extends Component {
     }
     
     switchToCategoryPage(item){        
+        console.log("switching to category page: ", item);
         this.setState({
             initialFilter : item['category'],
-            displayIndex : 2,            
+            displayIndex : 3,            
         })
         document.body.scrollTop = document.documentElement.scrollTop = 0;
     }

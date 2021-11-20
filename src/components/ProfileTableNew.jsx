@@ -75,6 +75,7 @@ class ProfileTableNew extends Component {
         this.setCurrentPage = this.setCurrentPage.bind(this); 
         this.getCategories = this.getCategories.bind(this);
         this.sortByCompleted = this.sortByCompleted.bind(this);
+        this.sortByDueDate = this.sortByDueDate.bind(this);
     }
     componentDidMount(){     
         let newData = [];
@@ -168,7 +169,22 @@ class ProfileTableNew extends Component {
             currentData : newData.slice((this.state.currentIndex-1) * 100, (this.state.currentIndex-1)*100+100)
         })
     }
-
+    sortByDueDate(){        
+        var newData = this.state.filteredData;
+        const id_to_level = this.props.userData.SRS_data['id_to_level'];
+        if(newData.length < 2) return;
+        // id_to_level[a['id']]
+        if(parseInt(id_to_level[newData[0]['id']]) > parseInt(id_to_level[newData[newData.length-1]['id']])){
+            newData.sort((a,b) => (parseInt(id_to_level[a['id']]) > parseInt(id_to_level[b['id']]))? 1 : -1)
+        } else {
+            newData.sort((a,b) => (parseInt(id_to_level[a['id']]) < parseInt(id_to_level[b['id']]))? 1 : -1)
+        }        
+        console.log("SORTED BY DUE DATE: ", newData);
+        this.setState({
+            filteredData : newData,
+            currentData : newData.slice((this.state.currentIndex - 1)* 100, (this.state.currentIndex-1)*100+100)
+        })
+    }
     sortByAcceptance(){        
         var newData = this.state.filteredData;
         if(newData.length < 2) return;
@@ -317,7 +333,7 @@ class ProfileTableNew extends Component {
                                     difficulty
                                     <span class="w-3.5 h-3.5 ml-2 text-gray-5 dark:text-dark-gray-5 group-hover:text-gray-7 dark:group-hover:text-dark-gray-7"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor"><path d="M18.695 9.378L12.83 3.769a1.137 1.137 0 00-.06-.054c-.489-.404-1.249-.377-1.7.06L5.303 9.381a.51.51 0 00-.16.366c0 .297.27.539.602.539h12.512a.64.64 0 00.411-.146.501.501 0 00.028-.762zM12.77 20.285c.021-.017.042-.035.062-.054l5.863-5.609a.5.5 0 00-.028-.762.64.64 0 00-.41-.146H5.743c-.332 0-.601.242-.601.54a.51.51 0 00.16.365l5.769 5.606c.45.437 1.21.464 1.698.06z"></path></svg></span>
                                 </th>
-                                <th class="m-1itvjt0 tablehover frequencyHeader"  onClick={this.sortByFrequency}>
+                                <th class="m-1itvjt0 tablehover frequencyHeader"  onClick={this.sortByDueDate}>
                                     Due Again In
                                     <span class="w-3.5 h-3.5 ml-2 text-gray-5 dark:text-dark-gray-5 group-hover:text-gray-7 dark:group-hover:text-dark-gray-7"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor"><path d="M18.695 9.378L12.83 3.769a1.137 1.137 0 00-.06-.054c-.489-.404-1.249-.377-1.7.06L5.303 9.381a.51.51 0 00-.16.366c0 .297.27.539.602.539h12.512a.64.64 0 00.411-.146.501.501 0 00.028-.762zM12.77 20.285c.021-.017.042-.035.062-.054l5.863-5.609a.5.5 0 00-.028-.762.64.64 0 00-.41-.146H5.743c-.332 0-.601.242-.601.54a.51.51 0 00.16.365l5.769 5.606c.45.437 1.21.464 1.698.06z"></path></svg></span>
                                 </th>

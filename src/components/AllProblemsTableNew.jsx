@@ -99,7 +99,7 @@ class AllProblemsTable extends Component {
             pageSize : 100            
         },() => {if(this.props.initialFilter.length > 3){
             document.getElementById('tags-select').value=this.props.initialFilter;
-            this.flipNavClasses(2);
+            this.flipNavClasses(3);
             this.onSelectChange();
        }})
         
