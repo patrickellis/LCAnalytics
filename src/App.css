@@ -2123,6 +2123,9 @@ svg:not(:root) {
   top:90px;
   
 }
+.userdash{
+  min-height:800px;
+}
 .recharts-polar-angle-axis-tick-value{
   margin:5px;
 }
