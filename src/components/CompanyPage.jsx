@@ -9,7 +9,7 @@ import Stats from './StatsSection';
 import RadarChart from './RadarChart';
 import StatsHeader from './StatsHeader';
 import BeatLoader from "react-spinners/BeatLoader";
-import AllProblemsTable from './AllProblemsTable';
+
 const client_id = 'c3dfbec01089dd36fa64';
 class CompanyPage extends Component {
     constructor(props){

@@ -13,7 +13,8 @@ class CompaniesTable extends Component {
         super(props);
         this.state = {
             data : this.props.data,
-            redirect : false
+            redirect : false,
+            tagFilter: ''
         };        
       
     }

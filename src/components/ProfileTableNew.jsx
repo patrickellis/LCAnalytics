@@ -1,9 +1,7 @@
 import {React,Component} from 'react';
-import Table from 'react-bootstrap/Table'
 import problemIdToCategories from '../data/problemIdToCategories.json'
-import {fetchGithubRepo,getURLfromId} from '../scripts/github'
-import {userHasSolvedProblem} from '../scripts/util'
-import getJSON from '../scripts/JSONloader'
+import {getURLfromId} from '../scripts/github'
+import Pagination from './Pagination';
 
 const TAGS = ['two-pointers','string','dynamic-programming','hash-table','math','depth-first-search','sorting','greedy','breadth-first-search',
 'tree','binary-search','matrix','two-pointers','bit-manipulation','stack','design','heap-priority-queue','backtracking','graph','simulation',
@@ -14,8 +12,14 @@ const TAGS = ['two-pointers','string','dynamic-programming','hash-table','math',
 'quickselect','bucket-sort','minimum-spanning-tree','counting-sort','suffix-array','shell','line-sweep','reservoir-sampling',
 'strongly-connected-component','eulerian-circuit','radix-sort','rejection-sampling','biconnected-component']
 
+
 const COLORS =["rgb(64,129,236)", "rgb(7,92,98)", "rgb(159,102,237)", "rgb(118,7,150)", "rgb(103,72,106)", "rgb(51, 138, 96)", "rgb(161,8,92)", "rgb(31,60,166)", "rgb(39,15,226)", "rgb(116,141,19)"]
 
+function getLevel(level){
+    if(level==1) return 'Easy';
+    if(level==2) return 'Medium';
+    return 'Hard';
+}
 function getColor(item){
     var itemname = item.toLowerCase();    
     itemname = itemname.split(' ').join('-');    
@@ -45,70 +49,128 @@ function inArray(arr, item){
 function getTagStyle(tag){
     return getColor(tag);
 }
-class ProfileTable extends Component {
+
+class ProfileTableNew extends Component {
     constructor(props){
         super(props);
         this.state = {
+            isLoaded : true,
+            data: [],
+            userData: this.props.userData,   
             tagsChecked: true,
-            tagFilter: 'All'     
-
-        };                
-        this.setEventListeners = this.setEventListeners.bind(this);
-        this.sortByFrequency = this.sortByFrequency.bind(this);
+            tagFilter: 'All',
+            filteredData: [],     
+            currentIndex : 1,
+            totalCount : 0,
+            pageSize : 100,
+            currentData : []
+        };        
+        this.isSolved = this.isSolved.bind(this);
+        this.setEventListeners = this.setEventListeners.bind(this);       
         this.sortByAcceptance = this.sortByAcceptance.bind(this);
-        this.sortByDifficulty = this.sortByDifficulty.bind(this);
+        this.sortBydifficulty = this.sortBydifficulty.bind(this);
         this.handleClick = this.handleClick.bind(this);
         this.onCheckChange = this.onCheckChange.bind(this);
         this.onSelectChange = this.onSelectChange.bind(this);
+        this.setCurrentPage = this.setCurrentPage.bind(this); 
+        this.getCategories = this.getCategories.bind(this);
+        this.sortByCompleted = this.sortByCompleted.bind(this);
     }
-    componentDidMount(){        
-            
+    componentDidMount(){     
+        let newData = [];
+        let ids_solved = this.props.userData.ids_solved;
+        for(let i = 0; i < ids_solved.length; ++i){
+            console.log("ID SOLVED: ", ids_solved[i]);
+            newData.push(this.props.userData['SRS_data']['id_to_obj'][ids_solved[i]]);            
+        }
+        this.setState({
+            data : newData,
+            filteredData : newData,   
+            currentData : newData.slice(0,100),         
+            currentIndex : 1,
+            totalCount : this.state.data.length,
+            pageSize : 100            
+        })
+        /*
+        
+        let newData = []  
+
+        for(let i = 0; i < this.state.data.length; ++i){
+            let item = this.state.data[i];
+            let level = item['level'];
+            if(level == 1) level = 'Easy';
+            if(level == 2) level = 'Medium';
+            if(level == 3) level = 'Hard';
+            item['difficulty'] = level;
+            newData.push(item);
+        }        
+        this.setState({
+            data : newData
+        })        
+        */
+    }
+    setCurrentPage(page){
+        this.setState({            
+            currentIndex : page,
+            currentData : this.state.filteredData.slice((page-1) * 100, (page-1)*100+100)
+        })
     }
     componentWillReceiveProps(nextProps) {        
         // You don't have to do this check first, but it can help prevent an unneeded render
-        if (nextProps.isLoaded != this.state.isLoaded) {
-          this.setState({ 
-              isLoaded: nextProps.isLoaded,
-              data : nextProps.data,
+        
+        if (nextProps.isLoaded !== this.state.isLoaded) {
+          this.setState({                
+               isLoaded: nextProps.isLoaded,              
                userData : nextProps.userData
             });
-        }
-        if(nextProps.data != this.state.data){            
-            this.setState({
-                data : nextProps.data
-            })
-        }
+        }       
+        this.setState({
+            data : nextProps.data,
+        },()=>this.onSelectChange());
+        
       }
     setEventListeners(){
-        const freq = document.getElementById('FrequencyTab');        
+        // nothing done here for now      
     }
-    sortByDifficulty(){        
-        var newData = this.state.data;
+    sortByCompleted(){        
+        var newData = this.state.filteredData;
+        console.log("sorting by completed",newData.length);
+        if(newData.length < 2) return;
+        if(this.isSolved(newData[0]['#'])){
+            newData.sort((a,b) => {
+                let as = this.isSolved(a['#']);
+                let bs = this.isSolved(b['#']);
+                return as > bs ? 1 : as == bs ? 0 : -1;
+            })}
+        else{
+            newData.sort((a,b) => {
+                let as = this.isSolved(a['#'])?1:0;
+                let bs = this.isSolved(b['#'])?1:0;
+                return as > bs ? -1 : as == bs ? 0 : 1;
+            });
+        }
+        this.setState({
+            filteredData : newData,
+            currentData : newData.slice((this.state.currentIndex-1) * 100, (this.state.currentIndex-1)*100+100)
+        })
+        }
+    sortBydifficulty(){        
+        var newData = this.state.filteredData;
         if(newData.length < 2) return;
         const dtoi = {'Easy':0,'Medium':1,'Hard':2}
-        if(parseFloat(newData[0]['Frequency']) > parseFloat(newData[1]['Frequency'])){
-            newData.sort((a,b) => (parseFloat(dtoi[a['Difficulty']]) > parseFloat(dtoi[b['Difficulty']]))? 1 : -1)
+        if(dtoi[newData[0]['difficulty']] > dtoi[newData[newData.length-1]['difficulty']]){
+            newData.sort((a,b) => dtoi[a['difficulty']] > dtoi[b['difficulty']] ? 1 : -1)
         } else {
-            newData.sort((a,b) => (parseFloat(dtoi[a['Difficulty']]) < parseFloat(dtoi[b['Difficulty']]))? 1 : -1)
+            newData.sort((a,b) => dtoi[a['difficulty']] < dtoi[b['difficulty']] ? 1 : -1)
         }        
         this.setState({
-            data : newData
+            filteredData : newData,
+            currentData : newData.slice((this.state.currentIndex-1) * 100, (this.state.currentIndex-1)*100+100)
         })
     }
-    sortByFrequency(){        
-        var newData = this.state.data;
-        if(newData.length < 2) return;
-        if(parseFloat(newData[0]['Frequency']) > parseFloat(newData[1]['Frequency'])){
-            newData.sort((a,b) => (parseFloat(a['Frequency']) > parseFloat(b['Frequency']))? 1 : -1)
-        } else {
-            newData.sort((a,b) => (parseFloat(a['Frequency']) < parseFloat(b['Frequency']))? 1 : -1)
-        }        
-        this.setState({
-            data : newData
-        })
-    }
+
     sortByAcceptance(){        
-        var newData = this.state.data;
+        var newData = this.state.filteredData;
         if(newData.length < 2) return;
         if(parseFloat(newData[0]['Frequency']) > parseFloat(newData[1]['Frequency'])){
             newData.sort((a,b) => (parseFloat(a['Acceptance'].substr(0,a['Acceptance'].length-1)) > parseFloat(b['Acceptance'].substr(0,b['Acceptance'].length-1)))? 1 : -1)
@@ -116,7 +178,8 @@ class ProfileTable extends Component {
             newData.sort((a,b) => (parseFloat(a['Acceptance'].substr(0,a['Acceptance'].length-1)) < parseFloat(b['Acceptance'].substr(0,b['Acceptance'].length-1)))? 1 : -1)
         }        
         this.setState({
-            data : newData
+            filteredData : newData,
+            currentData : newData.slice(this.state.currentIndex * 100, this.state.currentIndex*100+100)
         })
     }
     onCheckChange(){        
@@ -124,38 +187,78 @@ class ProfileTable extends Component {
             tagsChecked : !this.state.tagsChecked
         })
     }
+    getCategories(id){
+        const keys = Object.keys(problemIdToCategories);
+        if(inArray(keys,id)){
+            return problemIdToCategories[id];
+        }
+        return []
+    }
     onSelectChange(){
         console.log('select changed :', document.getElementById('tags-select').value);
+        let tag = document.getElementById('tags-select').value;
+        let filteredData = []
+        for(let i = 0; i < this.state.data.length; ++i){
+            if(tag == 'All'){
+                filteredData = this.state.data;
+                break;
+            }
+            if(inArray(this.getCategories(this.state.data[i]['id']),tag))
+                filteredData.push(this.state.data[i]);
+        }
         this.setState({
-            tagFilter : document.getElementById('tags-select').value
+            tagFilter : document.getElementById('tags-select').value,
+            filteredData : filteredData,
+            currentData : filteredData.slice(0,100),
+            currentIndex: 1,
+            totalCount : filteredData.length            
         })
     }
+
     isSolved(id){
-        if(!this.props.userData['user_solved_dict'] || this.props.userData['user_solved_dict'][id] == undefined) return false;
-        return this.props.userData['user_solved_dict'][id];
+        if(this.state.userData['user_solved_dict']){
+            return this.state.userData['user_solved_dict'][id];
+        }
+        return false;        
     }
     
     handleClick(id){
         window.open(getURLfromId(id), '_blank').focus();        
     }
+    /** 
+                <Pagination
+                className="pagination-bar"
+                currentPage={this.state.currentIndex}
+                totalCount={this.state.numProblems}
+                pageSize={100}
+                onPageChange={page => this.setCurrentPage(page)}
+            />*/
+
     render() {
-        //const data = this.props.userData;        
+        const {isLoaded, currentData} = this.state;
         const data = this.props.userData['SRS_data'];
-        const isLoaded = this.props.isLoaded;
-        const keys = Object.keys(problemIdToCategories);        
       return(
-                      
-                <div class="tableContainer userProfileTable">
+          <>
+                <div class="paginationContainer">
+                    <Pagination
+                    className="pagination-bar"
+                    currentPage={this.state.currentIndex}
+                    totalCount={this.state.totalCount}
+                    pageSize={100}
+                    onPageChange={page => this.setCurrentPage(page)}/>
+                </div>  
+
+                <div class="tableContainer">
                     { isLoaded &&  
                     <table class="m-3gmgrq mainTable">
                         
                          <thead class="thead">                                        
                             <tr class="m-1itvjt0 ejhqg10">
-                                <th class="m-1itvjt0"></th>
-                                                                
+                                <th class="m-1itvjt0"></th>                                
                                 <th class="m-1itvjt0 idHeader">#</th>
                                 <th class="m-1itvjt0 titleHeader">Title</th>   
                                 <th class="m-1itvjt0 tagsHeader">
+                                 <div class="switchtextcont">
                                     <div class="tagsText">Tags</div>
                                     <div class="switchContainer">
                                         <label class="switch">
@@ -166,6 +269,7 @@ class ProfileTable extends Component {
                                         />
                                         <span class="slider round"></span>
                                      </label>    
+                                    </div>
                                     </div>
                                     <div class="selectContainer">
                                         <select name="tags" id="tags-select" onChange={this.onSelectChange}>                                            
@@ -181,7 +285,7 @@ class ProfileTable extends Component {
                                             <option value="Dynamic Programming">Dynamic Programming</option>                                            
                                             <option value="Graph">Graph</option>
                                             <option value="Greedy">Greedy</option>
-                                            <option value="Heap">Heap</option>
+                                            <option value="Heap Priority Queue">Heap</option>
                                             <option value="Linked List">Linked List</option>
                                             <option value="Intervals">Intervals</option>
                                             <option value="Sliding Window">Sliding Window</option>
@@ -189,18 +293,28 @@ class ProfileTable extends Component {
                                             <option value="Topological Sort">Topological Sort</option>
                                             <option value="Trie">Trie</option>
                                             <option value="Two Pointers">Two Pointers</option>
-                                            <option value="Union Find">Union Find</option>                                                                                        
+                                            <option value="Union Find">Union Find</option>       
+                                            <option value="Randomized">Randomized</option>                                                                                        
+                                            <option value="Ordered Set">Ordered Set</option>       
+                                            <option value="Strongly Connected Component">Strongly Connected Component</option>     
+                                            <option value="Minimum Spanning Tree">Minimum Spanning Tree</option>     
+                                            <option value="Memoization">Memoization</option>     
+                                            <option value="Tree">Tree</option>     
+                                            <option value="Doubly Linked List">Doubly Linked List</option>     
+                                            <option value="Biconnected Component">Biconnected Component</option>   
+                                            <option value="Radix Sort">Radix Sort</option>   
+                                            <option value="Merge Sort">Merge Sort</option>   
                                         </select>
                                     </div>
-                                </th> 
+                                </th>                                 
                                 {/*
                                 <th class="m-1itvjt0 tablehover acceptance" onClick={this.sortByAcceptance}>
                                     Acceptance
                                     <span class="w-3.5 h-3.5 ml-2 text-gray-5 dark:text-dark-gray-5 group-hover:text-gray-7 dark:group-hover:text-dark-gray-7"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor"><path d="M18.695 9.378L12.83 3.769a1.137 1.137 0 00-.06-.054c-.489-.404-1.249-.377-1.7.06L5.303 9.381a.51.51 0 00-.16.366c0 .297.27.539.602.539h12.512a.64.64 0 00.411-.146.501.501 0 00.028-.762zM12.77 20.285c.021-.017.042-.035.062-.054l5.863-5.609a.5.5 0 00-.028-.762.64.64 0 00-.41-.146H5.743c-.332 0-.601.242-.601.54a.51.51 0 00.16.365l5.769 5.606c.45.437 1.21.464 1.698.06z"></path></svg></span>
                                   </th>
                                 */}
-                                <th class="m-1itvjt0 tablehover difficultyHeader" onClick={this.sortByDifficulty}>
-                                    Difficulty
+                                <th class="m-1itvjt0 tablehover difficultyHeader" onClick={this.sortBydifficulty}>
+                                    difficulty
                                     <span class="w-3.5 h-3.5 ml-2 text-gray-5 dark:text-dark-gray-5 group-hover:text-gray-7 dark:group-hover:text-dark-gray-7"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor"><path d="M18.695 9.378L12.83 3.769a1.137 1.137 0 00-.06-.054c-.489-.404-1.249-.377-1.7.06L5.303 9.381a.51.51 0 00-.16.366c0 .297.27.539.602.539h12.512a.64.64 0 00.411-.146.501.501 0 00.028-.762zM12.77 20.285c.021-.017.042-.035.062-.054l5.863-5.609a.5.5 0 00-.028-.762.64.64 0 00-.41-.146H5.743c-.332 0-.601.242-.601.54a.51.51 0 00.16.365l5.769 5.606c.45.437 1.21.464 1.698.06z"></path></svg></span>
                                 </th>
                                 <th class="m-1itvjt0 tablehover frequencyHeader"  onClick={this.sortByFrequency}>
@@ -213,21 +327,50 @@ class ProfileTable extends Component {
                         </thead>
                        
                         <tbody>                            
-                            {data['due'].map(id => {    
-                                const item = data['id_to_obj'][id];  
-                                const dueAgainIn = data['level_to_gap'][data['id_to_level'][id]];     
-                                return(       
+                            {currentData.map(item =>                             
+                                this.state.tagFilter == 'All'?                               
                                 <tr onClick={()=>this.handleClick(item['#'])} class="m-14j0amg e98qpmo0">                                    
                                     <td></td>
                                     
-                                    <td>{item.id}.</td>
-                                    <td>{item.title}</td>     
+                                    <td>{item['id']}.</td>
+                                    <td class="bold">{item['title']}</td>     
                                     <td class="tags">                                                                       
-                                        {                 
-                                        inArray(keys,item.id)?    
+                                                                                
                                             <>
                                             <div class="upperdiv">                                       
-                                                {problemIdToCategories[item.id].slice(0,3).map(e => 
+                                            {this.getCategories(item['id']).slice(0,3).map(e =>     
+                                                this.state.tagsChecked?                                        
+                                                <span class="tagItem" style={{background:getTagStyle(e)[1],color:getTagStyle(e)[0]}}>• {e}</span>
+                                                :
+                                                <span class="tagItem" style={{background:'#000'}}>***</span>                                                                                  
+                                            )}</div>
+                                            <div class="upperdiv">                                       
+                                            {this.getCategories(item['id']).slice(3,7).map(e =>     
+                                                this.state.tagsChecked?                                        
+                                                <span class="tagItem" style={{background:getTagStyle(e)[1],color:getTagStyle(e)[0]}}>• {e}</span>
+                                                :
+                                                <span class="tagItem" style={{background:'#000'}}>***</span>                                                                                  
+                                            )}</div>
+                                            </>                                                                          
+                                                                                                                                              
+                                    </td>                               
+                                    {/*<td>{item['Acceptance']}</td>*/}
+                                    <td style={item['difficulty']=='Easy'?{color:'rgba(0,175,155,1)'}:item['difficulty']=='Medium'?{color:'rgba(255,184,0,1'}:{color:'rgba(255,45,85,1)'}}>{item['difficulty']}</td>                                    
+                                    <td><div class="">{data['level_to_gap'][data['id_to_level'][item['id']]]} days</div></td>
+                                    <td class="bookend"></td>                                    
+                                </tr>
+                                :
+                                inArray(this.getCategories(item['id']),this.state.tagFilter)?                                
+                                <tr onClick={()=>this.handleClick(item['id'])} class="m-14j0amg e98qpmo0">                                    
+                                    <td></td>
+                                
+                                    <td>{item['id']}.</td>
+                                    <td>{item['title']}</td>     
+                                    <td class="tags">                                                                                                                           
+                                         
+                                            <>
+                                            <div class="upperdiv">                                       
+                                                {this.getCategories(item['id']).slice(0,3).map(e => 
                                                     this.state.tagsChecked?                                            
                                                     <span class="tagItem" style={{background:getTagStyle(e)[1],color:getTagStyle(e)[0]}}>• {e}</span>
                                                     :
@@ -235,31 +378,31 @@ class ProfileTable extends Component {
 
                                                  )}</div>
                                             <div class="upperdiv">                                       
-                                            {problemIdToCategories[item.id].slice(3,7).map(e =>     
+                                            {this.getCategories(item['id']).slice(3,7).map(e =>     
                                                 this.state.tagsChecked?                                        
                                                 <span class="tagItem" style={{background:getTagStyle(e)[1],color:getTagStyle(e)[0]}}>• {e}</span>
                                                 :
                                                 <span class="tagItem" style={{background:'#000'}}>***</span>                                                                                  
                                             )}</div>
                                             </>
-                                        :<></>}                                        
+                                        
                                                                                                                                               
                                     </td>                               
                                     {/*<td>{item['Acceptance']}</td>*/}
-                                    <td style={item['difficulty']=='Easy'?{color:'rgba(0,175,155,1)'}:item['difficulty']=='Medium'?{color:'rgba(255,184,0,1'}:{color:'rgba(255,45,85,1)'}}>{item['difficulty']}</td>
-                                    <td><div class="">{dueAgainIn} days</div></td>
+                                    <td style={item['difficulty']=='Easy'?{color:'rgba(0,175,155,1)'}:item['difficulty']=='Medium'?{color:'rgba(255,184,0,1'}:{color:'rgba(255,45,85,1)'}}>{item['difficulty']}</td>                                                                      
+                                    <td><div class="">{data['level_to_gap'][data['id_to_level'][item['id']]]} days</div></td>
                                     <td class="bookend"></td>                                    
-                                </tr>
-                                )}
+                                </tr>     
+                                : <></>                           
                             )};
                             
                         </tbody>
                     </table>    
                      }
                     </div>                    
-                
+        </>
       )
     }
   }
   
-  export default ProfileTable
+  export default ProfileTableNew

@@ -9,6 +9,7 @@ import RadarChart from './RadarChart';
 import StatsHeader from './StatsHeader';
 import {setActiveLink} from '../scripts/util';
 import ProfileTable from './ProfileTable';
+import ProfileTableNew from './ProfileTableNew';
 import UserProfileNav from './UserProfileNav';
 import SelectComponent from './SelectComponent';
 import {weeklyProgressFromDates} from '../scripts/github.js';
@@ -290,15 +291,14 @@ class ProfilePage extends Component {
                     </div>
                     )
                 }
-                {/*
+                
                 {idx == 2 &&
-                    <ProfileTable userData={this.props.userData} isLoaded={true}/>
-                }
-                */}
-                {idx == 2 && 
-                    <AllProblemsTableNew initialFilter={this.state.initialFilter} data={this.state.data} userData={this.props.userData} />                    
+                    <ProfileTableNew userData={this.props.userData} isLoaded={true}/>
                 }
                 
+                {idx == 3 && 
+                    <AllProblemsTableNew initialFilter={this.state.initialFilter} data={this.state.data} userData={this.props.userData} />                    
+                }                
                 </div>
                                                 
             </>       

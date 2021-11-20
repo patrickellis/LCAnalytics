@@ -1170,8 +1170,7 @@ tspan{
   -webkit-box-align: center;
   align-items: center;
 }
-.userProfileTable{
-  max-height:500px;
+.userProfileTable{  
   overflow-y:scroll;
   min-width:100%;
 }

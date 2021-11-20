@@ -237,7 +237,7 @@ function setInfo(oldest_commits,newest_commits,flag,slugData,numProblems,solvedC
  * @param {*} setUserData function that updates the state of the object that calls this function
  * @returns returns user_data but AFAIK this is never used
  */
-function setAllUserInfo(oldest_commits,newest_commits,slugData,setUserData){
+function setAllUserInfo(oldest_commits,newest_commits,slugData,setUserData,SRS_data){
     let solvedOverTime = weeklyProgressFromDates(oldest_commits,4,2000,userSolvedTotal,false);
     let category_data = category_completion_list(ids_solved);
     let user_data = {
@@ -249,7 +249,8 @@ function setAllUserInfo(oldest_commits,newest_commits,slugData,setUserData){
         'user_solved_dict' : user_solved_dict,
         'difficulties' : difficulties,
         'radar_data' : idsToRadar(ids_solved),
-        'category_completion_list' : category_data
+        'category_completion_list' : category_data,
+        'SRS_data' : SRS_data
     }
     user_data['slugData'].sort(function(a,b){
         if(a['daysAgo'] < b['daysAgo']) return -1;
@@ -260,6 +261,37 @@ function setAllUserInfo(oldest_commits,newest_commits,slugData,setUserData){
     setUserData(user_data);
     return user_data;
 }
+
+function get_due_date(level,lastSolved){
+    // days before this question is due again at each level
+    const level_to_gap = {
+        1 : 3, 
+        2 : 7, 
+        3 : 14, 
+        4 : 28, 
+        5 : 56,
+        6 : 112,
+        7 : 224,
+        8 : 448
+    };        
+    return new Date(lastSolved.getTime() + level_to_gap[level]*24*60*60*1000);
+}   
+function computeLevel(commit_history){
+    if(commit_history.length <= 1) return 1;
+    const levelGaps = [3,7,14,28,56,112,224,448];
+    var prev = new Date(commit_history[0]);
+    var curr_gap_index = 0;
+    for(let i = 1; i < commit_history.length; ++i){
+        var dateSolved = new Date(commit_history[i]);
+        var gap = datediff(prev,dateSolved);
+        console.log(`comparing ${dateSolved} with ${prev}, difference in days: ${gap} - current considered gap: ${levelGaps[curr_gap_index]}`);
+        if(gap > levelGaps[curr_gap_index]){
+            curr_gap_index += 1;
+            prev = dateSolved;
+        }
+    }
+    return ++curr_gap_index;
+}
 /**
  * implementation of the below function, called on App start from fetchGithubRepo that generates user profile statistic information
  * @param {*} username - github username
@@ -269,11 +301,25 @@ function setAllUserInfo(oldest_commits,newest_commits,slugData,setUserData){
  * @returns 
  */
 export const fetchDatesFromAllUserIds = (username,repo_name,ids,setUserData,token) => {    
+    const level_to_gap = {
+        1 : 3, 
+        2 : 7, 
+        3 : 14, 
+        4 : 28, 
+        5 : 56,
+        6 : 112,
+        7 : 224,
+        8 : 448
+    };
     console.log("fetching dates");
     var oldest_commits = []
     var newest_commits = []
     var slugData = []
+    var IDtoLevel = {}
+
+    var SRS_data = {'id_to_obj':{},'id_to_level' :IDtoLevel,'due' : [], 'id_to_due_date':{}, 'level_to_gap' : level_to_gap}; // map of id to commit history
     var id_slugs = convert_ids_to_slugs(ids)    
+    
     let commit_data = {}    
     if(ids.length==0) return setAllUserInfo(oldest_commits,newest_commits,slugData,setUserData);
     for(let i = 0; i < ids.length; ++i){
@@ -290,7 +336,7 @@ export const fetchDatesFromAllUserIds = (username,repo_name,ids,setUserData,toke
                             return setAllUserInfo(oldest_commits,newest_commits,slugData,setUserData);
                         }
                         return;        
-                    }                   
+                    }                                      
                     var oldest_commit = commits[commits.length-1]['commit']['author']['date'];
                     var newest_commit = commits[0]['commit']['author']['date'];                    
                     oldest_commits.push(new Date(oldest_commit));
@@ -301,10 +347,25 @@ export const fetchDatesFromAllUserIds = (username,repo_name,ids,setUserData,toke
                     obj['date'] = new Date(newest_commit);
                     obj['id'] = ids[i];
                     obj['difficulty'] = levelIdToText[id_to_level[ids[i]]];
-                    obj['daysAgo'] = datediff(new Date(newest_commit),new Date(Date.now()),);
+                    obj['daysAgo'] = datediff(new Date(newest_commit),new Date(Date.now()));
+                    
+                    // add check here
+                    // if (!foundInLocalStorage{})
+                    SRS_data[ids[i]] = []; // init SRS array
+                    commits.forEach(item => {
+                        SRS_data[ids[i]].push(item['commit']['author']['date']);
+                    })
+                    SRS_data[ids[i]] = SRS_data[ids[i]].reverse();
+                    SRS_data['id_to_level'][ids[i]] = computeLevel(SRS_data[ids[i]]);
+                    // always execute this line below even if SRS_DATA found in local storage
+                    SRS_data['id_to_obj'][ids[i]] = obj;
+                    var due = get_due_date(SRS_data['id_to_level'][ids[i]],new Date(newest_commit));
+                    SRS_data['id_to_due_date'][ids[i]] = due;
+                    if(due <= new Date()) SRS_data['due'].push(ids[i]);
+                    
                     slugData.push(obj);
                     if(i==ids.length-1){                                                
-                        return setAllUserInfo(oldest_commits,newest_commits,slugData,setUserData);                        
+                        return setAllUserInfo(oldest_commits,newest_commits,slugData,setUserData,SRS_data);                        
                     }
             })
         }   
