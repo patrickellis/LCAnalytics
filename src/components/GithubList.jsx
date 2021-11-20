@@ -44,6 +44,7 @@ class GithubList extends Component {
             redirect:true
         })
     }
+ 
     setRepos(repos){        
         this.setState({
             repos:repos
@@ -56,23 +57,33 @@ class GithubList extends Component {
             <div class="background">
                 <div class="outer-container-github">
                 <div class="githublistcont">
-                    <ul class="githubList">
-                        <h1 class="repoTitle">Choose your repository</h1>
-                        {this.state.repos.map(item =>
-                            <li onClick={()=>this.onClick(item)}>
-                                <div class="githubcontent">
-                                    <div class="inline">
-                                        <div class="githubtitle">{item.repo}</div>
-                                        <div class="githubbranch">{item.branch}</div>
+                    <div class="repoTitle">
+                        <div class="titleText">
+                            <h1>Choose your repository</h1>
+                        </div>
+                        <div class="exitButton">
+                            <button onClick={this.props.toggleModal}><img style={{width:'3rem',height:'3rem'}}src={'https://static.thenounproject.com/png/1202535-200.png'} alt=""/> </button>
+                        </div>
+                    </div>
+                    <div class="containerGithub">
+                        <ul class="githubList">                       
+                            {this.state.repos.map(item =>
+                                <li onClick={()=>this.onClick(item)}>
+                                    <div class="githubcontent">
+                                        <div class="inline">
+                                            <div class="githubtitle">{item.repo}</div>
+                                            <div class="githubbranch">{item.branch}</div>
+                                        </div>
+                                        <div class="icon">
+                                            <img src="https://pngimage.net/wp-content/uploads/2018/05/arrow-down-icon-png-5.png" style={{width:'25px',height:'25px',fill:'red'}}/>
+                                        </div>
                                     </div>
-                                    <div class="icon">
-                                        <img src="https://pngimage.net/wp-content/uploads/2018/05/arrow-down-icon-png-5.png" style={{width:'25px',height:'25px',fill:'red'}}/>
-                                    </div>
-                                </div>
-                                
-                            </li>
-                            )}
-                    </ul>
+                                    
+                                </li>
+                                )}
+                        </ul>
+                    </div>
+                    <div class="pagebreak"></div>
                 </div>
                 </div>
             </div>

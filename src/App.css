@@ -1607,6 +1607,7 @@ tspan{
   gap: 2rem;
   position: relative;
 }
+
 .m-bxtrut {
   padding: 0px 20px 1.2rem;
 }
@@ -1706,7 +1707,7 @@ tspan{
 .background{
   width:100%;
   height:100vh;
-  background:rgba(0,0,0,0.6);
+  background:rgba(2, 5, 44, 0.6);
   position:fixed;
   z-index:10000;
 }
@@ -2618,16 +2619,31 @@ les {
   font-weight:600;
 }
 .repoTitle{
-  font-size:1.7rem !important;
-  padding: 0 0 2rem 0;
+  font-size:2rem !important;
+  font-weight:500;
+  padding: 2rem 2rem 2rem 2rem;
+  margin-bottom:2rem !important;
+  border-bottom:1px solid lightgrey;
+}
+.titleText{
+  width:fit-content;
+  display:inline-block;
+}
+.exitButton{
+  display:inline-block;
+  float:right;
+}
+.titleText h1{
+  font-size:2rem;
 }
 .inline{
   display:inline-block;
   float:left;
 }
 .githublistcont{
-  background:#f4f4f4;
-  min-width:42rem;
+  background:white;
+  min-width:60rem;
+  border-radius:15px;
 }
 .icon{
   display:inline-block;
@@ -2675,14 +2691,33 @@ les {
   text-align:center;
   margin:1rem 0 1rem 0;
 }
+body.modal-open {
+  overflow: hidden;
+}
 .githubList li:hover{
-  background:lightblue;
+  background:#f1f4ff;
   cursor: pointer;
 }
+.containerGithub{
+  width:fit-content;
+  min-width:43rem;
+  margin:auto;
+  background:#f4f4f4; 
+  border-radius:10px;
+}
+.pagebreak{
+  width:100%;
+  height:2rem;
+}
 .githubList{
-  max-height:50rem;
-  height:50rem;
+  margin:10px;
+  max-height:70rem;
+  width:fit-content;
+  height:70rem;
   overflow-y:scroll;
+}
+.githubList::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
 }
 .paginationContainer{
   width:fit-content;

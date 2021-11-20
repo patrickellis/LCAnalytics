@@ -85,6 +85,7 @@ class App extends Component {
 
   setUserRepositoryAndBranch(user){
     console.log("set user repo");
+    document.body.classList.remove('modal-open');
     this.setState({
       userObject:user,
       displayModal:false,
@@ -119,16 +120,22 @@ class App extends Component {
     })
   }
   toggleModal(){
+    console.log("toggling modal");
+    document.body.classList.remove('modal-open');
     this.setState({
-      displayModal : false
+      displayModal : false,
+      displayModalNav : false,
     })
   }
+
   toggleModalFromNav(){
     console.log('toggle modal');
+    document.body.classList.add('modal-open');
     this.setState({      
       displayModalNav : true
-    }, console.log(this.state.displayModalNav))
+    })
   }
+
   signoutUser(){
     this.setState({
       user : undefined

@@ -169,6 +169,7 @@ class ProfileTableNew extends Component {
             currentData : newData.slice((this.state.currentIndex-1) * 100, (this.state.currentIndex-1)*100+100)
         })
     }
+    
     sortByDueDate(){        
         var newData = this.state.filteredData;
         const id_to_level = this.props.userData.SRS_data['id_to_level'];
@@ -185,6 +186,7 @@ class ProfileTableNew extends Component {
             currentData : newData.slice((this.state.currentIndex - 1)* 100, (this.state.currentIndex-1)*100+100)
         })
     }
+    
     sortByAcceptance(){        
         var newData = this.state.filteredData;
         if(newData.length < 2) return;
