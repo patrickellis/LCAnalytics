@@ -158,8 +158,7 @@
     transition-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 2000%, 0 2000%);
     clip-path: polygon(0 0, 100% 0, 100% 2000%, 0 2000%);
-    background: #1c2545;
-    border-bottom: 1px solid rgb(129, 129, 129);
+    background: #1c2545;    
 }
 .upNav{
     font-weight:600 !important;

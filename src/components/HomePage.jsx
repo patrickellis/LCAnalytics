@@ -52,8 +52,8 @@ class HomePage extends Component {
     }
     render() {            
       return(
-        <>            
-          <div class="login-background">
+        <>                      
+          <div class="login-background"></div>
             <div class="login">
                   <div class="loginFormContainer">
                     <h1 id="leetdata">Leetdata</h1>
@@ -82,7 +82,7 @@ class HomePage extends Component {
                     
                       </div>
               </div>
-          </div>
+          
         </>
       )
     }

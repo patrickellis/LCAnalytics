@@ -239,6 +239,7 @@ class App extends Component {
     return (
       <div style={{position:'relative'}}>    
         <div class="app-background"></div>
+        <div class="app-background2"></div>
         {this.state.user && (this.state.displayModal || this.state.displayModalNav)?           
           <GithubList displayModalNav={this.state.displayModalNav} toggleModal={this.toggleModal} setUserRepositoryAndBranch={this.setUserRepositoryAndBranch} user={this.state.user}/> : <></>  
         }
@@ -258,7 +259,10 @@ class App extends Component {
                       {this.state.user ?
                         <Redirect to="/profile"/>
                         :
-                        <HomePage keyfound={this.state.keyfound} login={this.login} setUserRepositoryAndBranch={this.setUserRepositoryAndBranch} user={this.state.user}/>
+                          <>
+                           
+                          <HomePage keyfound={this.state.keyfound} login={this.login} setUserRepositoryAndBranch={this.setUserRepositoryAndBranch} user={this.state.user}/>
+                           </>
                         }
                     </Route> 
                     <Route exact path="/home">
