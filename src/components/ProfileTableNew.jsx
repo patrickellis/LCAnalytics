@@ -425,7 +425,10 @@ class ProfileTableNew extends Component {
                                                                                                                                               
                                     </td>                               
                                     {/*<td>{item['Acceptance']}</td>*/}
-                                    <td style={item['difficulty']=='Easy'?{color:'rgba(0,175,155,1)'}:item['difficulty']=='Medium'?{color:'rgba(255,184,0,1'}:{color:'rgba(255,45,85,1)'}}>{item['difficulty']}</td>                                                                      
+                                    <td onClick={()=>this.handleClick(item['id'])} style={item['difficulty']=='Easy'?{color:'rgba(0,175,155,1)'}:item['difficulty']=='Medium'?{color:'rgba(255,184,0,1'}:{color:'rgba(255,45,85,1)'}}>                                        
+                                        <DifficultyCircle difficulty={item['difficulty']}/>
+                                        {/**<div style={{display:'inline-block'}}>{item['difficulty']}</div>**/}
+                                    </td>    
                                     <td><div class="">{data['level_to_gap'][data['id_to_level'][item['id']]]} days</div></td>
                                     <td><div class="reset">Reset</div></td>
                                     <td class="bookend"></td>                                    

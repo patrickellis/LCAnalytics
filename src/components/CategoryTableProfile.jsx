@@ -13,7 +13,7 @@ class CategoryTableProfile extends Component {
     constructor(props){
         super(props);
         this.state = {
-            goal : 25
+            goal :26
         };
         this.handleListClick = this.handleListClick.bind(this);
     }
@@ -37,7 +37,8 @@ class CategoryTableProfile extends Component {
                     <th class="m-1itvjt0">Category</th>     
                     <th class="m-1itvjt0" style={{minWidth:'11rem'}}>Solved</th>                                             
                     <th class="m-1itvjt0">
-                        <div style= {{width:this.state.goal * 3 + 'rem'}} class="target-text"><div class="text">Goal</div></div>
+                        <div class="line-container" style={{padding:'0.8rem 1.2rem'}}>
+                        <div style= {{width:this.state.goal * 3 + 1.2 + 'rem',padding:'0.8rem 1.2rem'}} class="target-text"><div class="text">Goal</div></div></div>
                         <div>Progress Bar</div>
                     </th>               
                     </thead>
@@ -50,7 +51,8 @@ class CategoryTableProfile extends Component {
                                 <td class="bold">{item.category}</td>    
                                 <td class="bold">{item.count}</td>                                                                                                   
                                 <td style={{overflow:'visible'}}>    
-                                <div class="target-line" style={{width:this.state.goal * 3 + 'rem'}}></div>                            
+                                <div class="line-container" style={{padding:'0.8rem 1.2rem'}}>
+                                    <div class="target-line" style={{width:this.state.goal * 3 + 'rem'}}></div></div>                            
                                     <ProblemBar goal={this.state.goal} count={item['count']} width={item['percent_width']} easy={item['Easy']} medium={item['Medium']} hard={item['Hard']}/>                                                                                                                                                                                
                                     {/*
                                     <div class="m-1s5vw6 e5mzqaz1">

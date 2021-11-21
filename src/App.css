@@ -62,7 +62,7 @@ body,html{
   -webkit-text-size-adjust: 100%;
   font-family: 'Aktiv Grotesk','Roboto',sans-serif !important;
   -webkit-font-smoothing: subpixel-antialiased;
-  font-size: 10px;
+  font-size: 9px;
   --nav-main-bg-color: #140e30;
   --nav-hover-bg-color: #271c37;
   --nav-border-color: #251e47;
@@ -1191,7 +1191,7 @@ tspan{
 }
 .add-company-button {
   position: absolute;
-  left: 310px;
+  left: 31rem;
   top:10px;
   width:2.7rem;
   height:2.7rem;
@@ -1654,8 +1654,8 @@ tspan{
 }
 .m-h0893i {
   font-weight: 500;
-  font-size: 18px;
-  line-height: 36px;
+  font-size: 1.8rem;
+  line-height: 3.6rem;
   letter-spacing: 0.15px;
   color: rgb(56, 47, 102);
   display: flex;
@@ -1666,13 +1666,16 @@ tspan{
   justify-content: center;
   width: 100%;
 }
+.timeSelectContainer{
+  
+}
 .m-lu2isw {
   margin: 0px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 2.4rem;
   line-height: 36px;
   letter-spacing: 0.15px;
 }
@@ -1854,7 +1857,7 @@ th{
 }
 .m-ht4nkg {
   
-  max-width: 130rem;
+  max-width: 135rem;
   width: 100%;
   flex: 1 1 100%;
 }
@@ -2139,7 +2142,7 @@ svg:not(:root) {
   
 }
 .userdash{
-  min-height:800px;
+  min-height:80rem;
 }
 .recharts-polar-angle-axis-tick-value{
   margin:5px;
@@ -2201,6 +2204,9 @@ nav ul li{
   color: #6b6889;
   font-size:1.5rem;  
   font-weight:500;  
+}
+.stroke ul li{
+  padding-bottom:1.4rem !important;
 }
 nav ul{
   background:#f1f5f9;
@@ -2843,7 +2849,7 @@ body.modal-open {
 }
 .text{
   float:right;
-  transform:translate(50%,0%);
+  transform:translate(50%,0%);  
 }
 .pagination-container{
   padding:5px;
