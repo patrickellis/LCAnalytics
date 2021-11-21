@@ -8,7 +8,6 @@ import problems from '../data/problems.json'
 import { isObjectBindingPattern } from 'typescript';
 
 const data = problems.reverse();
-console.log("PROBLEMS:",problems);
 
 const TAGS = ['two-pointers','string','dynamic-programming','hash-table','math','depth-first-search','sorting','greedy','breadth-first-search',
 'tree','binary-search','matrix','two-pointers','bit-manipulation','stack','design','heap-priority-queue','backtracking','graph','simulation',
@@ -122,8 +121,7 @@ class AllProblemsTable extends Component {
             tagsChecked : !this.state.tagsChecked
         })
     }
-    onSelectChange(){
-        console.log('select changed :', document.getElementById('tags-select').value);
+    onSelectChange(){        
         this.setState({
             tagFilter : document.getElementById('tags-select').value
         })
@@ -139,8 +137,7 @@ class AllProblemsTable extends Component {
     
     render() {
         const {isLoaded, data} = this.state;
-        const keys = Object.keys(problemIdToCategories);        
-        console.log("PROBLEM DICT:",problemIdToCategories['64']);
+        const keys = Object.keys(problemIdToCategories);                
       return(
                       
                 <div class="tableContainer">
@@ -234,7 +231,7 @@ class AllProblemsTable extends Component {
                                         {                 
                                         inArray(keys,item['id'])?    
                                             <>
-                                            <div class="upperdiv">                                       
+                                            <div class="upperdiv" style={problemIdToCategories[item['id']].length <= 3 ? {top : '0.5rem'} : {}}>                                       
                                             {problemIdToCategories[item['id']].slice(0,3).map(e =>     
                                                 this.state.tagsChecked?                                        
                                                 <span class="tagItem" style={{background:getTagStyle(e)[1],color:getTagStyle(e)[0]}}>• {e}</span>

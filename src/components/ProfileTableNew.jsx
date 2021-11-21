@@ -2,7 +2,7 @@ import {React,Component} from 'react';
 import problemIdToCategories from '../data/problemIdToCategories.json'
 import {getURLfromId} from '../scripts/github'
 import Pagination from './Pagination';
-
+import DifficultyCircle from './DifficultyCircle';
 const TAGS = ['two-pointers','string','dynamic-programming','hash-table','math','depth-first-search','sorting','greedy','breadth-first-search',
 'tree','binary-search','matrix','two-pointers','bit-manipulation','stack','design','heap-priority-queue','backtracking','graph','simulation',
 'prefix-sum','sliding-window','linked-list','counting','union-find','recursion','binary-search-tree','trie','monotonic-stack','ordered-set',
@@ -54,6 +54,7 @@ class ProfileTableNew extends Component {
     constructor(props){
         super(props);
         this.state = {
+            SRSdata : this.props.userData['SRS_data'],
             isLoaded : true,
             data: [],
             userData: this.props.userData,   
@@ -76,15 +77,15 @@ class ProfileTableNew extends Component {
         this.getCategories = this.getCategories.bind(this);
         this.sortByCompleted = this.sortByCompleted.bind(this);
         this.sortByDueDate = this.sortByDueDate.bind(this);
+        this.resetClick = this.resetClick.bind(this);
     }
     componentDidMount(){     
         let newData = [];
         let ids_solved = this.props.userData.ids_solved;
-        for(let i = 0; i < ids_solved.length; ++i){
-            console.log("ID SOLVED: ", ids_solved[i]);
+        for(let i = 0; i < ids_solved.length; ++i){            
             newData.push(this.props.userData['SRS_data']['id_to_obj'][ids_solved[i]]);            
         }
-        this.setState({
+        this.setState({            
             data : newData,
             filteredData : newData,   
             currentData : newData.slice(0,100),         
@@ -134,8 +135,7 @@ class ProfileTableNew extends Component {
         // nothing done here for now      
     }
     sortByCompleted(){        
-        var newData = this.state.filteredData;
-        console.log("sorting by completed",newData.length);
+        var newData = this.state.filteredData;        
         if(newData.length < 2) return;
         if(this.isSolved(newData[0]['#'])){
             newData.sort((a,b) => {
@@ -169,7 +169,7 @@ class ProfileTableNew extends Component {
             currentData : newData.slice((this.state.currentIndex-1) * 100, (this.state.currentIndex-1)*100+100)
         })
     }
-    
+
     sortByDueDate(){        
         var newData = this.state.filteredData;
         const id_to_level = this.props.userData.SRS_data['id_to_level'];
@@ -179,8 +179,7 @@ class ProfileTableNew extends Component {
             newData.sort((a,b) => (parseInt(id_to_level[a['id']]) > parseInt(id_to_level[b['id']]))? 1 : -1)
         } else {
             newData.sort((a,b) => (parseInt(id_to_level[a['id']]) < parseInt(id_to_level[b['id']]))? 1 : -1)
-        }        
-        console.log("SORTED BY DUE DATE: ", newData);
+        }                
         this.setState({
             filteredData : newData,
             currentData : newData.slice((this.state.currentIndex - 1)* 100, (this.state.currentIndex-1)*100+100)
@@ -213,7 +212,7 @@ class ProfileTableNew extends Component {
         return []
     }
     onSelectChange(){
-        console.log('select changed :', document.getElementById('tags-select').value);
+    
         let tag = document.getElementById('tags-select').value;
         let filteredData = []
         for(let i = 0; i < this.state.data.length; ++i){
@@ -239,7 +238,21 @@ class ProfileTableNew extends Component {
         }
         return false;        
     }
-    
+    resetClick(id){        
+        // 1. update item in state 
+        let data = this.state.SRSdata;
+        data['id_to_level'][id] = 1;
+        this.setState({SRSdata : data},()=>this.forceUpdate());
+        // 2. update localstorage
+        if (localStorage.getItem("resetIds") === null) {
+            let resetIds = {id : new Date()};
+            localStorage.setItem('resetIds',JSON.stringify(resetIds));    
+            return;        
+          }        
+        let resetIds = JSON.parse(localStorage.getItem('resetIds'));        
+        resetIds[id] = new Date();
+        localStorage.setItem('resetIds',JSON.stringify(resetIds));                
+    }
     handleClick(id){
         window.open(getURLfromId(id), '_blank').focus();        
     }
@@ -254,7 +267,7 @@ class ProfileTableNew extends Component {
 
     render() {
         const {isLoaded, currentData} = this.state;
-        const data = this.props.userData['SRS_data'];
+        const data = this.state.SRSdata;
       return(
           <>
                 <div class="paginationContainer">
@@ -272,9 +285,9 @@ class ProfileTableNew extends Component {
                         
                          <thead class="thead">                                        
                             <tr class="m-1itvjt0 ejhqg10">
-                                <th class="m-1itvjt0"></th>                                
-                                <th class="m-1itvjt0 idHeader">#</th>
-                                <th class="m-1itvjt0 titleHeader">Title</th>   
+                                <th class="m-1itvjt0" style={{minWidth:'3rem'}}></th>                                
+                                {/*<th class="m-1itvjt0 idHeader">#</th>*/}
+                                <th class="m-1itvjt0 titleHeader2">Title</th>   
                                 <th class="m-1itvjt0 tagsHeader">
                                  <div class="switchtextcont">
                                     <div class="tagsText">Tags</div>
@@ -339,23 +352,25 @@ class ProfileTableNew extends Component {
                                     Due Again In
                                     <span class="w-3.5 h-3.5 ml-2 text-gray-5 dark:text-dark-gray-5 group-hover:text-gray-7 dark:group-hover:text-dark-gray-7"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor"><path d="M18.695 9.378L12.83 3.769a1.137 1.137 0 00-.06-.054c-.489-.404-1.249-.377-1.7.06L5.303 9.381a.51.51 0 00-.16.366c0 .297.27.539.602.539h12.512a.64.64 0 00.411-.146.501.501 0 00.028-.762zM12.77 20.285c.021-.017.042-.035.062-.054l5.863-5.609a.5.5 0 00-.028-.762.64.64 0 00-.41-.146H5.743c-.332 0-.601.242-.601.54a.51.51 0 00.16.365l5.769 5.606c.45.437 1.21.464 1.698.06z"></path></svg></span>
                                 </th>
-                                
+                                <th class="m-1itvjt0 tablehover frequencyHeader">                                    
+                                    Actions
+                                </th>
                                 <th class="m-1itvjt0"></th>
                             </tr>
                         </thead>
                        
                         <tbody>                            
-                            {currentData.map(item =>                             
+                            {currentData.map(item =>                              
                                 this.state.tagFilter == 'All'?                               
-                                <tr onClick={()=>this.handleClick(item['#'])} class="m-14j0amg e98qpmo0">                                    
-                                    <td></td>
+                                <tr class="m-14j0amg e98qpmo0">                                    
+                                    <td onClick={()=>this.handleClick(item['id'])}></td>
                                     
-                                    <td>{item['id']}.</td>
-                                    <td class="bold">{item['title']}</td>     
-                                    <td class="tags">                                                                       
+                                    {/*<td>{item['id']}.</td>*/}
+                                    <td onClick={()=>this.handleClick(item['id'])}class="bold">{item['title']}</td>     
+                                    <td onClick={()=>this.handleClick(item['id'])} class="tags">                                                                       
                                                                                 
                                             <>
-                                            <div class="upperdiv">                                       
+                                            <div class="upperdiv" style={this.getCategories(item['id']).length <= 3 ? {top : '0.5rem'} : {}}>                                       
                                             {this.getCategories(item['id']).slice(0,3).map(e =>     
                                                 this.state.tagsChecked?                                        
                                                 <span class="tagItem" style={{background:getTagStyle(e)[1],color:getTagStyle(e)[0]}}>• {e}</span>
@@ -373,21 +388,24 @@ class ProfileTableNew extends Component {
                                                                                                                                               
                                     </td>                               
                                     {/*<td>{item['Acceptance']}</td>*/}
-                                    <td style={item['difficulty']=='Easy'?{color:'rgba(0,175,155,1)'}:item['difficulty']=='Medium'?{color:'rgba(255,184,0,1'}:{color:'rgba(255,45,85,1)'}}>{item['difficulty']}</td>                                    
-                                    <td><div class="">{data['level_to_gap'][data['id_to_level'][item['id']]]} days</div></td>
+                                    <td onClick={()=>this.handleClick(item['id'])} style={item['difficulty']=='Easy'?{color:'rgba(0,175,155,1)'}:item['difficulty']=='Medium'?{color:'rgba(255,184,0,1'}:{color:'rgba(255,45,85,1)'}}>                                        
+                                        <DifficultyCircle difficulty={item['difficulty']}/>
+                                        {/**<div style={{display:'inline-block'}}>{item['difficulty']}</div>**/}
+                                    </td>                                    
+                                    <td onClick={()=>this.handleClick(item['id'])}><div class="">{data['level_to_gap'][data['id_to_level'][item['id']]]} days</div></td>
+                                    <td><div class="reset" onClick={()=>this.resetClick(item['id'])}>Reset</div></td>
                                     <td class="bookend"></td>                                    
                                 </tr>
                                 :
                                 inArray(this.getCategories(item['id']),this.state.tagFilter)?                                
                                 <tr onClick={()=>this.handleClick(item['id'])} class="m-14j0amg e98qpmo0">                                    
                                     <td></td>
-                                
-                                    <td>{item['id']}.</td>
+                                                                    
                                     <td>{item['title']}</td>     
                                     <td class="tags">                                                                                                                           
                                          
                                             <>
-                                            <div class="upperdiv">                                       
+                                            <div class="upperdiv" style={this.getCategories(item['id']).length <= 3 ? {top : '0.5rem'} : {}}>                                       
                                                 {this.getCategories(item['id']).slice(0,3).map(e => 
                                                     this.state.tagsChecked?                                            
                                                     <span class="tagItem" style={{background:getTagStyle(e)[1],color:getTagStyle(e)[0]}}>• {e}</span>
@@ -409,10 +427,11 @@ class ProfileTableNew extends Component {
                                     {/*<td>{item['Acceptance']}</td>*/}
                                     <td style={item['difficulty']=='Easy'?{color:'rgba(0,175,155,1)'}:item['difficulty']=='Medium'?{color:'rgba(255,184,0,1'}:{color:'rgba(255,45,85,1)'}}>{item['difficulty']}</td>                                                                      
                                     <td><div class="">{data['level_to_gap'][data['id_to_level'][item['id']]]} days</div></td>
+                                    <td><div class="reset">Reset</div></td>
                                     <td class="bookend"></td>                                    
                                 </tr>     
                                 : <></>                           
-                            )};
+                            )}
                             
                         </tbody>
                     </table>    

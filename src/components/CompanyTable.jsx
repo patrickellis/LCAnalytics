@@ -275,7 +275,7 @@ class CompanyTable extends Component {
                                         {                 
                                         inArray(keys,item['#'])?    
                                             <>
-                                            <div class="upperdiv">                                       
+                                            <div class="upperdiv" style={problemIdToCategories[item['#']].length <= 3 ? {top : '0.5rem'} : {}}>                                       
                                                 {problemIdToCategories[item['#']].slice(0,3).map(e => 
                                                     this.state.tagsChecked?                                            
                                                     <span class="tagItem" style={{background:getTagStyle(e)[1],color:getTagStyle(e)[0]}}>• {e}</span>

@@ -2,6 +2,7 @@ import {React,Component} from 'react';
 import problemIdToCategories from '../data/problemIdToCategories.json'
 import {getURLfromId} from '../scripts/github'
 import Pagination from './Pagination';
+import DifficultyCircle from './DifficultyCircle';
 
 const TAGS = ['two-pointers','string','dynamic-programming','hash-table','math','depth-first-search','sorting','greedy','breadth-first-search',
 'tree','binary-search','matrix','two-pointers','bit-manipulation','stack','design','heap-priority-queue','backtracking','graph','simulation',
@@ -333,7 +334,7 @@ class AllProblemsTable extends Component {
                                     <td class="tags">                                                                       
                                                                                 
                                             <>
-                                            <div class="upperdiv">                                       
+                                            <div class="upperdiv" style={this.getCategories(item['#']).length <= 3 ? {top : '0.5rem'} : {}}>                                                                             
                                             {this.getCategories(item['#']).slice(0,3).map(e =>     
                                                 this.state.tagsChecked?                                        
                                                 <span class="tagItem" style={{background:getTagStyle(e)[1],color:getTagStyle(e)[0]}}>• {e}</span>
@@ -351,7 +352,10 @@ class AllProblemsTable extends Component {
                                                                                                                                               
                                     </td>                               
                                     {/*<td>{item['Acceptance']}</td>*/}
-                                    <td style={item['Difficulty']=='Easy'?{color:'rgba(0,175,155,1)'}:item['Difficulty']=='Medium'?{color:'rgba(255,184,0,1'}:{color:'rgba(255,45,85,1)'}}>{item['Difficulty']}</td>                                    
+                                    <td onClick={()=>this.handleClick(item['id'])} style={item['level_text']=='Easy'?{color:'rgba(0,175,155,1)'}:item['difficulty']=='Medium'?{color:'rgba(255,184,0,1'}:{color:'rgba(255,45,85,1)'}}>                                        
+                                        <DifficultyCircle difficulty={item['Difficulty']}/>
+                                        {/**<div style={{display:'inline-block'}}>{item['difficulty']}</div>**/}
+                                    </td> 
                                     <td class="bookend"></td>                                    
                                 </tr>
                                 :
@@ -369,7 +373,7 @@ class AllProblemsTable extends Component {
                                                     
                                          
                                             <>
-                                            <div class="upperdiv">                                       
+                                            <div class="upperdiv" style={this.getCategories(item['#']).length <= 3 ? {top : '0.5rem'} : {}}>   
                                                 {this.getCategories(item['#']).slice(0,3).map(e => 
                                                     this.state.tagsChecked?                                            
                                                     <span class="tagItem" style={{background:getTagStyle(e)[1],color:getTagStyle(e)[0]}}>• {e}</span>

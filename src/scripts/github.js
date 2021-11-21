@@ -88,8 +88,7 @@ function init_dictionaries(){
 init_dictionaries()
 // when and how often is this called? just on import? We only need it called once
 
-export const getUserRepositories = (username,token,setRepos) => {
-    console.log("getting user repositories")
+export const getUserRepositories = (username,token,setRepos) => {    
     var url = 'https://api.github.com/users/'+username+'/repos';
     //var url = 'https://api.github.com/users/patrickellis/repos';
     var repos = []
@@ -98,9 +97,7 @@ export const getUserRepositories = (username,token,setRepos) => {
             'Authorization' : 'token ' + token
         }
     })
-            .then(res => {
-                console.log("Here");
-                console.log(res);
+            .then(res => {                                
                 var data = res.data;
                 for(let i = 0; i < data.length; ++i){
                     //repos.push(data[i].name);
@@ -124,14 +121,13 @@ export const getUserRepositories = (username,token,setRepos) => {
  * @param {*} setUserData - function passed from App.js that sets object state to hold all user data
  * @returns 
  */
-export const fetchGithubRepo = (username,repo_name,branch_name,setUserData,token) => {
-    console.log("TOKEN: ",token);
+export const fetchGithubRepo = (username,repo_name,branch_name,setUserData,token) => {    
     var new_difficulties = {'Easy':0,'Medium':0,'Hard':0};
     var new_solved = []
     var new_solved_total = 0
     var new_user_solved_dict = {}
     var url = 'https://api.github.com/repos/'+username+'/'+repo_name+'/git/trees/'+branch_name+'?recursive=0' 
-    console.log(url);
+   
     axios.get(url,{
         'headers' : {
             'Authorization' : 'token ' + token
@@ -139,7 +135,7 @@ export const fetchGithubRepo = (username,repo_name,branch_name,setUserData,token
     })  
             .then(res => {
                 var tree = res.data.tree   
-                console.log(tree);             
+                          
                 var counter = 0
                 for(var i = 0; i < tree.length; ++i){
                     if(tree[i]['path'] in problems_dict){
@@ -158,13 +154,11 @@ export const fetchGithubRepo = (username,repo_name,branch_name,setUserData,token
                 fetchDatesFromAllUserIds(username,repo_name,ids_solved,setUserData,token);                                                                
             })           
 }
-export const get_object_from_id = (id) => {
-    console.log("inside with id: ", id);   
+export const get_object_from_id = (id) => {      
     let obj = {};
     obj['id'] = id;
     obj['level'] = id_to_level[id];
-    obj['title'] = problem_slug_to_actual[id_to_problem_slug[id]];   
-    console.log(obj); 
+    obj['title'] = problem_slug_to_actual[id_to_problem_slug[id]];      
     return obj;
 }
 
@@ -257,7 +251,6 @@ function setAllUserInfo(oldest_commits,newest_commits,slugData,setUserData,SRS_d
         if(a['daysAgo'] > b['daysAgo']) return 1;
         return 0;
     });
-    console.log("user data: ", user_data);    
     setUserData(user_data);
     return user_data;
 }
@@ -276,15 +269,31 @@ function get_due_date(level,lastSolved){
     };        
     return new Date(lastSolved.getTime() + level_to_gap[level]*24*60*60*1000);
 }   
-function computeLevel(commit_history){
-    if(commit_history.length <= 1) return 1;
+function getResetsFromLocalStorage(){
+    const resetIds = JSON.parse(localStorage.getItem('resetIds'));
+    return resetIds == null ? {} : resetIds;    
+}
+
+function commitIsAfterDate(commitDate, cutoffDate){
+    return commitDate >= cutoffDate;
+}
+function computeLevel(commit_history,id,resetIds){
+    var idHasBeenReset = resetIds.hasOwnProperty(id.toString());
+    const ignoreCommitsBefore = idHasBeenReset?new Date(resetIds[id.toString()]):undefined;
+    // prune the commit history to those only after reset, if this problem ID has been reset by the user
+    var filtered_history = idHasBeenReset ? [] : commit_history; 
+    if(idHasBeenReset){
+        commit_history.forEach((commit)=>{
+            if(commitIsAfterDate(new Date(commit))) filtered_history.push(commit);
+        });    
+    }
+    if(filtered_history.length <= 1) return 1;
     const levelGaps = [3,7,14,28,56,112,224,448];
-    var prev = new Date(commit_history[0]);
+    var prev = new Date(filtered_history[0]);
     var curr_gap_index = 0;
-    for(let i = 1; i < commit_history.length; ++i){
-        var dateSolved = new Date(commit_history[i]);
-        var gap = datediff(prev,dateSolved);
-        console.log(`comparing ${dateSolved} with ${prev}, difference in days: ${gap} - current considered gap: ${levelGaps[curr_gap_index]}`);
+    for(let i = 1; i < filtered_history.length; ++i){
+        var dateSolved = new Date(filtered_history[i]);
+        var gap = datediff(prev,dateSolved);        
         if(gap > levelGaps[curr_gap_index]){
             curr_gap_index += 1;
             prev = dateSolved;
@@ -311,7 +320,7 @@ export const fetchDatesFromAllUserIds = (username,repo_name,ids,setUserData,toke
         7 : 224,
         8 : 448
     };
-    console.log("fetching dates");
+    const resetIds = getResetsFromLocalStorage();
     var oldest_commits = []
     var newest_commits = []
     var slugData = []
@@ -356,7 +365,8 @@ export const fetchDatesFromAllUserIds = (username,repo_name,ids,setUserData,toke
                         SRS_data[ids[i]].push(item['commit']['author']['date']);
                     })
                     SRS_data[ids[i]] = SRS_data[ids[i]].reverse();
-                    SRS_data['id_to_level'][ids[i]] = computeLevel(SRS_data[ids[i]]);
+
+                    SRS_data['id_to_level'][ids[i]] = computeLevel(SRS_data[ids[i]],ids[i],resetIds);
                     // always execute this line below even if SRS_DATA found in local storage
                     SRS_data['id_to_obj'][ids[i]] = obj;
                     var due = get_due_date(SRS_data['id_to_level'][ids[i]],new Date(newest_commit));

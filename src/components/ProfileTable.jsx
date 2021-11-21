@@ -124,8 +124,7 @@ class ProfileTable extends Component {
             tagsChecked : !this.state.tagsChecked
         })
     }
-    onSelectChange(){
-        console.log('select changed :', document.getElementById('tags-select').value);
+    onSelectChange(){        
         this.setState({
             tagFilter : document.getElementById('tags-select').value
         })

@@ -69,10 +69,10 @@ class CompanyNav extends Component {
         }
     }
     async componentDidMount(){      
-        const allquestions = document.getElementById('allquestions');
-        const studyorder = document.getElementById('studyorder');       
-        allquestions.addEventListener("click", this.flipNavClasses);
-        studyorder.addEventListener("click", this.flipNavClasses);
+        // const allquestions = document.getElementById('allquestions');
+        // const studyorder = document.getElementById('studyorder');       
+        // allquestions.addEventListener("click", this.flipNavClasses);
+        // studyorder.addEventListener("click", this.flipNavClasses);
     }
     render(){              
         return(
@@ -82,12 +82,14 @@ class CompanyNav extends Component {
                         <BeatLoader color={'rgb(49,41,85)'} loading={true} size={15} />    
                         </div>
                  </div>
+                 {/*
                 <nav class="stroke">
                     <ul>
                         <li class="selected" id="allquestions">All Questions</li>
                         <li class="unselected" id="studyorder">Study Order (Beta)</li>       
                     </ul>
                 </nav>
+                 */}
                 <div class="timeSelectContainer">
                     <div onClick={()=>this.switchTimePeriod(0,'6mo')} class="timeSelectItem activeLink">6 Months</div>
                     <div onClick={()=>this.switchTimePeriod(1, '1yr')} class="timeSelectItem">1 Year</div>

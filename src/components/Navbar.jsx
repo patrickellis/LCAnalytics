@@ -25,8 +25,7 @@ class NavBar extends Component {
             document.getElementById('dropdown2').style.opacity='0';
         })       
     }
-    logout(){
-        console.log("signing out");        
+    logout(){              
         for (let i = 0; i < window.localStorage.length; i++) {
             let key = window.localStorage.key(i);
             if (key.slice(0,8) === "firebase") {

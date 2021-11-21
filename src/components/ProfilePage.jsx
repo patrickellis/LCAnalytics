@@ -72,13 +72,12 @@ class ProfilePage extends Component {
         document.body.scrollTop = document.documentElement.scrollTop = 0;
     }
     componentWillReceiveProps(){
-        console.log("receiving props");
+        
         this.computeListCompletion();
         
     }
     computeListCompletion(){
         let trackedCompanies = localStorage.getItem('Lists')===null?[]:JSON.parse(localStorage.getItem('Lists'));
-        console.log(trackedCompanies);
         const listkeys = Object.keys(AllLists);
         var listCompletion = {}
         for(let i = 0; i < listkeys.length; ++i){
@@ -91,8 +90,7 @@ class ProfilePage extends Component {
         }        
         
         for(let i = 0; i < trackedCompanies.length; ++i){
-            let cd =  this.props.companyData[trackedCompanies[i]];
-            console.log(cd);
+            let cd =  this.props.companyData[trackedCompanies[i]];            
             let counter = 0;
             for(let j = 0; j < cd.length; ++j){
                 counter += this.isSolved(cd[j]['#']);
@@ -105,7 +103,6 @@ class ProfilePage extends Component {
             listCompletion[trackedCompanies[i]] = counter;
         }
         //this.updateProgress(4);
-        console.log(listCompletion);
         this.setState({
             listCompletion:listCompletion,
             trackedCompanies : trackedCompanies,
@@ -151,23 +148,20 @@ class ProfilePage extends Component {
         }
     }
     removeCompanyFromUserLists(company){
-        let lists = JSON.parse(localStorage.getItem('Lists'));
-        console.log("removing company from list, list before removal: ", lists);
+        let lists = JSON.parse(localStorage.getItem('Lists'));        
         for(let i = 0; i < lists.length; ++i){
             if(lists[i]==company){
                 lists.splice(i,1);
                 break;
             }                
-        }
-        console.log("removing company from list, list after removal: ", lists);
+        }       
         localStorage.setItem('Lists',JSON.stringify(lists));
         this.setState({
             trackedCompanies : lists
         })
     }
     
-    switchToCategoryPage(item){        
-        console.log("switching to category page: ", item);
+    switchToCategoryPage(item){               
         this.setState({
             initialFilter : item['category'],
             displayIndex : 3,            
@@ -183,8 +177,7 @@ class ProfilePage extends Component {
             {value: "12", label: "3 Months"},
             {value: "24", label: "6 Months"}
         ]
-        let {trackedCompanies} = this.state;
-        console.log("Current index: ", idx);
+        let {trackedCompanies} = this.state;        
 
         return(            
             <>       

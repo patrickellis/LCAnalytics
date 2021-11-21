@@ -50,7 +50,7 @@ class CompaniesTable extends Component {
                             <tr class="m-1itvjt0 ejhqg10">
                                 <th class="m-1itvjt0"></th>
                                 <th class="m-1itvjt0 filler"></th>
-                                <th class="m-1itvjt0 solved">#</th>
+                                <th style={{minWidth:'5.5rem'}}class="m-1itvjt0 solved">#</th>
                                 <th class="m-1itvjt0">Company</th>                                                               
                                 <th class="m-1itvjt0 filler">                                    
                                 </th>

@@ -1,5 +1,6 @@
 import {React,Component} from 'react';
 import problemIdToCategories from '../data/problemIdToCategories.json'
+import DifficultyCircle from './DifficultyCircle';
 import {getURLfromId} from '../scripts/github'
 import Pagination from './Pagination';
 import Categories from '../data/categoryList.js';
@@ -299,40 +300,7 @@ class AllProblemsTable extends Component {
                                     <div class="selectContainer">
                                         <select name="tags" id="tags-select" onChange={this.onSelectChange}>    
                                             <option value="All">All</option>
-                                            {Categories.map(item => <option value={item}>{item}</option>)}
-                                        {/*                                        
-                                            <option value="All">All</option>
-                                            <option value="String">String</option>
-                                            <option value="Backtracking">Backtracking</option>
-                                            <option value="Binary Search">Binary Search</option>                    
-                                            <option value="Bit Manipulation">Bit Manipulation</option>
-                                            <option value="Breadth First Search">BFS</option>
-                                            <option value="Depth First Search">DFS</option>
-                                            <option value="Bucket Sort">Bucket Sort</option>
-                                            <option value="Design">Design</option>
-                                            <option value="Dynamic Programming">Dynamic Programming</option>                                            
-                                            <option value="Graph">Graph</option>
-                                            <option value="Greedy">Greedy</option>
-                                            <option value="Heap Priority Queue">Heap</option>
-                                            <option value="Linked List">Linked List</option>
-                                            <option value="Intervals">Intervals</option>
-                                            <option value="Sliding Window">Sliding Window</option>
-                                            <option value="Sorting">Sorting</option>
-                                            <option value="Topological Sort">Topological Sort</option>
-                                            <option value="Trie">Trie</option>
-                                            <option value="Two Pointers">Two Pointers</option>
-                                            <option value="Union Find">Union Find</option>       
-                                            <option value="Randomized">Randomized</option>                                                                                        
-                                            <option value="Ordered Set">Ordered Set</option>       
-                                            <option value="Strongly Connected Component">Strongly Connected Component</option>     
-                                            <option value="Minimum Spanning Tree">Minimum Spanning Tree</option>     
-                                            <option value="Memoization">Memoization</option>     
-                                            <option value="Tree">Tree</option>     
-                                            <option value="Doubly Linked List">Doubly Linked List</option>     
-                                            <option value="Biconnected Component">Biconnected Component</option>   
-                                            <option value="Radix Sort">Radix Sort</option>   
-                                            <option value="Merge Sort">Merge Sort</option>   
-                                        */}
+                                            {Categories.map(item => <option value={item}>{item}</option>)}                                        
                                         </select>
                                     </div>
                                 </th>                                 
@@ -367,7 +335,7 @@ class AllProblemsTable extends Component {
                                     <td class="tags">                                                                       
                                                                                 
                                             <>
-                                            <div class="upperdiv">                                       
+                                            <div class="upperdiv" style={item['tags'].length <= 3 ? {top : '0.5rem'} : {}}>                                       
                                             {item['tags'].slice(0,3).map(e =>     
                                                 this.state.tagsChecked?                                        
                                                 <span class="tagItem" style={{background:getTagStyle(e)[1],color:getTagStyle(e)[0]}}>• {e}</span>
@@ -385,7 +353,10 @@ class AllProblemsTable extends Component {
                                                                                                                                               
                                     </td>                               
                                     {/*<td>{item['Acceptance']}</td>*/}
-                                    <td style={item['level_text']=='Easy'?{color:'rgba(0,175,155,1)'}:item['level_text']=='Medium'?{color:'rgba(255,184,0,1'}:{color:'rgba(255,45,85,1)'}}>{item['level_text']}</td>                                    
+                                    <td onClick={()=>this.handleClick(item['id'])} style={item['level_text']=='Easy'?{color:'rgba(0,175,155,1)'}:item['difficulty']=='Medium'?{color:'rgba(255,184,0,1'}:{color:'rgba(255,45,85,1)'}}>                                        
+                                        <DifficultyCircle difficulty={item['level_text']}/>
+                                        {/**<div style={{display:'inline-block'}}>{item['difficulty']}</div>**/}
+                                    </td> 
                                     <td class="bookend"></td>                                    
                                 </tr>
                                 :
@@ -403,7 +374,7 @@ class AllProblemsTable extends Component {
                                                     
                                          
                                             <>
-                                            <div class="upperdiv">                                       
+                                            <div class="upperdiv" style={item['tags'].length <= 3 ? {top : '0.5rem'} : {}}>                                       
                                                 {item['tags'].slice(0,3).map(e => 
                                                     this.state.tagsChecked?                                            
                                                     <span class="tagItem" style={{background:getTagStyle(e)[1],color:getTagStyle(e)[0]}}>• {e}</span>
@@ -423,7 +394,10 @@ class AllProblemsTable extends Component {
                                                                                                                                               
                                     </td>                               
                                     {/*<td>{item['Acceptance']}</td>*/}
-                                    <td style={item['level_text']=='Easy'?{color:'rgba(0,175,155,1)'}:item['level_text']=='Medium'?{color:'rgba(255,184,0,1'}:{color:'rgba(255,45,85,1)'}}>{item['level_text']}</td>                                                                      
+                                    <td onClick={()=>this.handleClick(item['id'])} style={item['level_text']=='Easy'?{color:'rgba(0,175,155,1)'}:item['difficulty']=='Medium'?{color:'rgba(255,184,0,1'}:{color:'rgba(255,45,85,1)'}}>                                        
+                                        <DifficultyCircle difficulty={item['level_text']}/>
+                                        {/**<div style={{display:'inline-block'}}>{item['difficulty']}</div>**/}
+                                    </td> 
                                     <td class="bookend"></td>                                    
                                 </tr>     
                                 : <></>                           

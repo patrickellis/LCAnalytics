@@ -51,7 +51,7 @@ class UserProfileNav extends Component {
         })
     }
     flipNavClasses(id){
-        console.log("Flipping nav with id: ", id);
+       
         // this needs to be generalised to function with 5 headers///
         
         const tabs = document.getElementsByClassName('upNav');

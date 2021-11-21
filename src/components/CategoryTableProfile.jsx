@@ -33,9 +33,9 @@ class CategoryTableProfile extends Component {
             <div class="tableContainer">               
                 <table class="m-3gmgrq mainTable">
                     <thead class="thead">
-                    <th class="m-1itvjt0"></th>
+                    <th class="m-1itvjt0" style={{minWidth:'2rem'}}></th>
                     <th class="m-1itvjt0">Category</th>     
-                    <th class="m-1itvjt0">Solved</th>                                             
+                    <th class="m-1itvjt0" style={{minWidth:'11rem'}}>Solved</th>                                             
                     <th class="m-1itvjt0">
                         <div style= {{width:this.state.goal * 3 + 'rem'}} class="target-text"><div class="text">Goal</div></div>
                         <div>Progress Bar</div>

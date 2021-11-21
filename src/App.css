@@ -1193,11 +1193,12 @@ tspan{
   position: absolute;
   left: 310px;
   top:10px;
-  width:3rem;
+  width:2.7rem;
+  height:2.7rem;
   z-index:100;
   box-sizing: border-box;  
-  border-radius: 3px;
-  background: none #3d3d3d;
+  border-radius: 1.35rem;
+  background: #e5e7eb;
   border: none;
   outline: none;
   transition: background-color 0.1s ease-in 0s, opacity 0.1s ease-in 0s, color 0.1s ease-in 0s;
@@ -1205,14 +1206,18 @@ tspan{
   line-height: 2.4rem;
   letter-spacing: 0.025rem;
   text-transform: uppercase;
-  color: rgb(255, 255, 255);
+  color: #64778c;
   white-space: nowrap;
   cursor: pointer;
   align-items: center;
   overflow: hidden;
   text-align:center;
   vertical-align: center;
-  font-size: 1.5rem;  
+  font-size: 2rem;  
+}
+.add-company-button:hover{
+  color: #106dc4;
+  background: #eaf0fb;
 }
 .w-3\.5 {
   top:-1px;
@@ -1536,6 +1541,10 @@ tspan{
   border-collapse: separate;
   box-sizing: border-box;
   outline: none!important;
+}
+
+.m-14j0amg td{
+  color: #637385;
 }
 .m-1itvjt0 {
   user-select: none;
@@ -2011,7 +2020,7 @@ svg:not(:root) {
   overflow: hidden;
 }
 .mainTable td{  
-  color:#11172c;
+  color:#637385;
   box-shadow: none;
 }
 .mainTable tr{
@@ -2019,8 +2028,13 @@ svg:not(:root) {
 }
 .mainTable tr{
   background:white;
-  border: 3px solid rgb(129, 129, 129);
+  border: 3px solid #f7f9fc;
   height:60px;
+}
+.titleHeader2 {
+  width: 430px;
+  min-width: 410px;
+  max-width:410px;
 }
 .mainTable th{
   border-bottom:1px solid rgb(220,220,220);
@@ -2046,10 +2060,10 @@ svg:not(:root) {
   color:blue;
 }
 .mainTable tr:hover{
-  background: white !important;  
+  background: #f7f9fc !important;  
 }
 .mainTable tr:hover td{
-  color:blue;
+  
 }
 .mainTable{
   margin:0 auto;
@@ -2084,7 +2098,8 @@ svg:not(:root) {
   color:#333;
 }
 .ml-2 {
-  margin-left: 12px;
+  margin-left: 0.1rem;
+  top:0px;
   right:0px;
   position:relative;
 }
@@ -2744,6 +2759,13 @@ body.modal-open {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;  
+}
+.reset{
+  color: #247ce0;
+  font-weight:bold;
+}
+.reset:hover{
+  color: #1a5ca8;  
 }
 .app-background2{
   position:fixed;

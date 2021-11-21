@@ -2,8 +2,7 @@ import idToCategories from '../data/problemIdToCategories.json';
 import category_list from '../data/categoryList';
 
 export const userHasSolvedProblem = (problemID, userdata) => {
-    var solved = userdata['ids_solved']
-    //console.log(userdata)
+    var solved = userdata['ids_solved'];
     for(var i = 0; i < solved.length; ++i){
         if(solved[i] == problemID)
             return true
@@ -19,12 +18,10 @@ export const idsToRadar = (data) => {
     const TOP_N = 8;
     var counts = new Array(category_list.length).fill(0);
     for(let i = 0; i < data.length; ++i){
-        var id = data[i];
-        //console.log("Id: ", id)
+        var id = data[i];        
         if(!id in idToCategories) continue;
         var cats = idToCategories[id];
-        if(!cats) continue;
-        //console.log(cats);
+        if(!cats) continue;        
         for(let j = 0; j < cats.length; ++j){
             counts[cat_name_to_idx[cats[j]]]+=1;
         }
@@ -42,19 +39,93 @@ export const idsToRadar = (data) => {
         return 0;
     })
     display_data = display_data.slice(0,TOP_N);
-    
-    //console.log(display_data);
-    let desired_order = [0,4,5,7,1,3,2,6];
+        
+    let desired_order = [7,0,1,2,3,4,5,6];
+    let display_data_copy = JSON.parse(JSON.stringify(display_data));
     display_data.sort(function(a,b){
-        if(a['category'].length > b['category'].length) return -1;
-        if(a['category'].length < b['category'].length) return 1;
+        if(a['category'].length < b['category'].length) return -1;
+        if(a['category'].length > b['category'].length) return 1;
         return 0;
     })
-    let newdata = Array(TOP_N).fill({});
-    for(let i = 0 ; i < TOP_N; ++i){
-        newdata[desired_order[i]] = display_data[i];
+    let nonZeroCountData = [];
+    let zeroCountData = [];
+    display_data.forEach(item => {
+        if(item['count'] > 0) nonZeroCountData.push(item);
+        else zeroCountData.push(item);
+    })
+    console.log("checkpoint 1, nonZeroCountData: ", nonZeroCountData, ", zeroCountData: ", zeroCountData);
+    let usingNonZeroData = false;
+    if(nonZeroCountData.length >= 4 && nonZeroCountData.length < 8){
+        usingNonZeroData = true;
+        let temp = nonZeroCountData[0]; // shortest length category string
+         nonZeroCountData[0] = nonZeroCountData[2];
+         nonZeroCountData[2] = temp;
+         if(nonZeroCountData.length == 7){
+             temp = nonZeroCountData[1];
+             nonZeroCountData[1] = nonZeroCountData[6];
+             nonZeroCountData[6] = temp;
+         }
+        zeroCountData.sort(function(a,b){
+            if(a['category'].length < b['category'].length) return -1;
+            if(a['category'].length > b['category'].length) return 1;
+            return 0;
+        })
+        zeroCountData.forEach(item => {
+            nonZeroCountData.push(item);
+        })
+        // check to see if we have any category names that are too long in the wrong places
+        // object that maps index to longest string that can be held there without overflowing container
+        let limits = { 
+            0 : 50,
+            1 : 16,
+            2 : 8,
+            3 : 16,
+            4 : 50,
+            5 : 16,
+            6 : 8,
+            7 : 16
+        }
+        for(let idx = 0; idx < nonZeroCountData.length; ++idx){            
+            if(nonZeroCountData[idx]['category'].length > limits[idx]){
+                console.log("string: ", nonZeroCountData[idx], " is too large to fit in index: ", idx);
+                usingNonZeroData = false;
+                break;
+            }
+            else{
+                console.log("string: ", nonZeroCountData[idx], " is large enough to fit in index ", idx, " -> required length: ", limits[idx], ", category item length: ", nonZeroCountData[idx].length);
+            }
+        }
     }
-    return newdata;
+    else if(nonZeroCountData.length < 4 && nonZeroCountData.length > 1){
+        usingNonZeroData = true;
+        let temp = nonZeroCountData[0]; // shortest length category string
+        nonZeroCountData[0] = nonZeroCountData[2];
+        nonZeroCountData[2] = temp;
+        const criticalIndex = 6 - nonZeroCountData.length;
+        temp = zeroCountData[0];
+        zeroCountData[0] = zeroCountData[criticalIndex];
+        zeroCountData[criticalIndex] = temp;
+        zeroCountData.forEach(item => {
+            nonZeroCountData.push(item);
+        })
+        let newdata = Array(TOP_N).fill({});
+        for(let i = 0 ; i < TOP_N; ++i){
+            newdata[desired_order[i]] = nonZeroCountData[i];
+        }
+    }
+    if(!usingNonZeroData){
+        display_data_copy.sort(function(a,b){
+            if(a['category'].length > b['category'].length) return -1;
+            if(a['category'].length < b['category'].length) return 1;
+            return 0;
+        })
+        let newdata = Array(TOP_N).fill({});
+        for(let i = 0 ; i < TOP_N; ++i){
+            newdata[desired_order[i]] = display_data_copy[i];
+        }
+        return newdata;
+    }
+    return nonZeroCountData;
 }
 export const setActiveLink = (id) => {    
     const headers = document.getElementsByClassName('m-ijakdu');
