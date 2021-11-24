@@ -18,6 +18,11 @@ const TAGS = ['two-pointers','string','dynamic-programming','hash-table','math',
 const COLORS =["rgb(64,129,236)", "rgb(7,92,98)", "rgb(159,102,237)", "rgb(118,7,150)", "rgb(103,72,106)", "rgb(51, 138, 96)", "rgb(161,8,92)", "rgb(31,60,166)", "rgb(39,15,226)", "rgb(116,141,19)"]
 
 function getColor(item){
+    // this does a linear search of the tags before deciding a color, 
+    // we could use a hashmap 
+    // lets think, 2000 questions * 50 tags -> O(n) maximally bounded by 100,000
+    // could be 2000 with a hashmap, i.e. 50 times faster
+    // but it's 3am, onto the todo list it goes 
     var itemname = item.toLowerCase();    
     itemname = itemname.split(' ').join('-');    
     for(let i = 0; i < TAGS.length; ++i){
