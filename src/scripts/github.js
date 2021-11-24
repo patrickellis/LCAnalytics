@@ -128,7 +128,7 @@ export const fetchGithubRepo = (username,repo_name,branch_name,setUserData,token
     var new_solved_total = 0
     var new_user_solved_dict = {}
     var url = 'https://api.github.com/repos/'+username+'/'+repo_name+'/git/trees/'+branch_name+'?recursive=0' 
-   
+    console.log(`GITHUB REQUEST: made a request to url: ${url} with token: ${token}`);
     axios.get(url,{
         'headers' : {
             'Authorization' : 'token ' + token
@@ -136,7 +136,7 @@ export const fetchGithubRepo = (username,repo_name,branch_name,setUserData,token
     })  
             .then(res => {
                 var tree = res.data.tree   
-                          
+                console.log(res);
                 var counter = 0
                 for(var i = 0; i < tree.length; ++i){
                     if(tree[i]['path'] in problems_dict){
@@ -458,7 +458,7 @@ export const weeklyProgressFromDates = (dates,num_weeks,num_problems,num_solved,
     var numBins = 16; // how many sections do we want to display on progress graph
     numBins = Math.min(numBins, num_weeks*7);   
     var data = new Array(numBins).fill(0);
-    var ratio = Math.round(((today-cutoff)/(1000*60*60*24))/numBins); // difference in days between sections
+    var ratio = ((today-cutoff)/(1000*60*60*24))/numBins; // difference in days between sections
     var nearest = Math.round(ratio);
     console.log("RATIO: ", ratio, ", ROUNDED: ", nearest);
     cutoff = new Date(Date.now() - 24 * 3600 * 1000 * numBins * nearest);

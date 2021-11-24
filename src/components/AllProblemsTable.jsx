@@ -27,20 +27,17 @@ function getLevel(level){
     if(level==2) return 'Medium';
     return 'Hard';
 }
-function getColor(item){
-    var itemname = item.toLowerCase();    
-    itemname = itemname.split(' ').join('-');    
-    for(let i = 0; i < TAGS.length; ++i){
-        if(TAGS[i]==itemname){     
-            var idx = i;      
-            if(idx >= COLORS.length){
-                idx = idx % COLORS.length;
-            }            
+function getColor(tag){
+    const TAG = tag.toLowerCase().split(' ').join('-');        
+    let idx = 0;
+    for(let category of TAGS){  
+        if(TAG == category){           
             var blockColor = COLORS[idx];
             var backgroundColor = blockColor.replace(')',',0.20)');            
             return [blockColor,backgroundColor];
         }
-    }
+        idx = (idx + 1) % COLORS.length;
+    } 
     return ['rgb(0,0,0)','rgba(0,0,0,0.2)'];
 }
 

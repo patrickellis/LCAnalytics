@@ -80,7 +80,7 @@ class Stats extends Component {
         for(let i = 0; i < numProblems; ++i){
             db[this.state.data[i]['Difficulty']] += 1;
             cpd[this.state.data[i]['#']] = true;
-            if(this.state.userData['user_solved_dict'][this.state.data[i]['#']]){
+            if(this.state.userData['user_solved_dict'] && this.state.userData['user_solved_dict'][this.state.data[i]['#']]){
                 commonIDS.push(this.state.data[i]['#'])               
                 solvedCounter += 1;                
             }

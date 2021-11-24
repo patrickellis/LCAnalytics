@@ -65,7 +65,7 @@ const renderTooltipContent = (o) => {
   var labeltest = label?label.split('.'):[];
   if(labeltest?.length){
     labeltest[0] = numberToMonth[labeltest[0]];
-    if(labeltest[1].length == 1) 
+    if(labeltest[1]?.length == 1) 
       labeltest[1] = '0'.concat(labeltest[1]);
     
       labeltest = labeltest[0] + ' ' + labeltest[1];
