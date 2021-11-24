@@ -26,12 +26,13 @@ class NavBar extends Component {
         })       
     }
     logout(){              
-        for (let i = 0; i < window.localStorage.length; i++) {
-            let key = window.localStorage.key(i);
-            if (key.slice(0,8) === "firebase") {
-                localStorage.removeItem(key);
-            }
-        }
+        // for (let i = 0; i < window.localStorage.length; i++) {
+        //     let key = window.localStorage.key(i);
+        //     if (key.slice(0,8) === "firebase") {
+        //         localStorage.removeItem(key);
+        //     }
+        // }
+        localStorage.removeItem('userObject');
         
         const auth = getAuth();
         signOut(auth).then(() => {

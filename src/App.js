@@ -70,6 +70,7 @@ class App extends Component {
       displayModal : false,
       displayModalNav : false  ,
       keyfound : false,
+      loadingFromLocalStorage : false
     }
     this.setLoadingStatusTopLevel = this.setLoadingStatusTopLevel.bind(this);
     this.updateData = this.updateData.bind(this);
@@ -150,17 +151,27 @@ class App extends Component {
         })
     })
 }
-  async componentDidMount(){           
-    let keyfound = false;
-    for (let i = 0; i < window.localStorage.length; i++) {
-        let key = window.localStorage.key(i);
-        if (key.slice(0,8) === "firebase") {            
-            keyfound = true;
-            break;
-        }
-    }          
-    if(keyfound){
-      this.setState({keyfound:keyfound})
+  async componentDidMount(){     
+    console.log("App.js mounted");      
+   // basically, we are setting the User localstorage variable too soon (I think)
+    // this means, the auth field which contains information we use later is not available
+    // resulting in code in github.js failing
+    // therefore - i have added a timeout in GithubList.jsx before the user is set in localstorage
+    // to give time for the object to be fully initialised
+    // hopefully this fixes the problem
+    // TO-DO: 
+    // update GithubList to also fetch whatever happened in getuserrepositories from localstorage as well, 
+    // regardless of whether or not this sign in is happening automatically or not
+    // either this is the first login, so we need to display the modal
+    // or we can grab the data from localstorage.
+
+    if(localStorage.getItem('userObject') != null){ // && JSON.parse(localStorage.getItem('User'))['auth'] != undefined
+      this.setState({keyfound:true});
+      const today = new Date();      
+      var lastSignIn = new Date(JSON.parse(localStorage.getItem('lastSignIn')));
+      const minutes = parseInt(Math.abs(lastSignIn.getTime() - today.getTime()) / (1000 * 60) % 60);
+      console.log(`last sign in was ${minutes} minutes ago`);
+      if(minutes > 24 * 60 * 14){
         setPersistence(auth, browserLocalPersistence)
           .then(() => {
               signInWithPopup(auth, provider)
@@ -175,13 +186,7 @@ class App extends Component {
                 // The signed-in user info.
                 const user = result.user;
                 user['responseToken'] = token;
-                console.log("USER: ", user);
-
-                let userStore = JSON.stringify(user);
-                let lastSignInStore = JSON.stringify(Date.now());
-                console.log("Updating local storage with: ", userStore, ", ", lastSignInStore);
-                localStorage.setItem('User',JSON.stringify(user));
-                localStorage.setItem('lastSignIn', JSON.stringify(Date.now()));
+                console.log("USER: ", user);                
                           
                 this.setState({
                   user : user
@@ -200,7 +205,16 @@ class App extends Component {
               });    
           }); 
         }
-                
+        else{    
+          this.setState({
+            loadingFromLocalStorage : true
+          })      
+          const user = JSON.parse(localStorage.getItem('userObject'));
+          console.log('found user in localstorage: ', user);
+          this.setState({user : user});
+          this.getUserData(user);
+        }
+      }             
   }
   async login(){
     setPersistence(auth, browserLocalPersistence)
@@ -248,7 +262,7 @@ class App extends Component {
         <div class="app-background"></div>
         <div class="app-background2"></div>
         {this.state.user && (this.state.displayModal || this.state.displayModalNav)?           
-          <GithubList displayModalNav={this.state.displayModalNav} toggleModal={this.toggleModal} setUserRepositoryAndBranch={this.setUserRepositoryAndBranch} user={this.state.user}/> : <></>  
+          <GithubList loadingFromLocalStorage={this.state.loadingFromLocalStorage} displayModalNav={this.state.displayModalNav} toggleModal={this.toggleModal} setUserRepositoryAndBranch={this.setUserRepositoryAndBranch} user={this.state.user}/> : <></>  
         }
           <main className="m-36y2kb">            
             <div className="m-ht4nkg">             
@@ -289,7 +303,7 @@ class App extends Component {
                     <Route path="/company">      
                        {this.state.user ?       
                        
-                      <CompanyPage user={this.state.userObject} setLoadingStatusTopLevel={this.setLoadingStatusTopLevel} isLoaded={this.state.isLoaded} userData={this.state.userData} setLoadingStatus={this.state.setLoadingStatus} updateDataTimePeriod={this.updateDataTimePeriod} name={this.state.name} data={this.state.data}/>
+                      <CompanyPage loadingFromLocalStorage={this.state.loadingFromLocalStorage}  user={this.state.userObject} setLoadingStatusTopLevel={this.setLoadingStatusTopLevel} isLoaded={this.state.isLoaded} userData={this.state.userData} setLoadingStatus={this.state.setLoadingStatus} updateDataTimePeriod={this.updateDataTimePeriod} name={this.state.name} data={this.state.data}/>
                      
                       :
                       <Redirect to="/"/>

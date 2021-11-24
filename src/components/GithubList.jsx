@@ -16,22 +16,49 @@ class GithubList extends Component {
         }
         this.setRepos = this.setRepos.bind(this);
     }
-  
+      
     componentDidMount(){       
-        if(localStorage.getItem('userObject') !== null && !this.props.displayModalNav){
-            
+        if(localStorage.getItem('userObject') !== null && !this.props.displayModalNav){            
             this.props.toggleModal();
             const userObject = JSON.parse(localStorage.getItem('userObject'));
             //console.log("USER FOUND IN LOCALSTORAGE: ", userObject);
             this.props.setUserRepositoryAndBranch(userObject);     
             window.sessionStorage.setItem('firstListMount', 'complete');       
         } 
-        const currentUser = this.props.user['auth']['currentUser'];
-        const ghUsername = currentUser['reloadUserInfo']['screenName'];
-        const token = this.props.user['responseToken'];
-        console.log("USER INFO: ", currentUser, ", ", ghUsername, ", ", token);
-        console.log("USER:",ghUsername);
-        getUserRepositories(ghUsername,token,this.setRepos);        
+        let currentUser;
+        let ghUsername;
+        let token;
+
+        if(!this.props.loadingFromLocalStorage || (localStorage.getItem('userObject') == null)){
+            currentUser = this.props.user['auth']['currentUser'];
+            ghUsername = currentUser['reloadUserInfo']['screenName'];
+            token = this.props.user['responseToken'];
+        }
+        else{
+            const userObject = JSON.parse(localStorage.getItem('userObject'));
+            ghUsername = userObject.username;
+            token = userObject.token;
+            currentUser = "undefined";
+        }        
+        let lastSignInStore = JSON.stringify(Date.now());        
+        localStorage.setItem('lastSignIn', lastSignInStore);    
+        // local store for user repositories, update once per hour (or instantly on button press)
+        const lastRepositoryUpdate = localStorage.getItem('lastRepositoryUpdate');
+        if(lastRepositoryUpdate == null) getUserRepositories(ghUsername,token,this.setRepos);      
+        else{
+            const lastUpdateDate = new Date(JSON.parse(lastRepositoryUpdate));
+            const today = new Date();
+            const minutes = parseInt(Math.abs(lastUpdateDate.getTime() - today.getTime()) / (1000 * 60) % 60);
+            if(minutes <= 60){
+                const repos = JSON.parse(localStorage.getItem('userRepositories'));
+                this.setState({
+                    repos:repos
+                })
+            }
+            else getUserRepositories(ghUsername,token,this.setRepos); 
+        }
+
+          
     }
     onClick(userObject){        
         console.log("userObject: ", userObject);
@@ -45,7 +72,21 @@ class GithubList extends Component {
         })
     }
  
-    setRepos(repos){        
+    setRepos(repos){    
+        const lastRepositoryUpdate = localStorage.getItem('lastRepositoryUpdate');
+        if(lastRepositoryUpdate == null){
+            localStorage.setItem('userRepositories',JSON.stringify(repos));
+            localStorage.setItem('lastRepositoryUpdate',JSON.stringify(new Date()));   
+        }
+        else{
+            const lastUpdateDate = new Date(JSON.parse(lastRepositoryUpdate));
+            const today = new Date();
+            const minutes = parseInt(Math.abs(lastUpdateDate.getTime() - today.getTime()) / (1000 * 60) % 60);
+            if(minutes > 60){
+                localStorage.setItem('userRepositories',JSON.stringify('repos'));
+                localStorage.setItem('lastRepositoryUpdate',JSON.stringify(new Date()));   
+            }
+        }
         this.setState({
             repos:repos
         })

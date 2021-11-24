@@ -92,6 +92,7 @@ export const getUserRepositories = (username,token,setRepos) => {
     var url = 'https://api.github.com/users/'+username+'/repos';
     //var url = 'https://api.github.com/users/patrickellis/repos';
     var repos = []
+    console.log(`GITHUB REQUEST: made a request to url: ${url} with token: ${token}`);
     axios.get(url,{
         'headers' : {
             'Authorization' : 'token ' + token
@@ -333,6 +334,7 @@ export const fetchDatesFromAllUserIds = (username,repo_name,ids,setUserData,toke
     if(ids.length==0) return setAllUserInfo(oldest_commits,newest_commits,slugData,setUserData);
     for(let i = 0; i < ids.length; ++i){
         var url = 'https://api.github.com/repos/'+username+'/'+repo_name+'/commits?path='+id_slugs[i];
+        console.log("making request to URL: ", url , " using token: ", token);
         axios.get(url,{
             'headers' : {
                 'Authorization' : 'token ' + token
@@ -401,6 +403,7 @@ export const fetchDatesFromIds = (username,repo_name,ids,setData,numProblems,sol
     }
     for(let i = 0; i < ids.length; ++i){
         var url = 'https://api.github.com/repos/'+username+'/'+repo_name+'/commits?path='+id_slugs[i];
+        console.log("making request to URL: ", url , " using token: ", token);
         axios.get(url,{
             'headers' : {
                 'Authorization' : 'token ' + token
@@ -446,15 +449,22 @@ function datediff(first, second) {
  * @returns 
  */
 export const weeklyProgressFromDates = (dates,num_weeks,num_problems,num_solved,plotRemaining) => {    
-    const today = new Date(Date.now());
+    var today = new Date(Date.now());
     // cutoff - problems solved before this date are not included in the returned data object
     // used to implement the toggle for the progress tracking area chart
-    const cutoff = new Date(Date.now() - 24 * 3600 * 1000 * num_weeks * 7);
-    var numBins = 15; // how many sections do we want to display on progress graph
+    var cutoff = new Date(Date.now() - 24 * 3600 * 1000 * num_weeks * 7);
+    cutoff.setHours(12,0,0,0);
+    today.setHours(12,0,0,0);
+    var numBins = 16; // how many sections do we want to display on progress graph
     numBins = Math.min(numBins, num_weeks*7);   
     var data = new Array(numBins).fill(0);
-    var ratio = ((today-cutoff)/(1000*60*60*24))/numBins; // difference in days between sections
+    var ratio = Math.round(((today-cutoff)/(1000*60*60*24))/numBins); // difference in days between sections
+    var nearest = Math.round(ratio);
+    console.log("RATIO: ", ratio, ", ROUNDED: ", nearest);
+    cutoff = new Date(Date.now() - 24 * 3600 * 1000 * numBins * nearest);
+    cutoff.setHours(12,0,0,0);
     var step_size = (today - cutoff)/ numBins; // step size in milliseconds (I think)
+    console.log("STEP SIZE: ", step_size)
     for(let i = 0; i < dates.length; ++i){        
         if(dates[i] < cutoff){            
             continue; // ignore if solved pre-cutoff
@@ -487,7 +497,7 @@ export const weeklyProgressFromDates = (dates,num_weeks,num_problems,num_solved,
     }
     return to_display;
 }
-function getDates(numBins,ratio){
+function getDates(numBins,ratio){    
     var dates_ = new Array(numBins).fill(0);
     for(let i = numBins-1; i >= 0; --i){
         var date = new Date(Date.now() - (numBins-1-i) * ratio * 24*3600*1000);
@@ -495,6 +505,7 @@ function getDates(numBins,ratio){
         var prettyDate = (date.getMonth()+1) + '.' + date.getDate(); 
         dates_[i] = prettyDate;        
     }    
+    console.log("NUMBINS: ", numBins, ", RATIO: ", ratio, ", dates: ", dates_);
     return dates_;
 }
 /**

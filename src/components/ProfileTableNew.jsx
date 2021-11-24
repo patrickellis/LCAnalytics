@@ -63,7 +63,7 @@ class ProfileTableNew extends Component {
             filteredData: [],     
             currentIndex : 1,
             totalCount : 0,
-            pageSize : 100,
+            pageSize : 25,
             currentData : []
         };        
         this.isSolved = this.isSolved.bind(this);
@@ -82,16 +82,17 @@ class ProfileTableNew extends Component {
     componentDidMount(){     
         let newData = [];
         let ids_solved = this.props.userData.ids_solved;
-        for(let i = 0; i < ids_solved.length; ++i){            
+
+        for(let i = 0; i < ids_solved?.length; ++i){            
             newData.push(this.props.userData['SRS_data']['id_to_obj'][ids_solved[i]]);            
         }
         this.setState({            
             data : newData,
             filteredData : newData,   
-            currentData : newData.slice(0,100),         
+            currentData : newData.slice(0,25),         
             currentIndex : 1,
             totalCount : this.state.data.length,
-            pageSize : 100            
+            pageSize : 25            
         })
         /*
         
@@ -114,7 +115,7 @@ class ProfileTableNew extends Component {
     setCurrentPage(page){
         this.setState({            
             currentIndex : page,
-            currentData : this.state.filteredData.slice((page-1) * 100, (page-1)*100+100)
+            currentData : this.state.filteredData.slice((page-1) * 25, (page-1)*25+25)
         })
     }
     componentWillReceiveProps(nextProps) {        
@@ -152,7 +153,7 @@ class ProfileTableNew extends Component {
         }
         this.setState({
             filteredData : newData,
-            currentData : newData.slice((this.state.currentIndex-1) * 100, (this.state.currentIndex-1)*100+100)
+            currentData : newData.slice((this.state.currentIndex-1) * 25, (this.state.currentIndex-1)*25+25)
         })
         }
     sortBydifficulty(){        
@@ -166,7 +167,7 @@ class ProfileTableNew extends Component {
         }        
         this.setState({
             filteredData : newData,
-            currentData : newData.slice((this.state.currentIndex-1) * 100, (this.state.currentIndex-1)*100+100)
+            currentData : newData.slice((this.state.currentIndex-1) * 25, (this.state.currentIndex-1)*25+25)
         })
     }
 
@@ -182,7 +183,7 @@ class ProfileTableNew extends Component {
         }                
         this.setState({
             filteredData : newData,
-            currentData : newData.slice((this.state.currentIndex - 1)* 100, (this.state.currentIndex-1)*100+100)
+            currentData : newData.slice((this.state.currentIndex - 1)* 25, (this.state.currentIndex-1)*25+25)
         })
     }
     
@@ -196,7 +197,7 @@ class ProfileTableNew extends Component {
         }        
         this.setState({
             filteredData : newData,
-            currentData : newData.slice(this.state.currentIndex * 100, this.state.currentIndex*100+100)
+            currentData : newData.slice(this.state.currentIndex * 25, this.state.currentIndex*25+25)
         })
     }
     onCheckChange(){        
@@ -226,7 +227,7 @@ class ProfileTableNew extends Component {
         this.setState({
             tagFilter : document.getElementById('tags-select').value,
             filteredData : filteredData,
-            currentData : filteredData.slice(0,100),
+            currentData : filteredData.slice(0,25),
             currentIndex: 1,
             totalCount : filteredData.length            
         })
@@ -261,7 +262,7 @@ class ProfileTableNew extends Component {
                 className="pagination-bar"
                 currentPage={this.state.currentIndex}
                 totalCount={this.state.numProblems}
-                pageSize={100}
+                pageSize={25}
                 onPageChange={page => this.setCurrentPage(page)}
             />*/
 
@@ -269,16 +270,7 @@ class ProfileTableNew extends Component {
         const {isLoaded, currentData} = this.state;
         const data = this.state.SRSdata;
       return(
-          <>
-                <div class="paginationContainer">
-                    <Pagination
-                    className="pagination-bar"
-                    currentPage={this.state.currentIndex}
-                    totalCount={this.state.totalCount}
-                    pageSize={100}
-                    onPageChange={page => this.setCurrentPage(page)}/>
-                </div>  
-
+          <>                
                 <div class="tableContainer">
                     { isLoaded &&  
                     <table class="m-3gmgrq mainTable">
@@ -366,7 +358,7 @@ class ProfileTableNew extends Component {
                                     <td onClick={()=>this.handleClick(item['id'])}></td>
                                     
                                     {/*<td>{item['id']}.</td>*/}
-                                    <td onClick={()=>this.handleClick(item['id'])}class="bold">{item['title']}</td>     
+                                    <td onClick={()=>this.handleClick(item['id'])}class="problemslugtext bold">{item['title']}</td>     
                                     <td onClick={()=>this.handleClick(item['id'])} class="tags">                                                                       
                                                                                 
                                             <>
@@ -401,7 +393,7 @@ class ProfileTableNew extends Component {
                                 <tr onClick={()=>this.handleClick(item['id'])} class="m-14j0amg e98qpmo0">                                    
                                     <td></td>
                                                                     
-                                    <td>{item['title']}</td>     
+                                    <td class="problemslugtext">{item['title']}</td>     
                                     <td class="tags">                                                                                                                           
                                          
                                             <>
@@ -439,7 +431,15 @@ class ProfileTableNew extends Component {
                         </tbody>
                     </table>    
                      }
-                    </div>                    
+                    </div>         
+                    <div class="paginationContainer">
+                    <Pagination
+                    className="pagination-bar"
+                    currentPage={this.state.currentIndex}
+                    totalCount={this.state.totalCount}
+                    pageSize={25}
+                    onPageChange={page => this.setCurrentPage(page)}/>
+                </div>             
         </>
       )
     }

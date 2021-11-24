@@ -11,16 +11,18 @@ import SelectComponent from './SelectComponent';
 import { css } from "@emotion/react";
 import ScaleLoader from "react-spinners/ScaleLoader";
 import { HashRouter as Router, Switch, Route, Link } from "react-router-dom";
+import RecentlySolvedTable from './RecentlySolvedTable';
 
 class UserDashboard extends Component {
     constructor(props){
         super(props);
         this.state = {
-  
+            dataBufferCompleted : false
         };
     }
 
-    async componentDidMount(){                
+    componentDidMount(){     
+        setTimeout(()=>this.setState({dataBufferCompleted : true}),150);           
     }
     render(){
         let noneSolved = this.props.slugData.length == 0;
@@ -42,46 +44,10 @@ class UserDashboard extends Component {
                                 
                             </header>     
                             <div class="upperleftcontent question-list">
-                                <table class="m-3gmgrq dashTable">
-                                    <thead class="thead">                                        
-                                        <tr class="m-1itvjt0 ejhqg10">
-                                            <th class="m-1itvjt0"></th>
-                                            <th class="m-1itvjt0 id-col">#</th>
-                                            <th class="m-1itvjt0">Problem</th>
-                                            <th class="m-1itvjt0 last-solved">Last Solved</th>
-                                            <th class="m-1itvjt0"></th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td colspan="15" class='m-1m0ike6'></td>
-                                        </tr>
-                                        {this.props.slugData && this.props.slugData.map(item =>  {
-                                            return(                                             
-                                            <tr class="m-14j0amg">
-                                                <td></td>
-                                                <td style={{color:'#666'}}> {idx++}. </td>
-                                                <td> {item.title}</td>
-                                                <td class="lastSolved"> <span class="m-14c7t56 esfbxh91" style={{color: '#345bdf'}}>{item.daysAgo} days ago</span></td>
-                                                <td></td>
-                                            </tr>
-                                            )
-                                            })}
-                                        {noneSolved?
-                                        <tr class="m-14j0amg">
-                                        <td></td>
-                                        <td></td>
-                                        <td>You haven't solved any problems on this company list yet.</td>
-                                        <td class="lastSolved"></td>
-                                        <td></td>
-                                    </tr>
-                                        :<></>}
-                                    </tbody>
-
-                                </table>
+                            
                                 {/* <ActiveShapePieChart data={this.props.chartDataCompleted}/>*/}
                                                 
-                                    
+                                <RecentlySolvedTable dataBufferCompleted={this.state.dataBufferCompleted} slugData={this.props.slugData}/>
                                 
                             </div>                      
                         </div>

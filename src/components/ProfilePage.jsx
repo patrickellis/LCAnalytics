@@ -275,7 +275,9 @@ class ProfilePage extends Component {
                                                     <div class="m-oxskvv" style={{left: completedWidth+'%'}}></div>                                                
                                                 </div>      
                                             </td>
-                                            <td><button onClick={()=>this.removeCompanyFromUserLists(item)}class="remove-company-button">-</button></td>
+                                            <td><button onClick={()=>this.removeCompanyFromUserLists(item)}class="remove-company-button">
+                                            -
+                                        </button></td>
                                         </tr>
                                         )
                                     })}

@@ -6,6 +6,7 @@ import {userHasSolvedProblem} from '../scripts/util'
 import getJSON from '../scripts/JSONloader'
 import problems from '../data/problems.json'
 import { isObjectBindingPattern } from 'typescript';
+import DifficultyCircle from './DifficultyCircle';
 
 const data = problems.reverse();
 
@@ -128,7 +129,10 @@ class AllProblemsTable extends Component {
     }
 
     isSolved(id){
-        return this.state.userData['user_solved_dict'][id];
+        if(this.state.userData['user_solved_dict']){
+            return this.state.userData['user_solved_dict'][id];
+        }
+        return false;        
     }
     
     handleClick(id){
@@ -250,7 +254,9 @@ class AllProblemsTable extends Component {
                                                                                                                                               
                                     </td>                               
                                     {/*<td>{item['Acceptance']}</td>*/}
-                                    <td style={getLevel(item['level'])=='Easy'?{color:'rgba(0,175,155,1)'}:getLevel(item['level'])=='Medium'?{color:'rgba(255,184,0,1'}:{color:'rgba(255,45,85,1)'}}>{getLevel(item['level'])}</td>                                    
+                                    <td style={getLevel(item['level'])=='Easy'?{color:'rgba(0,175,155,1)'}:getLevel(item['level'])=='Medium'?{color:'rgba(255,184,0,1'}:{color:'rgba(255,45,85,1)'}}>
+                                        <DifficultyCircle difficulty={getLevel(item['level'])}/>
+                                        </td>                                    
                                     <td class="bookend"></td>                                    
                                 </tr>
                                 :

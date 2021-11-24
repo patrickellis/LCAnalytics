@@ -14,6 +14,7 @@ class Stats extends Component {
     constructor(props){
         super(props);
         this.state = {
+            renderloopcount : 0,
             isLoaded : this.props.isLoaded,
             statsComputed : false,
             overTimeDataComputed : false,
@@ -94,10 +95,28 @@ class Stats extends Component {
             difficultyBreakdown : db,
             idList : idList
         })
+
         let radarData = idsToRadar(idList);
-        await fetchDatesFromIds('PatrickEllis','LeetCode',commonIDS,this.setSlugAndDatesData,numProblems,solvedCounter,this.props.user['token']);
-        
-        
+        let currentUser;
+        let ghUsername;
+        let token;
+        let repo;
+        let branch;
+
+        if(!this.props.loadingFromLocalStorage){
+            currentUser = this.props.user['auth']['currentUser'];
+            ghUsername = currentUser['reloadUserInfo']['screenName'];
+            token = this.props.user['responseToken'];
+        }
+        else{
+            const userObject = JSON.parse(localStorage.getItem('userObject'));
+            ghUsername = userObject.username;
+            repo = userObject.repo;
+            branch = userObject.branch;
+            token = userObject.token;
+            currentUser = "undefined";
+        }     
+        await fetchDatesFromIds(ghUsername,repo,commonIDS,this.setSlugAndDatesData,numProblems,solvedCounter,token);        
         this.setState({
             radarData : radarData,            
             commonIDS : commonIDS,
@@ -113,10 +132,10 @@ class Stats extends Component {
         document.getElementById('loaderDiv').style.display = 'none';
     }
     render(){
-        if(!this.state.statsComputed && this.state.isLoaded){
+        if(!this.state.statsComputed && this.state.isLoaded && this.state.renderloopcount == 0){    
             this.setState({
-                statsComputed : true
-            })
+                renderloopcount : this.state.renderloopcount+1
+            })        
             this.computeStats();            
         }
         const options = [
@@ -130,10 +149,9 @@ class Stats extends Component {
           ];
         return(
             <>
-                {/*{this.state.overTimeDataComputed && <PercentAreaChart data={this.state.solvedOverTimeData}/>}*/}
-                
-                <div class='m-12f3mir'>
-                     
+                {/*{this.state.overTimeDataComputed && <PercentAreaChart data={this.state.solvedOverTimeData}/>}*/}   
+                {this.state.statsComputed &&            
+                <div class='m-12f3mir'>                     
                     <CompanyDashboard                         
                         name = {this.props.name}
                         radarData={this.state.radarData}
@@ -151,7 +169,7 @@ class Stats extends Component {
                         numProblems={this.state.numProblems}                        
                     />
                 </div>
-            
+                }
            
             </>
         )

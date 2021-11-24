@@ -19,12 +19,12 @@ class CompanyNav extends Component {
         super(props);
         this.state = { 
             loading : false           
-        };
-        this.flipNavClasses = this.flipNavClasses.bind(this);
+        };        
         this.switchTimePeriod = this.switchTimePeriod.bind(this);
-        this.setLoadingStatus = this.setLoadingStatus.bind(this);
+        this.setLoadingStatus = this.setLoadingStatus.bind(this);        
     }
     switchTimePeriod(id, period){
+        document.getElementById('loaderDiv').style.display='block';
         //this.props.setLoadingStatus();
         const headers = document.getElementsByClassName('timeSelectItem');
             for(let i = 0; i < headers.length; ++i){
@@ -51,23 +51,7 @@ class CompanyNav extends Component {
             loading : !this.state.loading
         })
     }
-    flipNavClasses(){
-        this.props.toggleDisplay();
-        const allquestions = document.getElementById('allquestions');
-        const studyorder = document.getElementById('studyorder'); 
-        if(allquestions.classList.contains('selected')){
-            allquestions.classList.remove('selected');
-            allquestions.classList.add('unselected');
-            studyorder.classList.remove('unselected');
-            studyorder.classList.add('selected');
-        }
-        else{
-            allquestions.classList.add('selected');
-            allquestions.classList.remove('unselected');
-            studyorder.classList.add('unselected');
-            studyorder.classList.remove('selected');
-        }
-    }
+   
     async componentDidMount(){      
         // const allquestions = document.getElementById('allquestions');
         // const studyorder = document.getElementById('studyorder');       

@@ -41,6 +41,7 @@ export const idsToRadar = (data) => {
     display_data = display_data.slice(0,TOP_N);
         
     let desired_order = [7,0,1,2,3,4,5,6];
+    let default_order = [0,4,1,3,5,7,2,6];
     let display_data_copy = JSON.parse(JSON.stringify(display_data));
     display_data.sort(function(a,b){
         if(a['category'].length < b['category'].length) return -1;
@@ -77,13 +78,13 @@ export const idsToRadar = (data) => {
         // object that maps index to longest string that can be held there without overflowing container
         let limits = { 
             0 : 50,
-            1 : 16,
+            1 : 15,
             2 : 8,
-            3 : 16,
+            3 : 15,
             4 : 50,
-            5 : 16,
+            5 : 15,
             6 : 8,
-            7 : 16
+            7 : 15
         }
         for(let idx = 0; idx < nonZeroCountData.length; ++idx){            
             if(nonZeroCountData[idx]['category'].length > limits[idx]){
@@ -121,7 +122,7 @@ export const idsToRadar = (data) => {
         })
         let newdata = Array(TOP_N).fill({});
         for(let i = 0 ; i < TOP_N; ++i){
-            newdata[desired_order[i]] = display_data_copy[i];
+            newdata[default_order[i]] = display_data_copy[i];
         }
         return newdata;
     }

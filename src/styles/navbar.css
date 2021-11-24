@@ -292,7 +292,7 @@
     box-sizing: border-box;
     flex: 0 0 auto;
     border-radius: 3px;
-    background: none #F9690E;
+    background: none #7b85e3;
     border: none;
     outline: none;
     transition: background-color 0.1s ease-in 0s, opacity 0.1s ease-in 0s, color 0.1s ease-in 0s;
@@ -310,6 +310,9 @@
     padding: 1px 16px;
     font-size: 10px;
     margin-right: 1.2rem;
+}
+.m-tuly59:hover{
+    background: #515eda;
 }
 .m-1wv4onu {
     margin-right:10px;

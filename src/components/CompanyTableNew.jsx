@@ -231,16 +231,7 @@ class AllProblemsTable extends Component {
     render() {
         const {isLoaded, currentData} = this.state;
       return(
-          <>
-                <div class="paginationContainer">
-                    <Pagination
-                    className="pagination-bar"
-                    currentPage={this.state.currentIndex}
-                    totalCount={this.state.totalCount}
-                    pageSize={100}
-                    onPageChange={page => this.setCurrentPage(page)}/>
-                </div>  
-
+          <>                
                 <div class="tableContainer">
                     { isLoaded &&  
                     <table class="m-3gmgrq mainTable">
@@ -330,7 +321,7 @@ class AllProblemsTable extends Component {
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" class="w-[18px] h-[18px] text-gray-5 dark:text-dark-gray-5"><path fill-rule="evenodd" d="M4 12a1 1 0 011-1h14a1 1 0 110 2H5a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>                                        
                                         }</td>
                                     <td>{item['#']}.</td>
-                                    <td class="bold">{item['Title']}</td>     
+                                    <td class="problemslugtext bold">{item['Title']}</td>     
                                     <td class="tags">                                                                       
                                                                                 
                                             <>
@@ -368,7 +359,7 @@ class AllProblemsTable extends Component {
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" class="w-[18px] h-[18px] text-gray-5 dark:text-dark-gray-5"><path fill-rule="evenodd" d="M4 12a1 1 0 011-1h14a1 1 0 110 2H5a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>                                        
                                         }</td>
                                     <td>{item['#']}.</td>
-                                    <td>{item['Title']}</td>     
+                                    <td class="problemslugtext">{item['Title']}</td>     
                                     <td class="tags">                                                                       
                                                     
                                          
@@ -402,7 +393,15 @@ class AllProblemsTable extends Component {
                         </tbody>
                     </table>    
                      }
-                    </div>                    
+                    </div>    
+                    <div class="paginationContainer">
+                    <Pagination
+                    className="pagination-bar"
+                    currentPage={this.state.currentIndex}
+                    totalCount={this.state.totalCount}
+                    pageSize={100}
+                    onPageChange={page => this.setCurrentPage(page)}/>
+                </div>                  
         </>
       )
     }

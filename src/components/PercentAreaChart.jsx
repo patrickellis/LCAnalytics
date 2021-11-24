@@ -1,13 +1,20 @@
 import React, { PureComponent } from 'react';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
-const data = [
-    {date: 'Mon Aug 09 2021', remaining: 91, solved: 0},
-    {date: 'Mon Aug 09 2021', remaining: 91, solved: 23},
-    {date: 'Mon Aug 09 2021', remaining: 91, solved: 34}
-  
-];
-
+const numberToMonth = {
+  '1' : 'Jan',
+  '2' : 'Feb',
+  '3' : 'Mar',
+  '4' : 'Apr',
+  '5' : 'May',
+  '6' : 'Jun',
+  '7' : 'Jul',
+  '8' : 'Aug',
+  '9' : 'Sep',
+  '10' : 'Oct',
+  '11' : 'Nov',
+  '12' : 'Dec',
+}
 const toPercent = (decimal, fixed = 0) => `${(decimal * 100).toFixed(0)}%`;
 
 const getPercent = (value, total) => {
@@ -19,15 +26,22 @@ const getPercent = (value, total) => {
 const renderTooltipContent = (o) => {
   const { payload, label } = o;
   const total = payload.reduce((result, entry) => result + entry.value, 0);
-
+  var labeltest = label?label.split('.'):[];
+  if(labeltest.length){
+    labeltest[0] = numberToMonth[labeltest[0]];
+    if(labeltest[1].length == 1) 
+      labeltest[1] = '0'.concat(labeltest[1]);
+    
+      labeltest = labeltest[0] + ' ' + labeltest[1];
+  }
   return (
     <div className="customized-tooltip-content">
       <div className="tooltip-content">
-        <p className="total">{`${label}`}</p>
-        
+        <p style={{color:'#6973a1',fontWeight:'bold'}} className="total">{`${labeltest}`}</p>
+          
           {payload.map((entry, index) => (
-            <div key={`item-${index}`} style={entry.name=='Solved'?{ color: 'rgb(24, 189, 155)' }:{color: 'rgb(229, 71, 135)'}}>
-              <span class="tooltipItem">{`${entry.name}:`}</span><span class="tooltipVal">{`${entry.value}`}</span>
+            <div class="payloadentry" key={`item-${index}`} style={entry.name=='Solved'?index==1?{marginBotton:'1rem',color: 'rgb(24, 189, 155)' }:{color: 'rgb(24, 189, 155)' }:{color: 'rgb(229, 71, 135)'}}>
+              <span style={{color:'#233075',fontWeight:'bold'}} class="tooltipVal">{`${entry.value}`}</span><br/><span style={{color:'#6973a1',fontWeight:'bold'}}class="tooltipItem">{`${entry.name}`}</span>
             </div>
           ))}
         
@@ -44,6 +58,7 @@ export default class PercentAreaChart extends PureComponent {
         <div class="pieChartContainer">
       <ResponsiveContainer width="100%" height="100%">
         <AreaChart
+         animationDuration={4000}
           width={500}
           height={400}
           data={this.props.data}
@@ -57,8 +72,7 @@ export default class PercentAreaChart extends PureComponent {
         >
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="date" />
-          <YAxis tickFormatter={toPercent} />
-          <Tooltip content={renderTooltipContent} />
+          <YAxis tickFormatter={toPercent} />          
           <Area type="monotone" dataKey="Solved" stackId="1" stroke="#8884d8" fill="rgb(24, 189, 155)" />
           
           <Area type="monotone" dataKey="Remaining" stackId="1" stroke="#ffc658" fill="rgb(229, 71, 135)" />

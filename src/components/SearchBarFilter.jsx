@@ -37,6 +37,10 @@ function SearchBarFilter(props){
         if(!companies.includes(input.toLowerCase())){
 
             document.getElementById('searchBox').style.border="1px solid #CF000F";
+            document.querySelector('.drop').style.height = 0;
+            box.style.borderBottomLeftRadius ='5px';
+            box.style.borderBottomRightRadius ='5px';
+            setTimeout(()=>document.getElementById('searchBox').style.border="1px solid transparent",1000);
             return;
         }
 

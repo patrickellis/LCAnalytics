@@ -63,7 +63,7 @@ class AllProblemsTable extends Component {
             filteredData: [],     
             currentIndex : 1,
             totalCount : 0,
-            pageSize : 100,
+            pageSize : 50,
             currentData : []
         };        
         this.isSolved = this.isSolved.bind(this);
@@ -85,19 +85,19 @@ class AllProblemsTable extends Component {
             data : data
         },this.setState({
             filteredData : this.state.data,
-            currentData : this.state.data.slice(0,100),
+            currentData : this.state.data.slice(0,50),
             currentIndex : 1,
             totalCount : this.state.data.length,
-            pageSize : 100            
+            pageSize : 50            
         })
         )
         */
         this.setState({
             filteredData : this.state.data,
-            currentData : this.state.data.slice(0,100),
+            currentData : this.state.data.slice(0,50),
             currentIndex : 1,
             totalCount : this.state.data.length,
-            pageSize : 100            
+            pageSize : 50            
         },() => {if(this.props.initialFilter.length > 3){
             document.getElementById('tags-select').value=this.props.initialFilter;
             this.flipNavClasses(3);
@@ -146,7 +146,7 @@ class AllProblemsTable extends Component {
     setCurrentPage(page){
         this.setState({            
             currentIndex : page,
-            currentData : this.state.filteredData.slice((page-1) * 100, (page-1)*100+100)
+            currentData : this.state.filteredData.slice((page-1) * 50, (page-1)*50+50)
         })
     }
     componentWillReceiveProps(nextProps) {        
@@ -181,7 +181,7 @@ class AllProblemsTable extends Component {
         }
         this.setState({
             filteredData : newData,
-            currentData : newData.slice((this.state.currentIndex-1) * 100, (this.state.currentIndex-1)*100+100)
+            currentData : newData.slice((this.state.currentIndex-1) * 50, (this.state.currentIndex-1)*50+50)
         })
         }
     
@@ -196,7 +196,7 @@ class AllProblemsTable extends Component {
         }        
         this.setState({
             filteredData : newData,
-            currentData : newData.slice((this.state.currentIndex-1) * 100, (this.state.currentIndex-1)*100+100)
+            currentData : newData.slice((this.state.currentIndex-1) * 50, (this.state.currentIndex-1)*50+50)
         })
     }
 
@@ -210,7 +210,7 @@ class AllProblemsTable extends Component {
         }        
         this.setState({
             filteredData : newData,
-            currentData : newData.slice(this.state.currentIndex * 100, this.state.currentIndex*100+100)
+            currentData : newData.slice(this.state.currentIndex * 50, this.state.currentIndex*50+50)
         })
     }
     onCheckChange(){        
@@ -233,7 +233,7 @@ class AllProblemsTable extends Component {
         this.setState({
             tagFilter : document.getElementById('tags-select').value,
             filteredData : filteredData,
-            currentData : filteredData.slice(0,100),
+            currentData : filteredData.slice(0,50),
             currentIndex: 1,
             totalCount : filteredData.length            
         })
@@ -254,23 +254,14 @@ class AllProblemsTable extends Component {
                 className="pagination-bar"
                 currentPage={this.state.currentIndex}
                 totalCount={this.state.numProblems}
-                pageSize={100}
+                pageSize={50}
                 onPageChange={page => this.setCurrentPage(page)}
             />*/
 
     render() {
         const {isLoaded, currentData} = this.state;
       return(
-          <>
-                <div class="paginationContainer">
-                    <Pagination
-                    className="pagination-bar"
-                    currentPage={this.state.currentIndex}
-                    totalCount={this.state.totalCount}
-                    pageSize={100}
-                    onPageChange={page => this.setCurrentPage(page)}/>
-                </div>  
-
+          <>                
                 <div class="tableContainer">
                     { isLoaded &&  
                     <table class="m-3gmgrq mainTable">
@@ -331,7 +322,7 @@ class AllProblemsTable extends Component {
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" class="w-[18px] h-[18px] text-gray-5 dark:text-dark-gray-5"><path fill-rule="evenodd" d="M4 12a1 1 0 011-1h14a1 1 0 110 2H5a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>                                        
                                         }</td>
                                     <td>{item['id']}.</td>
-                                    <td class="bold">{item['title']}</td>     
+                                    <td class="problemslugtext bold">{item['title']}</td>     
                                     <td class="tags">                                                                       
                                                                                 
                                             <>
@@ -369,7 +360,7 @@ class AllProblemsTable extends Component {
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" class="w-[18px] h-[18px] text-gray-5 dark:text-dark-gray-5"><path fill-rule="evenodd" d="M4 12a1 1 0 011-1h14a1 1 0 110 2H5a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>                                        
                                         }</td>
                                     <td>{item['id']}.</td>
-                                    <td>{item['title']}</td>     
+                                    <td class="problemslugtext">{item['title']}</td>     
                                     <td class="tags">                                                                       
                                                     
                                          
@@ -406,7 +397,15 @@ class AllProblemsTable extends Component {
                         </tbody>
                     </table>    
                      }
-                    </div>                    
+                    </div>     
+                    <div class="paginationContainer">
+                    <Pagination
+                    className="pagination-bar"
+                    currentPage={this.state.currentIndex}
+                    totalCount={this.state.totalCount}
+                    pageSize={50}
+                    onPageChange={page => this.setCurrentPage(page)}/>
+                </div>                 
         </>
       )
     }

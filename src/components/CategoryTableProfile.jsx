@@ -13,7 +13,7 @@ class CategoryTableProfile extends Component {
     constructor(props){
         super(props);
         this.state = {
-            goal :26
+            goal :18
         };
         this.handleListClick = this.handleListClick.bind(this);
     }
@@ -37,8 +37,10 @@ class CategoryTableProfile extends Component {
                     <th class="m-1itvjt0">Category</th>     
                     <th class="m-1itvjt0" style={{minWidth:'11rem'}}>Solved</th>                                             
                     <th class="m-1itvjt0">
-                        <div class="line-container" style={{padding:'0.8rem 1.2rem'}}>
-                        <div style= {{width:this.state.goal * 3 + 1.2 + 'rem',padding:'0.8rem 1.2rem'}} class="target-text"><div class="text">Goal</div></div></div>
+                        
+                        <div style= {{width:this.state.goal * 3 + 2.4 + 'rem',padding:'0.8rem 1.2rem'}} class="target-text">
+                            <div class="text">Goal</div>
+                        </div>
                         <div>Progress Bar</div>
                     </th>               
                     </thead>
@@ -48,7 +50,7 @@ class CategoryTableProfile extends Component {
                             return(
                             <tr onClick={() => this.props.switchToCategoryPage(item)} class="m-14j0amg e98qpmo0">
                                 <td></td>
-                                <td class="bold">{item.category}</td>    
+                                <td class="problemslugtext bold">{item.category}</td>    
                                 <td class="bold">{item.count}</td>                                                                                                   
                                 <td style={{overflow:'visible'}}>    
                                 <div class="line-container" style={{padding:'0.8rem 1.2rem'}}>

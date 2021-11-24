@@ -1,0 +1,1 @@
+https://www.reddit.com/r/webdev/wiki/optimization#wiki_image_files

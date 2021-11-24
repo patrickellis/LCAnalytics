@@ -44,24 +44,26 @@ class CompanyPage extends Component {
                     <h3 id="popuptext"> Add to your tracked lists </h3>
                 </div>
             </div>  
-            {this.props.isLoaded ?                
-                <>                
-                <StatsHeader/>
-                <div class="m-ht4nkg">
-                    <Stats user={this.props.user} setLoadingStatus={this.props.setLoadingStatus} name={this.props.name} userData={this.props.userData} data={this.props.data} isLoaded={this.props.isLoaded}/>
-                    <div class="separator"></div>
-                    <CompanyNav setLoadingStatus={this.props.setLoadingStatus} name={this.props.name} updateDataTimePeriod={this.props.updateDataTimePeriod} toggleDisplay={this.toggleDisplay}/>
-                    {this.state.displayQuestions && 
-                    <CompanyTableNew setLoadingStatusTopLevel={this.props.setLoadingStatusTopLevel} userData={this.props.userData} data={this.props.data} isLoaded={this.props.isLoaded}/>
-                    }
-                </div>
-                </>
-            :
+            {this.props.isLoaded &&             
+            <>                
+            <StatsHeader/>
+            <div class="m-ht4nkg">
+                <Stats loadingFromLocalStorage={this.props.loadingFromLocalStorage}  user={this.props.user} setLoadingStatus={this.props.setLoadingStatus} name={this.props.name} userData={this.props.userData} data={this.props.data} isLoaded={this.props.isLoaded}/>
+                <div class="separator"></div>
+                <CompanyNav setLoadingStatus={this.props.setLoadingStatus} name={this.props.name} updateDataTimePeriod={this.props.updateDataTimePeriod} toggleDisplay={this.toggleDisplay}/>
+                {this.state.displayQuestions && 
+                <CompanyTableNew setLoadingStatusTopLevel={this.props.setLoadingStatusTopLevel} userData={this.props.userData} data={this.props.data} isLoaded={this.props.isLoaded}/>
+                }
+            </div>
+            </>
+            }
+        {!this.props.postLoadingBufferComplete || !this.props.isLoaded && 
             <div class="loaderDiv" id="loaderDiv">
                 <div class="loaderContainer">
                     <BeatLoader color={'rgb(255,255,255)'} loading={true} size={12} />    
                     </div>
-            </div>}  
+            </div> 
+        }
             </>
         )
     }
