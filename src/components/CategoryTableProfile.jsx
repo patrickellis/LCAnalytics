@@ -39,7 +39,7 @@ class CategoryTableProfile extends Component {
                     <th class="m-1itvjt0">
                         
                         <div style= {{width:this.state.goal * 3 + 2.4 + 'rem',padding:'0.8rem 1.2rem'}} class="target-text">
-                            <div class="text">Goal</div>
+                            {data != undefined ? <div class="text">Goal</div> : null}
                         </div>
                         <div>Progress Bar</div>
                     </th>               
@@ -67,7 +67,9 @@ class CategoryTableProfile extends Component {
                             </tr>
                             )
                         }
-                        ):null}
+                        ):
+                        null
+                        }
                         
                     
                     </tbody>
