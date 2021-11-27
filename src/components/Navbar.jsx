@@ -129,8 +129,10 @@ class NavBar extends Component {
                             </div>
                         <div class="m-101kwlt" id="dropdown2">
                             <div class="m-wjum0u">                                                                  
-                                <a class="m-ka11ik" onClick={this.logout}>Logout</a>   
-                                
+                                <a class="m-ka11ik" onClick={()=>this.props.toggleSettingsModal(false)}> Settings</a>                                   
+                            </div>
+                            <div class="m-wjum0u">                                                                  
+                                <a class="m-ka11ik" onClick={this.logout}>Logout</a>                                   
                             </div>
                         </div>
                     </div>

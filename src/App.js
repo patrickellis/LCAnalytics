@@ -18,6 +18,7 @@ import { getAuth, signInWithPopup, GoogleAuthProvider,GithubAuthProvider} from "
 import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
 import {setPersistence, browserLocalPersistence } from "firebase/auth";
 import GithubList from './components/GithubList';
+import SettingsModal from './components/SettingsModal';
 
 // REACT LAZY IMPORTS
 const CompanyPage = React.lazy(() => import('./components/CompanyPage'));
@@ -53,7 +54,6 @@ provider.setCustomParameters({
 });
 //Handle Account Status
 
-
 class App extends Component {  
   constructor(props){
     super(props);
@@ -70,7 +70,19 @@ class App extends Component {
       displayModal : false,
       displayModalNav : false  ,
       keyfound : false,
-      loadingFromLocalStorage : false
+      loadingFromLocalStorage : false,
+      displaySettingsModal : true,
+      goal : 25,
+      level_to_gap : {
+        1 : 3, 
+        2 : 7, 
+        3 : 14, 
+        4 : 28, 
+        5 : 56,
+        6 : 112,
+        7 : 224,
+        8 : 448
+    }
     }
     this.setLoadingStatusTopLevel = this.setLoadingStatusTopLevel.bind(this);
     this.updateData = this.updateData.bind(this);
@@ -82,6 +94,7 @@ class App extends Component {
     this.toggleModalFromNav = this.toggleModalFromNav.bind(this);
     this.login = this.login.bind(this);
     this.signoutUser = this.signoutUser.bind(this);
+    this.toggleSettingsModal = this.toggleSettingsModal.bind(this);
   }
 
   setUserRepositoryAndBranch(user){
@@ -118,6 +131,24 @@ class App extends Component {
     this.setState({
       data : this.state.companyData[timeperiod][name],   
       setLoadingStatus : function(){ func()}      
+    })
+  }
+  toggleSettingsModal(updateFromLocalStorage){
+    if(updateFromLocalStorage && this.state.displaySettingsModal){
+      // either user is closing the modal from X or they are submitting the form
+      const goal = parseInt(JSON.parse(localStorage.getItem('goal')));
+      if(goal >= 5 && goal <= 25){
+        this.setState({goal : goal});
+      }
+      const SRS = JSON.parse(localStorage.getItem('level_to_gap'));
+      if(SRS != this.state.level_to_gap){
+        console.log("GETTING USER DATA AGAIN, LEVEL TO GAP: ", SRS)
+        this.setState({level_to_gap : SRS});
+        this.getUserData(this.state.user);
+      }
+    }
+    this.setState({
+      displaySettingsModal : !this.state.displaySettingsModal
     })
   }
   toggleModal(){
@@ -264,17 +295,22 @@ class App extends Component {
         {this.state.user && (this.state.displayModal || this.state.displayModalNav)?           
           <GithubList loadingFromLocalStorage={this.state.loadingFromLocalStorage} displayModalNav={this.state.displayModalNav} toggleModal={this.toggleModal} setUserRepositoryAndBranch={this.setUserRepositoryAndBranch} user={this.state.user}/> : <></>  
         }
+        {this.state.user && this.state.displaySettingsModal && 
+          <SettingsModal toggleSettingsModal={this.toggleSettingsModal} />
+        }
           <main className="m-36y2kb">            
             <div className="m-ht4nkg">             
               <Router>                   
-              <NavBar signoutUser={this.signoutUser} toggleModal={this.toggleModalFromNav} data={this.state.companyData} updateData={this.updateData}/>
+              <NavBar toggleSettingsModal={this.toggleSettingsModal} signoutUser={this.signoutUser} toggleModal={this.toggleModalFromNav} data={this.state.companyData} updateData={this.updateData}/>
               <Suspense fallback={
                 <div class="loaderDiv" id="loaderDiv">
                     <div class="loaderContainer">
                        <BeatLoader color={'rgb(255,255,255)'} loading={true} size={16} />    
                     </div>
                 </div>
+                
                 }>
+                  
                   <Switch>                    
                     <Route exact path="/">
                       {this.state.user ?
@@ -311,7 +347,7 @@ class App extends Component {
                     </Route>                        
                     <Route path="/profile">
                       {this.state.user ?
-                      <ProfilePage isLoaded={this.state.isLoaded} data={problems} userData={this.state.userData} setLoadingStatusTopLevel={this.setLoadingStatusTopLevel} companyData={this.state.companyData['6mo']} updateData={this.updateData}/>  
+                      <ProfilePage level_to_gap={this.state.level_to_gap} goal={this.state.goal} isLoaded={this.state.isLoaded} data={problems} userData={this.state.userData} setLoadingStatusTopLevel={this.setLoadingStatusTopLevel} companyData={this.state.companyData['6mo']} updateData={this.updateData}/>  
                       :
                       <Redirect to="/"/>
                       }                      

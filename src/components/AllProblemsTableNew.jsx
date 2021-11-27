@@ -151,12 +151,12 @@ class AllProblemsTable extends Component {
     }
     componentWillReceiveProps(nextProps) {        
         // You don't have to do this check first, but it can help prevent an unneeded render
-        if (nextProps.isLoaded !== this.state.isLoaded) {
-          this.setState({ 
-               isLoaded: nextProps.isLoaded,              
-               userData : nextProps.userData
-            });
-        }       
+        // if (nextProps.isLoaded !== this.state.isLoaded) {
+        //   this.setState({ 
+        //        isLoaded: nextProps.isLoaded,              
+        //        userData : nextProps.userData
+        //     });
+        // }       
       }
     setEventListeners(){
         // nothing done here for now      
@@ -260,6 +260,10 @@ class AllProblemsTable extends Component {
 
     render() {
         const {isLoaded, currentData} = this.state;
+        let displayAsText = false;
+        if(localStorage.getItem('displayAsText')!=null){
+            displayAsText = JSON.parse(localStorage.getItem('displayAsText'));
+        }
       return(
           <>                
                 <div class="tableContainer">
@@ -345,8 +349,14 @@ class AllProblemsTable extends Component {
                                     </td>                               
                                     {/*<td>{item['Acceptance']}</td>*/}
                                     <td onClick={()=>this.handleClick(item['id'])} style={item['level_text']=='Easy'?{color:'rgba(0,175,155,1)'}:item['difficulty']=='Medium'?{color:'rgba(255,184,0,1'}:{color:'rgba(255,45,85,1)'}}>                                        
-                                        <DifficultyCircle difficulty={item['level_text']}/>
-                                        {/**<div style={{display:'inline-block'}}>{item['difficulty']}</div>**/}
+                                            {displayAsText ? 
+                                            <div style={{display:'inline-block'}}>{item['level_text']}</div>
+                                            :                                        
+                                                <DifficultyCircle difficulty={item['level_text']}/>
+                                            }
+
+                                        
+                                        
                                     </td> 
                                     <td class="bookend"></td>                                    
                                 </tr>
@@ -386,8 +396,11 @@ class AllProblemsTable extends Component {
                                     </td>                               
                                     {/*<td>{item['Acceptance']}</td>*/}
                                     <td onClick={()=>this.handleClick(item['id'])} style={item['level_text']=='Easy'?{color:'rgba(0,175,155,1)'}:item['difficulty']=='Medium'?{color:'rgba(255,184,0,1'}:{color:'rgba(255,45,85,1)'}}>                                        
-                                        <DifficultyCircle difficulty={item['level_text']}/>
-                                        {/**<div style={{display:'inline-block'}}>{item['difficulty']}</div>**/}
+                                    {displayAsText ? 
+                                            <div style={{display:'inline-block'}}>{item['level_text']}</div>
+                                            :                                        
+                                                <DifficultyCircle difficulty={item['level_text']}/>
+                                            }                                        
                                     </td> 
                                     <td class="bookend"></td>                                    
                                 </tr>     

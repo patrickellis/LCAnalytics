@@ -77,13 +77,13 @@ class AllProblemsTable extends Component {
         
     }
     componentWillReceiveProps(nextProps) {        
-        // You don't have to do this check first, but it can help prevent an unneeded render
-        if (nextProps.isLoaded !== this.state.isLoaded) {
-          this.setState({ 
-               isLoaded: nextProps.isLoaded,              
-               userData : nextProps.userData
-            });
-        }       
+        // // You don't have to do this check first, but it can help prevent an unneeded render
+        // if (nextProps.isLoaded !== this.state.isLoaded) {
+        //   this.setState({ 
+        //        isLoaded: nextProps.isLoaded,              
+        //        userData : nextProps.userData
+        //     });
+        // }       
       }
     setEventListeners(){
         // nothing done here for now      
@@ -138,7 +138,11 @@ class AllProblemsTable extends Component {
     
     render() {
         const {isLoaded, data} = this.state;
-        const keys = Object.keys(problemIdToCategories);                
+        const keys = Object.keys(problemIdToCategories);      
+        let displayAsText = false;
+        if(localStorage.getItem('displayAsText')!=null){
+            displayAsText = JSON.parse(localStorage.getItem('displayAsText'));
+        }
       return(
                       
                 <div class="tableContainer">
@@ -252,7 +256,12 @@ class AllProblemsTable extends Component {
                                     </td>                               
                                     {/*<td>{item['Acceptance']}</td>*/}
                                     <td style={getLevel(item['level'])=='Easy'?{color:'rgba(0,175,155,1)'}:getLevel(item['level'])=='Medium'?{color:'rgba(255,184,0,1'}:{color:'rgba(255,45,85,1)'}}>
-                                        <DifficultyCircle difficulty={getLevel(item['level'])}/>
+                                        
+                                        {displayAsText ? 
+                                            <div style={{display:'inline-block'}}>{getLevel(item['level'])}</div>
+                                            :                                        
+                                                <DifficultyCircle difficulty={getLevel(item['level'])}/>
+                                            }
                                         </td>                                    
                                     <td class="bookend"></td>                                    
                                 </tr>

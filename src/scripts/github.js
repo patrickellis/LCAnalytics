@@ -255,10 +255,8 @@ function setAllUserInfo(oldest_commits,newest_commits,slugData,setUserData,SRS_d
     setUserData(user_data);
     return user_data;
 }
-
-function get_due_date(level,lastSolved){
-    // days before this question is due again at each level
-    const level_to_gap = {
+function getLevelToGap(){
+    let level_to_gap = {
         1 : 3, 
         2 : 7, 
         3 : 14, 
@@ -267,7 +265,17 @@ function get_due_date(level,lastSolved){
         6 : 112,
         7 : 224,
         8 : 448
-    };        
+    }; 
+    if(localStorage.getItem('level_to_gap')!=null){
+        level_to_gap = JSON.parse(localStorage.getItem('level_to_gap'));        
+    }
+    console.log("LEVEL TO GAP: ",level_to_gap);
+    return level_to_gap;
+}
+function get_due_date(level,lastSolved){
+    // days before this question is due again at each level
+
+    const level_to_gap = getLevelToGap();       
     return new Date(lastSolved.getTime() + level_to_gap[level]*24*60*60*1000);
 }   
 function getResetsFromLocalStorage(){
@@ -311,16 +319,7 @@ function computeLevel(commit_history,id,resetIds){
  * @returns 
  */
 export const fetchDatesFromAllUserIds = (username,repo_name,ids,setUserData,token) => {    
-    const level_to_gap = {
-        1 : 3, 
-        2 : 7, 
-        3 : 14, 
-        4 : 28, 
-        5 : 56,
-        6 : 112,
-        7 : 224,
-        8 : 448
-    };
+    const level_to_gap = getLevelToGap();
     const resetIds = getResetsFromLocalStorage();
     var oldest_commits = []
     var newest_commits = []

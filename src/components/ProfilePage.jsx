@@ -53,8 +53,7 @@ class ProfilePage extends Component {
             listCompletion : {},
             haveUpdatedSolvedOverTime : false, 
             initialFilter : '',  
-            haveComputedData : false,
-            goal : 18         
+            haveComputedData : false,                  
         };
         this.updateProgress = this.updateProgress.bind(this);
         this.toggleDisplay = this.toggleDisplay.bind(this);
@@ -207,7 +206,7 @@ class ProfilePage extends Component {
                                 <ProfileStatisticsProgress options={options} updateProgress={this.updateProgress} data={this.state.haveUpdatedSolvedOverTime?this.state.solvedOverTime:this.props.userData.solvedOverTime}/>                            
                                 : null}
                             </div>                        
-                            <CategoryTableProfile switchToCategoryPage={this.switchToCategoryPage} data={this.props.userData['category_completion_list']}/>
+                            <CategoryTableProfile goal={this.props.goal} switchToCategoryPage={this.switchToCategoryPage} data={this.props.userData['category_completion_list']}/>
                         {/*<Heatmap/>*/}
 
                         </div>:
@@ -289,11 +288,11 @@ class ProfilePage extends Component {
                 }
                 
                 {idx == 2 &&
-                    <ProfileTableNew userData={this.props.userData} isLoaded={true}/>
+                    <ProfileTableNew level_to_gap={this.props.level_to_gap} userData={this.props.userData} isLoaded={true}/>
                 }
                 
                 {idx == 3 && 
-                    <AllProblemsTableNew initialFilter={this.state.initialFilter} data={this.state.data} userData={this.props.userData} />                    
+                    <AllProblemsTableNew initialFilter={this.state.initialFilter} data={this.state.data.reverse()} userData={this.props.userData} />                    
                 }                
                 </div>
                                                 

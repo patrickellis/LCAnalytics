@@ -230,6 +230,10 @@ class AllProblemsTable extends Component {
 
     render() {
         const {isLoaded, currentData} = this.state;
+        let displayAsText = false;
+        if(localStorage.getItem('displayAsText')!=null){
+            displayAsText = JSON.parse(localStorage.getItem('displayAsText'));
+        }
       return(
           <>                
                 <div class="tableContainer">
@@ -343,9 +347,12 @@ class AllProblemsTable extends Component {
                                                                                                                                               
                                     </td>                               
                                     {/*<td>{item['Acceptance']}</td>*/}
-                                    <td onClick={()=>this.handleClick(item['id'])} style={item['level_text']=='Easy'?{color:'rgba(0,175,155,1)'}:item['difficulty']=='Medium'?{color:'rgba(255,184,0,1'}:{color:'rgba(255,45,85,1)'}}>                                        
-                                        <DifficultyCircle difficulty={item['Difficulty']}/>
-                                        {/**<div style={{display:'inline-block'}}>{item['difficulty']}</div>**/}
+                                    <td style={item['level_text']=='Easy'?{color:'rgba(0,175,155,1)'}:item['difficulty']=='Medium'?{color:'rgba(255,184,0,1'}:{color:'rgba(255,45,85,1)'}}>                                        
+                                    {displayAsText ? 
+                                            <div style={{display:'inline-block'}}>{item['Difficulty']}</div>
+                                            :                                        
+                                                <DifficultyCircle difficulty={item['Difficulty']}/>
+                                            }  
                                     </td> 
                                     <td class="bookend"></td>                                    
                                 </tr>
@@ -384,7 +391,13 @@ class AllProblemsTable extends Component {
                                                                                                                                               
                                     </td>                               
                                     {/*<td>{item['Acceptance']}</td>*/}
-                                    <td style={item['Difficulty']=='Easy'?{color:'rgba(0,175,155,1)'}:item['Difficulty']=='Medium'?{color:'rgba(255,184,0,1'}:{color:'rgba(255,45,85,1)'}}>{item['Difficulty']}</td>                                                                      
+                                    <td style={item['level_text']=='Easy'?{color:'rgba(0,175,155,1)'}:item['difficulty']=='Medium'?{color:'rgba(255,184,0,1'}:{color:'rgba(255,45,85,1)'}}>                                        
+                                    {displayAsText ? 
+                                            <div style={{display:'inline-block'}}>{item['Difficulty']}</div>
+                                            :                                        
+                                                <DifficultyCircle difficulty={item['Difficulty']}/>
+                                            }  
+                                    </td> 
                                     <td class="bookend"></td>                                    
                                 </tr>     
                                 : <></>                           

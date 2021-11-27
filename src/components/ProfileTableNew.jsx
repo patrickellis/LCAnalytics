@@ -78,22 +78,10 @@ class ProfileTableNew extends Component {
         this.sortByCompleted = this.sortByCompleted.bind(this);
         this.sortByDueDate = this.sortByDueDate.bind(this);
         this.resetClick = this.resetClick.bind(this);
+        this.updateData = this.updateData.bind(this);
     }
     componentDidMount(){     
-        let newData = [];
-        let ids_solved = this.props.userData.ids_solved;
-
-        for(let i = 0; i < ids_solved?.length; ++i){            
-            newData.push(this.props.userData['SRS_data']['id_to_obj'][ids_solved[i]]);            
-        }
-        this.setState({            
-            data : newData,
-            filteredData : newData,   
-            currentData : newData.slice(0,25),         
-            currentIndex : 1,
-            totalCount : this.state.data.length,
-            pageSize : 25            
-        })
+       this.updateData();
         /*
         
         let newData = []  
@@ -112,24 +100,49 @@ class ProfileTableNew extends Component {
         })        
         */
     }
+
+    updateData(){
+        let newData = [];
+        let ids_solved = this.props.userData.ids_solved;
+
+        for(let i = 0; i < ids_solved?.length; ++i){            
+            newData.push(this.props.userData['SRS_data']['id_to_obj'][ids_solved[i]]);            
+        }
+        this.setState({            
+            data : newData,
+            filteredData : newData,   
+            currentData : newData.slice(0,25),         
+            currentIndex : 1,
+            totalCount : this.state.data.length,
+            pageSize : 25,
+            SRSdata: this.props.userData['SRS_data'],            
+        })
+    }
     setCurrentPage(page){
         this.setState({            
             currentIndex : page,
             currentData : this.state.filteredData.slice((page-1) * 25, (page-1)*25+25)
         })
     }
-    componentWillReceiveProps(nextProps) {        
+    componentWillReceiveProps(nextProps) {       
+        console.log("RECEIVED PROPS: ", nextProps) 
         // You don't have to do this check first, but it can help prevent an unneeded render
-        
-        if (nextProps.isLoaded !== this.state.isLoaded) {
-          this.setState({                
-               isLoaded: nextProps.isLoaded,              
-               userData : nextProps.userData
-            });
-        }       
-        this.setState({
-            data : nextProps.data,
-        },()=>this.onSelectChange());
+        if(nextProps.userData != this.state.userData){
+            console.log("Userdata in nextprops DIFFERENT");
+            this.setState({userData : nextProps.userData},()=>{
+                this.updateData();                
+                setTimeout(function(){ this.forceUpdate()}.bind(this), 1000);
+            });            
+        }        
+        // if (nextProps.isLoaded !== this.state.isLoaded) {
+        //   this.setState({                
+        //        isLoaded: nextProps.isLoaded,              
+        //        userData : nextProps.userData
+        //     });
+        // }       
+        // this.setState({
+        //     data : nextProps.data,
+        // },()=>this.onSelectChange());
         
       }
     setEventListeners(){
@@ -216,7 +229,7 @@ class ProfileTableNew extends Component {
     
         let tag = document.getElementById('tags-select').value;
         let filteredData = []
-        for(let i = 0; i < this.state.data.length; ++i){
+        for(let i = 0; i < this.state.data?.length; ++i){
             if(tag == 'All'){
                 filteredData = this.state.data;
                 break;
@@ -269,6 +282,10 @@ class ProfileTableNew extends Component {
     render() {
         const {isLoaded, currentData} = this.state;
         const data = this.state.SRSdata;
+        let displayAsText = false;
+        if(localStorage.getItem('displayAsText')!=null){
+            displayAsText = JSON.parse(localStorage.getItem('displayAsText'));
+        }
       return(
           <>                
                 <div class="tableContainer">
@@ -380,8 +397,12 @@ class ProfileTableNew extends Component {
                                                                                                                                               
                                     </td>                               
                                     {/*<td>{item['Acceptance']}</td>*/}
-                                    <td onClick={()=>this.handleClick(item['id'])} style={item['difficulty']=='Easy'?{color:'rgba(0,175,155,1)'}:item['difficulty']=='Medium'?{color:'rgba(255,184,0,1'}:{color:'rgba(255,45,85,1)'}}>                                        
-                                        <DifficultyCircle difficulty={item['difficulty']}/>
+                                    <td onClick={()=>this.handleClick(item['id'])} style={item['difficulty']=='Easy'?{color:'rgba(0,175,155,1)'}:item['difficulty']=='Medium'?{color:'rgba(255,184,0,1'}:{color:'rgba(255,45,85,1)'}}>                                                                                
+                                        {displayAsText ? 
+                                            <div style={{display:'inline-block'}}>{item['difficulty']}</div>
+                                            :                                        
+                                                <DifficultyCircle difficulty={item['difficulty']}/>
+                                            }
                                         {/**<div style={{display:'inline-block'}}>{item['difficulty']}</div>**/}
                                     </td>                                    
                                     <td onClick={()=>this.handleClick(item['id'])}><div class="">{data['level_to_gap'][data['id_to_level'][item['id']]]} days</div></td>
@@ -418,8 +439,11 @@ class ProfileTableNew extends Component {
                                     </td>                               
                                     {/*<td>{item['Acceptance']}</td>*/}
                                     <td onClick={()=>this.handleClick(item['id'])} style={item['difficulty']=='Easy'?{color:'rgba(0,175,155,1)'}:item['difficulty']=='Medium'?{color:'rgba(255,184,0,1'}:{color:'rgba(255,45,85,1)'}}>                                        
-                                        <DifficultyCircle difficulty={item['difficulty']}/>
-                                        {/**<div style={{display:'inline-block'}}>{item['difficulty']}</div>**/}
+                                    {displayAsText ? 
+                                            <div style={{display:'inline-block'}}>{item['difficulty']}</div>
+                                            :                                        
+                                                <DifficultyCircle difficulty={item['difficulty']}/>
+                                            }
                                     </td>    
                                     <td><div class="">{data['level_to_gap'][data['id_to_level'][item['id']]]} days</div></td>
                                     <td><div class="reset">Reset</div></td>

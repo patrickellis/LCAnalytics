@@ -13,7 +13,7 @@ class CategoryTableProfile extends Component {
     constructor(props){
         super(props);
         this.state = {
-            goal :18
+            
         };
         this.handleListClick = this.handleListClick.bind(this);
     }
@@ -38,7 +38,7 @@ class CategoryTableProfile extends Component {
                     <th class="m-1itvjt0" style={{minWidth:'11rem'}}>Solved</th>                                             
                     <th class="m-1itvjt0">
                         
-                        <div style= {{width:this.state.goal * 3 + 2.4 + 'rem',padding:'0.8rem 1.2rem'}} class="target-text">
+                        <div style= {{width:this.props.goal * 3 + 2.4 + 'rem',padding:'0.8rem 1.2rem'}} class="target-text">
                             {data != undefined ? <div class="text">Goal</div> : null}
                         </div>
                         <div>Progress Bar</div>
@@ -54,8 +54,8 @@ class CategoryTableProfile extends Component {
                                 <td class="bold">{item.count}</td>                                                                                                   
                                 <td style={{overflow:'visible'}}>    
                                 <div class="line-container" style={{padding:'0.8rem 1.2rem'}}>
-                                    <div class="target-line" style={{width:this.state.goal * 3 + 'rem'}}></div></div>                            
-                                    <ProblemBar goal={this.state.goal} count={item['count']} width={item['percent_width']} easy={item['Easy']} medium={item['Medium']} hard={item['Hard']}/>                                                                                                                                                                                
+                                    <div class="target-line" style={{width:this.props.goal * 3 + 'rem'}}></div></div>                            
+                                    <ProblemBar goal={this.props.goal} count={item['count']} width={item['percent_width']} easy={item['Easy']} medium={item['Medium']} hard={item['Hard']}/>                                                                                                                                                                                
                                     {/*
                                     <div class="m-1s5vw6 e5mzqaz1">
                                         <div data-progress="47" class="m-148kaov e5mzqaz0" style={{width: completedWidth+'%'}}></div>                                                
