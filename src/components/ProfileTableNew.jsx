@@ -369,7 +369,8 @@ class ProfileTableNew extends Component {
                         </thead>
                        
                         <tbody>                            
-                            {currentData.map(item =>                              
+                            {currentData.map(item =>   
+                                item?                           
                                 this.state.tagFilter == 'All'?                               
                                 <tr class="m-14j0amg e98qpmo0">                                    
                                     <td onClick={()=>this.handleClick(item['id'])}></td>
@@ -450,7 +451,7 @@ class ProfileTableNew extends Component {
                                     <td class="bookend"></td>                                    
                                 </tr>     
                                 : <></>                           
-                            )}
+                            :null)}
                             
                         </tbody>
                     </table>    

@@ -75,9 +75,9 @@ class HomePage extends Component {
                           Login
                           </button>
                           <br/>
-                          <div class="remember-me-container">
+                          {/* <div class="remember-me-container">
                             <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter"></input><span class="input-label">Remember Me?</span>
-                          </div>
+                          </div> */}
                       </div>
                     
                       </div>

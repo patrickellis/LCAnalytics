@@ -33,13 +33,14 @@
 
 .settingsmodal h4{
     font-size:1.5rem;
-    color:#1c2545;
+    color:#1c2545;    
 }
 .switchContainer{
     width:2rem;
 }
 .setting{
     margin-bottom:2rem;
+    text-align: left;
 }
 .sliderheader{
     margin-left:4.5rem;
@@ -50,4 +51,28 @@
     position:relative;
     float:right;
 
+}
+.checkbox-container{
+    position:relative;
+    float:right;
+    display:inline-block;
+    margin-top:1rem;
+}
+.checkbox-container-alt{
+    position:absolute;
+    right:0;    
+    display:inline-block;
+    margin-top:1rem;
+}
+.checkbox-text{
+    display:inline-block;
+    padding:0 .8rem;
+    font-size:1.3rem;
+    color:#435870;
+    top:-0.4rem;
+    position:relative;
+}
+.checkbox{
+    height:1.7rem;
+    width:1.7rem;
 }

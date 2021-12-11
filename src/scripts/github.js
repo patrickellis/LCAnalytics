@@ -373,8 +373,9 @@ export const fetchDatesFromAllUserIds = (username,repo_name,ids,setUserData,toke
                     var due = get_due_date(SRS_data['id_to_level'][ids[i]],new Date(newest_commit));
                     SRS_data['id_to_due_date'][ids[i]] = due;
                     if(due <= new Date()) SRS_data['due'].push(ids[i]);
-                    
-                    slugData.push(obj);
+                    // if(localStorage.getItem('hardmode')!=null && JSON.parse(localStorage.getItem('hardmode'))){
+                    //     if(due >= new Date()) slugData.push(obj);
+                    // }
                     if(i==ids.length-1){                                                
                         return setAllUserInfo(oldest_commits,newest_commits,slugData,setUserData,SRS_data);                        
                     }
@@ -411,7 +412,7 @@ export const fetchDatesFromIds = (username,repo_name,ids,setData,numProblems,sol
             .then(res => {
                 var commits = res.data;                    
                 var oldest_commit = commits.at(-1)['commit']['author']['date'];
-                var newest_commit = commits[0]['commit']['author']['date'];                    
+                var newest_commit = commits.length ? commits[0]['commit']['author']['date'] : undefined;                    
                 oldest_commits.push(new Date(oldest_commit))
                 newest_commits.push(new Date(newest_commit))
                 let obj = {}

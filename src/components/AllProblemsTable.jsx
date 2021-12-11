@@ -62,7 +62,8 @@ class AllProblemsTable extends Component {
             data: this.props.data,
             userData: this.props.userData,   
             tagsChecked: true,
-            tagFilter: 'All'     
+            tagFilter: 'All',
+            hideSolved : false     
         };        
         this.isSolved = this.isSolved.bind(this);
         this.setEventListeners = this.setEventListeners.bind(this);       
@@ -71,6 +72,7 @@ class AllProblemsTable extends Component {
         this.handleClick = this.handleClick.bind(this);
         this.onCheckChange = this.onCheckChange.bind(this);
         this.onSelectChange = this.onSelectChange.bind(this);
+        this.handleCheckClick = this.handleCheckClick.bind(this);
     }
     componentDidMount(){     
         const keys = Object.keys(problemIdToCategories);  
@@ -135,6 +137,11 @@ class AllProblemsTable extends Component {
     handleClick(id){
         window.open(getURLfromId(id), '_blank').focus();        
     }
+    handleCheckClick(){
+        this.setState({
+            hideSolved : !this.state.hideSolved
+        })
+    }
     
     render() {
         const {isLoaded, data} = this.state;
@@ -144,10 +151,21 @@ class AllProblemsTable extends Component {
             displayAsText = JSON.parse(localStorage.getItem('displayAsText'));
         }
       return(
-                      
+                <>
+                <div class="checkbox-container-alt">
+                    <input
+                        class="checkbox"
+                        type="checkbox"
+                        checked={this.state.hideSolved}
+                        onClick={this.handleCheckClick}
+                    />
+                    <p class="checkbox-text">Hide solved problems?</p>
+                </div>     
                 <div class="tableContainer">
+                    
                     { isLoaded &&  
-                    <table class="m-3gmgrq mainTable">
+                    
+                    <table class="m-3gmgrq mainTable" style={{marginTop:'4rem'}}>
                         
                          <thead class="thead">                                        
                             <tr class="m-1itvjt0 ejhqg10">
@@ -221,6 +239,7 @@ class AllProblemsTable extends Component {
                        
                         <tbody>                            
                             {this.state.data.map(item =>   
+                                this.state.hideSolved && this.isSolved(item['id']) ? undefined : 
                                 this.state.tagFilter == 'All'?
                                
                                 <tr onClick={()=>this.handleClick(item['id'])} class="m-14j0amg e98qpmo0">                                    
@@ -310,7 +329,7 @@ class AllProblemsTable extends Component {
                     </table>    
                      }
                     </div>                    
-                
+                </>
       )
     }
   }

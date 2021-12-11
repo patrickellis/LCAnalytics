@@ -13,7 +13,6 @@ import ProfileTableNew from './ProfileTableNew';
 import UserProfileNav from './UserProfileNav';
 import SelectComponent from './SelectComponent';
 import {weeklyProgressFromDates} from '../scripts/github.js';
-import Heatmap from './Heatmap';
 import ProfileStatisticsProblems from './ProfileStatisticsProblems';
 import ProfileStatisticsProgress from './ProfileStatisticsProgress';
 import ProfileStatisticsRadar from './ProfileStatisticsRadar';

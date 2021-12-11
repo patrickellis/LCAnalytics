@@ -71,7 +71,7 @@ class App extends Component {
       displayModalNav : false  ,
       keyfound : false,
       loadingFromLocalStorage : false,
-      displaySettingsModal : true,
+      displaySettingsModal : false,
       goal : 25,
       level_to_gap : {
         1 : 3, 
@@ -288,6 +288,7 @@ class App extends Component {
           });        
   }
   render(){
+    const userRepositoriesInStorage = localStorage.getItem('userRepositories') != null;
     return (
       <div style={{position:'relative'}}>    
         <div class="app-background"></div>

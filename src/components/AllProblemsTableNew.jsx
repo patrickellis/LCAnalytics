@@ -3,6 +3,7 @@ import problemIdToCategories from '../data/problemIdToCategories.json'
 import DifficultyCircle from './DifficultyCircle';
 import {getURLfromId} from '../scripts/github'
 import Pagination from './Pagination';
+import Checkbox from './Checkbox'
 import Categories from '../data/categoryList.js';
 const TAGS = ['two-pointers','string','dynamic-programming','hash-table','math','depth-first-search','sorting','greedy','breadth-first-search',
 'tree','binary-search','matrix','two-pointers','bit-manipulation','stack','design','heap-priority-queue','backtracking','graph','simulation',
@@ -64,7 +65,8 @@ class AllProblemsTable extends Component {
             currentIndex : 1,
             totalCount : 0,
             pageSize : 50,
-            currentData : []
+            currentData : [],
+            hideSolved : false
         };        
         this.isSolved = this.isSolved.bind(this);
         this.setEventListeners = this.setEventListeners.bind(this);       
@@ -76,6 +78,7 @@ class AllProblemsTable extends Component {
         this.setCurrentPage = this.setCurrentPage.bind(this); 
         this.sortByCompleted = this.sortByCompleted.bind(this);
         this.flipNavClasses = this.flipNavClasses.bind(this);
+        this.handleCheckClick = this.handleCheckClick.bind(this);
     }
     componentDidMount(){     
         /*
@@ -122,6 +125,11 @@ class AllProblemsTable extends Component {
             data : newData
         })        
         */
+    }
+    handleCheckClick(){
+        this.setState({
+            hideSolved : !this.state.hideSolved
+        })
     }
     flipNavClasses(id){
         console.log("Flipping nav with id: ", id);
@@ -265,7 +273,16 @@ class AllProblemsTable extends Component {
             displayAsText = JSON.parse(localStorage.getItem('displayAsText'));
         }
       return(
-          <>                
+          <>                      
+                <div class="checkbox-container">
+                    <input
+                        class="checkbox"
+                        type="checkbox"
+                        checked={this.state.hideSolved}
+                        onClick={this.handleCheckClick}
+                    />
+                    <p class="checkbox-text">Hide solved problems?</p>
+                </div>      
                 <div class="tableContainer">
                     { isLoaded &&  
                     <table class="m-3gmgrq mainTable">
@@ -316,7 +333,8 @@ class AllProblemsTable extends Component {
                         </thead>
                        
                         <tbody>                            
-                            {currentData.map(item =>   
+                            {currentData.map(item =>  
+                                this.state.hideSolved && this.isSolved(item['id']) ? undefined : 
                                 this.state.tagFilter == 'All'?                               
                                 <tr onClick={()=>this.handleClick(item['id'])} class="m-14j0amg e98qpmo0">                                    
                                     <td></td>
@@ -405,7 +423,7 @@ class AllProblemsTable extends Component {
                                     <td class="bookend"></td>                                    
                                 </tr>     
                                 : <></>                           
-                            )};
+                            )}
                             
                         </tbody>
                     </table>    

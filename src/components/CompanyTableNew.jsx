@@ -64,8 +64,10 @@ class AllProblemsTable extends Component {
             currentIndex : 1,
             totalCount : 0,
             pageSize : 100,
-            currentData : []
+            currentData : [],
+            hideSolved : false
         };        
+        this.handleCheckClick = this.handleCheckClick.bind(this);
         this.isSolved = this.isSolved.bind(this);
         this.setEventListeners = this.setEventListeners.bind(this);       
         this.sortByAcceptance = this.sortByAcceptance.bind(this);
@@ -102,6 +104,11 @@ class AllProblemsTable extends Component {
             data : newData
         })        
         */
+    }
+    handleCheckClick(){
+        this.setState({
+            hideSolved : !this.state.hideSolved
+        })
     }
     setCurrentPage(page){
         this.setState({            
@@ -236,9 +243,18 @@ class AllProblemsTable extends Component {
         }
       return(
           <>                
+                <div class="checkbox-container-alt">
+                        <input
+                            class="checkbox"
+                            type="checkbox"
+                            checked={this.state.hideSolved}
+                            onClick={this.handleCheckClick}
+                        />
+                        <p class="checkbox-text">Hide solved problems?</p>
+                    </div>  
                 <div class="tableContainer">
                     { isLoaded &&  
-                    <table class="m-3gmgrq mainTable">
+                    <table class="m-3gmgrq mainTable" style={{marginTop:'4rem'}}>
                         
                          <thead class="thead">                                        
                             <tr class="m-1itvjt0 ejhqg10">
@@ -316,6 +332,7 @@ class AllProblemsTable extends Component {
                        
                         <tbody>                            
                             {currentData.map(item =>   
+                                this.state.hideSolved && this.isSolved(item['#']) ? undefined : 
                                 this.state.tagFilter == 'All'?                               
                                 <tr onClick={()=>this.handleClick(item['#'])} class="m-14j0amg e98qpmo0">                                    
                                     <td></td>
