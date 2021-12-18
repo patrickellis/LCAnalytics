@@ -72,6 +72,7 @@ class AllProblemsTable extends Component {
         this.setEventListeners = this.setEventListeners.bind(this);       
         this.sortByAcceptance = this.sortByAcceptance.bind(this);
         this.sortByDifficulty = this.sortByDifficulty.bind(this);
+        this.sortById = this.sortById.bind(this);
         this.handleClick = this.handleClick.bind(this);
         this.onCheckChange = this.onCheckChange.bind(this);
         this.onSelectChange = this.onSelectChange.bind(this);
@@ -105,26 +106,8 @@ class AllProblemsTable extends Component {
             document.getElementById('tags-select').value=this.props.initialFilter;
             this.flipNavClasses(3);
             this.onSelectChange();
+            this.sortById()
        }})
-        
-       
-        /*
-        
-        let newData = []  
-
-        for(let i = 0; i < this.state.data.length; ++i){
-            let item = this.state.data[i];
-            let level = item['level'];
-            if(level == 1) level = 'Easy';
-            if(level == 2) level = 'Medium';
-            if(level == 3) level = 'Hard';
-            item['level_text'] = level;
-            newData.push(item);
-        }        
-        this.setState({
-            data : newData
-        })        
-        */
     }
     handleCheckClick(){
         this.setState({
@@ -169,8 +152,7 @@ class AllProblemsTable extends Component {
     setEventListeners(){
         // nothing done here for now      
     }
-    sortByCompleted(){
-        
+    sortByCompleted(){        
         var newData = this.state.filteredData;
         console.log("sorting by completed",newData.length);
         if(newData.length < 2) return;
@@ -215,6 +197,19 @@ class AllProblemsTable extends Component {
             newData.sort((a,b) => (parseFloat(a['Acceptance'].substr(0,a['Acceptance'].length-1)) > parseFloat(b['Acceptance'].substr(0,b['Acceptance'].length-1)))? 1 : -1)
         } else {
             newData.sort((a,b) => (parseFloat(a['Acceptance'].substr(0,a['Acceptance'].length-1)) < parseFloat(b['Acceptance'].substr(0,b['Acceptance'].length-1)))? 1 : -1)
+        }        
+        this.setState({
+            filteredData : newData,
+            currentData : newData.slice(this.state.currentIndex * 50, this.state.currentIndex*50+50)
+        })
+    }
+    sortById(){        
+        var newData = this.state.filteredData;
+        if(newData.length < 2) return;
+        if(parseFloat(newData[0]['id']) > parseFloat(newData[1]['id'])){
+            newData.sort((a,b) => (parseInt(a['id']) > parseInt(b['id'])? 1 : -1))
+        } else {
+            newData.sort((a,b) => (parseInt(a['id']) > parseInt(b['id'])? 1 : -1))
         }        
         this.setState({
             filteredData : newData,

@@ -323,7 +323,7 @@ class AllProblemsTable extends Component {
                                     <td class="bookend"></td>                                    
                                 </tr>     
                                 : <></>                           
-                            )};
+                            )}
                             
                         </tbody>
                     </table>    
