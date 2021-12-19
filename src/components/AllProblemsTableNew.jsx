@@ -99,33 +99,38 @@ class AllProblemsTable extends Component {
             this.sortById()
        }})
     }
-    handleCheckClick(){
-        if(this.state.hideSolved){
-            this.setState({
-                hideSolved : !this.state.hideSolved,
-                filteredData : this.state.data,
-                currentData : this.state.data.slice(0,50)
-            })
-        }
-        else{
-            let data = this.state.data;
-            let filteredData = []
+    handleCheckClick(){              
+        let data = this.state.filteredData;
+        let filteredData = []
+        if(!this.state.hideSolved){
             for(let i = 0; i < data.length; ++i){
                 const item = data[i];
                 if(!this.isSolved(item['id'])){
                     filteredData.push(item);
-                }
+                }}
+            }        
+        else{
+            data = this.state.data;
+            if(this.state.tagFilter == 'All'){
+                filteredData = data;
             }
-            this.setState({
-                hideSolved : !this.state.hideSolved,
-                filteredData : filteredData,
-                currentData : filteredData.slice(0,50)
-            })
-     }
+            else{
+                for(let i = 0; i < data.length; ++i){
+                    const item = data[i];
+                    if(inArray(item['tags'],this.state.tagFilter))
+                        filteredData.push(item);
+             }    
+            } 
+        }
+        this.setState({
+            hideSolved : !this.state.hideSolved,
+            filteredData : filteredData,
+            currentData : filteredData.slice(0,50),
+            currentIndex : 1
+        })
+     
     }
-    flipNavClasses(id){
-        console.log("Flipping nav with id: ", id);
-        // this needs to be generalised to function with 5 headers///
+    flipNavClasses(id){                
         
         const tabs = document.getElementsByClassName('upNav');
         if(tabs[id].classList.contains('selected')) return;

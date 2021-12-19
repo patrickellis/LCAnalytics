@@ -103,19 +103,19 @@ class Stats extends Component {
         let repo;
         let branch;
 
-        if(!this.props.loadingFromLocalStorage){
-            currentUser = this.props.user['auth']['currentUser'];
-            ghUsername = currentUser['reloadUserInfo']['screenName'];
-            token = this.props.user['responseToken'];
-        }
-        else{
-            const userObject = JSON.parse(localStorage.getItem('userObject'));
-            ghUsername = userObject.username;
-            repo = userObject.repo;
-            branch = userObject.branch;
-            token = userObject.token;
-            currentUser = "undefined";
-        }     
+        // if(!this.props.loadingFromLocalStorage){
+        //     currentUser = this.props.user['auth']['currentUser'];
+        //     ghUsername = currentUser['reloadUserInfo']['screenName'];
+        //     token = this.props.user['responseToken'];
+        // }
+        // else{
+        const userObject = JSON.parse(localStorage.getItem('userObject'));
+        ghUsername = userObject.username;
+        repo = userObject.repo;
+        branch = userObject.branch;
+        token = userObject.token;
+        currentUser = "undefined";
+        // }     
         await fetchDatesFromIds(ghUsername,repo,commonIDS,this.setSlugAndDatesData,numProblems,solvedCounter,token);        
         this.setState({
             radarData : radarData,            

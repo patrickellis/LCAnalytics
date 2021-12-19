@@ -254,8 +254,7 @@ class AllProblemsTable extends Component {
                     </div>  
                 <div class="tableContainer">
                     { isLoaded &&  
-                    <table class="m-3gmgrq mainTable" style={{marginTop:'4rem'}}>
-                        
+                    <table class="m-3gmgrq mainTable" style={{marginTop:'4rem'}}>                        
                          <thead class="thead">                                        
                             <tr class="m-1itvjt0 ejhqg10">
                                 <th class="m-1itvjt0"></th>
@@ -364,7 +363,7 @@ class AllProblemsTable extends Component {
                                                                                                                                               
                                     </td>                               
                                     {/*<td>{item['Acceptance']}</td>*/}
-                                    <td style={item['level_text']=='Easy'?{color:'rgba(0,175,155,1)'}:item['difficulty']=='Medium'?{color:'rgba(255,184,0,1'}:{color:'rgba(255,45,85,1)'}}>                                        
+                                    <td style={item['Difficulty']=='Easy'?{color:'rgba(0,175,155,1)'}:item['Difficulty']=='Medium'?{color:'rgba(255,184,0,1'}:{color:'rgba(255,45,85,1)'}}>                                        
                                     {displayAsText ? 
                                             <div style={{display:'inline-block'}}>{item['Difficulty']}</div>
                                             :                                        
