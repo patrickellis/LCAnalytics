@@ -81,26 +81,16 @@ class AllProblemsTable extends Component {
         this.flipNavClasses = this.flipNavClasses.bind(this);
         this.handleCheckClick = this.handleCheckClick.bind(this);
     }
-    componentDidMount(){     
-        /*
-        let data = this.state.data;        
-        data.sort((a,b) => a['id'] < b['id'] ? -1 : 1 );
+    componentDidMount(){    
+        let data = this.state.data;
+        if(data.length && data[0].id >= 50){
+            data = data.reverse()
+        } 
         this.setState({
-            data : data
-        },this.setState({
-            filteredData : this.state.data,
-            currentData : this.state.data.slice(0,50),
+            filteredData : data,
+            currentData : data.slice(0,50),
             currentIndex : 1,
-            totalCount : this.state.data.length,
-            pageSize : 50            
-        })
-        )
-        */
-        this.setState({
-            filteredData : this.state.data,
-            currentData : this.state.data.slice(0,50),
-            currentIndex : 1,
-            totalCount : this.state.data.length,
+            totalCount :data.length,
             pageSize : 50            
         },() => {if(this.props.initialFilter.length > 3){
             document.getElementById('tags-select').value=this.props.initialFilter;
@@ -110,9 +100,28 @@ class AllProblemsTable extends Component {
        }})
     }
     handleCheckClick(){
-        this.setState({
-            hideSolved : !this.state.hideSolved
-        })
+        if(this.state.hideSolved){
+            this.setState({
+                hideSolved : !this.state.hideSolved,
+                filteredData : this.state.data,
+                currentData : this.state.data.slice(0,50)
+            })
+        }
+        else{
+            let data = this.state.data;
+            let filteredData = []
+            for(let i = 0; i < data.length; ++i){
+                const item = data[i];
+                if(!this.isSolved(item['id'])){
+                    filteredData.push(item);
+                }
+            }
+            this.setState({
+                hideSolved : !this.state.hideSolved,
+                filteredData : filteredData,
+                currentData : filteredData.slice(0,50)
+            })
+     }
     }
     flipNavClasses(id){
         console.log("Flipping nav with id: ", id);
@@ -343,15 +352,15 @@ class AllProblemsTable extends Component {
                                     <td class="tags">                                                                       
                                                                                 
                                             <>
-                                            <div class="upperdiv" style={item['tags'].length <= 3 ? {top : '0.5rem'} : {}}>                                       
-                                            {item['tags'].slice(0,3).map(e =>     
+                                            <div class="upperdiv" style={item['tags']?.length <= 3 ? {top : '0.5rem'} : {}}>                                       
+                                            {item['tags']?.slice(0,3).map(e =>     
                                                 this.state.tagsChecked?                                        
                                                 <span class="tagItem" style={{background:getTagStyle(e)[1],color:getTagStyle(e)[0]}}>• {e}</span>
                                                 :
                                                 <span class="tagItem" style={{background:'#000'}}>***</span>                                                                                  
                                             )}</div>
                                             <div class="upperdiv">                                       
-                                            {item['tags'].slice(3,7).map(e =>     
+                                            {item['tags']?.slice(3,7).map(e =>     
                                                 this.state.tagsChecked?                                        
                                                 <span class="tagItem" style={{background:getTagStyle(e)[1],color:getTagStyle(e)[0]}}>• {e}</span>
                                                 :
@@ -361,7 +370,7 @@ class AllProblemsTable extends Component {
                                                                                                                                               
                                     </td>                               
                                     {/*<td>{item['Acceptance']}</td>*/}
-                                    <td onClick={()=>this.handleClick(item['id'])} style={item['level_text']=='Easy'?{color:'rgba(0,175,155,1)'}:item['difficulty']=='Medium'?{color:'rgba(255,184,0,1'}:{color:'rgba(255,45,85,1)'}}>                                        
+                                    <td onClick={()=>this.handleClick(item['id'])} style={item['level_text']=='Easy'?{color:'rgba(0,175,155,1)'}:item['level_text']=='Medium'?{color:'rgba(255,184,0,1'}:{color:'rgba(255,45,85,1)'}}>                                        
                                             {displayAsText ? 
                                             <div style={{display:'inline-block'}}>{item['level_text']}</div>
                                             :                                        
