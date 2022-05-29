@@ -124,9 +124,22 @@ export const idsToRadar = (data) => {
         for(let i = 0 ; i < TOP_N; ++i){
             newdata[default_order[i]] = display_data_copy[i];
         }
-        return newdata;
+        let res = []
+        for(let i = 0; i < newdata.length; ++i){
+            if(newdata[i]==undefined) continue;
+            res.push(newdata[i]);
+        }
+        console.log("RADAR DATA:",newdata);
+        return res;
     }
-    return nonZeroCountData;
+    console.log("RADAR DATA (nonzerocount):",nonZeroCountData);
+    let res = []
+    for(let i = 0; i < nonZeroCountData.length; ++i){
+        const item = nonZeroCountData[i];
+        if(item == undefined) continue;
+        res.push(item);
+    }
+    return res;
 }
 export const setActiveLink = (id) => {    
     const headers = document.getElementsByClassName('m-ijakdu');

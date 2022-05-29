@@ -34,7 +34,8 @@ const Pagination = props => {
 
   let lastPage = paginationRange[paginationRange.length - 1];
   return (
-    <ul
+    <ul 
+      style={{marginTop:'1rem'}}
       className={classnames('pagination-container', { [className]: className })}
     >
        {/* Left navigation arrow */}
