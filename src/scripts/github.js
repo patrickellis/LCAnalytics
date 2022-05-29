@@ -19,6 +19,7 @@ var difficulties = {'Easy':0,'Medium':0,'Hard':0};
 var userSolvedTotal = 0;
 var ids_solved = []
 var id_to_new_slug = {}
+var new_slug_to_actual = {}
 
 export const category_completion_list = (ids_solved) => {
     // obj keys => 'category', 'count', 'easy', 'medium', 'hard'
@@ -151,6 +152,7 @@ export const fetchGithubRepo = (username,repo_name,branch_name,setUserData,token
                         new_difficulties[levelIdToText[level]]+=1;
                         new_solved_total+=1;
                         id_to_new_slug[problem_slug_to_id[tree[i]['path']]] = orig
+                        new_slug_to_actual[orig] = problem_slug_to_actual[tree[i]['path']]
                     }
                 }
                 userSolvedTotal = new_solved_total;
@@ -358,7 +360,7 @@ export const fetchDatesFromAllUserIds = (username,repo_name,ids,setUserData,toke
                     newest_commits.push(new Date(newest_commit));
                     let obj = {};
                     obj['slug'] = id_slugs[i];
-                    obj['title'] = problem_slug_to_actual[id_slugs[i]];
+                    obj['title'] = new_slug_to_actual[id_slugs[i]];
                     obj['date'] = new Date(newest_commit);
                     obj['id'] = ids[i];
                     obj['difficulty'] = levelIdToText[id_to_level[ids[i]]];
@@ -422,10 +424,11 @@ export const fetchDatesFromIds = (username,repo_name,ids,setData,numProblems,sol
                 newest_commits.push(new Date(newest_commit))
                 let obj = {}
                 obj['slug'] = id_slugs[i];
-                obj['title'] = problem_slug_to_actual[id_slugs[i]];
+                obj['title'] = new_slug_to_actual[id_slugs[i]];
                 obj['date'] = new Date(newest_commit);
                 obj['daysAgo'] = datediff(new Date(newest_commit),new Date(Date.now()),);
                 slugData.push(obj);
+                console.log(JSON.stringify(obj))
                 if(i==ids.length-1){
                     // because this is an async function, and these get requests have no guaranteed
                     // promise resolution time, we need to call our setData method from within the function
